@@ -1,0 +1,16 @@
+{
+  "guild1_user1": {
+    "userId": "user1",
+    "username": "Unknown",
+    "discriminator": "0000",
+    "reason": "reason",
+    "addedBy": "mod1",
+    "addedAt": "2025-08-23T09:16:22.919Z",
+    "lastSeen": null,
+    "guildId": "guild1",
+    "watchLevel": "observe",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  }
+}

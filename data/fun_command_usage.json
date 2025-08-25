@@ -1,0 +1,207 @@
+{
+  "123456789-user123": {
+    "userId": "user123",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 1,
+        "lastUsed": "2025-08-23T08:32:08.492Z"
+      },
+      "8ball": {
+        "count": 1,
+        "lastUsed": "2025-08-23T08:32:08.507Z"
+      },
+      "meme": {
+        "count": 1,
+        "lastUsed": "2025-08-23T08:32:08.525Z"
+      },
+      "trivia": {
+        "count": 1,
+        "lastUsed": "2025-08-23T08:34:32.019Z"
+      }
+    },
+    "totalUsage": 4,
+    "scores": {
+      "trivia": {
+        "totalPoints": 70,
+        "gamesPlayed": 10,
+        "correctAnswers": 6
+      }
+    }
+  },
+  "123456789-user456": {
+    "userId": "user456",
+    "guildId": "123456789",
+    "commands": {},
+    "totalUsage": 0,
+    "scores": {
+      "trivia": {
+        "totalPoints": 60,
+        "gamesPlayed": 4,
+        "correctAnswers": 4
+      }
+    }
+  },
+  "123456789-user789": {
+    "userId": "user789",
+    "guildId": "123456789",
+    "commands": {},
+    "totalUsage": 0,
+    "scores": {
+      "trivia": {
+        "totalPoints": 50,
+        "gamesPlayed": 2,
+        "correctAnswers": 2
+      }
+    }
+  },
+  "123456789-user1": {
+    "userId": "user1",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 10,
+        "lastUsed": "2025-08-23T08:39:54.359Z"
+      },
+      "8ball": {
+        "count": 5,
+        "lastUsed": "2025-08-23T08:39:54.391Z"
+      }
+    },
+    "totalUsage": 15,
+    "scores": {
+      "trivia": {
+        "totalPoints": 25,
+        "gamesPlayed": 2,
+        "correctAnswers": 2
+      }
+    }
+  },
+  "123456789-user2": {
+    "userId": "user2",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 20,
+        "lastUsed": "2025-08-23T08:39:54.617Z"
+      },
+      "8ball": {
+        "count": 10,
+        "lastUsed": "2025-08-23T08:39:54.735Z"
+      }
+    },
+    "totalUsage": 30,
+    "scores": {
+      "trivia": {
+        "totalPoints": 50,
+        "gamesPlayed": 2,
+        "correctAnswers": 2
+      }
+    }
+  },
+  "123456789-user3": {
+    "userId": "user3",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 30,
+        "lastUsed": "2025-08-23T08:39:54.992Z"
+      },
+      "8ball": {
+        "count": 15,
+        "lastUsed": "2025-08-23T08:39:55.132Z"
+      }
+    },
+    "totalUsage": 45,
+    "scores": {
+      "trivia": {
+        "totalPoints": 75,
+        "gamesPlayed": 2,
+        "correctAnswers": 2
+      }
+    }
+  },
+  "123456789-abuser123": {
+    "userId": "abuser123",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 60,
+        "lastUsed": "2025-08-23T08:39:55.650Z"
+      },
+      "8ball": {
+        "count": 50,
+        "lastUsed": "2025-08-23T08:39:56.121Z"
+      }
+    },
+    "totalUsage": 110
+  },
+  "123456789-normaluser123": {
+    "userId": "normaluser123",
+    "guildId": "123456789",
+    "commands": {
+      "joke": {
+        "count": 1,
+        "lastUsed": "2025-08-23T08:39:56.143Z"
+      }
+    },
+    "totalUsage": 1
+  },
+  "guild456-user123": {
+    "userId": "user123",
+    "guildId": "guild456",
+    "commands": {
+      "joke": {
+        "count": 78,
+        "lastUsed": "2025-08-23T12:00:27.188Z"
+      }
+    },
+    "totalUsage": 78,
+    "scores": {
+      "trivia": {
+        "totalPoints": 75,
+        "gamesPlayed": 9,
+        "correctAnswers": 6
+      }
+    }
+  },
+  "guild456-user1": {
+    "userId": "user1",
+    "guildId": "guild456",
+    "commands": {},
+    "totalUsage": 0,
+    "scores": {
+      "trivia": {
+        "totalPoints": 300,
+        "gamesPlayed": 3,
+        "correctAnswers": 3
+      }
+    }
+  },
+  "guild456-user2": {
+    "userId": "user2",
+    "guildId": "guild456",
+    "commands": {},
+    "totalUsage": 0,
+    "scores": {
+      "trivia": {
+        "totalPoints": 150,
+        "gamesPlayed": 3,
+        "correctAnswers": 3
+      }
+    }
+  },
+  "guild456-user3": {
+    "userId": "user3",
+    "guildId": "guild456",
+    "commands": {},
+    "totalUsage": 0,
+    "scores": {
+      "trivia": {
+        "totalPoints": 225,
+        "gamesPlayed": 3,
+        "correctAnswers": 3
+      }
+    }
+  }
+}

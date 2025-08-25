@@ -1,0 +1,4 @@
+- améliorer le système de détéction des raid 
+- améliorer le système de détéction des dox
+- liaison télégram discord 
+- commande "fun"

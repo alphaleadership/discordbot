@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1756051125425ucdsnmsec",
+    "timestamp": "2025-08-24T15:58:45.425Z",
+    "messageId": "1409205300132843631",
+    "userId": "840985745182425108",
+    "guildId": "1037794097894797442",
+    "channelId": "1065526591372927077",
+    "content": "🚀 **Pourquoi ce bot est-il important pour vous ?**\n\n*   **Pour les Modérateurs** : Des outils puissants et centralisés pour une gestion de communauté plus efficace et moins stressante.\n*   **Pour les",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "medium",
+    "textAnalysis": {
+      "detected": true,
+      "detections": [
+        {
+          "type": "phone",
+          "matches": [
+            "**********"
+          ],
+          "originalMatches": [
+            "9511635974"
+          ]
+        },
+        {
+          "type": "phone",
+          "matches": [
+            "************"
+          ],
+          "originalMatches": [
+            "099511635974"
+          ]
+        }
+      ],
+      "riskLevel": "medium"
+    },
+    "imageAnalysis": null
+  },
+  {
+    "id": "17561277760668ncikwqqu",
+    "timestamp": "2025-08-25T13:16:16.066Z",
+    "messageId": "1409526795660824607",
+    "userId": "1223690418957586443",
+    "guildId": "1137477774907543692",
+    "channelId": "1409490900064665610",
+    "content": "Plus que 18 mn et on est à 100",
+    "detectionType": [
+      "address"
+    ],
+    "riskLevel": "medium",
+    "textAnalysis": {
+      "detected": true,
+      "detections": [
+        {
+          "type": "address",
+          "matches": [
+            "*** mn et on est"
+          ],
+          "originalMatches": [
+            "18 mn et on est"
+          ]
+        }
+      ],
+      "riskLevel": "medium"
+    },
+    "imageAnalysis": null
+  },
+  {
+    "id": "1756127815898mtds6z7f0",
+    "timestamp": "2025-08-25T13:16:55.898Z",
+    "messageId": "1409526957170888725",
+    "userId": "1223690418957586443",
+    "guildId": "1137477774907543692",
+    "channelId": "1409490900064665610",
+    "content": "C grave là",
+    "detectionType": [
+      "address"
+    ],
+    "riskLevel": "medium",
+    "textAnalysis": {
+      "detected": false,
+      "detections": [],
+      "riskLevel": "none"
+    },
+    "imageAnalysis": {
+      "processed": 1,
+      "detections": 1
+    }
+  }
+]

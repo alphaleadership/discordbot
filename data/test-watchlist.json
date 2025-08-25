@@ -1,0 +1,130 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-08-23T12:11:11.527Z",
+    "lastModified": "2025-08-23T12:11:12.571Z"
+  },
+  "_settings": {},
+  "987654321098765432_123456789012345678": {
+    "userId": "123456789012345678",
+    "username": "TestUser",
+    "discriminator": "1234",
+    "reason": "Test surveillance for notification system",
+    "addedBy": "999888777666555444",
+    "addedAt": "2025-08-23T12:11:12.539Z",
+    "lastSeen": "2025-08-23T12:11:12.655Z",
+    "guildId": "987654321098765432",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1755951072571_dnupo716s",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Test Guild",
+        "timestamp": "2025-08-23T12:11:12.571Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 178114272570,
+          "joinedAt": "2025-08-23T12:11:11.522Z",
+          "isGlobalWatch": false,
+          "memberCount": 100,
+          "operationId": "join_123456789012345678_1755951072563"
+        }
+      },
+      {
+        "id": "1755951072641_swqqrzoqe",
+        "type": "message",
+        "description": "Message dans #general: This is a test message from a watched user",
+        "timestamp": "2025-08-23T12:11:12.641Z",
+        "channelId": "777888999000111222",
+        "messageId": "111222333444555666",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 42,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": false,
+          "operationId": "msg_123456789012345678_1755951072640",
+          "messageUrl": "https://discord.com/channels/987654321098765432/777888999000111222/111222333444555666"
+        }
+      },
+      {
+        "id": "1755951072648_ytu91mjtl",
+        "type": "warning",
+        "description": "User received a warning for inappropriate behavior",
+        "timestamp": "2025-08-23T12:11:12.648Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "severity": 4,
+          "moderatorId": "999888777666555444",
+          "reason": "Inappropriate language",
+          "duration": null,
+          "isGlobalWatch": false,
+          "operationId": "action_123456789012345678_warning_1755951072647",
+          "timestamp": "2025-08-23T12:11:12.648Z",
+          "additionalData": {}
+        }
+      },
+      {
+        "id": "1755951072652_ty0ir16ek",
+        "type": "message",
+        "description": "Message dans #general: Test message 1 for rate limiting",
+        "timestamp": "2025-08-23T12:11:12.652Z",
+        "channelId": "777888999000111222",
+        "messageId": "111222333444555666_0",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 32,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": false,
+          "operationId": "msg_123456789012345678_1755951072651",
+          "messageUrl": "https://discord.com/channels/987654321098765432/777888999000111222/111222333444555666"
+        }
+      },
+      {
+        "id": "1755951072653_9tixu7on6",
+        "type": "message",
+        "description": "Message dans #general: Test message 2 for rate limiting",
+        "timestamp": "2025-08-23T12:11:12.653Z",
+        "channelId": "777888999000111222",
+        "messageId": "111222333444555666_1",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 32,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": false,
+          "operationId": "msg_123456789012345678_1755951072653",
+          "messageUrl": "https://discord.com/channels/987654321098765432/777888999000111222/111222333444555666"
+        }
+      },
+      {
+        "id": "1755951072655_bkvib76qy",
+        "type": "message",
+        "description": "Message dans #general: Test message 3 for rate limiting",
+        "timestamp": "2025-08-23T12:11:12.655Z",
+        "channelId": "777888999000111222",
+        "messageId": "111222333444555666_2",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 32,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": false,
+          "operationId": "msg_123456789012345678_1755951072654",
+          "messageUrl": "https://discord.com/channels/987654321098765432/777888999000111222/111222333444555666"
+        }
+      }
+    ],
+    "active": true
+  }
+}

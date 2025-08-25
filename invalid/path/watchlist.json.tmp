@@ -1,0 +1,23 @@
+{
+  "guild1_user1": {
+    "userId": "user1",
+    "username": "Unknown",
+    "discriminator": "0000",
+    "reason": "reason",
+    "addedBy": "mod1",
+    "addedAt": "2025-08-23T09:16:22.919Z",
+    "lastSeen": null,
+    "guildId": "guild1",
+    "watchLevel": "observe",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  },
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-08-23T11:47:32.519Z",
+    "lastModified": "2025-08-23T11:47:32.519Z",
+    "migrated": true
+  },
+  "_settings": {}
+}

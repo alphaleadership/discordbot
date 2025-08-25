@@ -1,0 +1,134 @@
+{
+  "123456789": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "ocrEnabled": false,
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [
+        "disabled-channel-123"
+      ],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    }
+  },
+  "1405654925144490115": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "ocrEnabled": false,
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    }
+  }
+}

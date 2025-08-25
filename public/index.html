@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bot Control Panel</h1>
+        <div id="login-container">
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="control-panel" style="display: none;">
+            <h2>Ban List Management</h2>
+            <textarea id="banlist" rows="10" cols="50"></textarea><br>
+            <button onclick="updateBanlist()">Update Banlist</button>
+
+            <h2>Server Actions</h2>
+            <select id="server-select"></select>
+            <button onclick="massBan()">Mass Ban from List</button>
+            <button onclick="exportBans()">Export Server Bans</button>
+            <button onclick="exportMembers()">Export Server Members</button>
+
+            <h2>Channel Messages</h2>
+            <select id="channel-select"></select>
+            <button onclick="getMessages()">Get Messages</button>
+            <div id="messages-container"></div>
+
+            <h2>Logs</h2>
+            <pre id="logs"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

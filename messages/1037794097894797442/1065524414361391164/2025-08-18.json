@@ -1,0 +1,316 @@
+[
+  {
+    "id": "1406905856078909471",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Pas tes affaires, je croyais que c’était clair.",
+    "timestamp": 1755502895136,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907658727985242",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Mais je suis censé gérer la partie diplomatique😅",
+    "timestamp": 1755503324921,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907743885066331",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Non",
+    "timestamp": 1755503345224,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907761836429363",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Pas ça",
+    "timestamp": 1755503349504,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907781658968075",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Juste la pub",
+    "timestamp": 1755503354230,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907919513157703",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Tris m’a attribué sa partie diplomatique en juin il me semble",
+    "timestamp": 1755503387097,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406907966761865246",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Il te semble ?",
+    "timestamp": 1755503398362,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406908007094161538",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Oui, je suis quasi-sur",
+    "timestamp": 1755503407978,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406908057052778517",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Et je représente le Listenbourg à l’ONV",
+    "timestamp": 1755503419889,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948048877391954",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Il a raison je m’en souviens également",
+    "timestamp": 1755512954683,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948095350149122",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Fin il devait gérer les tickets diplomatiques en tout cas",
+    "timestamp": 1755512965763,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948135301021728",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Même si ça devrait être un rôle rp",
+    "timestamp": 1755512975288,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948163524235264",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Y’a un ministre",
+    "timestamp": 1755512982017,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948172869275769",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Un président",
+    "timestamp": 1755512984245,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406948178816663612",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Pourbca",
+    "timestamp": 1755512985663,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

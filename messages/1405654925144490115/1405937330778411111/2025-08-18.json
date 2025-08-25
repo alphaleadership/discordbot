@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1406962408345305129",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "@everyone \nBonjour à tous \nLe serveur du conseil sécurité rp est officiellement ouvert et recrute !\nhttps://discord.gg/anWUSaAZ",
+    "timestamp": 1755516378247,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406964174868713562",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "@everyone \n⚖️ Organigramme du Conseil de Sécurité RP\n\n1. 👑 Président du Conseil\n\nChef suprême du Conseil.\n\nDirige les réunions, valide les décisions.\n\nPeut imposer son arbitrage en cas de désaccord.\n\n\n\n2. ⚔️ Président Adjoint du Conseil\n\nBras droit du Président.\n\nLe remplace en cas d’absence.\n\nSupervise les travaux des membres et du député.\n\n\n\n3. 📜 Député du Conseil Général de Sécurité\n\nCoordonne les dossiers et rapports.\n\nPrépare les votes et résolutions.\n\nSert de liaison entre la présidence et les membres.\n\n\n\n4. 🎖️ Membre Vétéran\n\nAncien membre expérimenté.\n\nConseille sur les stratégies, les crises, la diplomatie.\n\nDispose d’une voix au vote, mais aussi d’un poids moral fort.\n\n\n\n5. 🛡️ Membre\n\nParticipe aux débats et aux votes.\n\nReprésente une faction, un État ou un secteur RP.\n\nPeut proposer des résolutions ou appuyer celles des autres.",
+    "timestamp": 1755516799419,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

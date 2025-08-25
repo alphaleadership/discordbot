@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-08-23T12:11:11.527Z",
+    "lastModified": "2025-08-23T12:11:12.539Z"
+  },
+  "_settings": {},
+  "987654321098765432_123456789012345678": {
+    "userId": "123456789012345678",
+    "username": "Unknown",
+    "discriminator": "0",
+    "reason": "Test surveillance for notification system",
+    "addedBy": "999888777666555444",
+    "addedAt": "2025-08-23T12:11:12.539Z",
+    "lastSeen": null,
+    "guildId": "987654321098765432",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  }
+}

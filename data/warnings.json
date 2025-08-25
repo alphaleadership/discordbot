@@ -1,0 +1,34 @@
+{
+  "1212431738219925568": [
+    {
+      "id": "1755617361278",
+      "reason": "Spam détecté (11.60 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-19T15:29:21.278Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "879384380152381460": [
+    {
+      "id": "1755617366652",
+      "reason": "Spam détecté (12.99 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-19T15:29:26.652Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1070602999329722368": [
+    {
+      "id": "1755624579995",
+      "reason": "Spam détecté (2486.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-19T17:29:39.995Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "720268488744370207": [
+    {
+      "id": "1755975073974",
+      "reason": "Spam détecté (3142.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-23T18:51:13.974Z",
+      "moderator": "1012782955493601291"
+    }
+  ]
+}
