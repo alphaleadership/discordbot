@@ -26,6 +26,7 @@ import {
     FunCommandsManager,
     EnhancedReloadSystem
 } from './utils/managers/index.js';
+import AutoWatchHandler from './utils/handlers/AutoWatchHandler.js';
 import UnifiedErrorReporter from './utils/UnifiedErrorReporter.js';
 import PermissionValidator from './utils/PermissionValidator.js';
 import { DMTicketManager } from './utils/DMTicketManager.js';
@@ -593,6 +594,7 @@ for (const token of tokens) {
     const raidDetector = new RaidDetector(client, guildConfig, reportManager);
     const doxDetector = new DoxDetector(warnManager, reportManager);
     const enhancedReloadSystem = new EnhancedReloadSystem();
+    const autoWatchHandler = new AutoWatchHandler(client, guildConfig, reportManager);
     
     // Initialize interaction handler with new managers
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
@@ -748,7 +750,21 @@ for (const token of tokens) {
     // Détection des liens d'invitation dans les messages
     client.on('messageCreate', async message => {
         if (message.author.bot) return;
-        watchlistManager.handleUserMessage(message);
+        
+        // Handle auto-watch for keywords
+        if (autoWatchHandler) {
+            try {
+                await autoWatchHandler.handleMessage(message, watchlistManager, client);
+            } catch (error) {
+                console.error('Error in auto-watch handler:', error);
+            }
+        }
+        
+        // Handle watchlist monitoring
+        if (watchlistManager.handleUserMessage) {
+            watchlistManager.handleUserMessage(message);
+        }
+        
         const timestamp = new Date().toISOString();
         const logMessage = `${timestamp} - ${message.author.tag}: ${message.content}`;
         logQueue.push(logMessage);

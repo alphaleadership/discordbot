@@ -40,7 +40,12 @@ export class EnhancedReloadSystem extends EventEmitter {
         this.initializeDependencies();
         this.setupConfigWatching();
     }
+    reload() {
+        this.reloadOrder.forEach(component => {
+            this.reloadComponent(component);
+        });
 
+    }
     /**
      * Initialize component dependencies for safe reload ordering
      */
@@ -741,7 +746,7 @@ export class EnhancedReloadSystem extends EventEmitter {
         
         console.log('[EnhancedReloadSystem] Cleanup completed');
     }
-}
+
     /**
 
      * Component isolation to prevent cascade failures
