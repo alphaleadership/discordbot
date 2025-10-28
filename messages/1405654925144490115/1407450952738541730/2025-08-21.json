@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1408234100887912458",
+    "author": {
+      "id": "1092020440387563540",
+      "username": "yosco.zeltinskiy",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1407450952738541730",
+    "channelName": "Baptiste Robert",
+    "content": "# Perso supprimé",
+    "timestamp": 1755819573376,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

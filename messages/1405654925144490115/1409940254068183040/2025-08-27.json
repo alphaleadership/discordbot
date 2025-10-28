@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410280036413735013",
+    "author": {
+      "id": "1092020440387563540",
+      "username": "yosco.zeltinskiy",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1409940254068183040",
+    "channelName": "Détente",
+    "content": "Slt",
+    "timestamp": 1756307362417,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

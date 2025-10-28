@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1409193379627270244",
+    "author": {
+      "id": "957685914329563207",
+      "username": "neltharion_ltv",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1057781822001512510",
+    "channelName": "💬︙𝗚𝗲𝗻𝗲𝗿𝗮𝗹",
+    "content": "Bonjour",
+    "timestamp": 1756048283250,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1409206823629885593",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1057781822001512510",
+    "channelName": "💬︙𝗚𝗲𝗻𝗲𝗿𝗮𝗹",
+    "content": "Coucou",
+    "timestamp": 1756051488550,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "957685914329563207"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

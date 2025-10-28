@@ -1,0 +1,33 @@
+{
+  "123456789012345678": {
+    "guildId": "123456789012345678",
+    "guildName": "Test Guild",
+    "logChannelId": "222222222222222222",
+    "moderationSettings": {
+      "autoModeration": true,
+      "spamDetection": true,
+      "linkFiltering": false,
+      "maxWarnings": 3,
+      "muteRole": "444444444444444444"
+    },
+    "watchlistSettings": {
+      "enabled": true,
+      "alertChannel": "333333333333333333",
+      "autoAction": "alert"
+    },
+    "telegramIntegration": {
+      "enabled": false,
+      "chatId": null,
+      "bridgeChannel": null
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldown": 5000,
+      "channels": ["111111111111111111"]
+    },
+    "permissions": {
+      "moderatorRoles": ["333333333333333333"],
+      "adminRoles": ["555555555555555555"]
+    }
+  }
+}

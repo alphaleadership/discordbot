@@ -49,6 +49,22 @@ export default {
             );
 
             if (!permissionResult.success) {
+                // Log permission denial
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logPermissionDenial({
+                        action: 'ban',
+                        userId: interaction.user.id,
+                        userTag: interaction.user.tag,
+                        targetId: targetUser.id,
+                        targetTag: targetUser.tag,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        reason: permissionResult.message || 'Permission denied',
+                        requiredPermission: 'BAN_MEMBERS',
+                        userPermissions: interaction.member.permissions.toArray()
+                    });
+                }
+                
                 return interaction.reply({
                     content: permissionResult.message || '❌ Vous n\'avez pas la permission d\'effectuer cette action.',
                     ephemeral: true
@@ -101,8 +117,8 @@ export default {
                 await interaction.reply({ embeds: [successEmbed] });
 
                 // Log the action with ModerationLogger
-                if (reportManager) {
-                    await reportManager.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'ban',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
@@ -128,8 +144,8 @@ export default {
                 console.error('Erreur lors du bannissement:', error);
                 
                 // Log failed action with ModerationLogger
-                if (reportManager) {
-                    await reportManager.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'ban',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,

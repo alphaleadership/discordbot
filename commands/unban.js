@@ -14,7 +14,7 @@ export default {
                 .setDescription('La raison du débannissement')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager, permissionValidator, moderationLogger) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const userId = interaction.options.getString('utilisateur-id');
             const reason = interaction.options.getString('raison') || 'Aucune raison spécifiée';
@@ -110,8 +110,8 @@ export default {
                 }
 
                 // Log the action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'unban',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
@@ -136,8 +136,8 @@ export default {
                 console.error('Erreur lors du débannissement:', error);
                 
                 // Log failed action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'unban',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,

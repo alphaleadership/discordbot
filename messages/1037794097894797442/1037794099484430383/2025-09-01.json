@@ -1,0 +1,84 @@
+[
+  {
+    "id": "1412111777893715969",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430383",
+    "channelName": "「🪧」𝐇𝐑𝐏",
+    "content": "https://discord.com/channels/1037794097894797442/1174050181730271252/1412047657299345510 j’ai cru à une voix IA au début",
+    "timestamp": 1756744083618,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412111858365763656",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430383",
+    "channelName": "「🪧」𝐇𝐑𝐏",
+    "content": "Mais en entendant les pings Discord dans le fond, j’ai remis mon avis en question.",
+    "timestamp": 1756744102804,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412120468281884755",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430383",
+    "channelName": "「🪧」𝐇𝐑𝐏",
+    "content": "Oui haha moi aussi j’ai entendu des pings je me suis dit «ah tiens ils ont rajouté cette fonctionnalité sur téléphone» avant de me rendre compte que personne ne m’avait mentionné",
+    "timestamp": 1756746155568,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412157362839617680",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430383",
+    "channelName": "「🪧」𝐇𝐑𝐏",
+    "content": "",
+    "timestamp": 1756754951916,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

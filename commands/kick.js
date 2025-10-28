@@ -14,7 +14,7 @@ export default {
                 .setDescription('La raison de l\'expulsion')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager, permissionValidator, moderationLogger) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
             const reason = interaction.options.getString('raison') || 'Aucune raison spécifiée';
@@ -83,8 +83,8 @@ export default {
                 await interaction.reply({ embeds: [successEmbed] });
 
                 // Log the action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'kick',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
@@ -108,8 +108,8 @@ export default {
                 console.error('Erreur lors de l\'expulsion:', error);
                 
                 // Log failed action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'kick',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,

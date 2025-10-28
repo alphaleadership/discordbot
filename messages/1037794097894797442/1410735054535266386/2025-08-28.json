@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410735129315246223",
+    "author": {
+      "id": "822479491703898123",
+      "username": "nono_lagrintah",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410735054535266386",
+    "channelName": "ticket-340",
+    "content": "Bonjour, je viens demander un partenariat",
+    "timestamp": 1756415865020,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

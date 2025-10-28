@@ -10,7 +10,7 @@ export default {
                 .setMinValue(1)
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager, permissionValidator, watchlistManager) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             // Validate permissions using PermissionValidator
             const permissionResult = permissionValidator.validateWatchlistPermission(interaction.member);

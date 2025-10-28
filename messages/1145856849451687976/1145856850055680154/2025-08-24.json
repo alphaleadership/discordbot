@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1409194856353628321",
+    "author": {
+      "id": "957685914329563207",
+      "username": "neltharion_ltv",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1145856850055680154",
+    "channelName": "•👋•-arrivants",
+    "content": "",
+    "timestamp": 1756048635329,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

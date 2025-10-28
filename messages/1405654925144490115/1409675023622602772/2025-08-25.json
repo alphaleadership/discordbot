@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1409675023622602772",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1409675023622602772",
+    "channelName": "Enzo Maurice",
+    "content": "Enzo Maurice\nPremier Président de Monteloria\n\nHomme d’État et guide visionnaire, Enzo Maurice fut le premier à porter la présidence de Monteloria.\nSon rôle fut essentiel dans la consolidation des institutions, la défense des valeurs communes et la représentation de la nation sur la scène internationale.\n\nAux côtés des autre fondateur de Monteloria, il a su transformer un rêve en réalité et donner au pays son premier souffle démocratique.\nSon nom reste à jamais lié à la naissance et à l’histoire de la nation.",
+    "timestamp": 1756163116127,
+    "attachments": [
+      {
+        "id": "1409675024062877757",
+        "name": "file_000000008bec6246ab83e059b99f15bc.png",
+        "url": "https://cdn.discordapp.com/attachments/1409675023622602772/1409675024062877757/file_000000008bec6246ab83e059b99f15bc.png?ex=68ae3dac&is=68acec2c&hm=712b650eb88f2bef00d75f222abac5295a1ce32252ad689f334d4496ab08aa77&",
+        "contentType": "image/png",
+        "size": 2256137
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

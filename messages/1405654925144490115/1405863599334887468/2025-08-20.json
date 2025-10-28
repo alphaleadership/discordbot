@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1407876828244475966",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405863599334887468",
+    "channelName": "🔍・logs",
+    "content": "2025-08-21T11:59:52.774000+00:00",
+    "timestamp": 1755734392940,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

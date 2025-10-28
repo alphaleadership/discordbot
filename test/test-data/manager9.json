@@ -1,0 +1,22 @@
+{
+  "guild9_user9": {
+    "userId": "user9",
+    "username": "Unknown",
+    "discriminator": "0",
+    "reason": "reason9",
+    "addedBy": "mod",
+    "addedAt": "2025-09-01T16:37:45.772Z",
+    "lastSeen": null,
+    "guildId": "guild9",
+    "watchLevel": "observe",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  },
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-09-01T16:37:45.772Z",
+    "lastModified": "2025-09-01T16:37:45.772Z"
+  },
+  "_settings": {}
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1408696310319812620",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406540951144632422",
+    "channelName": "annonce-bot",
+    "content": "update en cours",
+    "timestamp": 1755929772692,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408755264097751160",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406540951144632422",
+    "channelName": "annonce-bot",
+    "content": "## Salut la communauté ! 👋\n\nVotre bot Discord vient de recevoir une **mise à jour géniale** avec plein de nouvelles fonctionnalités pour rendre votre expérience encore meilleure !\n\n\n## 🎮 NOUVELLES COMMANDES FUN\n\n### 🎯 **Amusez-vous avec ces nouvelles commandes :**\n- **`/joke`** - Recevez une blague aléatoire pour égayer votre journée ! 😂\n- **`/8ball <votre question>`** - Posez une question à la boule magique 🎱\n- **`/meme`** - Obtenez un meme populaire et tendance 🔥\n- **`/trivia`** - Testez vos connaissances avec des questions-réponses 🧠\n- **`/leaderboard`** - Voyez qui sont les champions du serveur ! 🏆\n\n### 🏆 **Système de Points et Classements**\n- Gagnez des points en jouant au trivia\n- Montez dans le classement du serveur\n- Défiez vos amis pour devenir le meilleur !",
+    "timestamp": 1755943828368,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

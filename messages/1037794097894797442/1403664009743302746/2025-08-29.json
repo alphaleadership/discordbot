@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1410941748175175703",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1403664009743302746",
+    "channelName": "Proposition « Jiménez-Schneider » sur la réforme de la taxe sur la valeur ajoutée",
+    "content": "__**AMENDEMENT 16**__\n*L'article 5 est modifé comme suit*\nArticle 5 : Les taxes\n    Les paliers sont taxés comme suit :\nV0 : détaxation de 7.5% ; -> 2,25%\nV1 : sans TVA ; -> 0,5%\nV2 : TVA de 2.5% ; -> 2,75%\nE0 : TVA de 7.5% ;\nE1 : TVA de 3.5% ;\nE2 : TVA de 9% ;\nE3 : TVA de 6.5% ;\nL0 : TVA de 12% ;\nL1 : TVA de 13.5% ;\nL2 : TVA de 22.5% ;\nX0 : TVA de 22.5% ;\nX1 : TVA de 16.5% ;\nX2 : TVA de 33.25% ; -> 31,25%\nX3 : TVA de 42.5%.-> 33%\n  Une taxe relative à la catégorie est additionnée à la taxe du palier. Les taxes de catégories sont :\nL : +0% ; -> -0,5%\nO : +0.75% ; -> - 0,15%\nE : +1.25% ; - > - 0,10%\nS : +2.75% ; -> + 3,2%\nF : +3.25% ; -> + 3,15%\nM : +4% ; -> + 3%\nA : +8.5%. - > + 12,5%",
+    "timestamp": 1756465126795,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410982330897531002",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1403664009743302746",
+    "channelName": "Proposition « Jiménez-Schneider » sur la réforme de la taxe sur la valeur ajoutée",
+    "content": ".",
+    "timestamp": 1756474802470,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

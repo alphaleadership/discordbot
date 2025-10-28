@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1408835257511444491",
+    "author": {
+      "id": "1036745970077147279",
+      "username": "lemu321",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430381",
+    "channelName": "「💬」𝐃𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧-𝐑𝐏",
+    "content": "Bonjour",
+    "timestamp": 1755962900284,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

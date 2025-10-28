@@ -1,0 +1,49 @@
+[
+  {
+    "id": "action_1",
+    "timestamp": "2024-01-01T10:00:00.000Z",
+    "type": "ban",
+    "moderator": {
+      "id": "123456789012345678",
+      "tag": "Moderator#1234"
+    },
+    "target": {
+      "id": "987654321098765432",
+      "tag": "BadUser#5678"
+    },
+    "guild": {
+      "id": "123456789012345678",
+      "name": "Test Guild"
+    },
+    "reason": "Spam and harassment",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 7
+    },
+    "logType": "moderation_action"
+  },
+  {
+    "id": "action_2",
+    "timestamp": "2024-01-01T11:00:00.000Z",
+    "type": "kick",
+    "moderator": {
+      "id": "123456789012345678",
+      "tag": "Moderator#1234"
+    },
+    "target": {
+      "id": "111222333444555666",
+      "tag": "TroubleMaker#9999"
+    },
+    "guild": {
+      "id": "123456789012345678",
+      "name": "Test Guild"
+    },
+    "reason": "Inappropriate behavior",
+    "success": false,
+    "error": {
+      "code": 50013,
+      "message": "Missing Permissions"
+    },
+    "logType": "moderation_action"
+  }
+]

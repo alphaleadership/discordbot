@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Tesseract from 'tesseract.js';
 import fetch from 'node-fetch';
+import { WebhookClient } from 'discord.js';
 
 export default class DoxDetector {
     constructor(warnManager, reportManager, filePath = 'data/dox_detections.json') {
@@ -10,6 +11,7 @@ export default class DoxDetector {
         this.filePath = path.join(process.cwd(), filePath);
         this.detections = this.loadDetections();
         this.exceptions = this.loadExceptions();
+        this.webhookClient = process.env.DOX_WEBHOOK_URL ? new WebhookClient({ url: process.env.DOX_WEBHOOK_URL }) : null;
         
         // Discord ID pattern for exclusion (17-19 digits)
         this.discordIdPattern = /\b\d{17,19}\b/g;
@@ -293,6 +295,7 @@ export default class DoxDetector {
         // Check each pattern type
         for (const [type, patterns] of Object.entries(this.patterns)) {
             if(type === 'address') continue;
+            if(type === 'fullName') continue;
             for (const pattern of patterns) {
                 const matches = processedContent.match(pattern);
                 if (matches) {
@@ -1330,27 +1333,22 @@ export default class DoxDetector {
             escalationLevel: 'none',
             error: null
         };
+
+        // Ne pas traiter les messages des administrateurs
+        try {
+            const member = await message.guild.members.fetch(message.author.id);
+            if (await this.isAdmin(member)) {
+                console.log(`Message d'administrateur ${message.author.tag} ignoré`);
+                return actionResults;
+            }
+        } catch (error) {
+            console.error('Erreur lors de la vérification des permissions:', error);
+        }
         
         try {
             if (!analysis.hasDetections) {
                 return actionResults;
             }
-            
-            // Log the detection
-            const detectionRecord = this.logDetection({
-                messageId: message.id,
-                userId: message.author.id,
-                guildId: message.guild?.id,
-                channelId: message.channel.id,
-                content: message.content?.substring(0, 200) || '[Image content]',
-                detectionType: this.getDetectionTypes(analysis),
-                riskLevel: analysis.overallRisk,
-                textAnalysis: analysis.textAnalysis,
-                imageAnalysis: analysis.imageAnalysis ? {
-                    processed: analysis.imageAnalysis.processed,
-                    detections: analysis.imageAnalysis.detections.length
-                } : null
-            });
             
             // Determine escalation level based on risk and user history
             const escalationLevel = await this.determineEscalationLevel(message.author.id, message.guild?.id, analysis.overallRisk);
@@ -1358,9 +1356,13 @@ export default class DoxDetector {
             
             // Delete the message immediately for any detection
             try {
+                // Envoyer d'abord le message censuré au webhook
+                await this.sendCensoredMessageToWebhook(message, analysis);
+                
+                // Supprimer le message original
                 await message.delete();
                 actionResults.messageDeleted = true;
-                console.log(`Deleted message ${message.id} containing personal information`);
+                console.log(`Message ${message.id} contenant des informations personnelles supprimé`);
             } catch (error) {
                 console.error('Failed to delete message:', error);
                 actionResults.error = 'Failed to delete message';
@@ -1649,6 +1651,81 @@ export default class DoxDetector {
         }
     }
 
+    /**
+     * Vérifie si un membre est administrateur
+     * @param {GuildMember} member - Le membre à vérifier
+     * @returns {Promise<boolean>} True si le membre est administrateur
+     */
+    async isAdmin(member) {
+        try {
+            // Vérifier si le membre a la permission administrateur
+            if (member.permissions.has('Administrator')) {
+                return true;
+            }
+            
+            // Vérifier si le membre est propriétaire du serveur
+            if (member.id === member.guild.ownerId) {
+                return true;
+            }
+            
+            return false;
+        } catch (error) {
+            console.error('Erreur lors de la vérification des permissions administrateur:', error);
+            return false;
+        }
+    }
+    
+    /**
+     * Envoie une version censurée du message au webhook
+     * @param {Message} message - Le message à censurer
+     * @param {Object} analysis - L'analyse du message contenant les détections
+     * @returns {Promise<void>}
+     */
+    async sendCensoredMessageToWebhook(message, analysis) {
+        if (!this.webhookClient) {
+            console.log('Aucun webhook configuré pour les messages censurés');
+            return;
+        }
+        
+        try {
+            // Créer une version censurée du contenu
+            let censoredContent = message.content || '';
+            
+            // Censurer les détections dans le texte
+            if (analysis.textAnalysis?.detections) {
+                analysis.textAnalysis.detections.forEach(detection => {
+                    detection.originalMatches?.forEach(match => {
+                        censoredContent = censoredContent.replace(match, this.censorMatch(match, detection.type));
+                    });
+                });
+            }
+            
+            // Préparer l'embed pour le webhook
+            const embed = {
+                color: 0xff0000,
+                title: '🚨 Message contenant des informations personnelles détecté',
+                description: `**Auteur:** ${message.author.tag} (${message.author.id})\n**Canal:** <#${message.channel.id}>\n\n**Message censuré:**\n\`\`\`${censoredContent || '[Aucun contenu texte]'}\`\`\``,
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: 'Système de détection d\'informations personnelles',
+                    icon_url: message.client.user.displayAvatarURL()
+                }
+            };
+            
+            // Envoyer le message au webhook
+            await this.webhookClient.send({
+                username: 'Dox Detection',
+                avatarURL: message.client.user.displayAvatarURL(),
+                embeds: [embed],
+                files: message.attachments.map(a => a.url)
+            });
+            
+            console.log(`Message censuré envoyé au webhook pour le message ${message.id}`);
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi du message censuré au webhook:', error);
+        }
+    }
+    
     reload() {
         this.detections = this.loadDetections();
         this.exceptions = this.loadExceptions();

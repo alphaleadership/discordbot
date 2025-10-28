@@ -14,7 +14,7 @@ export default {
                 .setDescription('La note à ajouter')
                 .setRequired(true)
         ),
-    async execute(interaction, adminManager, permissionValidator, watchlistManager) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
             const noteText = interaction.options.getString('note');
@@ -23,6 +23,22 @@ export default {
             const permissionResult = permissionValidator.validateWatchlistPermission(interaction.member);
 
             if (!permissionResult.success) {
+                // Log permission denial
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logPermissionDenial({
+                        action: 'watchlist-note',
+                        userId: interaction.user.id,
+                        userTag: interaction.user.tag,
+                        targetId: targetUser.id,
+                        targetTag: targetUser.tag,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        reason: permissionResult.message,
+                        requiredPermission: 'WATCHLIST_MANAGEMENT',
+                        userPermissions: interaction.member.permissions.toArray()
+                    });
+                }
+                
                 return interaction.reply({
                     content: permissionResult.message,
                     ephemeral: true
@@ -63,6 +79,25 @@ export default {
             );
 
             if (!result.success) {
+                // Log failed watchlist operation
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logWatchlistOperation({
+                        operation: 'note',
+                        moderatorId: interaction.user.id,
+                        moderatorTag: interaction.user.tag,
+                        targetId: targetUser.id,
+                        targetTag: targetUser.tag,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        isGlobal: false,
+                        success: false,
+                        data: {
+                            note: noteText,
+                            error: result.error
+                        }
+                    });
+                }
+                
                 return interaction.reply({
                     content: `❌ ${result.error}`,
                     ephemeral: true
@@ -102,11 +137,43 @@ export default {
 
             await interaction.reply({ embeds: [successEmbed] });
 
-            // Log the action
+            // Log the successful watchlist operation
+            if (reportManager && reportManager.moderationLogger) {
+                await reportManager.moderationLogger.logWatchlistOperation({
+                    operation: 'note',
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    targetId: targetUser.id,
+                    targetTag: targetUser.tag,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name,
+                    isGlobal: false,
+                    success: true,
+                    data: {
+                        note: noteText,
+                        watchLevel: entry.watchLevel,
+                        totalNotes: (entry.notes?.length || 0) + 1
+                    }
+                });
+            }
+
+            // Legacy console logging
             console.log(`[WATCHLIST-NOTE] Note ajoutée pour ${targetUser.tag} (${targetUser.id}) par ${interaction.user.tag} (${interaction.user.id}) - Serveur: ${interaction.guild.name} - Note: ${noteText.substring(0, 100)}${noteText.length > 100 ? '...' : ''}`);
 
         } catch (error) {
             console.error('Erreur dans la commande watchlist-note:', error);
+            
+            // Log error
+            if (reportManager && reportManager.moderationLogger) {
+                await reportManager.moderationLogger.logError('watchlist-note', error, {
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    targetUserId: interaction.options.getUser('utilisateur')?.id,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name,
+                    note: interaction.options.getString('note')
+                });
+            }
             
             const errorMessage = '❌ Une erreur inattendue est survenue lors de l\'ajout de la note.';
             

@@ -9,7 +9,7 @@ export default {
                 .setDescription('L\'utilisateur dont afficher les informations')
                 .setRequired(true)
         ),
-    async execute(interaction, adminManager, permissionValidator, watchlistManager) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
 

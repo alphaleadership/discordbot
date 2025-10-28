@@ -1,0 +1,141 @@
+[
+  {
+    "id": "1410884213162508350",
+    "author": {
+      "id": "1395746373139431565",
+      "username": "lekaiser_spam",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223668774230687876",
+    "channelName": "『📅』vote-ag",
+    "content": "C'est déjà fait techniquement",
+    "timestamp": 1756451409379,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410888293733892138",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223668774230687876",
+    "channelName": "『📅』vote-ag",
+    "content": "(C'est en pause c'est pour ça",
+    "timestamp": 1756452382263,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1395746373139431565"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410913613170085954",
+    "author": {
+      "id": "1223690418957586443",
+      "username": "mrhypixel",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223668774230687876",
+    "channelName": "『📅』vote-ag",
+    "content": "Suspendu",
+    "timestamp": 1756458418887,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410918303911772260",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223668774230687876",
+    "channelName": "『📅』vote-ag",
+    "content": "(Laissons votez)",
+    "timestamp": 1756459537247,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411121099525062787",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223668774230687876",
+    "channelName": "『📅』vote-ag",
+    "content": "",
+    "timestamp": 1756507887489,
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "poll_result",
+        "id": "1411121099525062788",
+        "fields": [
+          {
+            "value": "Ban",
+            "name": "poll_question_text",
+            "inline": false
+          },
+          {
+            "value": "24",
+            "name": "victor_answer_votes",
+            "inline": false
+          },
+          {
+            "value": "41",
+            "name": "total_votes",
+            "inline": false
+          },
+          {
+            "value": "1",
+            "name": "victor_answer_id",
+            "inline": false
+          },
+          {
+            "value": "Pour / In Favour/ 同意",
+            "name": "victor_answer_text",
+            "inline": false
+          }
+        ],
+        "content_scan_version": 0
+      }
+    ],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

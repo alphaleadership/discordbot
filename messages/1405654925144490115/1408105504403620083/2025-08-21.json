@@ -1,0 +1,282 @@
+[
+  {
+    "id": "1408105504403620083",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "**Informations : **\n\n> __Nom : __ RTL World\n\n> __Fondateur : __ Jiv’\n> __Directeur général : __ RTL Groupe / Jiv’\n\n> __Date de création : __ 15 mai 2024 (si je me souviens bien), \n> __Lieu du QG : __ Gasparländ, Listenbourg \n\n> __Positionnement politique (facultatif) : __ Neutre\n\n> __Slogan : __ oula me souviens plus, je vous dit ça de suite\n> __Logo :__ <:RTL_World:1321224017046147082>",
+    "timestamp": 1755788913585,
+    "attachments": [
+      {
+        "id": "1408105505007861781",
+        "name": "Adobe_Express_20240819_1552510_1.png",
+        "url": "https://cdn.discordapp.com/attachments/1408105504403620083/1408105505007861781/Adobe_Express_20240819_1552510_1.png?ex=68a887f1&is=68a73671&hm=18424736b5efcf6919ae7de1255a7c45678635635e7549d2998019f5682c36d9&",
+        "contentType": "image/png",
+        "size": 12895
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105590374269029",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "<@1295832086602715251> voili voilou",
+    "timestamp": 1755788934082,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105646855032893",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "On peu pas me mention",
+    "timestamp": 1755788947548,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105658980499548",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "accépté",
+    "timestamp": 1755788950439,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105669693018192",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Ah waw carrément",
+    "timestamp": 1755788952993,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1229693026130198578"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105687493640213",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "A part président",
+    "timestamp": 1755788957237,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105717029671033",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Ah oké",
+    "timestamp": 1755788964279,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105747237179465",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Pardon je savais pas",
+    "timestamp": 1755788971481,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105887419203738",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Pas de souci",
+    "timestamp": 1755789004903,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408105920860520579",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Et ta chaîne est me bienvenue 🤝",
+    "timestamp": 1755789012876,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408106470373064746",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Merci",
+    "timestamp": 1755789143890,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408106929489707149",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "<@&1405899311572844615> faite le salon svp",
+    "timestamp": 1755789253352,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1405899311572844615"
+      ],
+      "channels": []
+    }
+  },
+  {
+    "id": "1408107001212567716",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408105504403620083",
+    "channelName": "RTL World",
+    "content": "Dans <#1406429615727054980>",
+    "timestamp": 1755789270452,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": [
+        "1406429615727054980"
+      ]
+    }
+  }
+]

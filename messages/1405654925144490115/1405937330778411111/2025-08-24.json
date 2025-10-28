@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1409092107645223002",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "<@&1405905402796834939>\n\n📢 Annonce Officielle à l’attention de tous les citoyens de Monteloria 📢\n\nLe Président vous informe qu’une conférence exceptionnelle se tiendra aujourd’hui à 16h précises.\nCet événement a pour objectif de répondre à toutes vos inquiétudes, vos interrogations et vos préoccupations concernant l’avenir de Monteloria.\n\nDans un contexte où de nombreuses questions émergent, le Président souhaite établir un dialogue direct et transparent avec vous. Cette rencontre sera l’occasion d’apporter des éclaircissements, de dissiper les doutes et d’écouter avec attention les voix de chacun.\n\n➡️ Nous vous invitons donc chaleureusement à être présents et à participer activement.\nVotre opinion compte, et votre présence est essentielle pour construire ensemble l’avenir de notre nation.\n\nRendez-vous aujourd’hui à 16h.\nNe manquez pas ce moment important pour Monteloria !",
+    "timestamp": 1756024138128,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1405905402796834939"
+      ],
+      "channels": []
+    }
+  }
+]

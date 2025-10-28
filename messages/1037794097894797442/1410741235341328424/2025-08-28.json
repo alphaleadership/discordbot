@@ -1,0 +1,148 @@
+[
+  {
+    "id": "1410741399908778127",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Bonjour je veut crée un journal mais je ne sais pas comment on fait pour le crée",
+    "timestamp": 1756417360046,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410741428107346024",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Pouvais vous m'aider",
+    "timestamp": 1756417366769,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410749939377770667",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Il faut aller sur le serveur de l’OLGIA",
+    "timestamp": 1756419396014,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410751445870973050",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Et comment j'obtiens le serveur ?",
+    "timestamp": 1756419755190,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410752918826516653",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "<@1212431738219925568>",
+    "timestamp": 1756420106370,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410754364443856967",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Sur le salon serveurs du Listenbourg",
+    "timestamp": 1756420451032,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410756622799605800",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410741235341328424",
+    "channelName": "ticket-341",
+    "content": "Merci!",
+    "timestamp": 1756420989466,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

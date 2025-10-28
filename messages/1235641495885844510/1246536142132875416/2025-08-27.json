@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1410363801634869248",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "**INFO RTL World : WarLand/République Candy Up a (de nouveau) subi un raid**\n\nNous venons d'apprendre à l'instant que le serveur de la République de Candy Up venait de subir un nouveau raid, qui cette fois a définitivement détruit les quelques salons qui étaient épargnés par le précédent raid.\n\nD'après le propriétaire, Mirionaute, le bot aurait été créé par un ancien ami à lui.\n\nNous n'en savons pas plus sur les raisons de ce raid pour le moment, mais nous vous tiendrons informés, restez à l'écoute.\n\nRetrouvez RTL World sur [WhatsApp](https://whatsapp.com/channel/0029VbAfKEQJ93wP3n3CKp2e) et sur notre [site web](https://tris-250.github.io/RTL-World/).\n\n\n<:lieu:1370514302183936021> Serveur Candy Up.\n<:RTL_World:1321224017046147082> Tris Tolherion, directeur de la rédaction, éditorialiste et journaliste à RTL World.",
+    "timestamp": 1756327333602,
+    "attachments": [
+      {
+        "id": "1410363801810894948",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1410363801810894948/image.png?ex=68b0bf25&is=68af6da5&hm=b1eee044af69e2beec18d369cfbcb04c8d8b5ecb79fa971c3e79c96d8fa874f2&",
+        "contentType": "image/png",
+        "size": 135532
+      },
+      {
+        "id": "1410363802201100469",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1410363802201100469/image.png?ex=68b0bf25&is=68af6da5&hm=2aa6b2e68621f9ee0b573e360885e9531d9275e6a016f88485853b6a9bece81e&",
+        "contentType": "image/png",
+        "size": 163528
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

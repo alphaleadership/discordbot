@@ -1,0 +1,47 @@
+{
+  "users": {
+    "987654321098765432": {
+      "userId": "987654321098765432",
+      "username": "SuspiciousUser",
+      "discriminator": "1234",
+      "reason": "Suspicious activity across multiple servers",
+      "watchLevel": "alert",
+      "addedBy": "123456789012345678",
+      "addedAt": "2024-01-01T00:00:00.000Z",
+      "guildId": "123456789012345678",
+      "isGlobal": false,
+      "incidents": [
+        {
+          "id": "incident_1",
+          "type": "message",
+          "content": "Suspicious message content",
+          "channelId": "111111111111111111",
+          "timestamp": "2024-01-01T12:00:00.000Z",
+          "severity": "medium"
+        }
+      ],
+      "notes": [
+        {
+          "id": "note_1",
+          "content": "User showed suspicious behavior",
+          "addedBy": "123456789012345678",
+          "timestamp": "2024-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "globalUsers": {
+    "111222333444555666": {
+      "userId": "111222333444555666",
+      "username": "GlobalThreat",
+      "discriminator": "9999",
+      "reason": "Known threat across multiple communities",
+      "watchLevel": "action",
+      "addedBy": "123456789012345678",
+      "addedAt": "2024-01-01T00:00:00.000Z",
+      "isGlobal": true,
+      "incidents": [],
+      "notes": []
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410756530193567845",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410756188550856837",
+    "channelName": "ticket-55",
+    "content": "Bonjour j'ai 2 chose à demander  1-j'aimerais faire un partenariat avec ma micronation Monteloria \n2- j'aimerais crée un journal mais je me demande comment on fait",
+    "timestamp": 1756420967387,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

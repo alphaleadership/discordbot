@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1410786649389924413",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1057781822001512510",
+    "channelName": "💬︙𝗚𝗲𝗻𝗲𝗿𝗮𝗹",
+    "content": "Bah, tu demandes à un journaliste de la relayer dans les médias.",
+    "timestamp": 1756428148363,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

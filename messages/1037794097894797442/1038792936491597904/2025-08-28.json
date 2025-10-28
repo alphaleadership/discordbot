@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1410681585635950676",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1038792936491597904",
+    "channelName": "「🎥」𝐌𝐞𝐝𝐢𝐚-𝐑𝐏",
+    "content": "**UN PROCHE DE CHRISTIAN ALREINDER CONFIE**\n\nIl va faire de grosses annonces lors de sa déclaration à l'Assemblée demain, il risque d'y avoir des surpris",
+    "timestamp": 1756403099212,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410682024846561300",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1038792936491597904",
+    "channelName": "「🎥」𝐌𝐞𝐝𝐢𝐚-𝐑𝐏",
+    "content": "l'eau mouille",
+    "timestamp": 1756403203928,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410742680874385520",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1038792936491597904",
+    "channelName": "「🎥」𝐌𝐞𝐝𝐢𝐚-𝐑𝐏",
+    "content": "**UN PROCHE D'ALREINDER NOUS CONFIE A NOUVEAU**\nIl se prépare, on dirait un fou, il marche et fait les 100 pas dans son bureau, il va annoncer des choses très importantes je pense",
+    "timestamp": 1756417665452,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410744240631189575",
+    "author": {
+      "id": "1036745970077147279",
+      "username": "lemu321",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1038792936491597904",
+    "channelName": "「🎥」𝐌𝐞𝐝𝐢𝐚-𝐑𝐏",
+    "content": "*un échange téléphonique a eu lieu entre le Président de la République et le Premier ministre concernant le futur discours de politique général et les annonces diplomatiques de demain*",
+    "timestamp": 1756418037327,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

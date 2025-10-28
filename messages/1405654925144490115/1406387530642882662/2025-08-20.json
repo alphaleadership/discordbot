@@ -1,0 +1,167 @@
+[
+  {
+    "id": "1407774192228634645",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "⛔️FERMETURE DU PARTI⛔️\nRaison: plus de membre ni de président",
+    "timestamp": 1755709922607,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407784865885192222",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Si y a encore <@1334432882222956594>",
+    "timestamp": 1755712467405,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251",
+        "1334432882222956594"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407785004364201984",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Y'a plus le président",
+    "timestamp": 1755712500421,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407785123914715218",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Après s'il veut il peut prendre la relève",
+    "timestamp": 1755712528924,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407785260900679775",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Faut l'autorisation du président original",
+    "timestamp": 1755712561584,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407873992626278520",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "<@&1406430984412594239>  ferme à partir de se jour!!!",
+    "timestamp": 1755733716876,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1406430984412594239"
+      ],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407874529275023460",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Faut vrmt d'autres partis 😭",
+    "timestamp": 1755733844823,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407874997342568500",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406387530642882662",
+    "channelName": "Union Catholique Royale (UCR)",
+    "content": "Se lui la il dégage",
+    "timestamp": 1755733956419,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

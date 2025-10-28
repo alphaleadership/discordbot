@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1406734216896450610",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406733317369364562",
+    "channelName": "🌍・relations-internationales",
+    "content": "🟢= bonne relation \n🟡= neutre\n🟠= mauvaise\n⚫️=en guerre",
+    "timestamp": 1755461973166,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406734262966947940",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406733317369364562",
+    "channelName": "🌍・relations-internationales",
+    "content": "",
+    "timestamp": 1755461984150,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

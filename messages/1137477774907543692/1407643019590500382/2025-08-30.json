@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1411147970593947752",
+    "author": {
+      "id": "1087880361972871230",
+      "username": "furiadanoite8428",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1407643019590500382",
+    "channelName": "Join Form / 加入表格的範例 / Formulaire d'adhésion",
+    "content": "Yes",
+    "timestamp": 1756514294051,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

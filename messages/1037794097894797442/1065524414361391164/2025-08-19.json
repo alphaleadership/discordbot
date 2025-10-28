@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1407375924755697805",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1065524414361391164",
+    "channelName": "「🗨」𝐂hat-staff",
+    "content": "Il est toujours diplomate.",
+    "timestamp": 1755614968242,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "879384380152381460"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410378066441670737",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410378066441670737",
+    "channelName": "Proposition de lois [ Régulation des éclairages artificiels en milieu urbain]",
+    "content": "Proposition : Régulation des éclairages artificiels en milieu urbain\n\nArticle premier : Objectif de réduction\nL’utilisation des éclairages artificiels en milieu urbain est progressivement régulée sur l’ensemble du territoire national, afin de limiter la pollution lumineuse, préserver la biodiversité nocturne et favoriser les économies d’énergie.\n\nArticle 2 : Calendrier de limitation\nÀ compter du 1er janvier 2026, l’extinction obligatoire des enseignes lumineuses commerciales, bureaux et bâtiments non occupés doit intervenir au plus tard à 23 heures.\nÀ partir du 1er janvier 2028, les collectivités locales devront réduire de 30 % l’intensité lumineuse de l’éclairage public durant les heures creuses (entre minuit et 5 heures).\n\nArticle 3 : Soutien à la transition\nL’État met en place un programme de financement destiné aux communes, entreprises et particuliers pour favoriser l’installation de systèmes d’éclairage sobres, intelligents et respectueux de l’environnement (ampoules LED, détecteurs de mouvement, technologies solaires).\n\nArticle 4 : Sanctions\nTout acteur (collectivité, entreprise ou particulier) ne respectant pas les règles fixées encourt une amende administrative, dont le montant sera déterminé par décret, proportionnel à la gravité de l’infraction.\n\nArticle 5 : Entrée en vigueur\nLa présente proposition entre en vigueur le 1er janvier 2026.",
+    "timestamp": 1756330734597,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

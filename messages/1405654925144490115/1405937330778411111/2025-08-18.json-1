@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1406962408345305129",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "@everyone \nBonjour à tous \nLe serveur du conseil sécurité rp est officiellement ouvert et recrute !\nhttps://discord.gg/anWUSaAZ",
+    "timestamp": 1755516378247,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406964174868713562",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "@everyone \n⚖️ Organigramme du Conseil de Sécurité RP\n\n1. 👑 Président du Conseil\n\nChef suprême du Conseil.\n\nDirige les réunions, valide les décisions.\n\nPeut imposer son arbitrage en cas de désaccord.\n\n\n\n2. ⚔️ Président Adjoint du Conseil\n\nBras droit du Président.\n\nLe remplace en cas d’absence.\n\nSupervise les travaux des membres et du député.\n\n\n\n3. 📜 Député du Conseil Général de Sécurité\n\nCoordonne les dossiers et rapports.\n\nPrépare les votes et résolutions.\n\nSert de liaison entre la présidence et les membres.\n\n\n\n4. 🎖️ Membre Vétéran\n\nAncien membre expérimenté.\n\nConseille sur les stratégies, les crises, la diplomatie.\n\nDispose d’une voix au vote, mais aussi d’un poids moral fort.\n\n\n\n5. 🛡️ Membre\n\nParticipe aux débats et aux votes.\n\nReprésente une faction, un État ou un secteur RP.\n\nPeut proposer des résolutions ou appuyer celles des autres.",
+    "timestamp": 1755516799419,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407055999986040905",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "<@&1405905350535942214>  si jamais vous voyez un utilisateur qui vous parait suspect il faut utilisée /report avec <@1012782955493601291>",
+    "timestamp": 1755538692233,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1012782955493601291"
+      ],
+      "roles": [
+        "1405905350535942214"
+      ],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407059905743032401",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "@everyone\n raid en cour merci de signaler comportement suspect",
+    "timestamp": 1755539623438,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407132526316617808",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "# Annonce\nJe commence à organiser les élections présidentielle et législative, mais j'ai un problème !\n\nPas suffisamment de partis politiques ! Pour l'instant y a 3 partis (c'est déjà super) mais étonnamment, sur les 3 partis 3 sont extrémistes ! \n\nJ'aurais besoin de volontaires pour fonder un ou plusieurs partis plus modérés (gauche ET droite de préférence) comme ça les élections seront plus faciles !\n\nSi vous voulez inviter des gens pour votre parti : faites donc !\n\nEncore merci beaucoup d'avoir rejoint le RP Monteloria ! On espère que ça sera fun pour tout le monde !\n\n||@everyone||",
+    "timestamp": 1755556937532,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

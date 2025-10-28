@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1407389078604873899",
+    "author": {
+      "id": "892092107714592839",
+      "username": "phenyklendae",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1168337085065863311",
+    "channelName": "logs",
+    "content": "",
+    "timestamp": 1755618104364,
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "auto_moderation_message",
+        "id": "1407389078604873900",
+        "fields": [
+          {
+            "value": "Bloquer des mots personnalisés",
+            "name": "rule_name",
+            "inline": false
+          },
+          {
+            "value": "1037794099484430383",
+            "name": "channel_id",
+            "inline": false
+          },
+          {
+            "value": "fee6a99085af42d7ae3404a1ee089f83",
+            "name": "decision_id",
+            "inline": false
+          },
+          {
+            "value": "woke",
+            "name": "keyword",
+            "inline": false
+          },
+          {
+            "value": "woke.",
+            "name": "keyword_matched_content",
+            "inline": false
+          },
+          {
+            "value": "blocked",
+            "name": "decision_outcome",
+            "inline": false
+          },
+          {
+            "value": "60",
+            "name": "timeout_duration",
+            "inline": false
+          }
+        ],
+        "description": "Y a plusieurs définitions en vrai pour woke. Y a celle qui est juste et celle qui est péjorative à mon humble avis.\n\nEt selon moi ceux qui se disent wokes, sont pas la vraie représentation du wokisme en soit. Après c'est mon avis.",
+        "content_scan_version": 0
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1412171409601593474",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "<@&1407313586702909441> <@&1405905402796834939> \n📜 Communiqué diplomatique – Alliance Inter-Micronation (AIM)\n\nIl y a quelque temps fut fondée l’Alliance Inter-Micronation (AIM), une organisation internationale ayant pour mission d’unir les micronations autour de la paix, de la solidarité et de la coopération.\n\nInspirée des grands principes des alliances défensives, l’AIM repose sur trois engagements majeurs :\n\nUne alliance de longue durée, garantissant stabilité et confiance entre ses membres.\n\nUn soutien militaire mutuel, afin d’assurer la sécurité collective.\n\nUne assistance financière et diplomatique, pour favoriser le développement et la reconnaissance de chaque nation membre.\n\n\nAfin de consolider ses fondations, l’AIM ouvre dès à présent ses portes aux premiers partenaires.\n⚜️ Les trois premières nations à rejoindre l’Alliance se verront conférer le statut prestigieux de Membres Fondateurs, inscrivant leur nom dans l’histoire de l’organisation.\n\nL’AIM recherche activement de nouveaux alliés désireux de renforcer leurs liens diplomatiques, d’assurer leur sécurité et de participer à une coopération durable.\n\n🌍 Ensemble, faisons de l’Alliance Inter-Micronation un pilier solide et une voix forte pour nos nations.\nhttps://discord.gg/X6mp38P8",
+    "timestamp": 1756758300925,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1407313586702909441",
+        "1405905402796834939"
+      ],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412172797714763928",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "<@&1405905402796834939> \nFERMETURE AIMN\n à partir de se jour",
+    "timestamp": 1756758631877,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1405905402796834939"
+      ],
+      "channels": []
+    }
+  }
+]

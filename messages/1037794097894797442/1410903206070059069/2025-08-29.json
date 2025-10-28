@@ -1,0 +1,806 @@
+[
+  {
+    "id": "1410903206070059069",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "E",
+    "timestamp": 1756455937641,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410903300278194258",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756455960102,
+    "attachments": [
+      {
+        "id": "1410903299988783104",
+        "name": "LPM_2025_2028.odt",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410903299988783104/LPM_2025_2028.odt?ex=68b2b598&is=68b16418&hm=6e0e9b15f2d9fcef723b9447d50937aebc3fa0bc4bb0f7cadf704b6840e78539&",
+        "contentType": "application/vnd.oasis.opendocument.text",
+        "size": 20922
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410924799789633597",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "C'est plus simple par écrit",
+    "timestamp": 1756461085985,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410926920974995477",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Y'a trop de tableau",
+    "timestamp": 1756461591715,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1070602999329722368"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410926976398524487",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Hm",
+    "timestamp": 1756461604929,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410927044899901531",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756461621261,
+    "attachments": [
+      {
+        "id": "1410927044593844347",
+        "name": "message.txt",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410927044593844347/message.txt?ex=68b2cbb5&is=68b17a35&hm=61ca7628e86bf4f25cf7c398f42530cddf81bcbcaef4b7b7baed99b87054e99e&",
+        "contentType": "text/plain; charset=utf-8",
+        "size": 6869
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410968615120928778",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "<@1368604399370502165> sinon tu prends en captures d'écran les tableaux et rajoutes en pj",
+    "timestamp": 1756471532374,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1368604399370502165"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410968723707134054",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Ok",
+    "timestamp": 1756471558263,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410968980348338268",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471619451,
+    "attachments": [
+      {
+        "id": "1410968979983564911",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410968979983564911/image.png?ex=68b2f2c3&is=68b1a143&hm=5d3abac0a51afee6e426bf6b7c67861181889c2819d1d894884f8610cb1c5f1d&",
+        "contentType": "image/webp",
+        "size": 140076
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969071138246687",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 2 – Achats de l’armée",
+    "timestamp": 1756471641097,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969308359557262",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471697655,
+    "attachments": [
+      {
+        "id": "1410969308049309696",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969308049309696/image.png?ex=68b2f311&is=68b1a191&hm=2cb1d8dcc54e4bddfb1e4b74b3bf532bb43ced32984f38975789a921f227b55b&",
+        "contentType": "image/webp",
+        "size": 55304
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969398470119610",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 3 – investissements dans la production nationale publique d’armes",
+    "timestamp": 1756471719139,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969437242130434",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471728383,
+    "attachments": [
+      {
+        "id": "1410969436978151434",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969436978151434/image.png?ex=68b2f330&is=68b1a1b0&hm=69611beec24444b6af34565b5a5dc473f15dea9101e50a3b97436b7a7e22f910&",
+        "contentType": "image/webp",
+        "size": 124214
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969478719864843",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Article 2 – Effectifs de l’armée de terre\n\nAlinéa 1 - Actifs",
+    "timestamp": 1756471738272,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969557593489552",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471757077,
+    "attachments": [
+      {
+        "id": "1410969557387972649",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969557387972649/image.png?ex=68b2f34d&is=68b1a1cd&hm=12114b862e6a7a58efeedb84e500ec44dabe7535940265190d0fcfcec03b7351&",
+        "contentType": "image/webp",
+        "size": 113086
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969593240879176",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 2 – Réservistes",
+    "timestamp": 1756471765576,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969713873391666",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471794337,
+    "attachments": [
+      {
+        "id": "1410969713315418223",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969713315418223/image.png?ex=68b2f372&is=68b1a1f2&hm=d3579d4c0347afb68420a11a90234fbf0157a131c9d11f3fa5eb318daed3482a&",
+        "contentType": "image/webp",
+        "size": 128516
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969760606457997",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Article 3 – Budget de la Marine Nationale \n\nAlinéa 1 – Logistique",
+    "timestamp": 1756471805479,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969804134813777",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471815857,
+    "attachments": [
+      {
+        "id": "1410969803547738214",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969803547738214/image.png?ex=68b2f387&is=68b1a207&hm=4c401930ecce56e79783c98f3b47899ec6bc279b4e97bef0cbd867d9850a8d85&",
+        "contentType": "image/webp",
+        "size": 101998
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969826838712360",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 2 – Achat de la marine",
+    "timestamp": 1756471821270,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969893406507048",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471837141,
+    "attachments": [
+      {
+        "id": "1410969892978425886",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969892978425886/image.png?ex=68b2f39d&is=68b1a21d&hm=9400c512f8a0b54cbbf41eb9b1ff30cbca27faab70e23babfe74dbd08345bd6d&",
+        "contentType": "image/webp",
+        "size": 93470
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969948053966858",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 3 – Investissements dans la production nationale",
+    "timestamp": 1756471850170,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410969993541058693",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471861015,
+    "attachments": [
+      {
+        "id": "1410969993276821584",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410969993276821584/image.png?ex=68b2f3b4&is=68b1a234&hm=418829113b9566a08d2e5e511f981f28a85571479c2152b2d0fe5fa3483c0cf4&",
+        "contentType": "image/webp",
+        "size": 122348
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970211888402545",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Article 4 – Augmentation des effectifs de la Marine Nationale\n\n\n- Alinéa unique: Recrutement de 10 000 marins d’ici à 2028.",
+    "timestamp": 1756471913073,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970251784618168",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Article 5 – Dissuasion nucléaire tactique\n\nAlinéa 1. Réarmement nucléaire rapide",
+    "timestamp": 1756471922585,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970300539080725",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471934209,
+    "attachments": [
+      {
+        "id": "1410970300400799886",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410970300400799886/image.png?ex=68b2f3fe&is=68b1a27e&hm=4e4a784f35a5c9100abbecbb1a3d19253104300f678b15d25cfcc63a4ebc3bcd&",
+        "contentType": "image/webp",
+        "size": 104310
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970367589089376",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 2. Production de missiles\n\n- Investir 10 Milliards dans la production d’un missile balistique intercontinental, à charge nucléaire\n\nAlinéa 3. Achat de missiles",
+    "timestamp": 1756471950195,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970438716096544",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756471967153,
+    "attachments": [
+      {
+        "id": "1410970438431019189",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410970438431019189/image.png?ex=68b2f41f&is=68b1a29f&hm=5b5b37ceaec9c0ee1eac2b2ddb8cd3f6e0444bd32840273e90b51de4079f9671&",
+        "contentType": "image/webp",
+        "size": 140320
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970549785595985",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Article 6 – Défense du littoral \n\nalinéa 1 – Moyens mobilisés et détails \n\nSur les 2000km de littoral, 4 500 soldats seront mobilisés pour surveiller les plages sensibles. 300 soldats du VigiListen appuieront les gardes-côtés dans leurs patrouilles. \nDes grillages de 2,5 mètres de haut seront installés près des zones sensibles qui sont proches du littoral. Le littoral sera fortifié, des bateaux patrouilleront en permanence à 500 mètres des côtés. La Police sera également mobilisée. Des murs de 5 mètres de haut, équipés de portes seront installés dans l’Océan Atlantique tout autour de Veroja et Lurenberg, seuls les bateaux identifiés seront autorisés à entrer, et les portes seront ouvertes. Ce dispositif sera mis en place d’ici 4 à 5 mois après la promulgation, ce dispositif sera ensuite généralisé à plusieurs autres villes",
+    "timestamp": 1756471993634,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970751317577821",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756472041683,
+    "attachments": [
+      {
+        "id": "1410970751023972352",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410970751023972352/image.png?ex=68b2f469&is=68b1a2e9&hm=7a043b0228013c4a336d1a96c354471d063ba46d69f1b94fbb7c0bc87d0f9371&",
+        "contentType": "image/webp",
+        "size": 117828
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970779008503849",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "Alinéa 2 - coût",
+    "timestamp": 1756472048285,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970797354258526",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756472052659,
+    "attachments": [
+      {
+        "id": "1410970797216104478",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410970797216104478/image.png?ex=68b2f474&is=68b1a2f4&hm=1bbf49d1f8d5746b4d33d0a8ba5fba1529642d9b82b6c8857347e048886db292&",
+        "contentType": "image/webp",
+        "size": 117828
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970822004314165",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "alinéa 1 – bilan militaire\n\nCette loi est exceptionnelle, elle garantira notre protection vis-à-vis des menaces. Elle fera de nous le premier arsenal nucléaire européen devant la France. Au total, il s’agit de plus de 55 000 soldats et marins supplémentaires. Dés fin 2028, notre armée comptera 441 965 militaires au total. \n\nAlinéa 2 – bilan économique",
+    "timestamp": 1756472058536,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410970867701121104",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410903206070059069",
+    "channelName": "Projet de Loi de Programmation militaire",
+    "content": "",
+    "timestamp": 1756472069431,
+    "attachments": [
+      {
+        "id": "1410970867302928417",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1410903206070059069/1410970867302928417/image.png?ex=68b2f485&is=68b1a305&hm=31c50bb65bc0cb8918085853a536526693920eb2bc33e323a68601025c41de06&",
+        "contentType": "image/png",
+        "size": 134348
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

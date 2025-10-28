@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1412006250035675218",
+    "author": {
+      "id": "1395746373139431565",
+      "username": "lekaiser_spam",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1407714844102365296",
+    "channelName": "『🚫』administration-de-belgrade",
+    "content": "<@761938874946813974> XD",
+    "timestamp": 1756718923816,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "761938874946813974"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

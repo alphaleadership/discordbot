@@ -1,0 +1,5855 @@
+[
+  {
+    "id": "1411293911296774225",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "1st Asian Summit",
+    "timestamp": 1756549089026,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411293920348078193",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756549091184,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294010013646861",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Salut",
+    "timestamp": 1756549112562,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294294001586258",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756549180270,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294369557774397",
+    "author": {
+      "id": "1061338174619660308",
+      "username": "goldenemperor4",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "wow",
+    "timestamp": 1756549198284,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294390160330813",
+    "author": {
+      "id": "1061338174619660308",
+      "username": "goldenemperor4",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "hi",
+    "timestamp": 1756549203196,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294444530958376",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Hi !",
+    "timestamp": 1756549216159,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294511396683776",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Yo my english is fire",
+    "timestamp": 1756549232101,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294512369631275",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Hi everyone",
+    "timestamp": 1756549232333,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294613070676009",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "What iS THE PM of Nesquacia doing here 🙏",
+    "timestamp": 1756549256342,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1004788867003584643"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294685716152371",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "hehe",
+    "timestamp": 1756549273662,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294901919944785",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Aleksï is everywhere bro",
+    "timestamp": 1756549325209,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294904100851744",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ça commence a 25",
+    "timestamp": 1756549325729,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294931926122536",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Come ça trkl",
+    "timestamp": 1756549332363,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294947612823775",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "bah je part à 25",
+    "timestamp": 1756549336103,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411294966981853254",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "You are mute",
+    "timestamp": 1756549340721,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295006484070432",
+    "author": {
+      "id": "1039960875420876840",
+      "username": "liza2_72",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Salut",
+    "timestamp": 1756549350139,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295010099433602",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756549351001,
+    "attachments": [
+      {
+        "id": "1411295009776336917",
+        "name": "Screenshot_20250828_131857_TikTok.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411295009776336917/Screenshot_20250828_131857_TikTok.jpg?ex=68b42266&is=68b2d0e6&hm=debcbb30078236091b68a2cafa61338a1035a1970ce92525651d015e2d205a15&",
+        "contentType": "image/jpeg",
+        "size": 39781
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295026625122384",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "he know",
+    "timestamp": 1756549354941,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295043020652626",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Salut",
+    "timestamp": 1756549358850,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1039960875420876840"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295043389489203",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "i think",
+    "timestamp": 1756549358938,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295057084153959",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Yo",
+    "timestamp": 1756549362203,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295061030866954",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "yoo",
+    "timestamp": 1756549363144,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1039960875420876840"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295117175820348",
+    "author": {
+      "id": "1039960875420876840",
+      "username": "liza2_72",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Vous allez bien",
+    "timestamp": 1756549376530,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295142043848806",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "super et toi",
+    "timestamp": 1756549382459,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1039960875420876840"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295158208692424",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Je vais bien et toi",
+    "timestamp": 1756549386313,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1039960875420876840"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295177552822312",
+    "author": {
+      "id": "1039960875420876840",
+      "username": "liza2_72",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ça va merci",
+    "timestamp": 1756549390925,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295230493458482",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<@989543121895448606> we can begin ?",
+    "timestamp": 1756549403547,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295288307486801",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "sure",
+    "timestamp": 1756549417331,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295350316077107",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756549432115,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295368859091008",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Great",
+    "timestamp": 1756549436536,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295856845651969",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "bye...",
+    "timestamp": 1756549552881,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295886415495230",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye bg",
+    "timestamp": 1756549559931,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295886247591998",
+    "author": {
+      "id": "1004788867003584643",
+      "username": "y0ka_s",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "je dois y aller mes bebous",
+    "timestamp": 1756549559891,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411295968518995998",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<@1402792961955205240> C'est quoi cte pp de goat",
+    "timestamp": 1756549579506,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296016065630350",
+    "author": {
+      "id": "1223690418957586443",
+      "username": "mrhypixel",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bruhhhh",
+    "timestamp": 1756549590842,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296149905866752",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Je sais pas ça s'est mis tout seul",
+    "timestamp": 1756549622752,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296308748091485",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "This is an Asian summit and we got a few Asian Micronation representatives",
+    "timestamp": 1756549660623,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296328641806368",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:AiSkull:1128484646271848499>",
+    "timestamp": 1756549665366,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296370882514986",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "🙏 there is more french thatn Asian",
+    "timestamp": 1756549675437,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296525031702569",
+    "author": {
+      "id": "1242811531071324307",
+      "username": "hyrei_127_",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Réel",
+    "timestamp": 1756549712189,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411296775192449184",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Fr",
+    "timestamp": 1756549771832,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297275011010682",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "when does it start ?",
+    "timestamp": 1756549890998,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297351917764689",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Vous m'entendez pas ?",
+    "timestamp": 1756549909334,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297401859215534",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bah non",
+    "timestamp": 1756549921241,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297404208287817",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "https://tenor.com/view/sparkles-and-champagne-sparklesandchampagne-opto_edge-gif-25486986",
+    "timestamp": 1756549921801,
+    "attachments": [],
+    "embeds": [
+      {
+        "video": {
+          "width": 462,
+          "url": "https://media.tenor.com/ZeLz2yfnx2QAAAPo/sparkles-and.mp4",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/JOko-4WzskywWXFOOOmgjzx32RfgETsvEXxWLwLLBlQ/https/media.tenor.com/ZeLz2yfnx2QAAAPo/sparkles-and.mp4",
+          "placeholder_version": 1,
+          "placeholder": "nSgKFQL1anV2aFqneGRYmLZweAqX",
+          "height": 640,
+          "flags": 0
+        },
+        "url": "https://tenor.com/view/sparkles-and-champagne-sparklesandchampagne-opto_edge-gif-25486986",
+        "type": "gifv",
+        "thumbnail": {
+          "width": 462,
+          "url": "https://media.tenor.com/ZeLz2yfnx2QAAAAe/sparkles-and.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/WTavn7kqv10poo1zehusHXYqaKYNUCzfh2u1zsLTiIY/https/media.tenor.com/ZeLz2yfnx2QAAAAe/sparkles-and.png",
+          "placeholder_version": 1,
+          "placeholder": "nSgKFQL1anV2aFqneGRYmLZweAqX",
+          "height": 640,
+          "flags": 0,
+          "content_type": ""
+        },
+        "provider": {
+          "url": "https://tenor.co",
+          "name": "Tenor"
+        },
+        "id": "1411297404208287818",
+        "content_scan_version": 2
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297421165858869",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Abdakor",
+    "timestamp": 1756549925844,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297506653896826",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Kim dong de core :",
+    "timestamp": 1756549946226,
+    "attachments": [
+      {
+        "id": "1411297506268286976",
+        "name": "Picsart_25-08-27_17-14-32-501.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411297506268286976/Picsart_25-08-27_17-14-32-501.jpg?ex=68b424ba&is=68b2d33a&hm=e8143607aa543a5cf96160c636b3059b7345253984d59a601600289c6b90d335&",
+        "contentType": "image/jpeg",
+        "size": 95854
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297542666326026",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756549954812,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297589932068984",
+    "author": {
+      "id": "1061338174619660308",
+      "username": "goldenemperor4",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "oui",
+    "timestamp": 1756549966081,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297592859689121",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Oui",
+    "timestamp": 1756549966779,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411297613910900797",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "🦧",
+    "timestamp": 1756549971798,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411298077712715868",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Peak VNO mom",
+    "timestamp": 1756550082377,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411298144217595924",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Hell🤚",
+    "timestamp": 1756550098233,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299252612894780",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Real",
+    "timestamp": 1756550362495,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299404651958364",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "就是不要再everyone,w,",
+    "timestamp": 1756550398744,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299436633657485",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "大半夜會被嚇死",
+    "timestamp": 1756550406369,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299444967608482",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "不好意思\n請您再問一遍🙇🙇",
+    "timestamp": 1756550408356,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299599183908875",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "很Friendiy",
+    "timestamp": 1756550445124,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299801806540821",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Plus responsable que le micro-État de Taïwan",
+    "timestamp": 1756550493433,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299940491198474",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "respect",
+    "timestamp": 1756550526498,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411299977711325255",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756550535372,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300051623608410",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "中文10分給5.5分",
+    "timestamp": 1756550552994,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300096917766315",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "🤩",
+    "timestamp": 1756550563793,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300146532057088",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "怎麼tag我了",
+    "timestamp": 1756550575622,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300224399441931",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<@874690564656877568> 翻譯一下",
+    "timestamp": 1756550594187,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300252383707136",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我聽不懂",
+    "timestamp": 1756550600859,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300278543585391",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:goldennega:1137853827802992674>",
+    "timestamp": 1756550607096,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300278921199729",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "nervous",
+    "timestamp": 1756550607186,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300365101568000",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I'm shy",
+    "timestamp": 1756550627733,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300380758773760",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Sry",
+    "timestamp": 1756550631466,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300381048438884",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "@錯人",
+    "timestamp": 1756550631535,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300393668968530",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "sorry",
+    "timestamp": 1756550634544,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300436937408612",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<@989543121895448606> 翻譯一下",
+    "timestamp": 1756550644860,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300455962640435",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我老人重聽",
+    "timestamp": 1756550649396,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300531011588199",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我根本沒聽到\n我剛剛Discord跳掉了",
+    "timestamp": 1756550667289,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300553136410745",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "娃",
+    "timestamp": 1756550672564,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300571545342014",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "可憐哪",
+    "timestamp": 1756550676953,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411300623357313064",
+    "author": {
+      "id": "796216207623323688",
+      "username": "kay__21",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "https://tenor.com/view/kelian-%E5%8F%AF%E6%86%90-%E5%8F%AF%E6%86%90%E5%93%AA-gif-19126619",
+    "timestamp": 1756550689306,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301217455312896",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "https://tenor.com/view/sparkles-and-champagne-sparklesandchampagne-opto_edge-gif-25486986",
+    "timestamp": 1756550830950,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301344299585628",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I think The French are very friendly to us Chinese and will translate the announcement content, even if the translation may contain errors.\nThis was my first time chatting with a real French person. It was the first time I felt the friendliness of foreigners. They were not like the Chinese who were so-called \"insulting China anime cosplayer\".",
+    "timestamp": 1756550861192,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301385735110729",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:happy:1407344123446558811>",
+    "timestamp": 1756550871071,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301469088514128",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Félicitations",
+    "timestamp": 1756550890944,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301491498680384",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "J'ai tout compris",
+    "timestamp": 1756550896287,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301516970819594",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:1814mlady:1377424236884525086>",
+    "timestamp": 1756550902360,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301540177641622",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Pareil",
+    "timestamp": 1756550907893,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1148273603931017226"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301578543075512",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "N'empêche c'est très intéressant kim",
+    "timestamp": 1756550917040,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301580204019722",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "C'est faux je comprend même pas l'anglais",
+    "timestamp": 1756550917436,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301693639102594",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Merci bg",
+    "timestamp": 1756550944481,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301726761517058",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "J'ai bien aimé quand il a dit :",
+    "timestamp": 1756550952378,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1148273603931017226"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411301984530862186",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Gay ?!",
+    "timestamp": 1756551013835,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302137484279878",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Sry I gotta to go a few minutes🙇🙇🙇🙇",
+    "timestamp": 1756551050302,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302318229553273",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "No problem",
+    "timestamp": 1756551093395,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302458516312156",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "no problem my friend !",
+    "timestamp": 1756551126842,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302522026459189",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Incroyable",
+    "timestamp": 1756551141984,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302561771815044",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "J'ai compris «diffamation»",
+    "timestamp": 1756551151460,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302593417973866",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "https://tenor.com/view/sparkles-and-champagne-sparklesandchampagne-opto_edge-gif-25486986",
+    "timestamp": 1756551159005,
+    "attachments": [],
+    "embeds": [
+      {
+        "video": {
+          "width": 462,
+          "url": "https://media.tenor.com/ZeLz2yfnx2QAAAPo/sparkles-and.mp4",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/JOko-4WzskywWXFOOOmgjzx32RfgETsvEXxWLwLLBlQ/https/media.tenor.com/ZeLz2yfnx2QAAAPo/sparkles-and.mp4",
+          "placeholder_version": 1,
+          "placeholder": "nSgKFQL1anV2aFqneGRYmLZweAqX",
+          "height": 640,
+          "flags": 0
+        },
+        "url": "https://tenor.com/view/sparkles-and-champagne-sparklesandchampagne-opto_edge-gif-25486986",
+        "type": "gifv",
+        "thumbnail": {
+          "width": 462,
+          "url": "https://media.tenor.com/ZeLz2yfnx2QAAAAe/sparkles-and.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/WTavn7kqv10poo1zehusHXYqaKYNUCzfh2u1zsLTiIY/https/media.tenor.com/ZeLz2yfnx2QAAAAe/sparkles-and.png",
+          "placeholder_version": 1,
+          "placeholder": "nSgKFQL1anV2aFqneGRYmLZweAqX",
+          "height": 640,
+          "flags": 0,
+          "content_type": ""
+        },
+        "reference_id": "1411302593417973866",
+        "provider": {
+          "url": "https://tenor.co",
+          "name": "Tenor"
+        },
+        "id": "1411302593417973867",
+        "content_scan_version": 2
+      }
+    ],
+    "mentions": {
+      "users": [
+        "1148273603931017226"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302672065368127",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I'm back 🤣🤓",
+    "timestamp": 1756551177756,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302674938466305",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Jsuis sur ont parle de la Neustrie",
+    "timestamp": 1756551178441,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302738712596551",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Comment t'as su",
+    "timestamp": 1756551193646,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1148273603931017226"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302762402287616",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Welcome back",
+    "timestamp": 1756551199294,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302794815737908",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<a:emoji_44:1104677534219653220>",
+    "timestamp": 1756551207022,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302800586969141",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Jsp «diffamation»",
+    "timestamp": 1756551208398,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302811974504518",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ooih",
+    "timestamp": 1756551211113,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302851170406523",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "«china anglish»",
+    "timestamp": 1756551220458,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302865615589509",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Neustria",
+    "timestamp": 1756551223902,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302873932763138",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ptnnn",
+    "timestamp": 1756551225885,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302895504064592",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Im intelligent",
+    "timestamp": 1756551231028,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302911383965716",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "War",
+    "timestamp": 1756551234814,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302918375870525",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ptn",
+    "timestamp": 1756551236481,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411302928865562666",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "OOH",
+    "timestamp": 1756551238982,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303000957522014",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "«Monsieur neutron and leo vander» <:1814mlady:1377424236884525086>",
+    "timestamp": 1756551256170,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303130209190023",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Eurovision ?!",
+    "timestamp": 1756551286986,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303293543780403",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Nah war Neustria",
+    "timestamp": 1756551325928,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303345552887898",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Like nazi ?!",
+    "timestamp": 1756551338328,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303374401310730",
+    "author": {
+      "id": "1148273603931017226",
+      "username": "musfy_de_province",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "What ?!",
+    "timestamp": 1756551345206,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303409889316914",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "WW2 ?",
+    "timestamp": 1756551353667,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303494568120401",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Il a raison d'avoir peur",
+    "timestamp": 1756551373856,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411303681931874386",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Réel",
+    "timestamp": 1756551418527,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411304247517118474",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "A ouais carrément",
+    "timestamp": 1756551553373,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411304279636971632",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Stan est allé cherché des micronations avec des idéologie tah WW2",
+    "timestamp": 1756551561031,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1402792961955205240"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411304376030728253",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ça m'étonne pas",
+    "timestamp": 1756551584013,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411304532369084497",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "不好意思，請問法國微國家會有類似線下見面的會議嗎？",
+    "timestamp": 1756551621287,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411304609053409301",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "J'étais mort de rire «terrorism micronation»",
+    "timestamp": 1756551639570,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305438389207070",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Sry\nI'm f*scism",
+    "timestamp": 1756551837299,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1148273603931017226"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305458714542144",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:st_koyuki_cry:1207086761226797066>",
+    "timestamp": 1756551842145,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305486799732866",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:AiSkull:1128484646271848499>",
+    "timestamp": 1756551848841,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305599270125732",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:st_shigure_bite:1214238484345266297>❓",
+    "timestamp": 1756551875656,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305877771911278",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "But I'm good guy\nI won't massacre",
+    "timestamp": 1756551942056,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411305894393938013",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:alice_uuu:1224671518672425030>",
+    "timestamp": 1756551946019,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306013054992395",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "HK🤚",
+    "timestamp": 1756551974310,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306048236683294",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "HK",
+    "timestamp": 1756551982698,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306094692667483",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Yes",
+    "timestamp": 1756551993774,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306320925167678",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "«Terrorism organization» 💔",
+    "timestamp": 1756552047712,
+    "attachments": [
+      {
+        "id": "1411306320929493082",
+        "name": "Screenshot_2025-08-27-13-47-05-454-edit_com.zhiliaoapp.musically.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411306320929493082/Screenshot_2025-08-27-13-47-05-454-edit_com.zhiliaoapp.musically.jpg?ex=68b42cef&is=68b2db6f&hm=f7765ee861390cfac9de28ca3bfb037a236392b73f2736692c5478755e5b6e18&",
+        "contentType": "image/jpeg",
+        "size": 41926
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306573028135025",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "在",
+    "timestamp": 1756552107818,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306692259352627",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "了解，非常感謝",
+    "timestamp": 1756552136245,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306793791131708",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Kim tu parles pas chinois  ?",
+    "timestamp": 1756552160452,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306794868805635",
+    "author": {
+      "id": "1039960875420876840",
+      "username": "liza2_72",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Désolée, je dois y aller, bonne après-midi !\nSorry, I have to go, good afternoon!",
+    "timestamp": 1756552160709,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306848828788826",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Pas de problème bye",
+    "timestamp": 1756552173574,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1039960875420876840"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306953803829270",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Ça craint d’être à un sommet et tu parles pas chinois <@912767966700003329>",
+    "timestamp": 1756552198602,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411306996937920532",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Azy toi frero",
+    "timestamp": 1756552208886,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307020778471484",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Faut parler chinois un peu",
+    "timestamp": 1756552214570,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307034338525247",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I like kosong and baguette.",
+    "timestamp": 1756552217803,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307042618216580",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Sinon ça sert à rien",
+    "timestamp": 1756552219777,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307047902773351",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "👍",
+    "timestamp": 1756552221037,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307067385446442",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Thank",
+    "timestamp": 1756552225682,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307175388774431",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Même son anglais",
+    "timestamp": 1756552251432,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307183244836895",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Mauvais",
+    "timestamp": 1756552253305,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307201125027882",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "La honte",
+    "timestamp": 1756552257568,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307303797395466",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "*Croissant",
+    "timestamp": 1756552282047,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307316808253450",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:goldennega:1137853827802992674>",
+    "timestamp": 1756552285149,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307629015334963",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "他中文不行，英文又超爛。聽他英文還不如聽中文，我都懂得多。",
+    "timestamp": 1756552359585,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307725815677001",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "貴安",
+    "timestamp": 1756552382664,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307774658351144",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756552394309,
+    "attachments": [
+      {
+        "id": "1411307774364745850",
+        "name": "FB_IMG_1756536827874.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411307774364745850/FB_IMG_1756536827874.jpg?ex=68b42e4a&is=68b2dcca&hm=6e3a153da0ed8a7fe22eaa0424f3373db92dbe6187512bba1a594acee2f94f64&",
+        "contentType": "image/jpeg",
+        "size": 85402
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307789468303372",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "中首",
+    "timestamp": 1756552397840,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307797253197945",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Je parles chinois moi",
+    "timestamp": 1756552399696,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307805419372544",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bref",
+    "timestamp": 1756552401643,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307822032879628",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Sup",
+    "timestamp": 1756552405604,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1223836949261848617"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307828634849301",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Nan",
+    "timestamp": 1756552407178,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307829721305124",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Duo",
+    "timestamp": 1756552407437,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307854366900337",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Je suis trilingue",
+    "timestamp": 1756552413313,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307880409468999",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Demande à Neutron mdrr",
+    "timestamp": 1756552419522,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411307922444779614",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_40:1395355578393563216> 我聽不懂",
+    "timestamp": 1756552429544,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308038496714813",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "等他講完我會翻譯",
+    "timestamp": 1756552457213,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308068070883469",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "感謝",
+    "timestamp": 1756552464264,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308107736547398",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我也聽不懂我自己在說啥 😂",
+    "timestamp": 1756552473721,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308303614738563",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "對對戲國家的一些組織？",
+    "timestamp": 1756552520422,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308337693462568",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "微國的科技普遍只有21世紀",
+    "timestamp": 1756552528547,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308384317210688",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "有類似聯合國軍隊的東西",
+    "timestamp": 1756552539663,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308407855779880",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "剛剛聽個大概",
+    "timestamp": 1756552545275,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308431473905684",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "懂了",
+    "timestamp": 1756552550906,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308456668827719",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "維和部隊",
+    "timestamp": 1756552556913,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308517763059774",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_40:1395355578393563216> 今天我放鬆就不仔細聽了",
+    "timestamp": 1756552571479,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308559785787402",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "~~剛剛睡了一會~~",
+    "timestamp": 1756552581498,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308571861319721",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "但我這條時間線的有3.8級文明以上的👀",
+    "timestamp": 1756552584377,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308578307964939",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "你們知道組織正在跟紐斯特里王國打仗嗎？",
+    "timestamp": 1756552585914,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308748907089940",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Son anglais est big drole",
+    "timestamp": 1756552626588,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308771518451834",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "略有耳聞",
+    "timestamp": 1756552631979,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308795958792192",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "抽象了",
+    "timestamp": 1756552637806,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308827617529907",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "哪一個",
+    "timestamp": 1756552645354,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308837910216784",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Même les chinois il le disent",
+    "timestamp": 1756552647808,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308856390189117",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Il comprennent rien",
+    "timestamp": 1756552652214,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308884534099992",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Which",
+    "timestamp": 1756552658924,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308896794054739",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Traduis les messages",
+    "timestamp": 1756552661847,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308910262091838",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "organization",
+    "timestamp": 1756552665058,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308969712025651",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "What's the English name?",
+    "timestamp": 1756552679232,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308969632465038",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Neustrie",
+    "timestamp": 1756552679213,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411308996949839953",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Neustrie",
+    "timestamp": 1756552685726,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1223836949261848617"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309055170838569",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "In French too",
+    "timestamp": 1756552699607,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309095809716325",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "好像是有個臭名昭著的國家 在法國微國圈那邊人人喊打那種 然後搞種族主義 歧視一些國家的微國這樣",
+    "timestamp": 1756552709296,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309125828218920",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Seems a realistic place",
+    "timestamp": 1756552716453,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309151086182452",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:st_natsu_ji:1257803208277884979>",
+    "timestamp": 1756552722475,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309183516672102",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "挖草",
+    "timestamp": 1756552730207,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309183709614171",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "了解OK",
+    "timestamp": 1756552730253,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309215477268534",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "可能不爽這邊收老中的國家吧",
+    "timestamp": 1756552737827,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309236813828176",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "🤧",
+    "timestamp": 1756552742914,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309246292693036",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "No Fake",
+    "timestamp": 1756552745174,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309285564088321",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "搞地域歧視阿",
+    "timestamp": 1756552754537,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309347648307250",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "重點是金（金某人）反對他們。",
+    "timestamp": 1756552769339,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309358154780804",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "They want to eat infrasonic hydrogen bombs",
+    "timestamp": 1756552771844,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309378920779830",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_73:1143160060525150228>",
+    "timestamp": 1756552776795,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309424974499900",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Yes",
+    "timestamp": 1756552787775,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309433924882576",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "IJK",
+    "timestamp": 1756552789909,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309442724794518",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Kim yes",
+    "timestamp": 1756552792007,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309459648680017",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:TKUemoji_2:1310643330861895741>",
+    "timestamp": 1756552796042,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309551013331004",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Y a-t-il beaucoup de pays xénophobes ?",
+    "timestamp": 1756552817825,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309563600310414",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "金已經襲擊過一些微國了 😌",
+    "timestamp": 1756552820826,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309582172819597",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Nan",
+    "timestamp": 1756552825254,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1406117683220709486"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309593652494396",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "怎麽説",
+    "timestamp": 1756552827991,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309632021860485",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": ".w.OK",
+    "timestamp": 1756552837139,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309704230994072",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Hein",
+    "timestamp": 1756552854355,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309709818073109",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Nan",
+    "timestamp": 1756552855687,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309740285497477",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Y’a pas de nation xénophobe",
+    "timestamp": 1756552862951,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309765224824882",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Qui",
+    "timestamp": 1756552868897,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309783885283409",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "À part Neustrie",
+    "timestamp": 1756552873346,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309841863147642",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# Kim FAKE",
+    "timestamp": 1756552887169,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309892697854090",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Oui je vous",
+    "timestamp": 1756552899289,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309901552156745",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Vois",
+    "timestamp": 1756552901400,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411309917364813834",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "T’a pas tord",
+    "timestamp": 1756552905170,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310031093370994",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "infrasonic hydrogen bombs\nIs The Three-Body Problem's Concept weapons",
+    "timestamp": 1756552932285,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310050927968276",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:st_shigure_bite:1214238484345266297>",
+    "timestamp": 1756552937014,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310080577507370",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# 金很危險，但穿粉紅色丁字褲的時候好可愛 🥰😍😘",
+    "timestamp": 1756552944083,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310115604271167",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "???",
+    "timestamp": 1756552952434,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310129185554523",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:AiSkull:1128484646271848499>",
+    "timestamp": 1756552955672,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310138962346054",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "阿神啊",
+    "timestamp": 1756552958003,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310163888967681",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "有人有問題嗎",
+    "timestamp": 1756552963946,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310236006092831",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "WTQ",
+    "timestamp": 1756552981140,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310237759307989",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "靠腰",
+    "timestamp": 1756552981558,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310277156409464",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "WHAT THE QUCK",
+    "timestamp": 1756552990951,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310347867918439",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "有啊，我有一個問題，他有沒有穿別顏色的丁字褲？ 😏",
+    "timestamp": 1756553007810,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310369732821002",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# Pink thong？",
+    "timestamp": 1756553013023,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310399692869632",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# Are you sure?",
+    "timestamp": 1756553020166,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310449684906034",
+    "author": {
+      "id": "953635086501314561",
+      "username": "leo_politics",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# YES",
+    "timestamp": 1756553032085,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310524708159618",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756553049972,
+    "attachments": [
+      {
+        "id": "1411310524049784903",
+        "name": "image0.gif",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411310524049784903/image0.gif?ex=68b430d9&is=68b2df59&hm=8c68a1a93e26ce3d7c85ff23aa9361741a2da7dbe09f8f8ef14676f3d4e60fb1&",
+        "contentType": "image/gif",
+        "size": 629559
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310759383662692",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I NEED MAO ZEDONG\n# TO BRAINWASHING ME",
+    "timestamp": 1756553105923,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310813695967295",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "mmwmm",
+    "timestamp": 1756553118872,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310825507131444",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "# My mind is not clear anymore",
+    "timestamp": 1756553121688,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310833816047646",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:possocialcr:1226578009436192818>",
+    "timestamp": 1756553123669,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310862081462332",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:22:1395669500946419752>",
+    "timestamp": 1756553130408,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310927277461554",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "No <:ccp:1385887650149433436> CPC no new 🇨🇳 China",
+    "timestamp": 1756553145952,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411310958290276453",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_83:1397207584817152030>",
+    "timestamp": 1756553153346,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311027085246567",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Libéralism>>>",
+    "timestamp": 1756553169748,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311159251959919",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "The Part of\n# Pink thong",
+    "timestamp": 1756553201259,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311193624412241",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_17:1404664921081254119>",
+    "timestamp": 1756553209454,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311211781554187",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "同志你需要一些习近平新时代特色社会主义思想的教育",
+    "timestamp": 1756553213783,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "874690564656877568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311317473824779",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "奴才覺得很困難",
+    "timestamp": 1756553238982,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311363480879175",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bro wanted to be sent to Xinjiang",
+    "timestamp": 1756553249951,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311442161831958",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我站希墨裕那邊的",
+    "timestamp": 1756553268710,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1223836949261848617"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311459471986710",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:st_natsu_ji:1257803208277884979>",
+    "timestamp": 1756553272837,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311509098725456",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "I don't want 勞改營😭",
+    "timestamp": 1756553284669,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311627047014492",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Mao was brainwashed the Chinese",
+    "timestamp": 1756553312790,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311654368444426",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:b5XduA23:1290243723724197931>",
+    "timestamp": 1756553319304,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311685959942195",
+    "author": {
+      "id": "1202232583744655420",
+      "username": "hak_2025",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "下班!",
+    "timestamp": 1756553326836,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311719384354847",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:emoji_6:1394261803977936926>",
+    "timestamp": 1756553334805,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1202232583744655420"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311741765423215",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "斑斑",
+    "timestamp": 1756553340141,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311800359587992",
+    "author": {
+      "id": "989543121895448606",
+      "username": "ya3289",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "666伏魔特色還在追我",
+    "timestamp": 1756553354111,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311816365047922",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<a:Gura_a:1123506141251510334>",
+    "timestamp": 1756553357927,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311843129032714",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "<:UMA_042:1372280870014291978>",
+    "timestamp": 1756553364308,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "989543121895448606"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311852603969649",
+    "author": {
+      "id": "78396085726351360",
+      "username": "youxinjie",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "下班領薪水(跟成田路)",
+    "timestamp": 1756553366567,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311861626044461",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "高持傲了",
+    "timestamp": 1756553368718,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311889824092232",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "附魔新時代特色下班注意思想",
+    "timestamp": 1756553375441,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311923412074627",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756553383449,
+    "attachments": [
+      {
+        "id": "1411311923152293988",
+        "name": "10e8a93bf00a407d.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411311923152293988/10e8a93bf00a407d.jpg?ex=68b43227&is=68b2e0a7&hm=0e70763a67b4ea75c6f73039d257fc4961520306f4926dec1da15d1e94a50c57&",
+        "contentType": "image/jpeg",
+        "size": 125820
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311936125272155",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756553386480,
+    "attachments": [
+      {
+        "id": "1411311935781212230",
+        "name": "IMG_20250830_191133_114.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1223657786634670211/1411311935781212230/IMG_20250830_191133_114.jpg?ex=68b4322a&is=68b2e0aa&hm=3453ef4881f9a3eb4aed20aa8d3077b46c2150da46b9bcad235081645ffb299b&",
+        "contentType": "image/jpeg",
+        "size": 41549
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311958681981009",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "我們都只領功德的好不",
+    "timestamp": 1756553391858,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "78396085726351360"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411311969528713307",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "腦自破洞",
+    "timestamp": 1756553394444,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312024033427456",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "把他當成一種功德聯微",
+    "timestamp": 1756553407439,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312078374834299",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "讓我們結束 Let's end",
+    "timestamp": 1756553420395,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312123665059973",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye Bye",
+    "timestamp": 1756553431193,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312124965163008",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "🔺==The end==🔺",
+    "timestamp": 1756553431503,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312175359856731",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "最後一句聼懂了（喜",
+    "timestamp": 1756553443518,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312177150693458",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+    "timestamp": 1756553443945,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312187141656628",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "EEEEEEEEE",
+    "timestamp": 1756553446327,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312192036536320",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye",
+    "timestamp": 1756553447494,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312212085047417",
+    "author": {
+      "id": "1406117683220709486",
+      "username": "3301linxian",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye",
+    "timestamp": 1756553452274,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312223216996412",
+    "author": {
+      "id": "78396085726351360",
+      "username": "youxinjie",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye",
+    "timestamp": 1756553454928,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312225314148424",
+    "author": {
+      "id": "874690564656877568",
+      "username": "lt.simon_riley25",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Have a GD",
+    "timestamp": 1756553455428,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312234361131108",
+    "author": {
+      "id": "1223836949261848617",
+      "username": "tykhft._928",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye",
+    "timestamp": 1756553457585,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312237926285335",
+    "author": {
+      "id": "1402792961955205240",
+      "username": "_vexos.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "Bye !",
+    "timestamp": 1756553458435,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312240367374473",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "1st Asian Summit",
+    "timestamp": 1756553459017,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312327919407180",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756553479891,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411312444437168199",
+    "author": {
+      "id": "613739587109519361",
+      "username": "lrniey666",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223657786634670211",
+    "channelName": "🏛︙Conférence",
+    "content": "",
+    "timestamp": 1756553507671,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

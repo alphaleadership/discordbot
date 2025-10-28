@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1407703193688871007",
+    "author": {
+      "id": "892092107714592839",
+      "username": "phenyklendae",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1168337085065863311",
+    "channelName": "logs",
+    "content": "",
+    "timestamp": 1755692995236,
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "auto_moderation_message",
+        "id": "1407703193688871008",
+        "fields": [
+          {
+            "value": "Bloquer des mots personnalisés",
+            "name": "rule_name",
+            "inline": false
+          },
+          {
+            "value": "1037794099484430383",
+            "name": "channel_id",
+            "inline": false
+          },
+          {
+            "value": "5861454891ee46bb94db03f550370ac5",
+            "name": "decision_id",
+            "inline": false
+          },
+          {
+            "value": "woke",
+            "name": "keyword",
+            "inline": false
+          },
+          {
+            "value": "woke",
+            "name": "keyword_matched_content",
+            "inline": false
+          },
+          {
+            "value": "blocked",
+            "name": "decision_outcome",
+            "inline": false
+          },
+          {
+            "value": "60",
+            "name": "timeout_duration",
+            "inline": false
+          }
+        ],
+        "description": "Bah qqln de woke selon moi : C'est une personne qui a un esprit critique développé bienveillant accompagné d'une certaine intelligence, et lucidité émotionnelle concrète. Son but est d'éclairer sur les injustices, et amener à davantage d'inclusion, d'humanité, de dignité et moins de divergences dans nos société. \n\nVoilà.",
+        "content_scan_version": 0
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407704357725667418",
+    "author": {
+      "id": "892092107714592839",
+      "username": "phenyklendae",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1168337085065863311",
+    "channelName": "logs",
+    "content": "",
+    "timestamp": 1755693272764,
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "auto_moderation_message",
+        "id": "1407704357725667419",
+        "fields": [
+          {
+            "value": "Bloquer des mots personnalisés",
+            "name": "rule_name",
+            "inline": false
+          },
+          {
+            "value": "1037794099484430383",
+            "name": "channel_id",
+            "inline": false
+          },
+          {
+            "value": "cb8602756b44456982d31c9f5f3c4cc1",
+            "name": "decision_id",
+            "inline": false
+          },
+          {
+            "value": "woke",
+            "name": "keyword",
+            "inline": false
+          },
+          {
+            "value": "woke",
+            "name": "keyword_matched_content",
+            "inline": false
+          },
+          {
+            "value": "blocked",
+            "name": "decision_outcome",
+            "inline": false
+          },
+          {
+            "value": "60",
+            "name": "timeout_duration",
+            "inline": false
+          }
+        ],
+        "description": "Sauf que le woke actuel (en géneral) => bah c'est un casse bonbon avec un manque d'objectivité effroyable, et souvent qui ne connaît pas la réalité du terrain, en plus de ça inaudible, et moralisant à tout va d'une manière toxique et gênante.",
+        "content_scan_version": 0
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

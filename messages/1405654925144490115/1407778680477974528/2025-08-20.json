@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1407778680477974528",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1407778680477974528",
+    "channelName": "MODEL FICHE PASSAGE POUR ÉTRANGER",
+    "content": "Nom: \nPrenom:\nPays:\nReson de la venu:\nComment tu as trouver le serveur ?:",
+    "timestamp": 1755710992689,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

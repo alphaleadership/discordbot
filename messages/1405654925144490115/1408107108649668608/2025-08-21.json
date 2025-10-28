@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1408228437566423060",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1408107108649668608",
+    "channelName": "rtl-world",
+    "content": "<@1212431738219925568> le salon pour rtl Word!!!",
+    "timestamp": 1755818223135,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

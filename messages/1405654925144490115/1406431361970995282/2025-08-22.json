@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1408418265713348628",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406431361970995282",
+    "channelName": "📣・annonces-gouvernement",
+    "content": "# Annonce du Premier Ministre\n\nSuite à un différend idéologique concernant la fin à venir de l'État ; je quitte mes fonctions.",
+    "timestamp": 1755863481692,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

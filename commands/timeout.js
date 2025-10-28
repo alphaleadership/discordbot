@@ -19,7 +19,7 @@ export default {
                 .setDescription('La raison du timeout')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager, permissionValidator, moderationLogger) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
             const durationStr = interaction.options.getString('duree');
@@ -113,8 +113,8 @@ export default {
                 await interaction.reply({ embeds: [successEmbed] });
 
                 // Log the action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'timeout',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
@@ -141,8 +141,8 @@ export default {
                 console.error('Erreur lors du timeout:', error);
                 
                 // Log failed action with ModerationLogger
-                if (moderationLogger) {
-                    await moderationLogger.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'timeout',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,

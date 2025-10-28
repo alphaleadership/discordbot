@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1407850787874410608",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405863556972417094",
+    "channelName": "🚪・départs",
+    "content": "Bon débarras",
+    "timestamp": 1755728184432,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

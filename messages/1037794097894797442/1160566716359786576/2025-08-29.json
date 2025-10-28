@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1410968500817891429",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1160566716359786576",
+    "channelName": "「📆」𝐀𝐧𝐧𝐨𝐧𝐜𝐞𝐬-𝐇𝐞́𝐦𝐢𝐜𝐲𝐜𝐥𝐞",
+    "content": "# Annonce de la présidence de l'Assemblée nationale \n\n<@&1037796999963103273> la session parlementaire de cette semaine commence dans 15 minutes.\nVoici l'ordre du jour :\n- Discours de politique général du <@&1067029788398735402> ;\n- Vote du budget de l'Etat et loi de Programmation Militaire ; \n- PPL Valkyrium & Amendements ;\n- PPL Jiménez-Schneider & Amendements ;\n- PPL Taxation CO2 & Amendements ;\n- PJL Immigration & Amendements ;\n- PPL Pass Culture ;\n- PJL sécurité des bâtiments politique de l'État ;\n- Organisation de la séance de la semaine prochaine ;\n- Discours de monsieur le <@&1072562747692298290> .",
+    "timestamp": 1756471505122,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1037796999963103273",
+        "1067029788398735402",
+        "1072562747692298290"
+      ],
+      "channels": []
+    }
+  }
+]

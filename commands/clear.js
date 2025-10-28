@@ -42,6 +42,22 @@ export default {
             );
 
             if (!permissionResult.success) {
+                // Log permission denial
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logPermissionDenial({
+                        action: 'clear',
+                        userId: interaction.user.id,
+                        userTag: interaction.user.tag,
+                        targetId: null,
+                        targetTag: null,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        reason: permissionResult.message,
+                        requiredPermission: 'MANAGE_MESSAGES',
+                        userPermissions: interaction.member.permissions.toArray()
+                    });
+                }
+                
                 return interaction.reply({
                     content: permissionResult.message,
                     ephemeral: true
@@ -141,8 +157,8 @@ export default {
                 }
 
                 // Log the action with ModerationLogger
-                if (reportManager) {
-                    await reportManager.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'clear',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
@@ -171,8 +187,8 @@ export default {
                 console.error('Erreur lors de la suppression des messages:', error);
                 
                 // Log failed action with ModerationLogger
-                if (reportManager) {
-                    await reportManager.logModerationAction({
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logModerationAction({
                         type: 'clear',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,

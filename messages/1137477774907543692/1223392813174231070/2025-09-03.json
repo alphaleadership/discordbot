@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1412670062325923921",
+    "author": {
+      "id": "1039960875420876840",
+      "username": "liza2_72",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223392813174231070",
+    "channelName": "『💬』welcome-chat",
+    "content": "Welcome",
+    "timestamp": 1756877188999,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

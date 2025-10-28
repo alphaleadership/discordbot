@@ -1,0 +1,380 @@
+[
+  {
+    "id": "1411664900677435472",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Coucou",
+    "timestamp": 1756637539787,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411664964283928708",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Ce serait pour demander à remettre le bot carfigures svp",
+    "timestamp": 1756637554952,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411695765365067866",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "tu sais que t'as acces à ce salon hein",
+    "timestamp": 1756644898502,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411695772344389748",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "https://discord.com/channels/1037794097894797442/1065524414361391164",
+    "timestamp": 1756644900166,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411703669157793882",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Oui mais je sais pas si je peux demander là bas",
+    "timestamp": 1756646782913,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "714869958097502299"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411721952158027838",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Bah ducoup si",
+    "timestamp": 1756651141920,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411725079813034196",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Nan mais si c’est dans les trucs dont je peux parler",
+    "timestamp": 1756651887611,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "714869958097502299"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411732797663739925",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Il n'est plus là le bot ?",
+    "timestamp": 1756653727690,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411732918983856228",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Tu peux faire des propositions",
+    "timestamp": 1756653756615,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411732944862843104",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "T’as accès au salon pu les staff parlent",
+    "timestamp": 1756653762785,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411733028622831788",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Les ticket ca sert aux gens qui veulent parler au staff",
+    "timestamp": 1756653782755,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411733100962254870",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "mais qd t’as accès a chat staff ca sert a rien",
+    "timestamp": 1756653800002,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411733136123105321",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Rg t’as trop trauma mdrr t’as peur de tout mtn",
+    "timestamp": 1756653808385,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411733141864841416",
+    "author": {
+      "id": "714869958097502299",
+      "username": "max.x.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Chill",
+    "timestamp": 1756653809754,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411772634965868819",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Non",
+    "timestamp": 1756663225643,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411772718671724554",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Okay",
+    "timestamp": 1756663245600,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "714869958097502299"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411777939808190485",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Envoie moi le lien vers le bot.",
+    "timestamp": 1756664490416,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1411777960759001128",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411664875087990826",
+    "channelName": "ticket-342",
+    "content": "Pour que je le réinstalle.",
+    "timestamp": 1756664495411,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

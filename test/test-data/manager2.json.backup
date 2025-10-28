@@ -1,0 +1,21 @@
+{
+  "guild2_user2": {
+    "userId": "user2",
+    "username": "Unknown",
+    "discriminator": "0",
+    "reason": "reason2",
+    "addedBy": "mod",
+    "addedAt": "2025-09-01T16:37:42.544Z",
+    "lastSeen": null,
+    "guildId": "guild2",
+    "watchLevel": "observe",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  },
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-09-01T16:37:42.544Z",
+    "lastModified": "2025-09-01T16:37:42.544Z"
+  }
+}

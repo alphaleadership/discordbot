@@ -1,0 +1,266 @@
+{
+  "templates": {
+    "small": {
+      "maxMembers": 100,
+      "description": "Basic setup for small communities",
+      "channels": {
+        "moderation-log": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for moderation logs and actions"
+        },
+        "reports": {
+          "type": "GUILD_TEXT", 
+          "permissions": "mod-only",
+          "description": "Channel for user reports"
+        }
+      },
+      "roles": {
+        "Moderator": {
+          "permissions": [
+            "ManageMessages",
+            "ModerateMembers",
+            "ViewAuditLog",
+            "ManageNicknames"
+          ],
+          "color": "#3498db",
+          "hoist": true,
+          "mentionable": false
+        }
+      },
+      "config": {
+        "antiInvite": {
+          "enabled": true,
+          "whitelistedChannels": []
+        },
+        "charLimit": 2000,
+        "raidDetection": {
+          "enabled": true,
+          "rapidJoinThreshold": 3,
+          "timeWindowMs": 30000,
+          "protectionLevel": "medium"
+        },
+        "doxDetection": {
+          "enabled": true,
+          "autoDelete": true,
+          "ocrEnabled": false
+        },
+        "funCommands": {
+          "enabled": true,
+          "cooldownMs": 10000,
+          "enabledCommands": ["joke", "8ball", "trivia"]
+        }
+      }
+    },
+    "medium": {
+      "maxMembers": 1000,
+      "description": "Enhanced setup for growing communities",
+      "channels": {
+        "moderation-log": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for moderation logs and actions"
+        },
+        "reports": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only", 
+          "description": "Channel for user reports"
+        },
+        "appeals": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for ban appeals and disputes"
+        },
+        "bot-commands": {
+          "type": "GUILD_TEXT",
+          "permissions": "public",
+          "description": "Dedicated channel for bot commands"
+        }
+      },
+      "roles": {
+        "Administrator": {
+          "permissions": [
+            "Administrator"
+          ],
+          "color": "#e74c3c",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Moderator": {
+          "permissions": [
+            "ManageMessages",
+            "ModerateMembers", 
+            "ViewAuditLog",
+            "ManageNicknames",
+            "KickMembers"
+          ],
+          "color": "#3498db",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Helper": {
+          "permissions": [
+            "ManageMessages",
+            "ViewAuditLog"
+          ],
+          "color": "#2ecc71",
+          "hoist": true,
+          "mentionable": false
+        }
+      },
+      "config": {
+        "antiInvite": {
+          "enabled": true,
+          "whitelistedChannels": []
+        },
+        "charLimit": 2000,
+        "raidDetection": {
+          "enabled": true,
+          "rapidJoinThreshold": 5,
+          "timeWindowMs": 60000,
+          "protectionLevel": "high",
+          "autoSlowMode": true
+        },
+        "doxDetection": {
+          "enabled": true,
+          "autoDelete": true,
+          "ocrEnabled": true
+        },
+        "funCommands": {
+          "enabled": true,
+          "cooldownMs": 5000,
+          "enabledCommands": ["joke", "8ball", "trivia", "meme"]
+        },
+        "watchlist": {
+          "enabled": true,
+          "defaultWatchLevel": "observe",
+          "autoNotifications": true
+        }
+      }
+    },
+    "large": {
+      "maxMembers": 10000,
+      "description": "Comprehensive setup for large communities",
+      "channels": {
+        "moderation-log": {
+          "type": "GUILD_TEXT",
+          "permissions": "admin-only",
+          "description": "Channel for moderation logs and actions"
+        },
+        "staff-log": {
+          "type": "GUILD_TEXT", 
+          "permissions": "admin-only",
+          "description": "Channel for staff activity logs"
+        },
+        "reports": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for user reports"
+        },
+        "appeals": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for ban appeals and disputes"
+        },
+        "bot-commands": {
+          "type": "GUILD_TEXT",
+          "permissions": "public",
+          "description": "Dedicated channel for bot commands"
+        },
+        "automod-log": {
+          "type": "GUILD_TEXT",
+          "permissions": "mod-only",
+          "description": "Channel for automated moderation actions"
+        }
+      },
+      "roles": {
+        "Owner": {
+          "permissions": [
+            "Administrator"
+          ],
+          "color": "#9b59b6",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Administrator": {
+          "permissions": [
+            "ManageGuild",
+            "ManageRoles",
+            "ManageChannels",
+            "KickMembers",
+            "BanMembers",
+            "ManageMessages",
+            "ModerateMembers",
+            "ViewAuditLog"
+          ],
+          "color": "#e74c3c",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Moderator": {
+          "permissions": [
+            "ManageMessages",
+            "ModerateMembers",
+            "ViewAuditLog", 
+            "ManageNicknames",
+            "KickMembers"
+          ],
+          "color": "#3498db",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Helper": {
+          "permissions": [
+            "ManageMessages",
+            "ViewAuditLog"
+          ],
+          "color": "#2ecc71",
+          "hoist": true,
+          "mentionable": false
+        },
+        "Trusted": {
+          "permissions": [
+            "SendMessages",
+            "EmbedLinks",
+            "AttachFiles"
+          ],
+          "color": "#f39c12",
+          "hoist": false,
+          "mentionable": false
+        }
+      },
+      "config": {
+        "antiInvite": {
+          "enabled": true,
+          "whitelistedChannels": []
+        },
+        "charLimit": 1500,
+        "raidDetection": {
+          "enabled": true,
+          "rapidJoinThreshold": 8,
+          "timeWindowMs": 60000,
+          "protectionLevel": "maximum",
+          "autoSlowMode": true,
+          "autoJoinRestrictions": true
+        },
+        "doxDetection": {
+          "enabled": true,
+          "autoDelete": true,
+          "ocrEnabled": true
+        },
+        "funCommands": {
+          "enabled": true,
+          "cooldownMs": 3000,
+          "enabledCommands": ["joke", "8ball", "trivia", "meme"],
+          "leaderboardEnabled": true
+        },
+        "watchlist": {
+          "enabled": true,
+          "defaultWatchLevel": "monitor",
+          "autoNotifications": true,
+          "reportIntervalHours": 12
+        }
+      }
+    }
+  }
+}

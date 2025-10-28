@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1409183979755802624",
+    "author": {
+      "id": "957685914329563207",
+      "username": "neltharion_ltv",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430381",
+    "channelName": "「💬」𝐃𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧-𝐑𝐏",
+    "content": "Salut",
+    "timestamp": 1756046042146,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1409249691694272514",
+    "author": {
+      "id": "1219398624039927944",
+      "username": "gracianodecoelho_07745",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430381",
+    "channelName": "「💬」𝐃𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧-𝐑𝐏",
+    "content": "Bonjour.",
+    "timestamp": 1756061709093,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1409887884869243020",
+    "author": {
+      "id": "1223690418957586443",
+      "username": "mrhypixel",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1409588473433817148",
+    "channelName": "For non-French speakers",
+    "content": "Abadakor",
+    "timestamp": 1756213866203,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "972496532794388502"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

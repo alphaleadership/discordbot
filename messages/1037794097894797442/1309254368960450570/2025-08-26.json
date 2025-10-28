@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1409878051222851736",
+    "author": {
+      "id": "879384380152381460",
+      "username": "rg1873",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1309254368960450570",
+    "channelName": "「🧳」𝐀𝐧𝐧𝐨𝐧𝐜𝐞𝐬-𝐝𝐞-𝐥𝐚-𝐏𝐫é𝐬𝐢𝐝𝐞𝐧𝐜𝐞",
+    "content": "La présidence de la République annonce le renvoi de <@789567269327208459> de la tête du gouvernement, et la nomination de <@1036745970077147279> comme nouveau Premier ministre. Il est chargé de former un nouveau gouvernement.\n<:flag_lis:1265964579305951264> Palais du Luxmander <:flag_lis:1265964579305951264>",
+    "timestamp": 1756211521679,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "789567269327208459",
+        "1036745970077147279"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

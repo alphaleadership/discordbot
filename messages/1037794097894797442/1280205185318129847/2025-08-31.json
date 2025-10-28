@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1411769662685053020",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1280205185318129847",
+    "channelName": "logs-transactions",
+    "content": "!!collecct",
+    "timestamp": 1756662516996,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

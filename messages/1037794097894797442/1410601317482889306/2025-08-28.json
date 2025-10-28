@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410601381890490569",
+    "author": {
+      "id": "697799928319180854",
+      "username": "adrien97.",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410601317482889306",
+    "channelName": "ticket-339",
+    "content": "Bonjour, je souhaite faire un partenariat",
+    "timestamp": 1756383977149,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

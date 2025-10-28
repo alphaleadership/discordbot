@@ -9,7 +9,7 @@ export default {
                 .setDescription('L\'utilisateur à retirer de la surveillance')
                 .setRequired(true)
         ),
-    async execute(interaction, adminManager, permissionValidator, watchlistManager) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
 
@@ -17,6 +17,22 @@ export default {
             const permissionResult = permissionValidator.validateWatchlistPermission(interaction.member);
 
             if (!permissionResult.success) {
+                // Log permission denial
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logPermissionDenial({
+                        action: 'watchlist-remove',
+                        userId: interaction.user.id,
+                        userTag: interaction.user.tag,
+                        targetId: targetUser.id,
+                        targetTag: targetUser.tag,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        reason: permissionResult.message,
+                        requiredPermission: 'WATCHLIST_MANAGEMENT',
+                        userPermissions: interaction.member.permissions.toArray()
+                    });
+                }
+                
                 return interaction.reply({
                     content: permissionResult.message,
                     ephemeral: true
@@ -36,6 +52,24 @@ export default {
             const result = await watchlistManager.removeFromWatchlist(targetUser.id, interaction.guild.id);
 
             if (!result.success) {
+                // Log failed watchlist operation
+                if (reportManager && reportManager.moderationLogger) {
+                    await reportManager.moderationLogger.logWatchlistOperation({
+                        operation: 'remove',
+                        moderatorId: interaction.user.id,
+                        moderatorTag: interaction.user.tag,
+                        targetId: targetUser.id,
+                        targetTag: targetUser.tag,
+                        guildId: interaction.guild.id,
+                        guildName: interaction.guild.name,
+                        isGlobal: false,
+                        success: false,
+                        data: {
+                            error: result.error
+                        }
+                    });
+                }
+                
                 return interaction.reply({
                     content: `❌ ${result.error}`,
                     ephemeral: true
@@ -74,11 +108,43 @@ export default {
 
             await interaction.reply({ embeds: [successEmbed] });
 
-            // Log the action
+            // Log the successful watchlist operation
+            if (reportManager && reportManager.moderationLogger) {
+                await reportManager.moderationLogger.logWatchlistOperation({
+                    operation: 'remove',
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    targetId: targetUser.id,
+                    targetTag: targetUser.tag,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name,
+                    isGlobal: false,
+                    success: true,
+                    data: {
+                        originalReason: existingEntry.reason,
+                        originalWatchLevel: existingEntry.watchLevel,
+                        notesCount: existingEntry.notes?.length || 0,
+                        incidentsCount: existingEntry.incidents?.length || 0
+                    }
+                });
+            }
+
+            // Legacy console logging
             console.log(`[WATCHLIST-REMOVE] ${targetUser.tag} (${targetUser.id}) retiré de la surveillance par ${interaction.user.tag} (${interaction.user.id}) - Serveur: ${interaction.guild.name}`);
 
         } catch (error) {
             console.error('Erreur dans la commande watchlist-remove:', error);
+            
+            // Log error
+            if (reportManager && reportManager.moderationLogger) {
+                await reportManager.moderationLogger.logError('watchlist-remove', error, {
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    targetUserId: interaction.options.getUser('utilisateur')?.id,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name
+                });
+            }
             
             const errorMessage = '❌ Une erreur inattendue est survenue lors du retrait de la liste de surveillance.';
             

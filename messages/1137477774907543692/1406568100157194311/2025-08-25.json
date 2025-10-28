@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1409547269190975549",
+    "author": {
+      "id": "1379458972591067286",
+      "username": "omerbey3634",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406568100157194311",
+    "channelName": "🌐︙republic-of-bosqunia",
+    "content": "New military flags of Bosqunia army\n1-Bosqunia land forces flag\n2-Bosqunia 1st army flag",
+    "timestamp": 1756132657097,
+    "attachments": [
+      {
+        "id": "1409547268507566132",
+        "name": "Askeri_flamalar.png",
+        "url": "https://cdn.discordapp.com/attachments/1406568100157194311/1409547268507566132/Askeri_flamalar.png?ex=68adc6b0&is=68ac7530&hm=d27c7b972ec21a826c67e7fe3939d4c3484316179b9264d8eb8d81ee8d037708&",
+        "contentType": "image/png",
+        "size": 140140
+      },
+      {
+        "id": "1409547268926869615",
+        "name": "IMG_20250814_215608.png",
+        "url": "https://cdn.discordapp.com/attachments/1406568100157194311/1409547268926869615/IMG_20250814_215608.png?ex=68adc6b1&is=68ac7531&hm=f436ae7f8749fc959b532f536857704e9ee75d314053dcc6deb0ec905d0938f0&",
+        "contentType": "image/png",
+        "size": 76869
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

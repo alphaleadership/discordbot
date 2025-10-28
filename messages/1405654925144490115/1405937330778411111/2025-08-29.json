@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410908763853950977",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1405937330778411111",
+    "channelName": "📢・annonces",
+    "content": "📢 Annonce officielle – Conférence de presse de Monteloria\n\nLa Principauté de Monteloria convie l’ensemble des journalistes micronationaux et médias internes à une conférence de questions-réponses qui se tiendra le 30 août à 17h.\n\nAu programme :\n\nPrésentation de l’avancement du projet Monteloria\n\nRéflexions sur les projets futurs\n\nDéclaration de la position officielle face aux menaces actuelles\n\n\nQuestion-réponse avec les journalistes.\n\nCet événement se veut un espace d’échange transparent, où chaque journaliste pourra poser ses questions et obtenir des réponses directes.\n\n📍 Lieu : salon conférence \n📅 Date : 30 août 2025\n🕔 Heure : 17h00\n\nTous les médias sont chaleureusement invités à y prendre part.",
+    "timestamp": 1756457262720,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

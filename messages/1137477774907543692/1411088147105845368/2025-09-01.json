@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1412105019595034677",
+    "author": {
+      "id": "1389992460049973390",
+      "username": "wawan_dgad",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411088147105845368",
+    "channelName": "ticket-0031",
+    "content": "<@912767966700003329> nouvelle requête",
+    "timestamp": 1756742472314,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "912767966700003329"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412105212193407117",
+    "author": {
+      "id": "1389992460049973390",
+      "username": "wawan_dgad",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411088147105845368",
+    "channelName": "ticket-0031",
+    "content": "En raison de mes disponibilités limitées, je passe mes pouvoirs à Shyne ce soir. Du coup, je voulais savoir si elle pouvait être votante le temps de mon absence",
+    "timestamp": 1756742518233,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1412106545394745476",
+    "author": {
+      "id": "912767966700003329",
+      "username": "kim_dong_de",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411088147105845368",
+    "channelName": "ticket-0031",
+    "content": "Yep tkt pas de problème",
+    "timestamp": 1756742836093,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

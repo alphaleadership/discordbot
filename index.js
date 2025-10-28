@@ -30,6 +30,9 @@ import AutoWatchHandler from './utils/handlers/AutoWatchHandler.js';
 import UnifiedErrorReporter from './utils/UnifiedErrorReporter.js';
 import PermissionValidator from './utils/PermissionValidator.js';
 import { DMTicketManager } from './utils/DMTicketManager.js';
+import { EconomyManager } from './utils/EconomyManager.js';
+import { ForumReportManager } from './utils/ForumReportManager.js';
+import AutoConfigManager from './utils/AutoConfigManager.js';
 
 let dmTicketManager; // Declare dmTicketManager here
 
@@ -277,7 +280,7 @@ async function saveFileToGitHub(path, content, message) {
         
         return true;
     } catch (error) {
-        console.error(`Erreur lors de la sauvegarde de ${path}:`, error.message);
+        // console.error(`Erreur lors de la sauvegarde de ${path}:`, error.message); // Logs de backup désactivés
         return false;
     }
 }
@@ -302,7 +305,7 @@ async function backupDirectory(dirPath, basePath = '') {
                     `Backup: ${path.join(dirPath, entry.name)}`
                 );
             } catch (error) {
-                console.error(`Erreur lors de la lecture du fichier ${fullEntryPath}:`, error);
+                // console.error(`Erreur lors de la lecture du fichier ${fullEntryPath}:`, error); // Logs de backup désactivés
             }
         }
     }
@@ -311,7 +314,7 @@ async function backupDirectory(dirPath, basePath = '') {
 // Déclaration de la fonction backupToGitHub
 async function backupToGitHub() {
     if (isLoggingToGithub) {
-        console.log('Une sauvegarde est déjà en cours, annulation de la nouvelle tentative');
+        // console.log('Une sauvegarde est déjà en cours, annulation de la nouvelle tentative'); // Logs de backup désactivés
         return false;
     }
     
@@ -323,7 +326,7 @@ async function backupToGitHub() {
             return false;
         }
         
-        console.log('Début de la sauvegarde sur GitHub...');
+        // console.log('Début de la sauvegarde sur GitHub...'); // Logs de backup désactivés
         
         // Sauvegarder chaque fichier/dossier de la liste
         for (const filePath of BACKUP_FILES) {
@@ -339,7 +342,7 @@ async function backupToGitHub() {
                     await saveFileToGitHub(filePath, content, `Backup: ${filePath}`);
                 }
             } else {
-                console.warn(`Le fichier/dossier n'existe pas: ${filePath}`);
+                // console.warn(`Le fichier/dossier n'existe pas: ${filePath}`); // Logs de backup désactivés
             }
         }
         
@@ -350,10 +353,10 @@ async function backupToGitHub() {
         saveBackupTime();
         initInteractionConfig(sharedConfig);
         
-        console.log('Sauvegarde sur GitHub terminée avec succès');
+        // console.log('Sauvegarde sur GitHub terminée avec succès'); // Logs de backup désactivés
         return true;
     } catch (error) {
-        console.error('Erreur lors de la sauvegarde sur GitHub:', error);
+        // console.error('Erreur lors de la sauvegarde sur GitHub:', error); // Logs de backup désactivés
         return false;
     } finally {
         isLoggingToGithub = false;
@@ -392,7 +395,7 @@ initInteractionConfig(sharedConfig);
 
 function initOctokit() {
     if (!process.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN === 'votre_token_github') {
-        console.warn('Avertissement: Aucun token GitHub valide trouvé. La journalisation sera désactivée.');
+        // console.warn('Avertissement: Aucun token GitHub valide trouvé. La journalisation sera désactivée.'); // Logs de backup désactivés
         return null;
     }
     
@@ -411,11 +414,11 @@ function initOctokit() {
             }
         });
         
-        console.log('✅ Configuration GitHub chargée avec succès');
+        // console.log('✅ Configuration GitHub chargée avec succès'); // Logs de backup désactivés
         return instance;
         
     } catch (error) {
-        console.error('❌ Erreur lors de l\'initialisation d\'Octokit:', error.message);
+        // console.error('❌ Erreur lors de l\'initialisation d\'Octokit:', error.message); // Logs de backup désactivés
         return null;
     }
 }
@@ -479,18 +482,18 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
     // Calculer la vitesse moyenne de frappe (caractères/seconde)
     const speed = charCount / windowTime;
     
-    console.log(`Analyse anti-spam pour ${userId}:`);
-    console.log(`- Messages analysés: ${userData.messages.length}`);
-    console.log(`- Fenêtre temporelle: ${windowTime.toFixed(2)} secondes`);
-    console.log(`- Caractères totaux: ${charCount}`);
-    console.log(`- Vitesse: ${speed.toFixed(2)} caractères/seconde (limite: ${charLimit} cps)`);
+    // console.log(`Analyse anti-spam pour ${userId}:`); // Logs d'analyse de message désactivés
+    // console.log(`- Messages analysés: ${userData.messages.length}`); // Logs d'analyse de message désactivés
+    // console.log(`- Fenêtre temporelle: ${windowTime.toFixed(2)} secondes`); // Logs d'analyse de message désactivés
+    // console.log(`- Caractères totaux: ${charCount}`); // Logs d'analyse de message désactivés
+    // console.log(`- Vitesse: ${speed.toFixed(2)} caractères/seconde (limite: ${charLimit} cps)`); // Logs d'analyse de message désactivés
     
     // Mettre à jour le suivi des messages
     spamTracker.set(userId, userData);
     
     // Vérifier si la limite est dépassée
     if (speed > charLimit) {
-        console.log(`Spam détecté pour ${userId}: ${speed.toFixed(2)} caractères/seconde`);
+        // console.log(`Spam détecté pour ${userId}: ${speed.toFixed(2)} caractères/seconde`); // Logs d'analyse de message désactivés
         
         // Ajouter un avertissement avec le gestionnaire
         const warn = warnManager.addWarn(
@@ -500,7 +503,7 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
         );
         
         // Envoyer un message d'avertissement en MP
-        const user = await guild.client.users.fetch(userId).catch(console.error);
+        const user = await guild.client.users.fetch(userId).catch(error => { /* console.error(error); */ }); // Logs d'analyse de message désactivés
         if (user) {
             const embed = new EmbedBuilder()
                 .setColor('#FFA500')
@@ -514,29 +517,29 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
                 .setFooter({ text: `ID: ${warn.id}` });
             
             await user.send({ embeds: [embed] })
-                .catch(() => console.log(`Impossible d'envoyer un MP à ${user.tag}`));
+                .catch(() => { /* console.log(`Impossible d'envoyer un MP à ${user.tag}`); */ }); // Logs d'analyse de message désactivés
         }
         
-        console.log(`Avertissement ${warn.count}/2 pour ${userId} (ID: ${warn.id})`);
+        // console.log(`Avertissement ${warn.count}/2 pour ${userId} (ID: ${warn.id})`); // Logs d'analyse de message désactivés
         
         // Si c'est le deuxième avertissement, bannir
         if (warn.count >= 2) {
             try {
                 await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
-                console.log(`Utilisateur ${userId} banni après 2 avertissements`);
+                // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
                 
                 // Ajouter à la banlist
                 const banReason = `Spam détecté (après 2 avertissements)`;
                 const result = await interactionHandler.addToBanlist(userId, banReason, guild.client.user.id);
                 
                 if (!result.success) {
-                    console.error(`Erreur lors de l'ajout à la banlist: ${result.message}`);
+                    // console.error(`Erreur lors de l'ajout à la banlist: ${result.message}`); // Logs d'analyse de message désactivés
                 }
                 
                 // Supprimer les avertissements après bannissement
                 warnManager.clearWarns(userId);
             } catch (error) {
-                console.error(`Erreur lors du bannissement de ${userId}:`, error);
+                // console.error(`Erreur lors du bannissement de ${userId}:`, error); // Logs d'analyse de message désactivés
             }
         }
         
@@ -584,6 +587,11 @@ for (const token of tokens) {
     const telegramIntegration = new TelegramIntegration(process.env.TELEGRAM_BOT_TOKEN, client);
     const funCommandsManager = new FunCommandsManager(guildConfig);
     
+    // Initialize new managers
+    const economyManager = new EconomyManager('data/economy.json');
+    const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
+    const autoConfigManager = new AutoConfigManager(client, guildConfig);
+    
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
     
@@ -598,12 +606,13 @@ for (const token of tokens) {
     
     // Initialize interaction handler with new managers
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
-    
-    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator);
+    dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
+    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager,dmTicketManager);
     commandHandler.loadCommands();
 
     // Enregistrer les commandes
     client.once('ready', async () => {
+       
         await commandHandler.registerCommands();
         console.log(`=== BOT CONNECTÉ EN TANT QUE ${client.user.tag} ===`);
         console.log(`ID du bot: ${client.user.id}`);
@@ -643,15 +652,15 @@ for (const token of tokens) {
     // Gestion des messages
     client.on('messageCreate', async message => {
         const isDM = message.guild === null;
-        console.log(`Nouveau message reçu - Type: ${message.channel.type}, DM: ${isDM}`);
+        // console.log(`Nouveau message reçu - Type: ${message.channel.type}, DM: ${isDM}`); // Logs d'analyse de message désactivés
         
         // Handle DMs
         if (isDM) { // DM channel ou message sans serveur
-            console.log(`DM reçu de ${message.author.tag}: ${message.content}`);
+            // console.log(`DM reçu de ${message.author.tag}: ${message.content}`); // Logs d'analyse de message désactivés
             try {
                 await dmTicketManager.handleDM(message);
             } catch (error) {
-                console.error('Erreur dans la gestion du DM:', error);
+                // console.error('Erreur dans la gestion du DM:', error); // Logs d'analyse de message désactivés
             }
             return;
         }
@@ -669,87 +678,49 @@ for (const token of tokens) {
                 await message.delete().catch(console.error);
             }
         }
-    });
+        if (message.author.bot) return;
 
-    
+        // Système de mine terrestre
+        // Toute personne qui envoie un message et dont l'ensemble des rôles sont sous le bot a 1% de chance de prendre un mute de 10 minutes.
+        if (message.guild) { // S'assurer que ce n'est pas un DM
+            const member = message.member;
+            const botMember = message.guild.members.me;
 
-    // Gestion des nouveaux membres qui rejoignent le serveur
-    client.on('guildMemberAdd', async member => {
-        try {
-            // Vérifier si l'utilisateur est dans la banlist
-            const { banned, reason } = await banlistManager.isBanned(member.id);
-            
-            if (banned) {
-                // Bannir l'utilisateur avec la raison du bannissement
-                try {
-                    await member.ban({ 
-                        reason: `Banni automatiquement - ${reason || 'Raison non spécifiée'}` 
-                    });
-                    
-                    console.log(`[BAN AUTOMATIQUE] ${member.user.tag} (${member.id}) a été banni automatiquement car il figure dans la banlist.`);
-                    
-                    // Envoyer un message dans le canal de logs si configuré
-                    const guildConfigs = guildConfig.loadConfig();
-                    const guildConfigData = guildConfigs[member.guild.id] || {};
-                    
-                    if (guildConfigData.logChannelId) {
-                        const logChannel = member.guild.channels.cache.get(guildConfigData.logChannelId);
-                        if (logChannel) {
-                            const embed = new EmbedBuilder()
-                                .setColor('#ff0000')
-                                .setTitle('🚨 Bannissement Automatique')
-                                .setDescription(`**${member.user.tag}** a été banni automatiquement car il figure dans la banlist.`)
-                                .addFields(
-                                    { name: 'ID', value: member.id, inline: true },
-                                    { name: 'Raison', value: reason || 'Non spécifiée', inline: true },
-                                    { name: 'Compte créé le', value: member.user.createdAt.toLocaleString('fr-FR'), inline: true }
-                                )
-                                .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
-                                .setTimestamp();
-                                
-                            await logChannel.send({ embeds: [embed] });
+            // Vérifier si le bot a la permission de gérer les rôles et de timeout
+            if (botMember && botMember.permissions.has(PermissionsBitField.Flags.ModerateMembers)) {
+                // Vérifier si le rôle le plus élevé de l'utilisateur est inférieur à celui du bot
+                // et que l'utilisateur n'est pas le propriétaire du serveur
+                if (member && botMember.roles.highest.position > member.roles.highest.position && member.id !== message.guild.ownerId) {
+                    // 1% de chance de déclencher la mine
+                    if (Math.random() < 0.01) {
+                        const muteDuration = 10 * 60 * 1000; // 10 minutes en millisecondes
+                        try {
+                            await member.timeout(muteDuration, 'Mine terrestre activée');
+                            await message.channel.send(`💥 **${member.user.tag}** a marché sur une mine terrestre et est mis en sourdine pendant 10 minutes !`);
+                            console.log(`[MINE TERRESTRE] ${member.user.tag} a été mis en sourdine pendant 10 minutes.`);
+                        } catch (error) {
+                            console.error(`Erreur lors de l'application du timeout pour ${member.user.tag}:`, error);
+                            // Gérer les erreurs de permission ou autres
+                            await message.channel.send(`Oops ! Une mine terrestre a tenté de s'activer pour **${member.user.tag}**, mais quelque chose a mal tourné. (Vérifiez les permissions du bot)`);
                         }
                     }
-                } catch (error) {
-                    console.error(`Erreur lors du bannissement automatique de ${member.user.tag}:`, error);
-                }
-                return; // Exit early if user was banned
-            }
-
-            // Check watchlist for new member
-            if (watchlistManager && watchlistManager.handleUserJoin) {
-                await watchlistManager.handleUserJoin(member);
-            }
-
-            // Check for raid detection
-            if (raidDetector && raidDetector.detectRapidJoins) {
-                const raidResult = raidDetector.detectRapidJoins(member.guild.id, member);
-                if (raidResult.isRaid) {
-                    console.log(`[RAID DETECTED] Potential raid detected in ${member.guild.name}: ${raidResult.severity} severity`);
-                    
-                    // Apply protective measures
-                    if (raidDetector.applyProtectiveMeasures) {
-                        await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity);
-                    }
-                    
-                    // Notify administrators
-                    if (raidDetector.notifyAdministrators) {
-                        await raidDetector.notifyAdministrators(member.guild, raidResult);
-                    }
                 }
             }
-        } catch (error) {
-            await errorReporter.reportError(error, 'GuildMemberAdd', {
-                memberId: member.id,
-                guildId: member.guild.id,
-                memberTag: member.user.tag
-            }, client);
         }
-    });
-
-    // Détection des liens d'invitation dans les messages
-    client.on('messageCreate', async message => {
-        if (message.author.bot) return;
+        
+        // Award economy currency for message activity
+        if (economyManager && message.guild) {
+            try {
+                await economyManager.addCurrency(
+                    message.author.id, 
+                    message.guild.id, 
+                    1, // Default message reward
+                    'Message sent'
+                );
+            } catch (error) {
+                console.error('Error awarding currency for message:', error);
+            }
+        }
         
         // Handle auto-watch for keywords
         if (autoWatchHandler) {
@@ -919,8 +890,126 @@ for (const token of tokens) {
         }
     });
 
+    
+
+    // Gestion des nouveaux membres qui rejoignent le serveur
+    client.on('guildMemberAdd', async member => {
+        try {
+            // Vérifier si l'utilisateur est dans la banlist
+            const { banned, reason } = await banlistManager.isBanned(member.id);
+            
+            if (banned) {
+                // Bannir l'utilisateur avec la raison du bannissement
+                try {
+                    await member.ban({ 
+                        reason: `Banni automatiquement - ${reason || 'Raison non spécifiée'}` 
+                    });
+                    
+                    console.log(`[BAN AUTOMATIQUE] ${member.user.tag} (${member.id}) a été banni automatiquement car il figure dans la banlist.`);
+                    
+                    // Envoyer un message dans le canal de logs si configuré
+                    const guildConfigs = guildConfig.loadConfig();
+                    const guildConfigData = guildConfigs[member.guild.id] || {};
+                    
+                    if (guildConfigData.logChannelId) {
+                        const logChannel = member.guild.channels.cache.get(guildConfigData.logChannelId);
+                        if (logChannel) {
+                            const embed = new EmbedBuilder()
+                                .setColor('#ff0000')
+                                .setTitle('🚨 Bannissement Automatique')
+                                .setDescription(`**${member.user.tag}** a été banni automatiquement car il figure dans la banlist.`)
+                                .addFields(
+                                    { name: 'ID', value: member.id, inline: true },
+                                    { name: 'Raison', value: reason || 'Non spécifiée', inline: true },
+                                    { name: 'Compte créé le', value: member.user.createdAt.toLocaleString('fr-FR'), inline: true }
+                                )
+                                .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
+                                .setTimestamp();
+                                
+                            await logChannel.send({ embeds: [embed] });
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Erreur lors du bannissement automatique de ${member.user.tag}:`, error);
+                }
+                return; // Exit early if user was banned
+            }
+
+            // Check watchlist for new member
+            if (watchlistManager && watchlistManager.handleUserJoin) {
+                await watchlistManager.handleUserJoin(member);
+            }
+
+            // Check for raid detection
+            if (raidDetector && raidDetector.detectRapidJoins) {
+                const raidResult = raidDetector.detectRapidJoins(member.guild.id, member);
+                if (raidResult.isRaid) {
+                    console.log(`[RAID DETECTED] Potential raid detected in ${member.guild.name}: ${raidResult.severity} severity`);
+                    
+                    // Apply protective measures
+                    if (raidDetector.applyProtectiveMeasures) {
+                        await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity);
+                    }
+                    
+                    // Notify administrators
+                    if (raidDetector.notifyAdministrators) {
+                        await raidDetector.notifyAdministrators(member.guild, raidResult);
+                    }
+                }
+            }
+        } catch (error) {
+            await errorReporter.reportError(error, 'GuildMemberAdd', {
+                memberId: member.id,
+                guildId: member.guild.id,
+                memberTag: member.user.tag
+            }, client);
+        }
+    });
+
+    // Détection des liens d'invitation dans les messages
+    client.on('messageCreate', async message => {
+    
+    });
+
+    // Economy activity tracking - Reaction rewards
+    client.on('messageReactionAdd', async (reaction, user) => {
+        if (user.bot) return;
+        if (!reaction.message.guild) return; // Skip DMs
+        
+        try {
+            await economyManager.addCurrency(
+                user.id,
+                reaction.message.guild.id,
+                0.5, // Reaction reward (half of message reward)
+                'Reaction added'
+            );
+        } catch (error) {
+            console.error('Error awarding currency for reaction:', error);
+        }
+    });
+
+    // Economy activity tracking - Voice activity rewards
+    client.on('voiceStateUpdate', async (oldState, newState) => {
+        if (newState.member.user.bot) return;
+        if (!newState.guild) return;
+        
+        // Award currency when user joins a voice channel
+        if (!oldState.channel && newState.channel) {
+            try {
+                await economyManager.addCurrency(
+                    newState.member.id,
+                    newState.guild.id,
+                    2, // Voice join reward
+                    'Joined voice channel'
+                );
+            } catch (error) {
+                console.error('Error awarding currency for voice join:', error);
+            }
+        }
+    });
+
     // Initialize DM Ticket Manager
-    dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
+
     
     
 
@@ -942,7 +1031,7 @@ const BACKUP_INTERVAL = 5 * 60 * 1000; // 5 minutes
 
 // Utiliser l'instance Octokit déjà configurée
 if (!octokit) {
-    console.warn('⚠️ La sauvegarde sur GitHub est désactivée (problème de configuration)');
+    // console.warn('⚠️ La sauvegarde sur GitHub est désactivée (problème de configuration)'); // Logs de backup désactivés
 }
 
 // Variables de suivi des sauvegardes
@@ -963,7 +1052,7 @@ function saveBackupTime() {
         
         fs.writeFileSync('data/backup_info.json', JSON.stringify(backupInfo, null, 2));
     } catch (error) {
-        console.error('Erreur lors de la sauvegarde des informations de sauvegarde:', error);
+        // console.error('Erreur lors de la sauvegarde des informations de sauvegarde:', error); // Logs de backup désactivés
     }
 }
 
@@ -992,7 +1081,7 @@ function loadBackupTime(interaction = null) {
             interaction.reply('ℹ️ Aucune configuration de sauvegarde précédente trouvée.');
         }
     } catch (error) {
-        console.error('Erreur lors du chargement de la configuration de sauvegarde:', error);
+        // console.error('Erreur lors du chargement de la configuration de sauvegarde:', error); // Logs de backup désactivés
         if (interaction) {
             interaction.reply('❌ Erreur lors du chargement de la configuration de sauvegarde.');
         }
@@ -1005,7 +1094,7 @@ loadBackupTime();
 // Planifier des sauvegardes régulières
 setInterval(() => {
     if (octokit) {
-        console.log('\n=== Démarrage de la sauvegarde planifiée ===');
+        // console.log('\n=== Démarrage de la sauvegarde planifiée ==='); // Logs de backup désactivés
         backupToGitHub()
             .then(() => {
                 // Mettre à jour le temps de la dernière sauvegarde
@@ -1013,7 +1102,7 @@ setInterval(() => {
                 initInteractionConfig(sharedConfig);
                 saveBackupTime();
             })
-            .catch(console.error);
+            .catch(error => { /* console.error(error); */ }); // Logs de backup désactivés
     }
 }, BACKUP_INTERVAL);
 
@@ -1028,7 +1117,7 @@ async function forceBackup() {
         saveBackupTime();
         initInteractionConfig(sharedConfig);
     } else {
-        console.error('Impossible de sauvegarder: configuration GitHub manquante');
+        // console.error('Impossible de sauvegarder: configuration GitHub manquante'); // Logs de backup désactivés
     }
 }
 
@@ -1044,7 +1133,7 @@ async function processLogQueue() {
     
     // Vérifier si Octokit est correctement configuré
     if (!octokit) {
-        console.warn('Octokit n\'est pas configuré. Impossible d\'envoyer les logs vers GitHub.');
+        // console.warn('Octokit n\'est pas configuré. Impossible d\'envoyer les logs vers GitHub.'); // Logs de backup désactivés
         logQueue = []; // Vider la file pour éviter une boucle infinie
         return;
     }
@@ -1058,7 +1147,7 @@ async function processLogQueue() {
         logsToProcess = logQueue.splice(0, batchSize).join('\n') + '\n';
         const logCount = logsToProcess.split('\n').filter(line => line.trim()).length;
         
-        console.log(`Tentative d'envoi de ${logCount} logs vers GitHub...`);
+        // console.log(`Tentative d'envoi de ${logCount} logs vers GitHub...`); // Logs de backup désactivés
 
         // Vérification des variables d'environnement
         if (!process.env.GITHUB_OWNER || !process.env.GITHUB_REPO) {
@@ -1070,7 +1159,7 @@ async function processLogQueue() {
         let fileSha = undefined;
         
         try {
-            console.log('Récupération du contenu existant du fichier...');
+            // console.log('Récupération du contenu existant du fichier...'); // Logs de backup désactivés
             const { data } = await octokit.repos.getContent({
                 owner: process.env.GITHUB_OWNER,
                 repo: process.env.GITHUB_REPO,
@@ -1081,15 +1170,15 @@ async function processLogQueue() {
             if (data && data.content) {
                 existingContent = Buffer.from(data.content, 'base64').toString('utf8');
                 fileSha = data.sha;
-                console.log(`Fichier existant récupéré (${existingContent.length} caractères)`);
+                // console.log(`Fichier existant récupéré (${existingContent.length} caractères)`); // Logs de backup désactivés
             }
         } catch (error) {
             // Si le fichier n'existe pas (erreur 404), on continue avec un contenu vide
             if (error.status !== 404) {
-                console.error('Erreur lors de la récupération du fichier de logs:', error.message);
+                // console.error('Erreur lors de la récupération du fichier de logs:', error.message); // Logs de backup désactivés
                 throw error;
             }
-            console.log('Aucun fichier de logs existant trouvé, création d\'un nouveau fichier.');
+            // console.log('Aucun fichier de logs existant trouvé, création d\'un nouveau fichier.'); // Logs de backup désactivés
         }
 
         // Préparer le nouveau contenu
@@ -1097,13 +1186,13 @@ async function processLogQueue() {
         
         // Vérifier la taille du contenu
         if (newContent.length > 1000000) { // 1MB max
-            console.warn('Le fichier de logs dépasse 1MB, il sera tronqué.');
+            // console.warn('Le fichier de logs dépasse 1MB, il sera tronqué.'); // Logs de backup désactivés
             // Garder seulement les logs les plus récents
             const truncatedContent = newContent.slice(-900000); // Garder les 900 derniers KB
             logsToProcess = truncatedContent;
         }
         
-        console.log('Envoi des mises à jour vers GitHub...');
+        // console.log('Envoi des mises à jour vers GitHub...'); // Logs de backup désactivés
         
         try {
             const response = await octokit.repos.createOrUpdateFileContents({
@@ -1124,7 +1213,7 @@ async function processLogQueue() {
                 }
             });
 
-            console.log(`Logs envoyés avec succès vers GitHub. Commit SHA: ${response.data.commit.sha}`);
+            // console.log(`Logs envoyés avec succès vers GitHub. Commit SHA: ${response.data.commit.sha}`); // Logs de backup désactivés
             
             // Sauvegarder une copie locale des logs
             try {
@@ -1135,32 +1224,32 @@ async function processLogQueue() {
                 
                 const logFilePath = path.join(logDir, 'bot.log');
                 await fs.promises.appendFile(logFilePath, logsToProcess);
-                console.log('Fichier de log local mis à jour avec succès');
+                // console.log('Fichier de log local mis à jour avec succès'); // Logs de backup désactivés
             } catch (fsError) {
-                console.error('Erreur lors de l\'écriture du fichier de log local:', fsError);
+                // console.error('Erreur lors de l\'écriture du fichier de log local:', fsError); // Logs de backup désactivés
             }
             
         } catch (apiError) {
-            console.error('Erreur lors de l\'appel à l\'API GitHub:', apiError.message);
+            // console.error('Erreur lors de l\'appel à l\'API GitHub:', apiError.message); // Logs de backup désactivés
             if (apiError.status === 403) {
-                console.error('Erreur 403 - Vérifiez les permissions du token GitHub et les limites de taux.');
+                // console.error('Erreur 403 - Vérifiez les permissions du token GitHub et les limites de taux.'); // Logs de backup désactivés
             }
             throw apiError; // Relancer pour le bloc catch principal
         }
 
     } catch (error) {
-        console.error('Erreur lors de l\'envoi des logs vers GitHub:', error.message);
+        // console.error('Erreur lors de l\'envoi des logs vers GitHub:', error.message); // Logs de backup désactivés
         
         // Remettre les logs non traités dans la file d'attente
         if (logsToProcess) {
             const failedLogs = logsToProcess.trim().split('\n').filter(log => log.trim());
             logQueue.unshift(...failedLogs);
-            console.log(`Remis ${failedLogs.length} logs dans la file d'attente`);
+            // console.log(`Remis ${failedLogs.length} logs dans la file d'attente`); // Logs de backup désactivés
         }
         
         // Attendre avant de réessayer
         const retryDelay = 30000; // 30 secondes
-        console.log(`Nouvelle tentative dans ${retryDelay/1000} secondes...`);
+        // console.log(`Nouvelle tentative dans ${retryDelay/1000} secondes...`); // Logs de backup désactivés
         await new Promise(resolve => setTimeout(resolve, retryDelay));
         
     } finally {
@@ -1168,7 +1257,7 @@ async function processLogQueue() {
         
         // Vérifier s'il reste des logs à traiter
         if (logQueue.length > 0) {
-            console.log(`Il reste ${logQueue.length} logs à traiter, nouvelle tentative...`);
+            // console.log(`Il reste ${logQueue.length} logs à traiter, nouvelle tentative...`); // Logs de backup désactivés
             setImmediate(processLogQueue); // Utiliser setImmediate pour éviter la récursion trop profonde
         } else {
             

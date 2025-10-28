@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1406675165831762071",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1353311763696717834",
+    "channelName": "「🤖」commandes-ssre",
+    "content": "test",
+    "timestamp": 1755447894295,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

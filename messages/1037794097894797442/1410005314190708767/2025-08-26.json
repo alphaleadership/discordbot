@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1410005314190708767",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410005314190708767",
+    "channelName": "Projet de Loi Alreinder, relatif aux informations transmises au parlement en temps de guerre",
+    "content": "__Article unique__\nLe Président de la République, doit convoquer la Chambre des Représentants, 48h au maximum, après toute décision militaire, pouvant impliquer des représailles sérieuses sur notre territoire national. \nCela sera au Premier Ministre de juger si la décision prise par le Président, relève de ce qui a été précisé ci-dessus. \nDurant la session, le Premier Ministre, informe le Parlement de la situation, ou en cas d'indisponibilité de ce dernier, le Ministre de la Défense, ou de la diplomatie peut le faire. \nEnsuite, le Parlement pourra déposer ou non, une motion de non-soutien à l'opération, et une injonction de cesser toutes les activités de guerre",
+    "timestamp": 1756241863535,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

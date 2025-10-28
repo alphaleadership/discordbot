@@ -1,0 +1,692 @@
+[
+  {
+    "id": "1407384869289459722",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Nnnaaaannnn",
+    "timestamp": 1755617100785,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407384942056570972",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Tu l’avais déjà je crois",
+    "timestamp": 1755617118134,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1030801549959630849"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407385006145540198",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Non",
+    "timestamp": 1755617133414,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407385135443214346",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Masterclass lui",
+    "timestamp": 1755617164241,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407385235498340372",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Snif",
+    "timestamp": 1755617188096,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "999736048596816014"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407385789901574266",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Oh merci",
+    "timestamp": 1755617320276,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407385853776498838",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Qu'y a t'il ?",
+    "timestamp": 1755617335505,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407387273955250258",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Naaaaaan",
+    "timestamp": 1755617674102,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407387314086346934",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Trop tard",
+    "timestamp": 1755617683670,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407387358608752700",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Haha",
+    "timestamp": 1755617694285,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421421231013920",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Désolé",
+    "timestamp": 1755625815447,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421473508823140",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Nnnnnnaaaaaannnnnn",
+    "timestamp": 1755625827911,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421512147009577",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "S'il te plaît !",
+    "timestamp": 1755625837123,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421535479922689",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Donne le moi !",
+    "timestamp": 1755625842686,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421605092786229",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Montre tes plus rares chef\nHistoire que je vois",
+    "timestamp": 1755625859283,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421653251789002",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "J'ai pas compris",
+    "timestamp": 1755625870765,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407421752589684898",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Fais /balls info et trie pour montrer les plus rares",
+    "timestamp": 1755625894449,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422426865991750",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Et comment ont fait sa ?",
+    "timestamp": 1755626055209,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422575696679076",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "\"/balls list sort:rarity\"",
+    "timestamp": 1755626090693,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422606088343602",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Ok",
+    "timestamp": 1755626097939,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422896002957352",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Ta deux reichtangle ?",
+    "timestamp": 1755626167060,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422934145958021",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Merci !",
+    "timestamp": 1755626176154,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422953636892824",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Oui. 😁",
+    "timestamp": 1755626180801,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1030801549959630849"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407422984234336468",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "A oe le riche",
+    "timestamp": 1755626188096,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423084209770556",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "🙂‍↕️",
+    "timestamp": 1755626211932,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423156045746348",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Je croyais que j'avais que 2 Roman Empire mais j'en ai 4 mdr",
+    "timestamp": 1755626229059,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423214011023471",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Oe t'est riche",
+    "timestamp": 1755626242879,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423222563078145",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "YA DES NOUVELLES+",
+    "timestamp": 1755626244918,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423237742264320",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "YAYAY",
+    "timestamp": 1755626248537,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423280293482597",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "A c'est mis a jour ?",
+    "timestamp": 1755626258682,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423303517208697",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Oui !",
+    "timestamp": 1755626264219,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407423381996961937",
+    "author": {
+      "id": "1030801549959630849",
+      "username": "banane_fr5",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "A ok",
+    "timestamp": 1755626282930,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407429258753605794",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Jpp à chaque fois que t’es proche de la fin ils en rajoutent mdr",
+    "timestamp": 1755627684058,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "999736048596816014"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1407429324432347287",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1281218220875059200",
+    "channelName": "「🏐」𝐁𝐚𝐥𝐥𝐬𝐃𝐞𝐱",
+    "content": "Ptdr tellement",
+    "timestamp": 1755627699717,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

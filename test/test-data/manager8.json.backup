@@ -1,0 +1,21 @@
+{
+  "guild8_user8": {
+    "userId": "user8",
+    "username": "Unknown",
+    "discriminator": "0",
+    "reason": "reason8",
+    "addedBy": "mod",
+    "addedAt": "2025-09-01T16:37:45.751Z",
+    "lastSeen": null,
+    "guildId": "guild8",
+    "watchLevel": "observe",
+    "notes": [],
+    "incidents": [],
+    "active": true
+  },
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-09-01T16:37:45.751Z",
+    "lastModified": "2025-09-01T16:37:45.751Z"
+  }
+}

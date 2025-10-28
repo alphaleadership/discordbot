@@ -1,0 +1,88 @@
+{
+  "_metadata": {
+    "version": "1.0",
+    "created": "2025-09-01T16:38:12.008Z",
+    "lastModified": "2025-09-01T16:38:12.098Z"
+  },
+  "guilds": {
+    "test-guild-123": {
+      "totalCurrency": 305,
+      "baseValue": 1,
+      "currentValue": 1.1187443502374725,
+      "inflationRate": 0,
+      "lastUpdate": "2025-09-01T16:38:12.084Z",
+      "users": {
+        "test-user-456": {
+          "balance": 305,
+          "totalEarned": 500,
+          "totalSpent": 195,
+          "lastActivity": "2025-09-01T16:38:12.068Z",
+          "lastDailyBonus": null,
+          "purchases": {
+            "role_color": {
+              "count": 2,
+              "totalSpent": 195,
+              "lastPurchase": "2025-09-01T16:38:12.084Z"
+            }
+          }
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      },
+      "shop": {
+        "role_color": {
+          "name": "Custom Role Color",
+          "description": "Change your role color for 30 days",
+          "basePrice": 100,
+          "currentPrice": 107,
+          "stock": -1,
+          "purchases": 2,
+          "category": "cosmetic"
+        },
+        "nickname_change": {
+          "name": "Nickname Change",
+          "description": "Change your nickname (moderator approval required)",
+          "basePrice": 50,
+          "currentPrice": 45,
+          "stock": -1,
+          "purchases": 0,
+          "category": "cosmetic"
+        },
+        "channel_boost": {
+          "name": "Channel Boost",
+          "description": "Boost a channel to the top of the list for 24 hours",
+          "basePrice": 200,
+          "currentPrice": 197,
+          "stock": 5,
+          "purchases": 0,
+          "category": "utility"
+        },
+        "lottery_ticket": {
+          "name": "Lottery Ticket",
+          "description": "Enter the weekly lottery draw",
+          "basePrice": 25,
+          "currentPrice": 22,
+          "stock": -1,
+          "purchases": 0,
+          "category": "gambling"
+        },
+        "voice_priority": {
+          "name": "Voice Priority",
+          "description": "Skip voice channel queue for 7 days",
+          "basePrice": 75,
+          "currentPrice": 70,
+          "stock": 10,
+          "purchases": 0,
+          "category": "utility"
+        }
+      }
+    }
+  }
+}

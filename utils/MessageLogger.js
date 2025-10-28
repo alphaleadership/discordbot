@@ -39,6 +39,293 @@ class MessageLogger {
     }
 
     /**
+     * Log message deletion event
+     * @param {Object} deletedMessage - Deleted message data
+     * @param {import('discord.js').Client} client - Discord client for reporting
+     */
+    async logMessageDeletion(deletedMessage, client = null) {
+        try {
+            const timestamp = new Date().toISOString();
+            const guildId = deletedMessage.guildId || deletedMessage.guild?.id;
+            const channelId = deletedMessage.channelId || deletedMessage.channel?.id;
+            
+            if (!guildId || !channelId) return;
+
+            const logEntry = {
+                messageId: deletedMessage.id,
+                author: {
+                    id: deletedMessage.author?.id,
+                    username: deletedMessage.author?.username,
+                    discriminator: deletedMessage.author?.discriminator,
+                    bot: deletedMessage.author?.bot
+                },
+                channelId: channelId,
+                channelName: deletedMessage.channel?.name,
+                guildId: guildId,
+                guildName: deletedMessage.guild?.name,
+                content: deletedMessage.content || '[Contenu non disponible]',
+                originalTimestamp: deletedMessage.createdTimestamp,
+                deletedAt: timestamp,
+                attachments: deletedMessage.attachments?.map(a => ({
+                    id: a.id,
+                    name: a.name,
+                    url: a.url,
+                    contentType: a.contentType,
+                    size: a.size
+                })) || [],
+                embeds: deletedMessage.embeds || [],
+                logType: 'message_deletion'
+            };
+
+            // Save to deletion log file
+            const date = new Date().toISOString().split('T')[0];
+            const deletionLogPath = path.join(MESSAGES_DIR, guildId, 'deletions', `${date}.json`);
+            const deletionDir = path.dirname(deletionLogPath);
+            
+            // Create deletion directory if it doesn't exist
+            if (!fs.existsSync(deletionDir)) {
+                fs.mkdirSync(deletionDir, { recursive: true });
+            }
+
+            // Load existing deletions or initialize new array
+            let deletions = [];
+            if (fs.existsSync(deletionLogPath)) {
+                try {
+                    deletions = JSON.parse(fs.readFileSync(deletionLogPath, 'utf8'));
+                } catch (e) {
+                    console.error(`Erreur lors de la lecture du fichier de suppressions ${deletionLogPath}:`, e);
+                }
+            }
+
+            deletions.push(logEntry);
+            fs.writeFileSync(deletionLogPath, JSON.stringify(deletions, null, 2), 'utf8');
+
+            // Also save to system logs for monitoring
+            const systemLogPath = path.join('data/system_logs', `message_deletion_${Date.now()}.json`);
+            fs.writeFileSync(systemLogPath, JSON.stringify(logEntry, null, 2));
+
+            // Report suspicious deletions (multiple deletions in short time, etc.)
+            if (this.reportManager && client) {
+                const recentDeletions = await this.getRecentDeletions(guildId, channelId, 5); // Last 5 minutes
+                
+                if (recentDeletions.length >= 5) { // 5 or more deletions in 5 minutes
+                    await this.reportManager.sendSystemAlert(
+                        client,
+                        '🗑️ Suppressions Massives Détectées',
+                        `Plusieurs messages ont été supprimés rapidement dans le même canal.`,
+                        [
+                            { name: 'Serveur', value: `${deletedMessage.guild?.name} (${guildId})`, inline: true },
+                            { name: 'Canal', value: `<#${channelId}>`, inline: true },
+                            { name: 'Suppressions récentes', value: recentDeletions.length.toString(), inline: true },
+                            { name: 'Dernier message supprimé', value: `Par: ${deletedMessage.author?.username || 'Inconnu'}`, inline: false }
+                        ],
+                        0xff9900
+                    );
+                }
+            }
+
+            console.log(`[MESSAGE DELETION] Message ${deletedMessage.id} deleted in guild ${guildId}, channel ${channelId}`);
+        } catch (error) {
+            console.error('Erreur lors de l\'enregistrement de la suppression de message:', error);
+        }
+    }
+
+    /**
+     * Log bulk message deletion event
+     * @param {Collection} deletedMessages - Collection of deleted messages
+     * @param {import('discord.js').Channel} channel - Channel where messages were deleted
+     * @param {import('discord.js').Client} client - Discord client for reporting
+     */
+    async logBulkMessageDeletion(deletedMessages, channel, client = null) {
+        try {
+            const timestamp = new Date().toISOString();
+            const guildId = channel.guild?.id;
+            
+            if (!guildId) return;
+
+            const logEntry = {
+                type: 'bulk_deletion',
+                guildId: guildId,
+                guildName: channel.guild?.name,
+                channelId: channel.id,
+                channelName: channel.name,
+                deletedCount: deletedMessages.size,
+                deletedAt: timestamp,
+                messages: deletedMessages.map(msg => ({
+                    id: msg.id,
+                    author: {
+                        id: msg.author?.id,
+                        username: msg.author?.username,
+                        discriminator: msg.author?.discriminator
+                    },
+                    content: msg.content || '[Contenu non disponible]',
+                    createdTimestamp: msg.createdTimestamp,
+                    attachments: msg.attachments?.map(a => ({
+                        id: a.id,
+                        name: a.name,
+                        url: a.url
+                    })) || []
+                })),
+                logType: 'bulk_message_deletion'
+            };
+
+            // Save to bulk deletion log
+            const date = new Date().toISOString().split('T')[0];
+            const bulkLogPath = path.join(MESSAGES_DIR, guildId, 'bulk_deletions', `${date}.json`);
+            const bulkDir = path.dirname(bulkLogPath);
+            
+            if (!fs.existsSync(bulkDir)) {
+                fs.mkdirSync(bulkDir, { recursive: true });
+            }
+
+            let bulkDeletions = [];
+            if (fs.existsSync(bulkLogPath)) {
+                try {
+                    bulkDeletions = JSON.parse(fs.readFileSync(bulkLogPath, 'utf8'));
+                } catch (e) {
+                    console.error(`Erreur lors de la lecture du fichier de suppressions en masse ${bulkLogPath}:`, e);
+                }
+            }
+
+            bulkDeletions.push(logEntry);
+            fs.writeFileSync(bulkLogPath, JSON.stringify(bulkDeletions, null, 2), 'utf8');
+
+            // Always report bulk deletions as they're significant events
+            if (this.reportManager && client) {
+                await this.reportManager.sendSystemAlert(
+                    client,
+                    '🗑️ Suppression en Masse Détectée',
+                    `Une suppression en masse de messages a été effectuée.`,
+                    [
+                        { name: 'Serveur', value: `${channel.guild?.name} (${guildId})`, inline: true },
+                        { name: 'Canal', value: `<#${channel.id}>`, inline: true },
+                        { name: 'Messages supprimés', value: deletedMessages.size.toString(), inline: true },
+                        { name: 'Heure', value: `<t:${Math.floor(Date.now() / 1000)}:F>`, inline: false }
+                    ],
+                    0xff4444
+                );
+            }
+
+            console.log(`[BULK DELETION] ${deletedMessages.size} messages deleted in guild ${guildId}, channel ${channel.id}`);
+        } catch (error) {
+            console.error('Erreur lors de l\'enregistrement de la suppression en masse:', error);
+        }
+    }
+
+    /**
+     * Get recent message deletions for analysis
+     * @param {string} guildId - Guild ID
+     * @param {string} channelId - Channel ID
+     * @param {number} minutes - Minutes to look back
+     * @returns {Array} Recent deletions
+     */
+    async getRecentDeletions(guildId, channelId, minutes = 5) {
+        try {
+            const cutoffTime = Date.now() - (minutes * 60 * 1000);
+            const date = new Date().toISOString().split('T')[0];
+            const deletionLogPath = path.join(MESSAGES_DIR, guildId, 'deletions', `${date}.json`);
+            
+            if (!fs.existsSync(deletionLogPath)) {
+                return [];
+            }
+
+            const deletions = JSON.parse(fs.readFileSync(deletionLogPath, 'utf8'));
+            
+            return deletions.filter(deletion => {
+                const deletionTime = new Date(deletion.deletedAt).getTime();
+                return deletion.channelId === channelId && deletionTime >= cutoffTime;
+            });
+        } catch (error) {
+            console.error('Erreur lors de la récupération des suppressions récentes:', error);
+            return [];
+        }
+    }
+
+    /**
+     * Get deletion statistics for a guild
+     * @param {string} guildId - Guild ID
+     * @param {number} days - Days to look back
+     * @returns {Object} Deletion statistics
+     */
+    getDeletionStats(guildId, days = 7) {
+        try {
+            const stats = {
+                totalDeletions: 0,
+                bulkDeletions: 0,
+                deletionsByChannel: {},
+                deletionsByUser: {},
+                deletionsByDay: {}
+            };
+
+            const deletionsDir = path.join(MESSAGES_DIR, guildId, 'deletions');
+            const bulkDeletionsDir = path.join(MESSAGES_DIR, guildId, 'bulk_deletions');
+
+            // Process regular deletions
+            if (fs.existsSync(deletionsDir)) {
+                const files = fs.readdirSync(deletionsDir).filter(file => file.endsWith('.json'));
+                
+                files.forEach(file => {
+                    const filePath = path.join(deletionsDir, file);
+                    const fileDate = file.replace('.json', '');
+                    
+                    // Check if file is within the specified days
+                    const daysDiff = Math.floor((Date.now() - new Date(fileDate).getTime()) / (1000 * 60 * 60 * 24));
+                    if (daysDiff <= days) {
+                        try {
+                            const deletions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                            
+                            stats.totalDeletions += deletions.length;
+                            stats.deletionsByDay[fileDate] = deletions.length;
+                            
+                            deletions.forEach(deletion => {
+                                // Count by channel
+                                if (!stats.deletionsByChannel[deletion.channelId]) {
+                                    stats.deletionsByChannel[deletion.channelId] = 0;
+                                }
+                                stats.deletionsByChannel[deletion.channelId]++;
+                                
+                                // Count by user
+                                const userId = deletion.author?.id || 'unknown';
+                                if (!stats.deletionsByUser[userId]) {
+                                    stats.deletionsByUser[userId] = 0;
+                                }
+                                stats.deletionsByUser[userId]++;
+                            });
+                        } catch (e) {
+                            console.error(`Erreur lors de la lecture du fichier de suppressions ${filePath}:`, e);
+                        }
+                    }
+                });
+            }
+
+            // Process bulk deletions
+            if (fs.existsSync(bulkDeletionsDir)) {
+                const files = fs.readdirSync(bulkDeletionsDir).filter(file => file.endsWith('.json'));
+                
+                files.forEach(file => {
+                    const filePath = path.join(bulkDeletionsDir, file);
+                    const fileDate = file.replace('.json', '');
+                    
+                    const daysDiff = Math.floor((Date.now() - new Date(fileDate).getTime()) / (1000 * 60 * 60 * 24));
+                    if (daysDiff <= days) {
+                        try {
+                            const bulkDeletions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                            stats.bulkDeletions += bulkDeletions.length;
+                        } catch (e) {
+                            console.error(`Erreur lors de la lecture du fichier de suppressions en masse ${filePath}:`, e);
+                        }
+                    }
+                });
+            }
+
+            return stats;
+        } catch (error) {
+            console.error('Erreur lors de la récupération des statistiques de suppression:', error);
+            return {};
+        }
+    }
+
+    /**
      * Sauvegarde un message dans le fichier JSON approprié
      * @param {Message} message - L'objet message de Discord.js
      */
@@ -385,7 +672,9 @@ class MessageLogger {
                 doxDetections: 0,
                 watchlistIncidents: 0,
                 systemErrors: 0,
-                systemEvents: 0
+                systemEvents: 0,
+                messageDeletions: 0,
+                bulkDeletions: 0
             };
 
             // Count files in each directory
@@ -402,6 +691,42 @@ class MessageLogger {
                     stats[key] = fs.readdirSync(dir).filter(file => file.endsWith('.json')).length;
                 }
             });
+
+            // Count message deletions across all guilds
+            if (fs.existsSync(MESSAGES_DIR)) {
+                const guildDirs = fs.readdirSync(MESSAGES_DIR, { withFileTypes: true })
+                    .filter(dirent => dirent.isDirectory())
+                    .map(dirent => dirent.name);
+                
+                guildDirs.forEach(guildId => {
+                    const deletionsDir = path.join(MESSAGES_DIR, guildId, 'deletions');
+                    const bulkDeletionsDir = path.join(MESSAGES_DIR, guildId, 'bulk_deletions');
+                    
+                    if (fs.existsSync(deletionsDir)) {
+                        const deletionFiles = fs.readdirSync(deletionsDir).filter(file => file.endsWith('.json'));
+                        deletionFiles.forEach(file => {
+                            try {
+                                const deletions = JSON.parse(fs.readFileSync(path.join(deletionsDir, file), 'utf8'));
+                                stats.messageDeletions += deletions.length;
+                            } catch (e) {
+                                // Ignore corrupted files
+                            }
+                        });
+                    }
+                    
+                    if (fs.existsSync(bulkDeletionsDir)) {
+                        const bulkFiles = fs.readdirSync(bulkDeletionsDir).filter(file => file.endsWith('.json'));
+                        bulkFiles.forEach(file => {
+                            try {
+                                const bulkDeletions = JSON.parse(fs.readFileSync(path.join(bulkDeletionsDir, file), 'utf8'));
+                                stats.bulkDeletions += bulkDeletions.length;
+                            } catch (e) {
+                                // Ignore corrupted files
+                            }
+                        });
+                    }
+                });
+            }
 
             return stats;
         } catch (error) {

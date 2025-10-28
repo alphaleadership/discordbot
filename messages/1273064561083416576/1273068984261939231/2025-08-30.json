@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1411398893899612301",
+    "author": {
+      "id": "972496532794388502",
+      "username": "rochester.3",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1273068984261939231",
+    "channelName": "📢annonces",
+    "content": "@everyone \n\nVu l'adoption des statuts, les rôles vont être refait.",
+    "timestamp": 1756574118829,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

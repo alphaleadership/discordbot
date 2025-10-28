@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1411406389074591898",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1273064561519362082",
+    "channelName": "réunions",
+    "content": "Bah c’est pas interdit",
+    "timestamp": 1756575905818,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "953635086501314561"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

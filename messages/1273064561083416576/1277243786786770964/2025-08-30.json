@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1411394020697047173",
+    "author": {
+      "id": "972496532794388502",
+      "username": "rochester.3",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1277243786786770964",
+    "channelName": "🗳vote",
+    "content": "",
+    "timestamp": 1756572956967,
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "poll_result",
+        "id": "1411394020697047174",
+        "fields": [
+          {
+            "value": "On adopte ces Statuts ?",
+            "name": "poll_question_text",
+            "inline": false
+          },
+          {
+            "value": "4",
+            "name": "victor_answer_votes",
+            "inline": false
+          },
+          {
+            "value": "6",
+            "name": "total_votes",
+            "inline": false
+          },
+          {
+            "value": "1",
+            "name": "victor_answer_id",
+            "inline": false
+          },
+          {
+            "value": "Oui",
+            "name": "victor_answer_text",
+            "inline": false
+          },
+          {
+            "value": "✅",
+            "name": "victor_answer_emoji_name",
+            "inline": false
+          }
+        ],
+        "content_scan_version": 0
+      }
+    ],
+    "mentions": {
+      "users": [
+        "972496532794388502"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

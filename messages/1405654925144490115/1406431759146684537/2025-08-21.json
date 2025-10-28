@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1408030747377406083",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406431759146684537",
+    "channelName": "🗒️・liste-des-ministres",
+    "content": "# Gouvernement temporaire Pavénine\n> Premier Ministre : Michael Pavénine (Syndicat Révolutionnaire)\n\n> Ministre des Armées et de la Défense : Baptiste Robert (indépendant)\n> Ministre des Affaires Étrangères et de la Diplomatie : Florian Debourges (gauche modérée)\n> Ministre de la Production et du Travail : *poste vacant*\n> Ministre de l'Écologie et de l'Énergie : *poste vacant*\n> Ministre de l'Éducation et de la Jeunesse : *poste vacant*",
+    "timestamp": 1755771090121,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

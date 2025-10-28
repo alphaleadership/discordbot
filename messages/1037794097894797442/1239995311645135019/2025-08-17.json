@@ -1,0 +1,108 @@
+[
+  {
+    "id": "1406734599282757776",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1239995311645135019",
+    "channelName": "「🤝」𝐂𝐨𝐦𝐦𝐢𝐬𝐬𝐢𝐨𝐧",
+    "content": "**Nom de la Commission**: Commission des Affaires Européennes, et des Relations entre l'UE et le Listenbourg\n**Objectifs de la commission**: Se réunir toutes les 3 semaines afin d'établir des liaisons avec l'UE, mais aussi débattre sur les sujets européens, et l'implication du Listenbourg dans cette dernière. \n\n**Membres parlementaires**: \n- __Président de la Commission__: Christian Alreinder\n- __Vice Président__: <@939927568533057586> \nDéputés: Tous conviés\n\n** Membres/invités extra-parlementaires**: \n- Ursula Von Der Leyen\n- Kaja Kallas\n- Georges Simon \n- Benjamin Haddad \n- Stéphane Sejourné",
+    "timestamp": 1755462064334,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "939927568533057586"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406735556074799245",
+    "author": {
+      "id": "939927568533057586",
+      "username": "alexandrevaladier",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1239995311645135019",
+    "channelName": "「🤝」𝐂𝐨𝐦𝐦𝐢𝐬𝐬𝐢𝐨𝐧",
+    "content": "-# George Simon le roumain ou <@789567269327208459> ?",
+    "timestamp": 1755462292451,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "789567269327208459"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406749860635611260",
+    "author": {
+      "id": "789567269327208459",
+      "username": "ebrithilar_elda",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1239995311645135019",
+    "channelName": "「🤝」𝐂𝐨𝐦𝐦𝐢𝐬𝐬𝐢𝐨𝐧",
+    "content": "(y'a Georges Simon et George Simion)",
+    "timestamp": 1755465702924,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406769665111359529",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1239995311645135019",
+    "channelName": "「🤝」𝐂𝐨𝐦𝐦𝐢𝐬𝐬𝐢𝐨𝐧",
+    "content": "Le PM",
+    "timestamp": 1755470424679,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "939927568533057586"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1406769680768696563",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1239995311645135019",
+    "channelName": "「🤝」𝐂𝐨𝐦𝐦𝐢𝐬𝐬𝐢𝐨𝐧",
+    "content": "Pas le roumain",
+    "timestamp": 1755470428412,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

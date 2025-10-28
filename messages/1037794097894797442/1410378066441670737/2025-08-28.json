@@ -1,0 +1,84 @@
+[
+  {
+    "id": "1410531018955558972",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410378066441670737",
+    "channelName": "Proposition de lois [ Régulation des éclairages artificiels en milieu urbain]",
+    "content": "<@1295832086602715251> C'est pas Proposition c'est Projet, et y'a pas 2 lois donc y'a pas de S",
+    "timestamp": 1756367201318,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410710156185960510",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410378066441670737",
+    "channelName": "Proposition de lois [ Régulation des éclairages artificiels en milieu urbain]",
+    "content": "__**AMENDEMENT 1**__\n*L'article 5 est modifié comme suit* \nRemplacer \"1er Janvier 2026\" par \"1er Septembre 2025\"",
+    "timestamp": 1756409910962,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410711466125819997",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410378066441670737",
+    "channelName": "Proposition de lois [ Régulation des éclairages artificiels en milieu urbain]",
+    "content": "__**AMENDEMENT 1**__\n*l'article 2 est modifié comme suit*\nRemplacer \"23 heures\" par \"00h00\"",
+    "timestamp": 1756410223276,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1410711631436058705",
+    "author": {
+      "id": "1368604399370502165",
+      "username": "wilson.jbis_81187",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1410378066441670737",
+    "channelName": "Proposition de lois [ Régulation des éclairages artificiels en milieu urbain]",
+    "content": "__**AMENDEMENT 2**__\n*L'article 5 est modifié comme suit* \nRemplacer \"1er Janvier 2026\" par \"1er Septembre 2025\"\n*En conséquence l'article 2 est modifié comme suit*\n\"1er Janvier 2026\" est remplacé par \"1er Septembre 2025\"",
+    "timestamp": 1756410262689,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -169,5 +169,233 @@
       "phone"
     ],
     "riskLevel": "low"
+  },
+  {
+    "id": "1756716697817qlstvlqif",
+    "timestamp": "2025-09-01T08:51:37.817Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg789",
+    "content": "Phone: 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756716697832hv0w569lu",
+    "timestamp": "2025-09-01T08:51:37.832Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "175671669783313l6dit9a",
+    "timestamp": "2025-09-01T08:51:37.833Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg2",
+    "detectionType": [
+      "email"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756716697855oa9sbauhy",
+    "timestamp": "2025-09-01T08:51:37.855Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567166978947mzagw8rj",
+    "timestamp": "2025-09-01T08:51:37.894Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg123",
+    "content": "My phone is 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756717769428sti1xeerm",
+    "timestamp": "2025-09-01T09:09:29.428Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg789",
+    "content": "Phone: 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567177694604xim57bti",
+    "timestamp": "2025-09-01T09:09:29.460Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756717769461pg7ai11ql",
+    "timestamp": "2025-09-01T09:09:29.461Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg2",
+    "detectionType": [
+      "email"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756717769495ujrwrcumg",
+    "timestamp": "2025-09-01T09:09:29.495Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567177695262t86rm1rj",
+    "timestamp": "2025-09-01T09:09:29.526Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg123",
+    "content": "My phone is 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756725346501cwuocg3pf",
+    "timestamp": "2025-09-01T11:15:46.501Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg789",
+    "content": "Phone: 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567253465139qwp55xor",
+    "timestamp": "2025-09-01T11:15:46.513Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756725346514ft14gem45",
+    "timestamp": "2025-09-01T11:15:46.514Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg2",
+    "detectionType": [
+      "email"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756725346535r5q77ubk3",
+    "timestamp": "2025-09-01T11:15:46.535Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756725346556z0yd772tf",
+    "timestamp": "2025-09-01T11:15:46.556Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg123",
+    "content": "My phone is 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756744681027gspoekjb9",
+    "timestamp": "2025-09-01T16:38:01.028Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg789",
+    "content": "Phone: 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567446810503njumwnr3",
+    "timestamp": "2025-09-01T16:38:01.050Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756744681052n2f4luqao",
+    "timestamp": "2025-09-01T16:38:01.052Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg2",
+    "detectionType": [
+      "email"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1756744681089jvpfbp0ir",
+    "timestamp": "2025-09-01T16:38:01.089Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17567446811342dpbtj4xw",
+    "timestamp": "2025-09-01T16:38:01.134Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg123",
+    "content": "My phone is 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
   }
 ]

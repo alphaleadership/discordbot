@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1411100684153262152",
+    "author": {
+      "id": "1389992460049973390",
+      "username": "wawan_dgad",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1411100684153262152",
+    "channelName": "Wawangame",
+    "content": "Nom/Name of the micronations/微觀國家名稱 : Wawangame (Oligarchic State of/État Oligarchique de)\n\nLien/Link/Lien du serveur Discord : https://discord.gg/PbX4mh8m2P\n\nReprésentant/Representative/你們微型國家的代表 : Founder/Fondateur **Wawan Silva** <@1389992460049973390>",
+    "timestamp": 1756503020085,
+    "attachments": [
+      {
+        "id": "1411100684778209421",
+        "name": "Flag_Wawangame.png",
+        "url": "https://cdn.discordapp.com/attachments/1411100684153262152/1411100684778209421/Flag_Wawangame.png?ex=68b36d6c&is=68b21bec&hm=a5d81076df713eb4f10c05865b7bbefcc8d249cd9ff5122ac19690483d35f920&",
+        "contentType": "image/png",
+        "size": 64611
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1389992460049973390"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

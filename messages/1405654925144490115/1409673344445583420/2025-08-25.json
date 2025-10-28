@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1409673344445583420",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1409673344445583420",
+    "channelName": "Yosco Zeltinskiy",
+    "content": "Yosco Zeltinskiy\n\nFondateur visionnaire de Monteloria, il a marqué l’histoire de notre nation en tant que ministre de la Défense.\nAmi fidèle du premier président Enzo Maurice, il a non seulement contribué à bâtir les fondations de notre pays, mais aussi à protéger son avenir.\n\nSon héritage est celui d’un pionnier, d’un protecteur et d’un homme de cœur, qui a su graver son nom dans l’Histoire… et dans la mémoire de chacun entre nous",
+    "timestamp": 1756162715780,
+    "attachments": [
+      {
+        "id": "1409673344630128739",
+        "name": "bonaparte_napoleon_as_countryhuman_by_admiralrobertdecart_dhgj6lb-fullview.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1409673344445583420/1409673344630128739/bonaparte_napoleon_as_countryhuman_by_admiralrobertdecart_dhgj6lb-fullview.jpg?ex=68ae3c1b&is=68acea9b&hm=41f246fbcc4350f25d776683988f381bfbc23dbf17ecb26adbab48fc58bb4756&",
+        "contentType": "image/jpeg",
+        "size": 183251
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

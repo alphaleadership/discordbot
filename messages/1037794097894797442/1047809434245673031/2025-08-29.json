@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1411042217253933187",
+    "author": {
+      "id": "1070602999329722368",
+      "username": "majusculep.pavulam.3436",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1047809434245673031",
+    "channelName": "「📰」𝐁𝐮𝐫𝐞𝐚𝐮-𝐝𝐞-𝐕𝐨𝐭𝐞",
+    "content": "<@&1037796999963103273>",
+    "timestamp": 1756489080490,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "437618149505105920"
+      ],
+      "roles": [
+        "1037796999963103273"
+      ],
+      "channels": []
+    }
+  }
+]
