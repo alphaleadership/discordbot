@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1444807366905168013",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1432760082176675940",
+    "channelName": "chat",
+    "content": "90",
+    "timestamp": 1764539319493,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

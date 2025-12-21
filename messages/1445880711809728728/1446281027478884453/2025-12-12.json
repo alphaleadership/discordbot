@@ -1,0 +1,2935 @@
+[
+  {
+    "id": "1449105006266683444",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Allocutions du dirigeant",
+    "timestamp": 1765563956563,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105234872762418",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "@everyone\n\nCONFERENCE URGENCE !",
+    "timestamp": 1765564011067,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105849174986762",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "@everyone",
+    "timestamp": 1765564157528,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105915285340240",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "bonjour",
+    "timestamp": 1765564173290,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105941873295400",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ça va et toi ?",
+    "timestamp": 1765564179629,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105982381621471",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Bonsoir",
+    "timestamp": 1765564189287,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449105994226335885",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Jsuis dans le bus",
+    "timestamp": 1765564192111,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106006448668946",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ça va et toi ?",
+    "timestamp": 1765564195025,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106092557865173",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On va encore se faire raid",
+    "timestamp": 1765564215555,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106154151215187",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Hein",
+    "timestamp": 1765564230240,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106158152319177",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ouais",
+    "timestamp": 1765564231194,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106264532455576",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ah",
+    "timestamp": 1765564256557,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106274204651683",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ok",
+    "timestamp": 1765564258863,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106320593649865",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Oh",
+    "timestamp": 1765564269923,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106408405602455",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Maiiiis, pas déjà",
+    "timestamp": 1765564290859,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106603482677349",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Il t’as ban 😂",
+    "timestamp": 1765564337369,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106644339396638",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Fais toi respecter",
+    "timestamp": 1765564347110,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106722839990403",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ok ok",
+    "timestamp": 1765564365826,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106833213227079",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Oh la la c’est compliqué",
+    "timestamp": 1765564392141,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106873159647297",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ben moi je dis si il te respecte pas, le respecte pas non plus...",
+    "timestamp": 1765564401665,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106911638327397",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ben en vrai ouais s’il touche à notre île relou",
+    "timestamp": 1765564410839,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106913395740704",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "😇",
+    "timestamp": 1765564411258,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449106984535064729",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "\"pas encore\"",
+    "timestamp": 1765564428219,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107078311448666",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "En fait il veut faire quoi exactement",
+    "timestamp": 1765564450577,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107179121541242",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "En faisant sécession ?",
+    "timestamp": 1765564474612,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107357627056339",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Répond à ma question d’abord",
+    "timestamp": 1765564517171,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107381576270140",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Je veux être sure de tout comprendre",
+    "timestamp": 1765564522881,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107494495584407",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ok et donc il essaye de te piquer ton territoire et il t’as ban",
+    "timestamp": 1765564549803,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107715984068730",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On peut essayer de négocier d’abord",
+    "timestamp": 1765564602610,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107722992750695",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "on peut essayer et si il veut pas on le ban",
+    "timestamp": 1765564604281,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107736620171406",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Mais pas trop longtemps",
+    "timestamp": 1765564607530,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107766609448980",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ouais voilà",
+    "timestamp": 1765564614680,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1314905030435803198"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107778760212616",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "j'allais dire pareil 🤣",
+    "timestamp": 1765564617577,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107828123111474",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ah bon ben dans ce cas là c’est un ban dans les dents",
+    "timestamp": 1765564629346,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107877393469534",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "je suis d'accord",
+    "timestamp": 1765564641093,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107894577528933",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "mais je le connais pas moi",
+    "timestamp": 1765564645190,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107902412623954",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ben en fait je le connais pas du tout moi",
+    "timestamp": 1765564647058,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107935106961549",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Je lui ai jamais parlé à part sur ce serv",
+    "timestamp": 1765564654853,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107952807051558",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais",
+    "timestamp": 1765564659073,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449107991386263783",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "on vote à trois mais c pas grave 😂",
+    "timestamp": 1765564668271,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108046692221168",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ben disons que on peut dire que ça peut être réversible s’il arrête tout",
+    "timestamp": 1765564681457,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108139851907196",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "J’peux essayer de m’infiltrer dans le serveur de l’île",
+    "timestamp": 1765564703668,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108246186168331",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ah oui vu comme ça",
+    "timestamp": 1765564729020,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108308601602049",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ok ben je crois qu’Alenia est occupée en ce moment",
+    "timestamp": 1765564743901,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108314796593354",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Irl",
+    "timestamp": 1765564745378,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108362527641660",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "<@1204140730654793751> <@779843063131930694>",
+    "timestamp": 1765564756758,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694",
+        "1204140730654793751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108363798380574",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Et sinon y’a pas beaucoup d’autre personnes ici",
+    "timestamp": 1765564757061,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108570829230111",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ouais pas faux",
+    "timestamp": 1765564806421,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108600852189224",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "A moua",
+    "timestamp": 1765564813579,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108659249614950",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "https://tenor.com/view/a-moi-nemo-mine-enwei-mouette-gif-16493341059794066027",
+    "timestamp": 1765564827502,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108759321514136",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais",
+    "timestamp": 1765564851361,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108769157152799",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Mais vas-y y’a le bot de sécurité qui vient de m’envoyer un message à cause de mon gif",
+    "timestamp": 1765564853706,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108775146360933",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Abusé",
+    "timestamp": 1765564855134,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108817324408904",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ouais on le ban",
+    "timestamp": 1765564865190,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108841936457800",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "serieux 🤣",
+    "timestamp": 1765564871058,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108864602603653",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Et s’il arrête ses trucs on peut le ramener",
+    "timestamp": 1765564876462,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449108956176846860",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Pcq en gros c’est presque comme s’il essayait de prendre ta place",
+    "timestamp": 1765564898295,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109034710864055",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "En tant que parrain, puisqu’il y’a viré de ton île et tout",
+    "timestamp": 1765564917019,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109171441111206",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Il a un rôle trop haut",
+    "timestamp": 1765564949618,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109266127523860",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Enlève le de la famille d’abord peut-être",
+    "timestamp": 1765564972193,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109474634629160",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "T’es enrhumé même dans tes messages de ban 🤣",
+    "timestamp": 1765565021905,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109504825360536",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "« Dub »",
+    "timestamp": 1765565029103,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109532931395746",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "si quoi ? j'ai pas compris",
+    "timestamp": 1765565035804,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109593262264432",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ben moi j’ai déjà ramené Blanche et Alenia",
+    "timestamp": 1765565050188,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109606176522462",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "je vais appeler la protection de l'enfance attention",
+    "timestamp": 1765565053267,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109616956014734",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Mais depuis non",
+    "timestamp": 1765565055837,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109653706510406",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On va se calmer avec la friture",
+    "timestamp": 1765565064599,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109708899225604",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Elle reste sur ton pantalon",
+    "timestamp": 1765565077758,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109725441425543",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais non j'ai pas fait de recrutement",
+    "timestamp": 1765565081702,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109774158532648",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "je sais pas a qui proposer en vrai",
+    "timestamp": 1765565093317,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109955608318102",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On est pas dans beaucoup de micronation en fait",
+    "timestamp": 1765565136578,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449109976273387671",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Garde la ta ceinture",
+    "timestamp": 1765565141505,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110023551844423",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ah, on accepte tout le monde comme ça ? je pensais une Mafia ct plus selectif en vrai",
+    "timestamp": 1765565152777,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110028702318665",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Tg",
+    "timestamp": 1765565154005,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110065029054628",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "hooo",
+    "timestamp": 1765565162666,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110102065025054",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Jvais prendre mes bretelles moi, on va faire un duel",
+    "timestamp": 1765565171496,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110108964524215",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "https://tenor.com/view/oops-cat-sassy-drama-boots-gif-7944317",
+    "timestamp": 1765565173141,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110290997182534",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ouais mais faut avoir confiance dans les gens qu’on ramène",
+    "timestamp": 1765565216541,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110400040964209",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "A coup de ceinture",
+    "timestamp": 1765565242539,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110408756465775",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "exécution",
+    "timestamp": 1765565244617,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110431179477003",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "sur la place publique",
+    "timestamp": 1765565249963,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110461869064386",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "c nul à la ceinture",
+    "timestamp": 1765565257280,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110537257353266",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Je crois ouais",
+    "timestamp": 1765565275254,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110547185274942",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "genre t'as de l'experience là dedans toi 😂",
+    "timestamp": 1765565277621,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110554865176743",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ça rend fou non ?",
+    "timestamp": 1765565279452,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110571013373962",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "très très satisfaisant il a dit",
+    "timestamp": 1765565283302,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110606333345792",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais c ça il me semble",
+    "timestamp": 1765565291723,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110665490071672",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "a intervalle régulier donc ça te rends completement taré",
+    "timestamp": 1765565305827,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110682527203439",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ça doit être treeees long ça",
+    "timestamp": 1765565309889,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110698331209932",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Très très long",
+    "timestamp": 1765565313657,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110722519896085",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Mais tu deviens fou avant",
+    "timestamp": 1765565319424,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110831592771604",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "T’es fou",
+    "timestamp": 1765565345429,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110832255598746",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "quelques heures ? t sur de seulement quelques heures",
+    "timestamp": 1765565345587,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110850064351454",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Tu es un psychopathe",
+    "timestamp": 1765565349833,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110877293904047",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "pcq pour trouer un crâne faut y aller quand mm",
+    "timestamp": 1765565356325,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110907362742454",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Il faut l’être un peu pour être parrain",
+    "timestamp": 1765565363494,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110914602242119",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "et c pas pcq tu trous le crâne que ça entraine la mort",
+    "timestamp": 1765565365220,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449110969895747756",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "donc faut que ça endommage le cerveau aussi",
+    "timestamp": 1765565378403,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111011888992326",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "donc ça doit être bieeeeen long",
+    "timestamp": 1765565388415,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111057691050138",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "plus d'un jours ou deux a mon avis là",
+    "timestamp": 1765565399335,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111113315782787",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Berk",
+    "timestamp": 1765565412597,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111143422496818",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "C’est salissant",
+    "timestamp": 1765565419775,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111216994914488",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "franchement le faire chauffer dans un taureau en fer c plus divertissant il parait",
+    "timestamp": 1765565437316,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111272036765860",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "bhaaaa",
+    "timestamp": 1765565450439,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111278814630008",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais",
+    "timestamp": 1765565452055,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111298444103741",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Hein",
+    "timestamp": 1765565456735,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111330249380002",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "mais ça ct pendant l'empire romain cette suplice",
+    "timestamp": 1765565464318,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111370493722796",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "pas pour les juifs",
+    "timestamp": 1765565473913,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111423887212577",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "🤣",
+    "timestamp": 1765565486643,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111434649800977",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "je vois",
+    "timestamp": 1765565489209,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111526115119198",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "mais wesh",
+    "timestamp": 1765565511016,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111544154820638",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ça va pas hein",
+    "timestamp": 1765565515317,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111568351494184",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ça doit faire super mal",
+    "timestamp": 1765565521086,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111572969689099",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Nan non non",
+    "timestamp": 1765565522187,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111585841741917",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "en plus tu meurs pas là",
+    "timestamp": 1765565525256,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111600840577206",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On va rester sur la goutte d’eau sinon",
+    "timestamp": 1765565528832,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111611204829287",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "c horrible juste",
+    "timestamp": 1765565531303,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111667811291166",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais c bien la goutte d'eau",
+    "timestamp": 1765565544799,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111672055791677",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Aleniaaaa",
+    "timestamp": 1765565545811,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111710706307336",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ça parle de choses bizarres",
+    "timestamp": 1765565555026,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111711222337688",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ouais plus rien du tout là",
+    "timestamp": 1765565555149,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111716267819018",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Carlitaaaaaaa",
+    "timestamp": 1765565556352,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111720151875644",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "plus de vie",
+    "timestamp": 1765565557278,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111752691421411",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "hoo Alenia",
+    "timestamp": 1765565565036,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111804419510393",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "jsuis sortie de l'entraînementtttt",
+    "timestamp": 1765565577369,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111818651045914",
+    "author": {
+      "id": "1314905030435803198",
+      "username": "elia015521",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "\"je te rassure \" c pas rassurant ce que tu viens de dire",
+    "timestamp": 1765565580762,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111819418341578",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "mais",
+    "timestamp": 1765565580945,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111825798008995",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "On vient de bannir quelqu’un",
+    "timestamp": 1765565582466,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111832358031370",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "maissss",
+    "timestamp": 1765565584030,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111849521119293",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "qui?",
+    "timestamp": 1765565588122,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111850808643615",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ça s’est bien passé ?",
+    "timestamp": 1765565588429,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111892726513665",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ah ethan…",
+    "timestamp": 1765565598423,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111904642531368",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Transition compliqué hein entre les 2 😅",
+    "timestamp": 1765565601264,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111951669072043",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "on était 4v",
+    "timestamp": 1765565612476,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449111984615456769",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "T’as même pas l’air étonnée 😆",
+    "timestamp": 1765565620331,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112023076962455",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ah, c’est pas beaucoup",
+    "timestamp": 1765565629501,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112061492859051",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "nan mais j'ai suivi les histoires à totocach",
+    "timestamp": 1765565638660,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112062163947602",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Ah ah ah",
+    "timestamp": 1765565638820,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112079893139506",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Je suis pliée de rire",
+    "timestamp": 1765565643047,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112143956807783",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Aaaah j’y suis pas moi c’est pour ça",
+    "timestamp": 1765565658321,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "779843063131930694"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112164995698781",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "T’es partout c’est pas possible",
+    "timestamp": 1765565663337,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112168124383293",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "ducoup on a fait des exercices indiv puis du 2-2",
+    "timestamp": 1765565664083,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112205533380822",
+    "author": {
+      "id": "903230827171807263",
+      "username": "carly2186",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "C’était bien quand même ?",
+    "timestamp": 1765565673002,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112230355407061",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "je suis dans ton coeur déjà",
+    "timestamp": 1765565678920,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1449112234662953022",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446281027478884453",
+    "channelName": "🗣️│allocutions",
+    "content": "Allocutions du dirigeant",
+    "timestamp": 1765565679947,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

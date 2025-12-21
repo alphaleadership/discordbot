@@ -1,0 +1,103 @@
+[
+  {
+    "id": "1448094613519859795",
+    "author": {
+      "id": "1447650630544916672",
+      "username": "iifvmrod",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1160565065452363888",
+    "channelName": "「📰」𝐋𝐞-𝐋𝐢𝐬𝐭𝐞𝐧𝐛𝐨𝐮𝐫𝐠𝐞𝐨𝐢𝐬",
+    "content": "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _  https://imgur.com/fk1pwNr https://imgur.com/him3L99 https://imgur.com/aFF0pd6 https://imgur.com/E1vu0CO",
+    "timestamp": 1765323060160,
+    "attachments": [],
+    "embeds": [
+      {
+        "url": "https://imgur.com/fk1pwNr",
+        "type": "image",
+        "thumbnail": {
+          "width": 960,
+          "url": "https://i.imgur.com/fk1pwNr.jpg",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/o7oEEjy6x5-djuW7F2X79J8pyH6-kFge7Ri-56f4hmo/https/i.imgur.com/fk1pwNr.jpg",
+          "placeholder_version": 1,
+          "placeholder": "ygcKBQBpVn9353jnaIqImIyvyPat",
+          "height": 1280,
+          "flags": 0,
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "url": "https://imgur.com",
+          "name": "Imgur"
+        },
+        "id": "1448094614035632128",
+        "content_scan_version": 2
+      },
+      {
+        "url": "https://imgur.com/him3L99",
+        "type": "image",
+        "thumbnail": {
+          "width": 960,
+          "url": "https://i.imgur.com/him3L99.jpg",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/OnAI5lcEVDo8iIQED5SEOTa9ibFc6BaqAdBFrww7dow/https/i.imgur.com/him3L99.jpg",
+          "placeholder_version": 1,
+          "placeholder": "yvcFDQIVaXp5uJj3d2/WZ3h2v/2n",
+          "height": 1280,
+          "flags": 0,
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "url": "https://imgur.com",
+          "name": "Imgur"
+        },
+        "id": "1448094614035632129",
+        "content_scan_version": 2
+      },
+      {
+        "url": "https://imgur.com/aFF0pd6",
+        "type": "image",
+        "thumbnail": {
+          "width": 960,
+          "url": "https://i.imgur.com/aFF0pd6.jpg",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/YeD_ADvB4OWZqPASp8XE47utQuB3wK7CnlRwO6Wwc1Y/https/i.imgur.com/aFF0pd6.jpg",
+          "placeholder_version": 1,
+          "placeholder": "i/cJDQJGeIl4eJj3Z3ynmJp/u7v3",
+          "height": 1280,
+          "flags": 0,
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "url": "https://imgur.com",
+          "name": "Imgur"
+        },
+        "id": "1448094614035632130",
+        "content_scan_version": 2
+      },
+      {
+        "url": "https://imgur.com/E1vu0CO",
+        "type": "image",
+        "thumbnail": {
+          "width": 960,
+          "url": "https://i.imgur.com/E1vu0CO.jpg",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/q4wEkw0Ae7_AiRLYzuweH7ygsyO4oITwroJpoubusko/https/i.imgur.com/E1vu0CO.jpg",
+          "placeholder_version": 1,
+          "placeholder": "xfcFDQIyelyGKIoHmoaZlntw+ynr",
+          "height": 1280,
+          "flags": 0,
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "url": "https://imgur.com",
+          "name": "Imgur"
+        },
+        "id": "1448094614035632131",
+        "content_scan_version": 2
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

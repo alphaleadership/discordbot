@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1446273007235502080",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446273007235502080",
+    "channelName": "Formulaire création/implantation de média",
+    "content": "Nom du média :\nOrigine (si votre média vient d'une autre micronation ou est international, ou vient d'ici) :\nType de contenu :",
+    "timestamp": 1764888755378,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

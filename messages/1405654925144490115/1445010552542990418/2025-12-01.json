@@ -1,0 +1,284 @@
+[
+  {
+    "id": "1445010577096445994",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Pour être juge",
+    "timestamp": 1764587768578,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445010620922597479",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "-# je n'ai jamais était juge",
+    "timestamp": 1764587779027,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445011712326504500",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Et ted pas neutre",
+    "timestamp": 1764588039238,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445085000063254669",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Avec Stanislas si",
+    "timestamp": 1764605512396,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445085036670881934",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "D'un côté je l'aime pas D'un côté si",
+    "timestamp": 1764605521124,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445085058619932856",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "On peut dire que je suis neutre",
+    "timestamp": 1764605526357,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445086141106618450",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Excuse",
+    "timestamp": 1764605784442,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445086216197505287",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Et nok car tu est comme les fondateur",
+    "timestamp": 1764605802345,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445086229229207592",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Vendu",
+    "timestamp": 1764605805452,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445088563187286146",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "C'est-à-dire ?",
+    "timestamp": 1764606361911,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445112989916336180",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Que je sais que tu est pour stanislas comme les fondateur",
+    "timestamp": 1764612185697,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445113037605310545",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Tous des vendu pour un enorme dictateur",
+    "timestamp": 1764612197067,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445119363316449382",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Nan",
+    "timestamp": 1764613705234,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445119380781269083",
+    "author": {
+      "id": "1384070618634391593",
+      "username": "tristanlebg62",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445010552542990418",
+    "channelName": "ticket-4",
+    "content": "Je suis neutre",
+    "timestamp": 1764613709398,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

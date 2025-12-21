@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1444379818459140127",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1442762527535534171",
+    "channelName": "📃-logs",
+    "content": "<@1295832086602715251>  pas de mise hors service d'advanced c'est pas une desicion a prendre comme sa",
+    "timestamp": 1764437384000,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1444379931386712104",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1442762527535534171",
+    "channelName": "📃-logs",
+    "content": "On verra",
+    "timestamp": 1764437410924,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

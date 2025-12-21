@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1441120980138328166",
+    "author": {
+      "id": "1360206152645873705",
+      "username": "max04054",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1441119114243608710",
+    "channelName": "├-『🛡️』devenir-staff",
+    "content": "<:moderation10:1018426028311453706> FORMULAIRE STAFF OUVERT<:moderation10:1018426028311453706> \n\nVous avez jusqu'au 30 novembre pour répondre !",
+    "timestamp": 1763660416398,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1441121014393212958",
+    "author": {
+      "id": "1360206152645873705",
+      "username": "max04054",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1441119114243608710",
+    "channelName": "├-『🛡️』devenir-staff",
+    "content": "@everyone",
+    "timestamp": 1763660424565,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

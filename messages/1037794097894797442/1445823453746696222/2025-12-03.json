@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1445823547141263471",
+    "author": {
+      "id": "804393256146305034",
+      "username": "lxcas277",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445823453746696222",
+    "channelName": "ticket-351",
+    "content": "bonsoir, bonsoir",
+    "timestamp": 1764781595741,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1445823600891396116",
+    "author": {
+      "id": "804393256146305034",
+      "username": "lxcas277",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1445823453746696222",
+    "channelName": "ticket-351",
+    "content": "je suis ici pour avoir un partenariat avec votre serveur !",
+    "timestamp": 1764781608556,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

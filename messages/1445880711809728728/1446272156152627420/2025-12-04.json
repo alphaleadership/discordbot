@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1446272156152627420",
+    "author": {
+      "id": "779843063131930694",
+      "username": "alenia_reyo",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446272156152627420",
+    "channelName": "Formulaire création de parti",
+    "content": "Nom du parti :\nAbbréviation (entre 2 et 5 caractères) :\nPositionnement (entre extrême gauche et extrême droite) :\nIdéologies dominantes (seulement le principal) :\nLogo du parti (à joindre)",
+    "timestamp": 1764888552464,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

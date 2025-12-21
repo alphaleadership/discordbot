@@ -10,11 +10,24 @@ import { CommandHandler } from './utils/CommandHandler.js';
 import { ReportManager } from './utils/ReportManager.js';
 import { BanlistManager } from './utils/BanlistManager.js';
 import { BlockedWordsManager } from './utils/BlockedWordsManager.js';
+import { WatchlistManager } from './utils/WatchlistManager.js';
+import { TelegramIntegration } from './utils/TelegramIntegration.js';
 import { initInteractionConfig, InteractionConfig } from './utils/InteractionConfig.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
 import GuildConfig from './utils/GuildConfig.js';
+import enhancedGuildConfig from './utils/config/EnhancedGuildConfig.js';
+
+// Import all new managers
+import {
+    RaidDetector,
+    DoxDetector,
+    FunCommandsManager,
+    EnhancedReloadSystem
+} from './utils/managers/index.js';
+import UnifiedErrorReporter from './utils/UnifiedErrorReporter.js';
+import PermissionValidator from './utils/PermissionValidator.js';
 
 
 
@@ -166,13 +179,14 @@ let isLoggingToGithub = false;  // Déclaration déplacée ici
 const lastBackupTimes = new Map();
 
 // Initialiser les configurations et les gestionnaires
-const guildConfig =  GuildConfig;
+const guildConfig = enhancedGuildConfig;
 guildConfig.ensureFileExists();
 const adminManager = new AdminManager();
 const warnManager = new WarnManager('data/warnings.json');
 warnManager.ensureFileExists();
 const blockedWordsManager = new BlockedWordsManager();
 blockedWordsManager.ensureFileExists();
+const permissionValidator = new PermissionValidator(adminManager);
 
 // Configuration GitHub
 const GITHUB_OWNER = process.env.GITHUB_OWNER || 'alphaleadership';
@@ -181,9 +195,21 @@ const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
 const BACKUP_FILES = [
     'data/messages',
     'data/warnings.json',
-    'data/guilds_config.json',
+    'guilds_config.json',
     'data/admins.json',
-'messages'
+    'messages',
+    // Enhanced system data files
+    'data/watchlist.json',
+    'data/raid_events',
+    'data/dox_detections',
+    'data/watchlist_incidents',
+    'data/system_logs',
+    'data/error_logs',
+    'data/fun_command_usage.json',
+    'data/telegram_messages.json',
+    'data/telegram_notifications.json',
+    'data/blocked_words.json',
+    'data/dox_exceptions.json'
 ]
 
 // Fonction pour encoder le contenu en base64
@@ -326,8 +352,8 @@ initInteractionConfig(sharedConfig);
 // Définir la fonction de sauvegarde dans la configuration partagée
 sharedConfig.backupToGitHub = backupToGitHub;
 
-// Initialiser le gestionnaire d'interactions
-const interactionHandler = new InteractionHandler(adminManager);
+// Initialiser le gestionnaire d'interactions (will be updated per client)
+let interactionHandler;
 
 const tokens = process.env.DISCORD_TOKEN.split(',');
 const webPassword = process.env.WEB_PASSWORD || 'password';
@@ -336,8 +362,8 @@ const webServerEnabled = process.env.WEB_SERVER_ENABLED === 'true' || process.en
 // Configuration d'Octokit avec authentification pour la journalisation
 let octokit = null;
 
-// Initialiser le logger de messages avant de l'utiliser
-const messageLogger = new MessageLogger('data/messages');
+// Initialiser le logger de messages avant de l'utiliser (will be updated per client)
+let messageLogger;
 
 // Charger les informations de sauvegarde au démarrage
 loadBackupTime();
@@ -522,7 +548,25 @@ for (const token of tokens) {
     const reportManager = new ReportManager();
     const banlistManager = new BanlistManager();
     const blockedWordsManager = new BlockedWordsManager();
-    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager);
+    const watchlistManager = new WatchlistManager('data/watchlist.json', reportManager);
+    const telegramIntegration = new TelegramIntegration(process.env.TELEGRAM_BOT_TOKEN, client);
+    const funCommandsManager = new FunCommandsManager(guildConfig);
+    
+    // Initialize enhanced message logger with report manager
+    messageLogger = new MessageLogger(reportManager);
+    
+    // Initialize unified error reporter
+    const errorReporter = new UnifiedErrorReporter(reportManager, messageLogger);
+    
+    // Initialize new enhanced managers
+    const raidDetector = new RaidDetector(client, guildConfig, reportManager);
+    const doxDetector = new DoxDetector(warnManager, reportManager);
+    const enhancedReloadSystem = new EnhancedReloadSystem();
+    
+    // Initialize interaction handler with new managers
+    interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
+    
+    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator);
     commandHandler.loadCommands();
 
     // Enregistrer les commandes
@@ -540,10 +584,19 @@ for (const token of tokens) {
 
     // Gestion des interactions (boutons et commandes slash)
     client.on('interactionCreate', async interaction => {
-        if (interaction.isCommand()) {
-            await commandHandler.handleCommand(interaction);
-        } else {
-            await interactionHandler.handleInteraction(interaction);
+        try {
+            if (interaction.isCommand()) {
+                await commandHandler.handleCommand(interaction);
+            } else {
+                await interactionHandler.handleInteraction(interaction);
+            }
+        } catch (error) {
+            await errorReporter.reportError(error, 'InteractionHandler', {
+                interactionType: interaction.type,
+                commandName: interaction.commandName || 'N/A',
+                userId: interaction.user?.id,
+                guildId: interaction.guild?.id
+            }, client);
         }
     });
 
@@ -587,16 +640,44 @@ for (const token of tokens) {
                 } catch (error) {
                     console.error(`Erreur lors du bannissement automatique de ${member.user.tag}:`, error);
                 }
+                return; // Exit early if user was banned
+            }
+
+            // Check watchlist for new member
+            if (watchlistManager && watchlistManager.handleUserJoin) {
+                await watchlistManager.handleUserJoin(member);
+            }
+
+            // Check for raid detection
+            if (raidDetector && raidDetector.detectRapidJoins) {
+                const raidResult = raidDetector.detectRapidJoins(member.guild.id, member);
+                if (raidResult.isRaid) {
+                    console.log(`[RAID DETECTED] Potential raid detected in ${member.guild.name}: ${raidResult.severity} severity`);
+                    
+                    // Apply protective measures
+                    if (raidDetector.applyProtectiveMeasures) {
+                        await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity);
+                    }
+                    
+                    // Notify administrators
+                    if (raidDetector.notifyAdministrators) {
+                        await raidDetector.notifyAdministrators(member.guild, raidResult);
+                    }
+                }
             }
         } catch (error) {
-            console.error('Erreur lors de la vérification de la banlist pour un nouveau membre:', error);
+            await errorReporter.reportError(error, 'GuildMemberAdd', {
+                memberId: member.id,
+                guildId: member.guild.id,
+                memberTag: member.user.tag
+            }, client);
         }
     });
 
     // Détection des liens d'invitation dans les messages
     client.on('messageCreate', async message => {
         if (message.author.bot) return;
-        
+        watchlistManager.handleUserMessage(message);
         const timestamp = new Date().toISOString();
         const logMessage = `${timestamp} - ${message.author.tag}: ${message.content}`;
         logQueue.push(logMessage);
@@ -661,6 +742,26 @@ for (const token of tokens) {
             }
             return;
         }
+
+        // Check for dox content (personal information) using enhanced DoxDetector
+        if (doxDetector && doxDetector.analyzeMessage) {
+            try {
+                const analysis = await doxDetector.analyzeMessage(message);
+                if (analysis && analysis.hasDetections) {
+                    console.log(`[DOX DETECTED] Personal information detected in message from ${message.author.tag}: ${analysis.overallRisk} risk level`);
+                    
+                    // Handle the detection with proper escalation
+                    const actionResults = await doxDetector.handleDetection(message, analysis, client);
+                    
+                    if (actionResults.messageDeleted) {
+                        return; // Exit early after handling dox content
+                    }
+                }
+            } catch (error) {
+                console.error('Error handling dox detection:', error);
+            }
+        }
+
         // Ignorer les messages des bots et les messages sans serveur (DM)
         if (message.author.bot || !message.guild) return;
 
@@ -753,7 +854,7 @@ for (const token of tokens) {
         console.error(`Failed to login with token: ${token.substring(0, 5)}...`, error);
     });
 
-    clients.push(client);
+    //clients.push(client);
 }
 
 const app = express();

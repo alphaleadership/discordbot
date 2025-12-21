@@ -490,7 +490,54 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
     
     // Mettre à jour le suivi des messages
     spamTracker.set(userId, userData);
-    
+    if(messageContent.includes("https://imgur.com/")){
+     const warn = warnManager.addWarn(
+            userId, 
+            `Spam détecté (${speed.toFixed(2)} caractères/seconde, max ${charLimit} autorisés)`,
+            guild.client.user.id
+        );
+        
+        // Envoyer un message d'avertissement en MP
+        const user = await guild.client.users.fetch(userId).catch(error => { /* console.error(error); */ }); // Logs d'analyse de message désactivés
+        if (user) {
+            const embed = new EmbedBuilder()
+                .setColor('#FFA500')
+                .setTitle('⚠️ Avertissement')
+                .setDescription(`Vous avez reçu un avertissement pour lien suspect.`)
+                .addFields(
+                    { name: 'Raison', value: warn.reason },
+                    { name: 'Avertissements actuels', value: `${warn.count}/2` },
+                    { name: 'Date', value: new Date(warn.date).toLocaleString('fr-FR') }
+                )
+                .setFooter({ text: `ID: ${warn.id}` });
+            
+            await user.send({ embeds: [embed] })
+                .catch(() => { /* console.log(`Impossible d'envoyer un MP à ${user.tag}`); */ }); // Logs d'analyse de message désactivés
+        }
+if (warn.count >= 2) {
+            try {
+                await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
+                // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
+                
+                // Ajouter à la banlist
+                const banReason = `lien suspect (après 2 avertissements)`;
+                const result = await interactionHandler.addToBanlist(userId, banReason, guild.client.user.id);
+                
+                if (!result.success) {
+                    // console.error(`Erreur lors de l'ajout à la banlist: ${result.message}`); // Logs d'analyse de message désactivés
+                }
+                
+                // Supprimer les avertissements après bannissement
+                warnManager.clearWarns(userId);
+            } catch (error) {
+                // console.error(`Erreur lors du bannissement de ${userId}:`, error); // Logs d'analyse de message désactivés
+            }
+        }
+        
+        // Nettoyer les données de spam tracking
+        spamTracker.delete(userId);
+        return true; // Spam détecté et traité
+}
     // Vérifier si la limite est dépassée
     if (speed > charLimit) {
         // console.log(`Spam détecté pour ${userId}: ${speed.toFixed(2)} caractères/seconde`); // Logs d'analyse de message désactivés
@@ -692,7 +739,7 @@ for (const token of tokens) {
                 // et que l'utilisateur n'est pas le propriétaire du serveur
                 if (member && botMember.roles.highest.position > member.roles.highest.position && member.id !== message.guild.ownerId) {
                     // 1% de chance de déclencher la mine
-                    if (Math.random() < 0.01) {
+                    if (Math.random() < 0.05) {
                         const muteDuration = 10 * 60 * 1000; // 10 minutes en millisecondes
                         try {
                             await member.timeout(muteDuration, 'Mine terrestre activée');

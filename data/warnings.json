@@ -5,6 +5,66 @@
       "reason": "Spam détecté (11.60 caractères/seconde, max 2000 autorisés)",
       "date": "2025-08-19T15:29:21.278Z",
       "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756060544081",
+      "reason": "Spam détecté (4096.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-24T18:35:44.081Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756061372565",
+      "reason": "Spam détecté (4520.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-24T18:49:32.565Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756062256560",
+      "reason": "Spam détecté (3786.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-24T19:04:16.560Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756063052863",
+      "reason": "Spam détecté (4126.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-24T19:17:32.863Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756649202717",
+      "reason": "Spam détecté (3406.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-31T14:06:42.717Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1759575482749",
+      "reason": "Spam détecté (902.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-10-04T10:58:02.749Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1759665177649",
+      "reason": "Spam détecté (404.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-10-05T11:52:57.649Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1759864958315",
+      "reason": "Spam détecté (1530.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-10-07T19:22:38.315Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1764370084584",
+      "reason": "Spam détecté (5074.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-11-28T22:48:04.584Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1764446159415",
+      "reason": "Spam détecté (5754.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-11-29T19:55:59.415Z",
+      "moderator": "1012782955493601291"
     }
   ],
   "879384380152381460": [
@@ -28,6 +88,403 @@
       "id": "1755975073974",
       "reason": "Spam détecté (3142.00 caractères/seconde, max 2000 autorisés)",
       "date": "2025-08-23T18:51:13.974Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "840985745182425108": [
+    {
+      "id": "1756051125710",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-08-24T15:58:45.710Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1756315486461",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-08-27T17:24:46.461Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1409212273809166470": [
+    {
+      "id": "1756072528635",
+      "reason": "Envoi de lien d'invitation non autorisé",
+      "date": "2025-08-24T21:55:28.635Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756072532169",
+      "reason": "Envoi de lien d'invitation non autorisé",
+      "date": "2025-08-24T21:55:32.169Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1223690418957586443": [],
+  "912767966700003329": [
+    {
+      "id": "1756142481030",
+      "reason": "Spam détecté (3496.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-25T17:21:21.030Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1339634495883575409": [
+    {
+      "id": "1756147255168",
+      "reason": "Spam détecté (3320.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-08-25T18:40:55.168Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756147394087",
+      "reason": "Spam détecté (3320.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-08-25T18:43:14.087Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1757183628161",
+      "reason": "Spam détecté (2290.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-06T18:33:48.161Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1087880361972871230": [
+    {
+      "id": "1756220317509",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-08-26T14:58:37.509Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1756220341514",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-08-26T14:59:01.514Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1756220476498",
+      "reason": "Partage d'informations personnelles critiques",
+      "date": "2025-08-26T15:01:16.498Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1040660073141256332": [
+    {
+      "id": "1756220797090",
+      "reason": "Spam détecté (424.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-08-26T15:06:37.090Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1759069578266",
+      "reason": "Spam détecté (495.72 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-28T14:26:18.266Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1759069592351",
+      "reason": "Spam détecté (341.69 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-28T14:26:32.351Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1098993315350847508": [
+    {
+      "id": "1756238013935",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-08-26T19:53:33.935Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1756238025659",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-08-26T19:53:45.659Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1756238086778",
+      "reason": "Partage d'informations personnelles critiques",
+      "date": "2025-08-26T19:54:46.778Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "892092107714592839": [
+    {
+      "id": "1756246967180",
+      "reason": "Spam détecté (320.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-08-26T22:22:47.180Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1758651461358",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-09-23T18:17:41.358Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1764428499497",
+      "reason": "Spam détecté (2542.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-11-29T15:01:39.497Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1368604399370502165": [
+    {
+      "id": "1756320305933",
+      "reason": "Spam détecté (3174.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-27T18:45:05.933Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756320709035",
+      "reason": "Spam détecté (3424.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-27T18:51:49.035Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1756403310458",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-08-28T17:48:30.458Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1092020440387563540": [
+    {
+      "id": "1756382322405",
+      "reason": "Spam détecté (2314.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-08-28T11:58:42.405Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "939927568533057586": [
+    {
+      "id": "1756476615160",
+      "reason": "Partage d'informations personnelles (premier incident)",
+      "date": "2025-08-29T14:10:15.160Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1395746373139431565": [
+    {
+      "id": "1757449796778",
+      "reason": "Spam détecté (2922.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-09T20:29:56.778Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1757449798285",
+      "reason": "Spam détecté (2378.65 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-09T20:29:58.285Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1274257010229248033": [
+    {
+      "id": "1757694921079",
+      "reason": "Spam détecté (498.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-12T16:35:21.079Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1758800483391",
+      "reason": "Spam détecté (2248.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-25T11:41:23.391Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1758800533570",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-09-25T11:42:13.570Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1397671821108842608": [
+    {
+      "id": "1757855366093",
+      "reason": "Partage d'informations personnelles (premier incident)",
+      "date": "2025-09-14T13:09:26.093Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1758551099797",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-09-22T14:24:59.797Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1295832086602715251": [
+    {
+      "id": "1757874561819",
+      "reason": "Envoi de lien d'invitation non autorisé",
+      "date": "2025-09-14T18:29:21.819Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1334936424222425098": [
+    {
+      "id": "1758194109054",
+      "reason": "Spam détecté (472.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-18T11:15:09.054Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1164986081809289368": [
+    {
+      "id": "1758297815012",
+      "reason": "Spam détecté (2890.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-19T16:03:35.012Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1176941809746841751": [
+    {
+      "id": "1758309289306",
+      "reason": "Partage d'informations personnelles (avertissement final)",
+      "date": "2025-09-19T19:14:49.306Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1302971925571702825": [
+    {
+      "id": "1758443600058",
+      "reason": "Spam détecté (411.08 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-21T08:33:20.058Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1284648869027778642": [
+    {
+      "id": "1758916138597",
+      "reason": "Spam détecté (3808.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-09-26T19:48:58.597Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1329176476553318401": [
+    {
+      "id": "1759264876012",
+      "reason": "Spam détecté (420.00 caractères/seconde, max 300 autorisés)",
+      "date": "2025-09-30T20:41:16.012Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1357064105084715241": [
+    {
+      "id": "1760214386141",
+      "reason": "Partage d'informations personnelles (premier incident)",
+      "date": "2025-10-11T20:26:26.141Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1167922907641544754": [
+    {
+      "id": "1762813189771",
+      "reason": "Partage d'informations personnelles (premier incident)",
+      "date": "2025-11-10T22:19:49.771Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1447617752155160577": [
+    {
+      "id": "1765384290336",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:30.336Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384294273",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:34.273Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384298294",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:38.294Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384302172",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:42.172Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384306026",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:46.026Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384310052",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:50.052Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384314037",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:54.037Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765384317975",
+      "reason": "Spam détecté (2214.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-10T16:31:57.975Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "903230827171807263": [
+    {
+      "id": "1765407594788",
+      "reason": "Partage d'informations personnelles (premier incident)",
+      "date": "2025-12-10T22:59:54.788Z",
+      "moderator": "DoxDetector"
+    },
+    {
+      "id": "1765564828066",
+      "reason": "Partage d'informations personnelles (incident répété)",
+      "date": "2025-12-12T18:40:28.066Z",
+      "moderator": "DoxDetector"
+    }
+  ],
+  "1450313846236643359": [
+    {
+      "id": "1765906634816",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:37:14.816Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765906638948",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:37:18.948Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765906642827",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:37:22.827Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765906646569",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:37:26.569Z",
+      "moderator": "1012782955493601291"
+    }
+  ],
+  "1450067101120466990": [
+    {
+      "id": "1765907541032",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:52:21.032Z",
+      "moderator": "1012782955493601291"
+    },
+    {
+      "id": "1765907545245",
+      "reason": "Spam détecté (2226.00 caractères/seconde, max 2000 autorisés)",
+      "date": "2025-12-16T17:52:25.245Z",
       "moderator": "1012782955493601291"
     }
   ]

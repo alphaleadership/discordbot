@@ -1,0 +1,1941 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-08-24T14:30:51.779Z",
+    "lastModified": "2025-12-18T22:04:36.678Z",
+    "migrated": true
+  },
+  "_settings": {},
+  "GLOBAL_957685914329563207": {
+    "userId": "957685914329563207",
+    "username": "neltharion_ltv",
+    "discriminator": "0",
+    "reason": "dc d'un admin du bot utilisée pour des test",
+    "addedBy": "702155370054811658",
+    "addedAt": "2025-08-24T14:32:08.393Z",
+    "lastSeen": "2025-08-28T21:23:27.381Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1756048891406_ejuagpwew",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: *Message sans contenu texte*",
+        "timestamp": "2025-08-24T15:21:31.406Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1409195930070155354",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_957685914329563207_1756048891404",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1409195930070155354"
+        }
+      },
+      {
+        "id": "1756415792198_e3b5vfp9u",
+        "type": "message",
+        "description": "Message dans #「🐦」𝐓𝐰𝐢𝐭𝐭𝐞𝐫: Percival en 1940 : Le Royaume-Uni refuse toutes les négociations et tout dialogue alors que l'Allemagne propose une solution de paix viable. Le régime bandériste de Londres chutera bien un jour.",
+        "timestamp": "2025-08-28T21:16:32.198Z",
+        "channelId": "1200187412278673519",
+        "messageId": "1410734823496224810",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 194,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_957685914329563207_1756415792196",
+          "messageUrl": "https://discord.com/channels/1037794097894797442/1200187412278673519/1410734823496224810"
+        }
+      },
+      {
+        "id": "1756416207381_5yksvxn03",
+        "type": "message",
+        "description": "Message dans #「🐦」𝐓𝐰𝐢𝐭𝐭𝐞𝐫: Les enlèvements d'enfants ukrainiens, les crimes de guerre massif, les massacres de civils, les viols, ce sont les russes qui le font, pas les Ukrainiens qui ne font que résister à l'envahisseur.\n\nL'i...",
+        "timestamp": "2025-08-28T21:23:27.381Z",
+        "channelId": "1200187412278673519",
+        "messageId": "1410736564832829470",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 397,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_957685914329563207_1756416207379",
+          "messageUrl": "https://discord.com/channels/1037794097894797442/1200187412278673519/1410736564832829470"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1334936424222425098": {
+    "userId": "1334936424222425098",
+    "username": "stanislasdeneustrie",
+    "discriminator": "0",
+    "reason": "Utilisateur dangereux qui a commis des raids, doxx et cyberharcèlement.",
+    "addedBy": "702155370054811658",
+    "addedAt": "2025-08-24T15:25:10.153Z",
+    "lastSeen": "2025-09-27T10:19:18.976Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1757245050522_n4rcsny5g",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: T'y es jamais allé",
+        "timestamp": "2025-09-07T11:37:30.522Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414212984904876115",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 18,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245050520",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414212984904876115"
+        }
+      },
+      {
+        "id": "1757245076872_e64r2u2qs",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Et vu ce que t'as du faire de ta micronation, j'irai pas parler d'inactivité à ta place",
+        "timestamp": "2025-09-07T11:37:56.872Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414213095580106773",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 87,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245076871",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414213095580106773"
+        }
+      },
+      {
+        "id": "1757245430844_c1p26gd1z",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Ça, c'est ce que tu veux bien dire",
+        "timestamp": "2025-09-07T11:43:50.844Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414214579940229173",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245430844",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414214579940229173"
+        }
+      },
+      {
+        "id": "1757245467841_hzugew0z2",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Pendant combien de temps dis moi ? 😂",
+        "timestamp": "2025-09-07T11:44:27.841Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414214735427141682",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 37,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245467840",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414214735427141682"
+        }
+      },
+      {
+        "id": "1757245495142_nsstwv0n3",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Et puis moi, je n'ai jamais été détesté dans ma propre nation comme tu l'as été",
+        "timestamp": "2025-09-07T11:44:55.142Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414214849956937758",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 79,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245495142",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414214849956937758"
+        }
+      },
+      {
+        "id": "1757245571529_z52e7xrj6",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: D'ailleurs je viens de vérifier, et c'est bien ce que je pensais, t'as jamais eu de visa à Neustrie",
+        "timestamp": "2025-09-07T11:46:11.529Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414215170309488681",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 99,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245571528",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414215170309488681"
+        }
+      },
+      {
+        "id": "1757245601062_r6eyahgbx",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Ça y est, il nous fait l'illuminé",
+        "timestamp": "2025-09-07T11:46:41.062Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414215294116696104",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 33,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245601061",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414215294116696104"
+        }
+      },
+      {
+        "id": "1757245627534_ua8t11lir",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Oui",
+        "timestamp": "2025-09-07T11:47:07.534Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414215405181866075",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245627534",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414215405181866075"
+        }
+      },
+      {
+        "id": "1757245699888_az5ivj2ir",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Alors nuance, je suis jamais parti moi",
+        "timestamp": "2025-09-07T11:48:19.888Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1414215708715388968",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 38,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757245699887",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1414215708715388968"
+        }
+      },
+      {
+        "id": "1757539755841_0wkcqdq4s",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: <@1295832086602715251> Je tiens à notifier ici que Berryne s'amuse à faire briser des traités de paix, à répétition",
+        "timestamp": "2025-09-10T21:29:15.841Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1415449068674748497",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 115,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757539755840",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1415449068674748497"
+        }
+      },
+      {
+        "id": "1757946852956_zs9t1925t",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Les révolutionnaire",
+        "timestamp": "2025-09-15T14:34:12.956Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 19602807502,
+          "joinedAt": "2025-09-15T14:34:12.819Z",
+          "isGlobalWatch": true,
+          "memberCount": 15,
+          "operationId": "join_1334936424222425098_1757946852955"
+        }
+      },
+      {
+        "id": "1757946853336_kr54xcil9",
+        "type": "message",
+        "description": "Message dans #général: *Message sans contenu texte*",
+        "timestamp": "2025-09-15T14:34:13.336Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417156559418556416",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757946853335",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417156559418556416"
+        }
+      },
+      {
+        "id": "1757946884044_i7385bocl",
+        "type": "message",
+        "description": "Message dans #général: https://discord.com/channels/1416436097084424213/1416740462756237377/1417103891916656790",
+        "timestamp": "2025-09-15T14:34:44.044Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417156687730704525",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 88,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757946884043",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417156687730704525"
+        }
+      },
+      {
+        "id": "1757946891528_3ercne81w",
+        "type": "message",
+        "description": "Message dans #général: On m'a appelé ? :))",
+        "timestamp": "2025-09-15T14:34:51.528Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417156719515140217",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 19,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757946891527",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417156719515140217"
+        }
+      },
+      {
+        "id": "1757946903099_rqp0hqc70",
+        "type": "message",
+        "description": "Message dans #général: J'ai croisé le lien dans une ambassade",
+        "timestamp": "2025-09-15T14:35:03.099Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417156767976263732",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 38,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757946903099",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417156767976263732"
+        }
+      },
+      {
+        "id": "1757948311559_ybe8cmg6t",
+        "type": "message",
+        "description": "Message dans #général: J'y suis sceptique pour le moment, je suis plutôt là en observateur",
+        "timestamp": "2025-09-15T14:58:31.559Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417162675657379950",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 67,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757948311558",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417162675657379950"
+        }
+      },
+      {
+        "id": "1757954553791_zmgpyv3oh",
+        "type": "message",
+        "description": "Message dans #général: Je ne suis un monarchiste pur et dur",
+        "timestamp": "2025-09-15T16:42:33.791Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417188857446924408",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 36,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757954553790",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417188857446924408"
+        }
+      },
+      {
+        "id": "1757954586778_ggd0zjmoj",
+        "type": "message",
+        "description": "Message dans #général: J'ai dis pur et dur",
+        "timestamp": "2025-09-15T16:43:06.778Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417188995497984134",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 19,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757954586777",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417188995497984134"
+        }
+      },
+      {
+        "id": "1757954609209_3p7y8vudv",
+        "type": "message",
+        "description": "Message dans #général: J'estime que la monarchie est une solution dans certaines nations, et la République dans d'autres",
+        "timestamp": "2025-09-15T16:43:29.209Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1417189089580552245",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 97,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1757954609209",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1417189089580552245"
+        }
+      },
+      {
+        "id": "1758136620214_xu0w485nt",
+        "type": "message",
+        "description": "Message dans #général: Non merci",
+        "timestamp": "2025-09-17T19:17:00.214Z",
+        "channelId": "1417608330976952450",
+        "messageId": "1417952499394154506",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 9,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758136620213",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1417608330976952450/1417952499394154506"
+        }
+      },
+      {
+        "id": "1758194109053_fw9k8sq29",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Moi, je trouve que faire ça contre quelqu'un qui ne représente aucune forme de menace réelle, à 2 semaines d'une conférence intermicronationale pour la paix, où cette nation doit se présenter comme mé...",
+        "timestamp": "2025-09-18T11:15:09.053Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418193624893620365",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 236,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194109052",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418193624893620365"
+        }
+      },
+      {
+        "id": "1758194167045_bsz4qgwa9",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: C'est une affaire qui concerne plus que 2 nations, donc c'est de facto international",
+        "timestamp": "2025-09-18T11:16:07.045Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418193868305862687",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 84,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194167045",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418193868305862687"
+        }
+      },
+      {
+        "id": "1758194226394_112c7i0x2",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Donc c'est international",
+        "timestamp": "2025-09-18T11:17:06.394Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418194117078286357",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 24,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194226393",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418194117078286357"
+        }
+      },
+      {
+        "id": "1758194251747_fj4iqhfg4",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Et pardon, mais non ce gamin de 11 piges ne représente aucune forme de menace réelle pour Monteloria",
+        "timestamp": "2025-09-18T11:17:31.747Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418194223160623237",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 100,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194251746",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418194223160623237"
+        }
+      },
+      {
+        "id": "1758194295343_cgqzdznmk",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: C'est pas tant le sujet",
+        "timestamp": "2025-09-18T11:18:15.343Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418194406405705758",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 23,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194295343",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418194406405705758"
+        }
+      },
+      {
+        "id": "1758194332132_4el68tub5",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: A Neustrie, on l'a mis sous silence en attente d'un procès, on a la paix",
+        "timestamp": "2025-09-18T11:18:52.132Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418194560668139631",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 72,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194332131",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418194560668139631"
+        }
+      },
+      {
+        "id": "1758194410436_cmrxdrazm",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Bon et bah voila, sujet clos",
+        "timestamp": "2025-09-18T11:20:10.436Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418194888926822421",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194410435",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418194888926822421"
+        }
+      },
+      {
+        "id": "1758194458476_48jpnhgvt",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: De toute façon, c'est un gamin dont les compétences s'arrêtent à Peppa Pig",
+        "timestamp": "2025-09-18T11:20:58.476Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418195090429448292",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 74,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194458475",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418195090429448292"
+        }
+      },
+      {
+        "id": "1758194472361_snfedke31",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Donc si tenté qu'il avait un serveur, il ne représente une menace pour personne",
+        "timestamp": "2025-09-18T11:21:12.361Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1418195148860293240",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 79,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758194472361",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1418195148860293240"
+        }
+      },
+      {
+        "id": "1758968022154_frd0pwn7e",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Il est parti",
+        "timestamp": "2025-09-27T10:13:42.154Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421439651759132702",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 12,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968022153",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421439651759132702"
+        }
+      },
+      {
+        "id": "1758968047341_6o4ulvlpv",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Et j'envisage de faire de même",
+        "timestamp": "2025-09-27T10:14:07.341Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421439757346668574",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 30,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968047341",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421439757346668574"
+        }
+      },
+      {
+        "id": "1758968084962_jm9sjldvu",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: J'étais venu pour la Conférence",
+        "timestamp": "2025-09-27T10:14:44.962Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421439915194843256",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968084962",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421439915194843256"
+        }
+      },
+      {
+        "id": "1758968100603_phsj6dq71",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Donc mtn qu'elle est annulée, j'ai plus aucune raison de restee",
+        "timestamp": "2025-09-27T10:15:00.603Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421439980936364142",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 63,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968100602",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421439980936364142"
+        }
+      },
+      {
+        "id": "1758968139335_p8kbduy1w",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Bof",
+        "timestamp": "2025-09-27T10:15:39.335Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421440143251865600",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968139335",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421440143251865600"
+        }
+      },
+      {
+        "id": "1758968276382_ce6rh8qln",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Le principe c'est que c'est une annonce publique",
+        "timestamp": "2025-09-27T10:17:56.382Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421440718160793691",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 48,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968276381",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421440718160793691"
+        }
+      },
+      {
+        "id": "1758968286763_cx470fgse",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: Et donc que tout le monde, y compris toi, puisse le lire",
+        "timestamp": "2025-09-27T10:18:06.763Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421440761538543683",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 56,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968286763",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421440761538543683"
+        }
+      },
+      {
+        "id": "1758968358976_4orvxgz5o",
+        "type": "message",
+        "description": "Message dans #🟦⬛🟥・𝐄mpire-de-𝐁erryne: La conclusion, c'est que personne n'a été aidé, bien au contraire, et que vous avez gagné quelques membres",
+        "timestamp": "2025-09-27T10:19:18.976Z",
+        "channelId": "1406936617301840002",
+        "messageId": "1421441064228749403",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 106,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1334936424222425098_1758968358976",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406936617301840002/1421441064228749403"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_924470301461450784": {
+    "userId": "924470301461450784",
+    "username": "neutron_28",
+    "discriminator": "0",
+    "reason": "Utilisateur qui fait du prosélitysme religieux, homophobe et soupçonné d'être un sympatisant islamiste.",
+    "addedBy": "702155370054811658",
+    "addedAt": "2025-08-24T15:26:50.623Z",
+    "lastSeen": "2025-10-08T12:22:41.215Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1759926161215_dsatahn26",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Royaume de Burgondie",
+        "timestamp": "2025-10-08T12:22:41.215Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 119444865518,
+          "joinedAt": "2025-10-08T12:22:41.119Z",
+          "isGlobalWatch": true,
+          "memberCount": 19,
+          "operationId": "join_924470301461450784_1759926161214"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_941795323481821214": {
+    "userId": "941795323481821214",
+    "username": "s_s_lp",
+    "discriminator": "0",
+    "reason": "Ancien membre du conseil constitutionnel en Nesquatie, connue pour ses dérapages régulier sur différents serveurs.",
+    "addedBy": "702155370054811658",
+    "addedAt": "2025-08-24T15:34:54.937Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_691642053154570251": {
+    "userId": "691642053154570251",
+    "username": "leandredesteinfort",
+    "discriminator": "0",
+    "reason": "Membre de la RGS qui a une devise (du consulats) pétainiste dans sa bio.",
+    "addedBy": "702155370054811658",
+    "addedAt": "2025-08-24T15:38:19.037Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1329176476553318401": {
+    "userId": "1329176476553318401",
+    "username": "red_jujul",
+    "discriminator": "0",
+    "reason": "mec sus",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-24T20:04:24.887Z",
+    "lastSeen": "2025-12-18T22:04:36.678Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1756421446313_qwf9kriyi",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur République démocratique de Monteloria [RP]",
+        "timestamp": "2025-08-28T22:50:46.313Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 19450679398,
+          "joinedAt": "2025-08-28T22:50:46.173Z",
+          "isGlobalWatch": true,
+          "memberCount": 45,
+          "operationId": "join_1329176476553318401_1756421446312"
+        }
+      },
+      {
+        "id": "1757804638038_quyx9pkbj",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Les révolutionnaire",
+        "timestamp": "2025-09-13T23:03:58.038Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 20833871123,
+          "joinedAt": "2025-09-13T23:03:57.944Z",
+          "isGlobalWatch": true,
+          "memberCount": 9,
+          "operationId": "join_1329176476553318401_1757804638037"
+        }
+      },
+      {
+        "id": "1757804638115_fz42hrg6r",
+        "type": "message",
+        "description": "Message dans #général: *Message sans contenu texte*",
+        "timestamp": "2025-09-13T23:03:58.115Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560065552318546",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804638114",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560065552318546"
+        }
+      },
+      {
+        "id": "1757804687115_99gkqnqik",
+        "type": "message",
+        "description": "Message dans #général: Tkt",
+        "timestamp": "2025-09-13T23:04:47.115Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560271035596841",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804687114",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560271035596841"
+        }
+      },
+      {
+        "id": "1757804692318_h6m0wf72l",
+        "type": "message",
+        "description": "Message dans #général: Bref je vais me coucher",
+        "timestamp": "2025-09-13T23:04:52.318Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560292728410200",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 23,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804692317",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560292728410200"
+        }
+      },
+      {
+        "id": "1757804695061_vn0hhzdzq",
+        "type": "message",
+        "description": "Message dans #général: Bonne nuit",
+        "timestamp": "2025-09-13T23:04:55.061Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560303960883282",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 10,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804695060",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560303960883282"
+        }
+      },
+      {
+        "id": "1757884761229_9o1awu7id",
+        "type": "message",
+        "description": "Message dans #général: Je vous suggère de construire des tunnel d'explosifs",
+        "timestamp": "2025-09-14T21:19:21.229Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416896126249865307",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 52,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757884761228",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416896126249865307"
+        }
+      },
+      {
+        "id": "1757884767690_mta0g16is",
+        "type": "message",
+        "description": "Message dans #général: Bon je dit ça je dit rien",
+        "timestamp": "2025-09-14T21:19:27.690Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416896153286479872",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757884767690",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416896153286479872"
+        }
+      },
+      {
+        "id": "1758053667097_lbd8fsyvx",
+        "type": "message",
+        "description": "Message dans #Toda Irde: Toda Irde",
+        "timestamp": "2025-09-16T20:14:27.097Z",
+        "channelId": "1417604568577085490",
+        "messageId": "1417604568577085490",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 9,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1758053667096",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1417604568577085490/1417604568577085490"
+        }
+      },
+      {
+        "id": "1759263295635_xlx9zhq1i",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: https://discord.com/channels/1405654925144490115/1405937330778411111/1422677910984331354",
+        "timestamp": "2025-09-30T20:14:55.635Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422678118530945064",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 88,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759263295633",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422678118530945064"
+        }
+      },
+      {
+        "id": "1759263320619_lyd68rlkf",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Je pense vrm savoir czst qui",
+        "timestamp": "2025-09-30T20:15:20.619Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422678223434813571",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759263320618",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422678223434813571"
+        }
+      },
+      {
+        "id": "1759264876011_emplkqhvb",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Jsp si tu savais mais avant on a fait un grp anti toi (je me suis excuser c'est du passé) mais après 1 deuxième grp de genrs 7 personne je dirais on crée un autre grp la bas ya Stan je pense si je me ...",
+        "timestamp": "2025-09-30T20:41:16.011Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422684747208855682",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 210,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759264876011",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422684747208855682"
+        }
+      },
+      {
+        "id": "1759265027553_ov1xhp4hy",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Jsp j'ai pas d'autre idée",
+        "timestamp": "2025-09-30T20:43:47.553Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422685382645911644",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759265027552",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422685382645911644"
+        }
+      },
+      {
+        "id": "1759265269762_5tzyy80y4",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: 23 wshh",
+        "timestamp": "2025-09-30T20:47:49.762Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422686398716313600",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759265269761",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422686398716313600"
+        }
+      },
+      {
+        "id": "1764326629977_ah31x7wjt",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Arrête de débattre toi aussi",
+        "timestamp": "2025-11-28T10:43:49.977Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443915281930915881",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764326629976",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443915281930915881"
+        }
+      },
+      {
+        "id": "1764332282324_jtttax018",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Merci beaucoup",
+        "timestamp": "2025-11-28T12:18:02.324Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443938989697663017",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764332282324",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443938989697663017"
+        }
+      },
+      {
+        "id": "1764336771820_wlp0f5spv",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Quand ta besoin de moi passe mp",
+        "timestamp": "2025-11-28T13:32:51.820Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443957820046184540",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764336771819",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443957820046184540"
+        }
+      },
+      {
+        "id": "1764340738164_tfyhziewf",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Bien",
+        "timestamp": "2025-11-28T14:38:58.164Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443974455767597140",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764340738163",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443974455767597140"
+        }
+      },
+      {
+        "id": "1766093353802_j80dl5tnk",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Service Espionnage gouvernementale Monteloria",
+        "timestamp": "2025-12-18T21:29:13.802Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 29122586887,
+          "joinedAt": "2025-12-18T21:29:13.604Z",
+          "isGlobalWatch": true,
+          "memberCount": 9,
+          "operationId": "join_1329176476553318401_1766093353801"
+        }
+      },
+      {
+        "id": "1766093410508_l6veuhxqu",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Intéressant ça",
+        "timestamp": "2025-12-18T21:30:10.508Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451325696562434129",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766093410507",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451325696562434129"
+        }
+      },
+      {
+        "id": "1766094038764_fwidxwv0w",
+        "type": "message",
+        "description": "Message dans #discution💬: Bonsoir mes chers compatriotes",
+        "timestamp": "2025-12-18T21:40:38.764Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451328331889770567",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 30,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094038763",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451328331889770567"
+        }
+      },
+      {
+        "id": "1766094071532_8vb0phozf",
+        "type": "message",
+        "description": "Message dans #discution💬: Ya aussi un dossier à faire c'est celui de Sarah thena",
+        "timestamp": "2025-12-18T21:41:11.532Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451328469345763369",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 54,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094071531",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451328469345763369"
+        }
+      },
+      {
+        "id": "1766094974956_y71p7d0i8",
+        "type": "message",
+        "description": "Message dans #discution💬: Elle a invité stan dans le RdT et quznd ya embrouille ça essaye de l'aider et de lui donner raison",
+        "timestamp": "2025-12-18T21:56:14.956Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451332258219688184",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 98,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094974955",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451332258219688184"
+        }
+      },
+      {
+        "id": "1766095005403_87n0c48rn",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Tkt ils serviront monteloria",
+        "timestamp": "2025-12-18T21:56:45.403Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451332386167062709",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095005403",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451332386167062709"
+        }
+      },
+      {
+        "id": "1766095176423_n2aly868r",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Bha j'ai pas ou emmené les dossiers enft",
+        "timestamp": "2025-12-18T21:59:36.423Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451333103489515580",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 40,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095176422",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451333103489515580"
+        }
+      },
+      {
+        "id": "1766095186042_sxumkgdes",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Et j'ai ps vrm de raison. Le faire",
+        "timestamp": "2025-12-18T21:59:46.042Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451333143666626592",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095186041",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451333143666626592"
+        }
+      },
+      {
+        "id": "1766095476678_gaufffoz6",
+        "type": "message",
+        "description": "Message dans #Dossier X00002: Pseudo:@sarahgl1\nId: \nAccusations: Reine autoritaire dictatrice/aide et soutient à stanislasdeneustrie\nDéposer le 18/12/2025 à 23h05\nPar Jujul\nPreuves: *dans le future*",
+        "timestamp": "2025-12-18T22:04:36.678Z",
+        "channelId": "1451334362581700822",
+        "messageId": "1451334362581700822",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 168,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095476678",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1451334362581700822/1451334362581700822"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1381303115994628311": {
+    "userId": "1381303115994628311",
+    "username": "jujuldesecours",
+    "discriminator": "0",
+    "reason": "ssecond compte",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-25T05:46:31.931Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1409212273809166470": {
+    "userId": "1409212273809166470",
+    "username": "tito2863356",
+    "discriminator": "0",
+    "reason": "utilisateur suspect",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-25T15:48:42.572Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1170366911071146097": {
+    "userId": "1170366911071146097",
+    "username": "saphir1051",
+    "discriminator": "0",
+    "reason": "utilisateur sus",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-25T17:41:04.598Z",
+    "lastSeen": "2025-10-10T13:02:56.515Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1756146850481_zdwasudyi",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: C'est moi🤣",
+        "timestamp": "2025-08-25T18:34:10.481Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1409606799925051393",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 11,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756146850478",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1409606799925051393"
+        }
+      },
+      {
+        "id": "1756148689973_h7cf7064d",
+        "type": "message",
+        "description": "Message dans #🏘️・café: Test",
+        "timestamp": "2025-08-25T19:04:49.973Z",
+        "channelId": "1405863580066250802",
+        "messageId": "1409614515573887108",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756148689971",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1405863580066250802/1409614515573887108"
+        }
+      },
+      {
+        "id": "1756154540298_xuvtw159j",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Ok",
+        "timestamp": "2025-08-25T20:42:20.298Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1409639053246205953",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756154540297",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1409639053246205953"
+        }
+      },
+      {
+        "id": "1756226664911_sw38onfld",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Nn",
+        "timestamp": "2025-08-26T16:44:24.911Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1409941566205984849",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756226664909",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1409941566205984849"
+        }
+      },
+      {
+        "id": "1756226668472_3iysp5k1n",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Déjà voc",
+        "timestamp": "2025-08-26T16:44:28.472Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1409941581179387904",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 8,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756226668471",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1409941581179387904"
+        }
+      },
+      {
+        "id": "1756234600320_li4j4fra1",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Mouton est toujours ban",
+        "timestamp": "2025-08-26T18:56:40.320Z",
+        "channelId": "1406429495740596356",
+        "messageId": "1409974849752793228",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 23,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756234600319",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429495740596356/1409974849752793228"
+        }
+      },
+      {
+        "id": "1756234755114_eg47278di",
+        "type": "message",
+        "description": "Message dans #🐦・twitter: Kayou",
+        "timestamp": "2025-08-26T18:59:15.114Z",
+        "channelId": "1406429690402443314",
+        "messageId": "1409975498959880223",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 5,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756234755113",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429690402443314/1409975498959880223"
+        }
+      },
+      {
+        "id": "1756667518221_pagse5g9n",
+        "type": "message",
+        "description": "Message dans #🐦・twitter: 1+1=2",
+        "timestamp": "2025-08-31T19:11:58.221Z",
+        "channelId": "1406429690402443314",
+        "messageId": "1411790638944489574",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 5,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1756667518208",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1406429690402443314/1411790638944489574"
+        }
+      },
+      {
+        "id": "1759008658873_x4372qc4u",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Pk tu ping ?",
+        "timestamp": "2025-09-27T21:30:58.873Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1421610094323302553",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 12,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1759008658872",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1421610094323302553"
+        }
+      },
+      {
+        "id": "1759008703246_3h9f4eul8",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Sava mais ping pour ça ça casse les couilles",
+        "timestamp": "2025-09-27T21:31:43.246Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1421610280726691960",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 44,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1759008703245",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1421610280726691960"
+        }
+      },
+      {
+        "id": "1760101356528_su2nlv7r7",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: <@1295832086602715251>",
+        "timestamp": "2025-10-10T13:02:36.528Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1426193200661532802",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1760101356527",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1426193200661532802"
+        }
+      },
+      {
+        "id": "1760101376515_n4d1204yf",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Vraiment <@1295832086602715251>",
+        "timestamp": "2025-10-10T13:02:56.515Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1426193284254138489",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1760101376514",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1426193284254138489"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1180568766011158690": {
+    "userId": "1180568766011158690",
+    "username": "mirionaute_05640",
+    "discriminator": "0",
+    "reason": "sus",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-26T09:46:18.539Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1250912740109844480": {
+    "userId": "1250912740109844480",
+    "username": "maskassouu",
+    "discriminator": "0",
+    "reason": "suspicion de raid",
+    "addedBy": "1295832086602715251",
+    "addedAt": "2025-08-26T09:52:53.181Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1185382688132173914": {
+    "userId": "1185382688132173914",
+    "username": "kobalt_08",
+    "discriminator": "0",
+    "reason": "raid",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-26T16:58:36.399Z",
+    "lastSeen": "2025-09-21T14:02:48.408Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1758463368341_0svb4m6ha",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Groupe RTL",
+        "timestamp": "2025-09-21T14:02:48.341Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 55775712145,
+          "joinedAt": "2025-09-21T14:02:48.235Z",
+          "isGlobalWatch": true,
+          "memberCount": 53,
+          "operationId": "join_1185382688132173914_1758463368340"
+        }
+      },
+      {
+        "id": "1758463368408_kj1mbhyk0",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: *Message sans contenu texte*",
+        "timestamp": "2025-09-21T14:02:48.408Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1419322980672077914",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1185382688132173914_1758463368407",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1419322980672077914"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1174068330525638680": {
+    "userId": "1174068330525638680",
+    "username": "al_maghrebi.",
+    "discriminator": "0",
+    "reason": "user suspect de prosélitisme + potentielle raideur",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-28T09:56:43.843Z",
+    "lastSeen": "2025-10-21T12:55:41.100Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1759429240170_fouccx6j8",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur République démocratique de Monteloria [RP]",
+        "timestamp": "2025-10-02T18:20:40.170Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 59439137038,
+          "joinedAt": "2025-10-02T18:20:39.633Z",
+          "isGlobalWatch": true,
+          "memberCount": 49,
+          "operationId": "join_1174068330525638680_1759429240169"
+        }
+      },
+      {
+        "id": "1760643495698_cx88b9wix",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Pk le serveur est mort ?",
+        "timestamp": "2025-10-16T19:38:15.698Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1428467097255809129",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 24,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1174068330525638680_1760643495696",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1428467097255809129"
+        }
+      },
+      {
+        "id": "1760676640984_h7pfjlxaa",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: A merde",
+        "timestamp": "2025-10-17T04:50:40.984Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1428606118581764098",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1174068330525638680_1760676640983",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1428606118581764098"
+        }
+      },
+      {
+        "id": "1761051337266_e8g9zna8z",
+        "type": "message",
+        "description": "Message dans #📢・annonces: Il a fait quoi",
+        "timestamp": "2025-10-21T12:55:37.266Z",
+        "channelId": "1429914061977419868",
+        "messageId": "1430177708796805210",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1174068330525638680_1761051337265",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914061977419868/1430177708796805210"
+        }
+      },
+      {
+        "id": "1761051341100_ux4lwuecr",
+        "type": "message",
+        "description": "Message dans #📢・annonces: Stanislas",
+        "timestamp": "2025-10-21T12:55:41.100Z",
+        "channelId": "1429914061977419868",
+        "messageId": "1430177724764389459",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 9,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1174068330525638680_1761051341100",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914061977419868/1430177724764389459"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_438710647996284949": {
+    "userId": "438710647996284949",
+    "username": "sunsky_",
+    "discriminator": "0",
+    "reason": "premier ministre de neustrie",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-09-06T17:11:52.857Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1296584792284069964": {
+    "userId": "1296584792284069964",
+    "username": "massimo_dux21",
+    "discriminator": "0",
+    "reason": "neustrien",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-09-06T17:15:35.784Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1249163614389272597": {
+    "userId": "1249163614389272597",
+    "username": "elea.jia58",
+    "discriminator": "0",
+    "reason": "citoyen et un rôle de ministre et suceur royal de Stanislas",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-09-06T17:20:27.191Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1202322570829897732": {
+    "userId": "1202322570829897732",
+    "username": "luclebruh",
+    "discriminator": "0",
+    "reason": "suspision misogyne",
+    "addedBy": "1295832086602715251",
+    "addedAt": "2025-09-07T08:56:42.409Z",
+    "lastSeen": "2025-12-11T19:53:30.923Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1765482557590_llibh13i7",
+        "type": "message",
+        "description": "Message dans #『💬』général: Bonsoir",
+        "timestamp": "2025-12-11T19:49:17.590Z",
+        "channelId": "1226192664018423946",
+        "messageId": "1448763593855074508",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1202322570829897732_1765482557588",
+          "messageUrl": "https://discord.com/channels/1226192664018423940/1226192664018423946/1448763593855074508"
+        }
+      },
+      {
+        "id": "1765482810923_kjjjz4887",
+        "type": "message",
+        "description": "Message dans #『💬』général: ça va ?",
+        "timestamp": "2025-12-11T19:53:30.923Z",
+        "channelId": "1226192664018423946",
+        "messageId": "1448764656079343772",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1202322570829897732_1765482810922",
+          "messageUrl": "https://discord.com/channels/1226192664018423940/1226192664018423946/1448764656079343772"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1336384749874315418": {
+    "userId": "1336384749874315418",
+    "username": "nathounax",
+    "discriminator": "0",
+    "reason": "utilisateur problématique",
+    "addedBy": "1295832086602715251",
+    "addedAt": "2025-09-07T16:57:47.258Z",
+    "lastSeen": "2025-09-07T17:32:17.206Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1757266337206_ar3hvhjb3",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur République démocratique de Monteloria [RP]",
+        "timestamp": "2025-09-07T17:32:17.206Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 18576984008,
+          "joinedAt": "2025-09-07T17:32:16.888Z",
+          "isGlobalWatch": true,
+          "memberCount": 49,
+          "operationId": "join_1336384749874315418_1757266337205"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1240344463721758820": {
+    "userId": "1240344463721758820",
+    "username": "lubeck_am",
+    "discriminator": "0",
+    "reason": "insulte+ menace se mort sur autre utilisateur",
+    "addedBy": "1295832086602715251",
+    "addedAt": "2025-10-15T19:40:40.720Z",
+    "lastSeen": "2025-11-10T22:20:10.221Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1762813210221_fps0pibdv",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: Naaaah le prompt",
+        "timestamp": "2025-11-10T22:20:10.221Z",
+        "channelId": "1433922223386661060",
+        "messageId": "1437567536433463510",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 16,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 5,
+          "isGlobalWatch": true,
+          "operationId": "msg_1240344463721758820_1762813210192",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433922223386661060/1437567536433463510"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_961005481600630855": {
+    "userId": "961005481600630855",
+    "username": "aissam7549",
+    "discriminator": "0",
+    "reason": "utilisateur suspect",
+    "addedBy": "1295832086602715251",
+    "addedAt": "2025-10-23T12:25:05.991Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  }
+}

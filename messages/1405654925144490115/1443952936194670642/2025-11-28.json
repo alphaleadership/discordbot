@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1443952936194670642",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1443952936194670642",
+    "channelName": "Modèle conforme",
+    "content": "Proposition de loi [numéro] \nExposé des motifs\n\nArticle 1 — Objet\n\nArticle 2 — Autorisation préalable\n\nArticle 3 — Obligations des exploitants\n\nArticle 4 — Autorité de contrôle\n\nArticle 5 — Sanctions\n\nArticle 6 — Entrée en vigueur\n\nLa présente loi entre en vigueur 30 jours après sa publication",
+    "timestamp": 1764335607337,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

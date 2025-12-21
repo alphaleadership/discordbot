@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1450584852863914086",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "actu-hrp",
+    "content": "Le Journal d’un prisonnier : le livre de Nicolas Sarkozy vendu à près de 100.000 exemplaires\nhttps://www.lefigaro.fr/politique/le-journal-d-un-prisonnier-le-livre-de-nicolas-sarkozy-vendu-a-pres-de-100-000-exemplaires-20251216?utm_source=app&utm_medium=share&utm_campaign=android_Figaro",
+    "timestamp": 1765916779486,
+    "attachments": [],
+    "embeds": [
+      {
+        "url": "https://www.lefigaro.fr/politique/le-journal-d-un-prisonnier-le-livre-de-nicolas-sarkozy-vendu-a-pres-de-100-000-exemplaires-20251216?utm_source=app&utm_medium=share&utm_campaign=android_Figaro",
+        "type": "article",
+        "title": "Le Journal d’un prisonnier : le livre de Nicolas Sarkozy vendu à...",
+        "thumbnail": {
+          "width": 1200,
+          "url": "https://i.f1g.fr/media/cms/1200x630_crop/2025/12/16/1f84522d47f11df9496416f6157dc2ddd6dc820629c174778e613e7e1deec74e.JPG",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/zKnYo1HXiDZuo6_f3AVzbgC8h2S4FAgGfmPlaNMvfZY/https/i.f1g.fr/media/cms/1200x630_crop/2025/12/16/1f84522d47f11df9496416f6157dc2ddd6dc820629c174778e613e7e1deec74e.JPG",
+          "height": 630,
+          "flags": 0,
+          "description": "L'ancien président Nicolas Sarkozy arrive à la librairie Lamartine pour la présentation de son nouveau livre sur son séjour en prison",
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "name": "Le Figaro"
+        },
+        "id": "1450584852863914087",
+        "description": "Sorti le 10 décembre, cet ouvrage raconte les trois semaines de détention de l’ancien président après sa condamnation dans l’affaire du financement présumé libyen de sa campagne de 2007.",
+        "content_scan_version": 3,
+        "color": 16777215
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

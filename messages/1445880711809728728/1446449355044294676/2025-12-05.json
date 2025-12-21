@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1446449355044294676",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446449355044294676",
+    "channelName": "Parti royal radicaux",
+    "content": "Nom du parti : royal radical \nAbbréviation (entre 2 et 5 caractères) : RR\nPositionnement (entre extrême gauche et extrême droite) : extrême gauche\nIdéologies dominantes (seulement le principal) : Royaliste, extremiste\nLogo du parti (à joindre)",
+    "timestamp": 1764930799972,
+    "attachments": [
+      {
+        "id": "1446449355719446649",
+        "name": "file_000000006ef0720a9e3038328b10225b.png",
+        "url": "https://cdn.discordapp.com/attachments/1446449355044294676/1446449355719446649/file_000000006ef0720a9e3038328b10225b.png?ex=69340670&is=6932b4f0&hm=a834850e3cd7a53d7984802a2d9ac86fc7d11982833571365e9965c9b10bfff9&",
+        "contentType": "image/png",
+        "size": 1307164
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

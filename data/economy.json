@@ -1,0 +1,2466 @@
+{
+  "_metadata": {
+    "version": "1.0",
+    "created": "2025-09-01T16:56:46.016Z",
+    "lastModified": "2025-12-21T13:43:34.215Z"
+  },
+  "guilds": {
+    "1037794097894797442": {
+      "totalCurrency": 2290.5,
+      "baseValue": 1,
+      "currentValue": 1,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-19T05:50:33.415Z",
+      "users": {
+        "1036745970077147279": {
+          "balance": 57.5,
+          "totalEarned": 57.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-08T23:47:56.656Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 665,
+          "totalEarned": 665,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-19T05:50:33.415Z",
+          "lastDailyBonus": null
+        },
+        "879384380152381460": {
+          "balance": 190,
+          "totalEarned": 190,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T15:25:28.024Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 243,
+          "totalEarned": 243,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-19T03:53:50.062Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 36.5,
+          "totalEarned": 36.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T15:56:12.114Z",
+          "lastDailyBonus": null
+        },
+        "1276746993326231676": {
+          "balance": 41.5,
+          "totalEarned": 41.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-10T12:07:35.038Z",
+          "lastDailyBonus": null
+        },
+        "1284648869027778642": {
+          "balance": 13,
+          "totalEarned": 13,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-09T17:50:02.858Z",
+          "lastDailyBonus": null
+        },
+        "892092107714592839": {
+          "balance": 107.5,
+          "totalEarned": 107.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T14:30:52.046Z",
+          "lastDailyBonus": null
+        },
+        "568775627058970635": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-06T10:19:32.124Z",
+          "lastDailyBonus": null
+        },
+        "1070602999329722368": {
+          "balance": 25.5,
+          "totalEarned": 25.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T12:15:24.338Z",
+          "lastDailyBonus": null
+        },
+        "714869958097502299": {
+          "balance": 354,
+          "totalEarned": 354,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-04T13:50:36.947Z",
+          "lastDailyBonus": null
+        },
+        "1092020440387563540": {
+          "balance": 8.5,
+          "totalEarned": 8.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:54:00.461Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 43,
+          "totalEarned": 43,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-11T08:36:02.332Z",
+          "lastDailyBonus": null
+        },
+        "1368604399370502165": {
+          "balance": 53,
+          "totalEarned": 53,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-05T09:58:36.428Z",
+          "lastDailyBonus": null
+        },
+        "1030801549959630849": {
+          "balance": 24.5,
+          "totalEarned": 24.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-09T01:35:37.825Z",
+          "lastDailyBonus": null
+        },
+        "1339634495883575409": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T18:33:21.381Z",
+          "lastDailyBonus": null
+        },
+        "1072941929228161064": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:37:27.687Z",
+          "lastDailyBonus": null
+        },
+        "1209704901878480897": {
+          "balance": 33,
+          "totalEarned": 33,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-12T12:11:35.925Z",
+          "lastDailyBonus": null
+        },
+        "1219398624039927944": {
+          "balance": 8.5,
+          "totalEarned": 8.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-26T16:12:34.383Z",
+          "lastDailyBonus": null
+        },
+        "1190230607503032342": {
+          "balance": 11,
+          "totalEarned": 11,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-12T18:10:55.881Z",
+          "lastDailyBonus": null
+        },
+        "901403507519791105": {
+          "balance": 86.5,
+          "totalEarned": 86.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-18T10:39:39.561Z",
+          "lastDailyBonus": null
+        },
+        "822479491703898123": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T19:45:32.374Z",
+          "lastDailyBonus": null
+        },
+        "792213910727819274": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-11T01:31:49.154Z",
+          "lastDailyBonus": null
+        },
+        "445595494165774336": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-12T11:15:20.930Z",
+          "lastDailyBonus": null
+        },
+        "837231857439211551": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-13T10:25:56.765Z",
+          "lastDailyBonus": null
+        },
+        "606880443966423235": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-14T13:55:58.669Z",
+          "lastDailyBonus": null
+        },
+        "782604441437601813": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-09T22:15:26.040Z",
+          "lastDailyBonus": null
+        },
+        "1061338174619660308": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-04T11:13:25.375Z",
+          "lastDailyBonus": null
+        },
+        "1354158228992294963": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-05T09:13:17.348Z",
+          "lastDailyBonus": null
+        },
+        "1040327884037955715": {
+          "balance": 8.5,
+          "totalEarned": 8.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T17:55:12.697Z",
+          "lastDailyBonus": null
+        },
+        "1280553998721745033": {
+          "balance": 12,
+          "totalEarned": 12,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:07:24.428Z",
+          "lastDailyBonus": null
+        },
+        "1357064105084715241": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-13T18:25:49.744Z",
+          "lastDailyBonus": null
+        },
+        "997575594315358269": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T22:23:10.587Z",
+          "lastDailyBonus": null
+        },
+        "1263103156452200489": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-21T06:58:10.112Z",
+          "lastDailyBonus": null
+        },
+        "736565059655958620": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-24T19:53:26.942Z",
+          "lastDailyBonus": null
+        },
+        "861329569117765652": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:35:16.285Z",
+          "lastDailyBonus": null
+        },
+        "453592216175116308": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-30T19:07:58.567Z",
+          "lastDailyBonus": null
+        },
+        "753869121279623201": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:49:36.602Z",
+          "lastDailyBonus": null
+        },
+        "1389992460049973390": {
+          "balance": 8.5,
+          "totalEarned": 8.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T18:23:16.187Z",
+          "lastDailyBonus": null
+        },
+        "761938874946813974": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T17:03:59.894Z",
+          "lastDailyBonus": null
+        },
+        "811523256452251670": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T17:50:00.546Z",
+          "lastDailyBonus": null
+        },
+        "1256249022344073298": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T15:47:17.938Z",
+          "lastDailyBonus": null
+        },
+        "1079395149957832826": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T15:48:10.187Z",
+          "lastDailyBonus": null
+        },
+        "982656530019135539": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T15:49:28.220Z",
+          "lastDailyBonus": null
+        },
+        "989518152935305278": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T15:49:31.545Z",
+          "lastDailyBonus": null
+        },
+        "1185382688132173914": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:04:57.984Z",
+          "lastDailyBonus": null
+        },
+        "487701530602897409": {
+          "balance": 5.5,
+          "totalEarned": 5.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:12:24.489Z",
+          "lastDailyBonus": null
+        },
+        "777529241439830047": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:13:00.650Z",
+          "lastDailyBonus": null
+        },
+        "1146539495643156660": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:37:31.713Z",
+          "lastDailyBonus": null
+        },
+        "1167594421555036262": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:41:11.630Z",
+          "lastDailyBonus": null
+        },
+        "939927568533057586": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:58:28.682Z",
+          "lastDailyBonus": null
+        },
+        "1266376210892722249": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T16:58:35.621Z",
+          "lastDailyBonus": null
+        },
+        "1402792961955205240": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T17:00:02.600Z",
+          "lastDailyBonus": null
+        },
+        "1218938070246883399": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T17:12:49.773Z",
+          "lastDailyBonus": null
+        },
+        "1157627151332421764": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T19:50:41.376Z",
+          "lastDailyBonus": null
+        },
+        "1402265395196592138": {
+          "balance": 1.5,
+          "totalEarned": 1.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T19:52:42.576Z",
+          "lastDailyBonus": null
+        },
+        "1229918604066029702": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-05T22:11:24.884Z",
+          "lastDailyBonus": null
+        },
+        "1431559994624577576": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-06T13:41:06.287Z",
+          "lastDailyBonus": null
+        },
+        "1168356361663418410": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-07T20:30:36.905Z",
+          "lastDailyBonus": null
+        },
+        "1082018328350031892": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-13T05:17:37.036Z",
+          "lastDailyBonus": null
+        },
+        "789567269327208459": {
+          "balance": 58,
+          "totalEarned": 58,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T19:38:31.802Z",
+          "lastDailyBonus": null
+        },
+        "1438773284828348628": {
+          "balance": 29,
+          "totalEarned": 29,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-16T02:37:25.459Z",
+          "lastDailyBonus": null
+        },
+        "1439090534563184652": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-17T03:16:56.814Z",
+          "lastDailyBonus": null
+        },
+        "1275529034876588215": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-28T20:01:53.819Z",
+          "lastDailyBonus": null
+        },
+        "804393256146305034": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-04T14:03:26.941Z",
+          "lastDailyBonus": null
+        },
+        "1447650630544916672": {
+          "balance": 15,
+          "totalEarned": 15,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-09T23:31:44.714Z",
+          "lastDailyBonus": null
+        },
+        "1447570760540487754": {
+          "balance": 30,
+          "totalEarned": 30,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-10T16:25:51.481Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1137477774907543692": {
+      "totalCurrency": 252.5,
+      "baseValue": 1,
+      "currentValue": 1.1376344030266723,
+      "inflationRate": 0,
+      "lastUpdate": "2025-09-09T20:30:04.839Z",
+      "users": {
+        "1326566946728185958": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-01T19:31:32.936Z",
+          "lastDailyBonus": null
+        },
+        "1190860378213724200": {
+          "balance": 14,
+          "totalEarned": 14,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T20:29:13.273Z",
+          "lastDailyBonus": null
+        },
+        "874690564656877568": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T23:37:34.254Z",
+          "lastDailyBonus": null
+        },
+        "1316752375566041164": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T17:39:28.852Z",
+          "lastDailyBonus": null
+        },
+        "912767966700003329": {
+          "balance": 30.5,
+          "totalEarned": 30.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T16:29:37.812Z",
+          "lastDailyBonus": null
+        },
+        "1087880361972871230": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T08:56:06.775Z",
+          "lastDailyBonus": null
+        },
+        "1268229530351567032": {
+          "balance": 20.5,
+          "totalEarned": 20.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-02T16:31:56.151Z",
+          "lastDailyBonus": null
+        },
+        "1395746373139431565": {
+          "balance": 37,
+          "totalEarned": 37,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T20:30:04.839Z",
+          "lastDailyBonus": null
+        },
+        "1339634495883575409": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T18:33:48.160Z",
+          "lastDailyBonus": null
+        },
+        "1039960875420876840": {
+          "balance": 28,
+          "totalEarned": 28,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T09:14:02.919Z",
+          "lastDailyBonus": null
+        },
+        "1151413830287630336": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T12:58:00.572Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T14:10:40.526Z",
+          "lastDailyBonus": null
+        },
+        "1379458972591067286": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T16:05:18.679Z",
+          "lastDailyBonus": null
+        },
+        "1061338174619660308": {
+          "balance": 1.5,
+          "totalEarned": 1.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T16:38:31.830Z",
+          "lastDailyBonus": null
+        },
+        "1369659375442067531": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T19:10:14.031Z",
+          "lastDailyBonus": null
+        },
+        "692236087732469811": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-03T20:48:28.065Z",
+          "lastDailyBonus": null
+        },
+        "1202232583744655420": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T08:06:49.607Z",
+          "lastDailyBonus": null
+        },
+        "1228183678761304196": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T08:10:32.285Z",
+          "lastDailyBonus": null
+        },
+        "1076467363928625232": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T08:17:08.054Z",
+          "lastDailyBonus": null
+        },
+        "1214862659883765802": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T09:09:19.403Z",
+          "lastDailyBonus": null
+        },
+        "723440345542688908": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T09:42:56.323Z",
+          "lastDailyBonus": null
+        },
+        "1341064175618752513": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T11:44:36.420Z",
+          "lastDailyBonus": null
+        },
+        "1223690418957586443": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T13:33:38.085Z",
+          "lastDailyBonus": null
+        },
+        "1098993315350847508": {
+          "balance": 36.5,
+          "totalEarned": 36.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-05T21:08:02.932Z",
+          "lastDailyBonus": null
+        },
+        "1389992460049973390": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T19:19:29.332Z",
+          "lastDailyBonus": null
+        },
+        "1229409203152617482": {
+          "balance": 7.5,
+          "totalEarned": 7.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T09:49:04.795Z",
+          "lastDailyBonus": null
+        },
+        "1336384749874315418": {
+          "balance": 13,
+          "totalEarned": 13,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-05T20:35:35.717Z",
+          "lastDailyBonus": null
+        },
+        "1065906428390424597": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T04:18:14.961Z",
+          "lastDailyBonus": null
+        },
+        "1146539495643156660": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T15:32:22.887Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T18:31:25.545Z",
+          "lastDailyBonus": null
+        },
+        "1414147087041433680": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T16:31:08.917Z",
+          "lastDailyBonus": null
+        },
+        "1240344463721758820": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T16:26:54.198Z",
+          "lastDailyBonus": null
+        },
+        "1129029520188526692": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T17:00:50.424Z",
+          "lastDailyBonus": null
+        },
+        "639915550289428510": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-07T16:58:11.954Z",
+          "lastDailyBonus": null
+        },
+        "421200651394220042": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T13:11:05.759Z",
+          "lastDailyBonus": null
+        },
+        "779843063131930694": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-08T17:33:56.769Z",
+          "lastDailyBonus": null
+        },
+        "989543121895448606": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T13:16:58.083Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1405654925144490115": {
+      "totalCurrency": 1274.5,
+      "baseValue": 1,
+      "currentValue": 1,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-01T18:43:51.688Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 524,
+          "totalEarned": 524,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T18:43:51.688Z",
+          "lastDailyBonus": null
+        },
+        "1170366911071146097": {
+          "balance": 16,
+          "totalEarned": 16,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T18:18:56.570Z",
+          "lastDailyBonus": null
+        },
+        "568775627058970635": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-01T20:42:52.744Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 25,
+          "totalEarned": 25,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-30T22:17:44.092Z",
+          "lastDailyBonus": null
+        },
+        "1400408084761018411": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T19:37:37.773Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 88.5,
+          "totalEarned": 88.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T09:02:39.120Z",
+          "lastDailyBonus": null
+        },
+        "892092107714592839": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-18T11:54:57.305Z",
+          "lastDailyBonus": null
+        },
+        "1339634495883575409": {
+          "balance": 25.5,
+          "totalEarned": 25.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-05T11:53:29.926Z",
+          "lastDailyBonus": null
+        },
+        "1098993315350847508": {
+          "balance": 25.5,
+          "totalEarned": 25.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-27T09:57:30.403Z",
+          "lastDailyBonus": null
+        },
+        "1302971925571702825": {
+          "balance": 8.5,
+          "totalEarned": 8.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-21T08:33:22.352Z",
+          "lastDailyBonus": null
+        },
+        "1334432882222956594": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-13T11:39:36.248Z",
+          "lastDailyBonus": null
+        },
+        "1070602999329722368": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T20:22:48.583Z",
+          "lastDailyBonus": null
+        },
+        "1249983316086620202": {
+          "balance": 34,
+          "totalEarned": 34,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-30T19:55:10.159Z",
+          "lastDailyBonus": null
+        },
+        "1240344463721758820": {
+          "balance": 100,
+          "totalEarned": 100,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T13:28:21.844Z",
+          "lastDailyBonus": null
+        },
+        "1334936424222425098": {
+          "balance": 35,
+          "totalEarned": 35,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-27T10:19:18.975Z",
+          "lastDailyBonus": null
+        },
+        "1384070618634391593": {
+          "balance": 84,
+          "totalEarned": 84,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T18:28:59.311Z",
+          "lastDailyBonus": null
+        },
+        "1336384749874315418": {
+          "balance": 4.5,
+          "totalEarned": 4.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-11T16:45:49.508Z",
+          "lastDailyBonus": null
+        },
+        "1167922907641544754": {
+          "balance": 26.5,
+          "totalEarned": 26.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-30T18:58:02.860Z",
+          "lastDailyBonus": null
+        },
+        "809465176964202546": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-11T11:04:21.854Z",
+          "lastDailyBonus": null
+        },
+        "720268488744370207": {
+          "balance": 20,
+          "totalEarned": 20,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-18T20:10:55.620Z",
+          "lastDailyBonus": null
+        },
+        "1274257010229248033": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-12T16:35:21.078Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-18T14:31:42.765Z",
+          "lastDailyBonus": null
+        },
+        "1329176476553318401": {
+          "balance": 18,
+          "totalEarned": 18,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T14:07:07.931Z",
+          "lastDailyBonus": null
+        },
+        "1176941809746841751": {
+          "balance": 51,
+          "totalEarned": 51,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T06:54:14.558Z",
+          "lastDailyBonus": null
+        },
+        "1155033451930583111": {
+          "balance": 27,
+          "totalEarned": 27,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-24T17:43:23.726Z",
+          "lastDailyBonus": null
+        },
+        "1353024905200799835": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-18T17:56:11.087Z",
+          "lastDailyBonus": null
+        },
+        "1166419262584406057": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-12T01:21:12.552Z",
+          "lastDailyBonus": null
+        },
+        "1146539495643156660": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-27T10:52:17.449Z",
+          "lastDailyBonus": null
+        },
+        "1040660073141256332": {
+          "balance": 54.5,
+          "totalEarned": 54.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-02T18:35:35.453Z",
+          "lastDailyBonus": null
+        },
+        "822479491703898123": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-08T05:40:50.861Z",
+          "lastDailyBonus": null
+        },
+        "1092020440387563540": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-11T16:41:42.329Z",
+          "lastDailyBonus": null
+        },
+        "1391761712809513022": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-11T19:17:58.629Z",
+          "lastDailyBonus": null
+        },
+        "1232671313160830979": {
+          "balance": 6.5,
+          "totalEarned": 6.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T07:26:28.834Z",
+          "lastDailyBonus": null
+        },
+        "1174068330525638680": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-21T12:55:41.099Z",
+          "lastDailyBonus": null
+        },
+        "1397671821108842608": {
+          "balance": 12,
+          "totalEarned": 12,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T18:27:02.320Z",
+          "lastDailyBonus": null
+        },
+        "1282056935201308742": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-30T19:21:46.811Z",
+          "lastDailyBonus": null
+        },
+        "1061338174619660308": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-27T18:48:32.985Z",
+          "lastDailyBonus": null
+        },
+        "1289875699422724191": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-27T18:56:38.092Z",
+          "lastDailyBonus": null
+        },
+        "1330300641108688968": {
+          "balance": 24,
+          "totalEarned": 24,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T16:39:46.499Z",
+          "lastDailyBonus": null
+        },
+        "1209704901878480897": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T16:00:39.969Z",
+          "lastDailyBonus": null
+        },
+        "652775050117644288": {
+          "balance": 1.5,
+          "totalEarned": 1.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-27T21:16:54.671Z",
+          "lastDailyBonus": null
+        },
+        "1164986081809289368": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-28T07:24:44.975Z",
+          "lastDailyBonus": null
+        },
+        "947480095730315285": {
+          "balance": 12.5,
+          "totalEarned": 12.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T06:49:31.694Z",
+          "lastDailyBonus": null
+        },
+        "1204140730654793751": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T06:35:47.820Z",
+          "lastDailyBonus": null
+        },
+        "1379704293392781362": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-01T16:10:57.386Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1235641495885844510": {
+      "totalCurrency": 269,
+      "baseValue": 1,
+      "currentValue": 1.1313043899380297,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-10T19:14:12.004Z",
+      "users": {
+        "702155370054811658": {
+          "balance": 24.5,
+          "totalEarned": 24.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-10T19:13:55.055Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 113,
+          "totalEarned": 113,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T19:55:59.414Z",
+          "lastDailyBonus": null
+        },
+        "1284648869027778642": {
+          "balance": 62,
+          "totalEarned": 62,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-28T07:27:28.623Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-13T13:48:22.900Z",
+          "lastDailyBonus": null
+        },
+        "1414682761322565775": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-08T21:18:38.765Z",
+          "lastDailyBonus": null
+        },
+        "1223690418957586443": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T17:25:16.251Z",
+          "lastDailyBonus": null
+        },
+        "837231857439211551": {
+          "balance": 21.5,
+          "totalEarned": 21.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-10T19:14:12.004Z",
+          "lastDailyBonus": null
+        },
+        "1333851369395720243": {
+          "balance": 20.5,
+          "totalEarned": 20.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-13T13:33:20.837Z",
+          "lastDailyBonus": null
+        },
+        "960461760836558899": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-13T13:28:13.296Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-21T18:27:43.643Z",
+          "lastDailyBonus": null
+        },
+        "1192424336917807177": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-15T13:37:57.066Z",
+          "lastDailyBonus": null
+        },
+        "1185382688132173914": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-21T14:02:48.407Z",
+          "lastDailyBonus": null
+        },
+        "1204140730654793751": {
+          "balance": 4.5,
+          "totalEarned": 4.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-30T23:07:00.492Z",
+          "lastDailyBonus": null
+        },
+        "1167922907641544754": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-30T23:07:03.866Z",
+          "lastDailyBonus": null
+        },
+        "1276746993326231676": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-15T20:58:40.767Z",
+          "lastDailyBonus": null
+        },
+        "1061338174619660308": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-28T06:28:37.404Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1408164216749428837": {
+      "totalCurrency": 64.5,
+      "baseValue": 1,
+      "currentValue": 1.274109005518041,
+      "inflationRate": 0,
+      "lastUpdate": "2025-10-29T11:50:35.638Z",
+      "users": {
+        "865958359701389312": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-23T14:00:57.276Z",
+          "lastDailyBonus": null
+        },
+        "811523256452251670": {
+          "balance": 27.5,
+          "totalEarned": 27.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-20T06:26:20.917Z",
+          "lastDailyBonus": null
+        },
+        "892092107714592839": {
+          "balance": 20,
+          "totalEarned": 20,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T11:50:35.638Z",
+          "lastDailyBonus": null
+        },
+        "1070602999329722368": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T10:36:57.264Z",
+          "lastDailyBonus": null
+        },
+        "789567269327208459": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T21:03:26.375Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1273064561083416576": {
+      "totalCurrency": 35.5,
+      "baseValue": 1,
+      "currentValue": 1.3338222582500767,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-07T21:12:41.921Z",
+      "users": {
+        "972496532794388502": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-04T19:54:05.612Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T07:29:08.796Z",
+          "lastDailyBonus": null
+        },
+        "1250652601666768960": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T11:50:56.527Z",
+          "lastDailyBonus": null
+        },
+        "1097487936284536964": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-03T14:14:59.154Z",
+          "lastDailyBonus": null
+        },
+        "1402792961955205240": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-14T15:50:00.053Z",
+          "lastDailyBonus": null
+        },
+        "1310282740851146944": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-24T20:27:30.488Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 8,
+          "totalEarned": 8,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-23T18:54:10.139Z",
+          "lastDailyBonus": null
+        },
+        "503488413681319936": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-15T21:05:38.354Z",
+          "lastDailyBonus": null
+        },
+        "1098993315350847508": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-21T07:19:26.045Z",
+          "lastDailyBonus": null
+        },
+        "1155033451930583111": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-27T20:51:29.446Z",
+          "lastDailyBonus": null
+        },
+        "902893022121959444": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-30T14:04:36.054Z",
+          "lastDailyBonus": null
+        },
+        "757169348245717010": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-20T03:13:22.006Z",
+          "lastDailyBonus": null
+        },
+        "1275529034876588215": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-07T21:12:41.921Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1410319412250148961": {
+      "totalCurrency": 7,
+      "baseValue": 1,
+      "currentValue": 1.4961845129926823,
+      "inflationRate": 0,
+      "lastUpdate": "2025-09-19T22:57:36.107Z",
+      "users": {
+        "840985745182425108": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-05T13:14:46.949Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-19T20:11:06.656Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-19T22:57:36.107Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1037352897555464232": {
+      "totalCurrency": 988.5,
+      "baseValue": 1,
+      "currentValue": 1.0011566636371465,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-21T03:06:42.639Z",
+      "users": {
+        "1302223857125556264": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T07:46:21.464Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 390.5,
+          "totalEarned": 390.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T16:08:25.170Z",
+          "lastDailyBonus": null
+        },
+        "811523256452251670": {
+          "balance": 287.5,
+          "totalEarned": 287.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T15:43:31.421Z",
+          "lastDailyBonus": null
+        },
+        "892092107714592839": {
+          "balance": 16,
+          "totalEarned": 16,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T15:47:56.093Z",
+          "lastDailyBonus": null
+        },
+        "1030801549959630849": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T16:13:09.403Z",
+          "lastDailyBonus": null
+        },
+        "1057978550088646666": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-12T16:33:38.800Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T16:15:51.937Z",
+          "lastDailyBonus": null
+        },
+        "1430952763151487097": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T17:00:12.714Z",
+          "lastDailyBonus": null
+        },
+        "487701530602897409": {
+          "balance": 164.5,
+          "totalEarned": 164.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T15:43:11.260Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-21T21:53:40.079Z",
+          "lastDailyBonus": null
+        },
+        "1228481383815712830": {
+          "balance": 8,
+          "totalEarned": 8,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-21T17:32:48.253Z",
+          "lastDailyBonus": null
+        },
+        "1284648869027778642": {
+          "balance": 20,
+          "totalEarned": 20,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-18T22:16:31.634Z",
+          "lastDailyBonus": null
+        },
+        "1368604399370502165": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-07T16:01:52.073Z",
+          "lastDailyBonus": null
+        },
+        "1036745970077147279": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-08T12:55:48.609Z",
+          "lastDailyBonus": null
+        },
+        "789567269327208459": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-21T17:56:56.776Z",
+          "lastDailyBonus": null
+        },
+        "879384380152381460": {
+          "balance": 21,
+          "totalEarned": 21,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-21T22:09:48.449Z",
+          "lastDailyBonus": null
+        },
+        "1275529034876588215": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-06T21:22:00.592Z",
+          "lastDailyBonus": null
+        },
+        "265526328088854538": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-07T00:05:37.249Z",
+          "lastDailyBonus": null
+        },
+        "1144313972531671060": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-14T11:00:50.714Z",
+          "lastDailyBonus": null
+        },
+        "1450067101120466990": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-16T17:52:25.244Z",
+          "lastDailyBonus": null
+        },
+        "1021998578731851816": {
+          "balance": 6,
+          "totalEarned": 6,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-19T22:14:52.811Z",
+          "lastDailyBonus": null
+        },
+        "1276746993326231676": {
+          "balance": 24.5,
+          "totalEarned": 24.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T20:07:29.408Z",
+          "lastDailyBonus": null
+        },
+        "1186570199705591818": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-21T03:06:42.639Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1057781820869054494": {
+      "totalCurrency": 39,
+      "baseValue": 1,
+      "currentValue": 1.324419363285249,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-16T17:37:26.568Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 15,
+          "totalEarned": 15,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-28T23:15:52.060Z",
+          "lastDailyBonus": null
+        },
+        "702155370054811658": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-28T23:15:35.512Z",
+          "lastDailyBonus": null
+        },
+        "1302971925571702825": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-06T22:37:08.721Z",
+          "lastDailyBonus": null
+        },
+        "1333851369395720243": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-12T18:15:30.090Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 5,
+          "totalEarned": 5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-06T20:21:34.497Z",
+          "lastDailyBonus": null
+        },
+        "1229918604066029702": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-07T14:56:48.929Z",
+          "lastDailyBonus": null
+        },
+        "1450313846236643359": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-16T17:37:26.568Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1412877009041883179": {
+      "totalCurrency": 84.5,
+      "baseValue": 1,
+      "currentValue": 1.247100374461901,
+      "inflationRate": 0,
+      "lastUpdate": "2025-10-18T14:26:56.676Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 53,
+          "totalEarned": 53,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-18T12:12:19.531Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-11T19:45:06.997Z",
+          "lastDailyBonus": null
+        },
+        "1302971925571702825": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T20:22:42.090Z",
+          "lastDailyBonus": null
+        },
+        "1096780328934318130": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T16:31:04.403Z",
+          "lastDailyBonus": null
+        },
+        "1240344463721758820": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T20:33:20.613Z",
+          "lastDailyBonus": null
+        },
+        "1232662033330339913": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-11T16:59:05.702Z",
+          "lastDailyBonus": null
+        },
+        "1176941809746841751": {
+          "balance": 11.5,
+          "totalEarned": 11.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-18T14:20:07.403Z",
+          "lastDailyBonus": null
+        },
+        "1397671821108842608": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-18T14:26:56.676Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1101569746333351986": {
+      "totalCurrency": 153,
+      "baseValue": 1,
+      "currentValue": 1.18773173575897,
+      "inflationRate": 0,
+      "lastUpdate": "2025-11-29T12:50:58.722Z",
+      "users": {
+        "1212431738219925568": {
+          "balance": 89,
+          "totalEarned": 89,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T12:49:17.740Z",
+          "lastDailyBonus": null
+        },
+        "1072941929228161064": {
+          "balance": 19,
+          "totalEarned": 19,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-07T18:04:08.113Z",
+          "lastDailyBonus": null
+        },
+        "1284648869027778642": {
+          "balance": 34,
+          "totalEarned": 34,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-29T12:50:58.722Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-27T20:45:47.535Z",
+          "lastDailyBonus": null
+        },
+        "1146539495643156660": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-30T16:36:14.784Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1340513779829702721": {
+      "totalCurrency": 7,
+      "baseValue": 1,
+      "currentValue": 1.4961845129926823,
+      "inflationRate": 0,
+      "lastUpdate": "2025-09-09T23:04:14.129Z",
+      "users": {
+        "267739602301878272": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-09T23:04:14.129Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1416436097084424213": {
+      "totalCurrency": 965,
+      "baseValue": 1,
+      "currentValue": 1.0035627177643152,
+      "inflationRate": 0,
+      "lastUpdate": "2025-09-20T18:12:47.790Z",
+      "users": {
+        "1176941809746841751": {
+          "balance": 103,
+          "totalEarned": 103,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-19T05:57:27.350Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 372,
+          "totalEarned": 372,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-18T18:54:58.046Z",
+          "lastDailyBonus": null
+        },
+        "1158046944732647574": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-13T16:49:17.497Z",
+          "lastDailyBonus": null
+        },
+        "1329176476553318401": {
+          "balance": 7.5,
+          "totalEarned": 7.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T20:14:27.096Z",
+          "lastDailyBonus": null
+        },
+        "1397671821108842608": {
+          "balance": 178.5,
+          "totalEarned": 178.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-20T18:12:47.790Z",
+          "lastDailyBonus": null
+        },
+        "1155033451930583111": {
+          "balance": 47.5,
+          "totalEarned": 47.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-15T19:23:50.940Z",
+          "lastDailyBonus": null
+        },
+        "1339634495883575409": {
+          "balance": 100,
+          "totalEarned": 100,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T15:45:23.157Z",
+          "lastDailyBonus": null
+        },
+        "840985745182425108": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-15T19:33:32.112Z",
+          "lastDailyBonus": null
+        },
+        "1288073689052741642": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-15T18:03:49.864Z",
+          "lastDailyBonus": null
+        },
+        "1164986081809289368": {
+          "balance": 77,
+          "totalEarned": 77,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-20T18:12:21.898Z",
+          "lastDailyBonus": null
+        },
+        "1240344463721758820": {
+          "balance": 12,
+          "totalEarned": 12,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T12:22:30.445Z",
+          "lastDailyBonus": null
+        },
+        "1334936424222425098": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-17T19:17:00.212Z",
+          "lastDailyBonus": null
+        },
+        "1384070618634391593": {
+          "balance": 34,
+          "totalEarned": 34,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T15:44:18.620Z",
+          "lastDailyBonus": null
+        },
+        "1117853251644170422": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-15T20:21:14.422Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1233730438262951936": {
+      "totalCurrency": 41,
+      "baseValue": 1,
+      "currentValue": 1.319418321227783,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-10T16:31:57.973Z",
+      "users": {
+        "1209704901878480897": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-16T16:46:38.475Z",
+          "lastDailyBonus": null
+        },
+        "1092020440387563540": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-13T17:01:54.871Z",
+          "lastDailyBonus": null
+        },
+        "1212431738219925568": {
+          "balance": 5.5,
+          "totalEarned": 5.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-15T23:27:32.064Z",
+          "lastDailyBonus": null
+        },
+        "1057978550088646666": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-12T16:43:04.931Z",
+          "lastDailyBonus": null
+        },
+        "794157392828825601": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-28T10:36:42.174Z",
+          "lastDailyBonus": null
+        },
+        "1430952763151487097": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-29T17:03:08.866Z",
+          "lastDailyBonus": null
+        },
+        "1426994798728056933": {
+          "balance": 10,
+          "totalEarned": 10,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-03T22:28:21.458Z",
+          "lastDailyBonus": null
+        },
+        "1134080912066351126": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-10T17:09:51.638Z",
+          "lastDailyBonus": null
+        },
+        "1097487936284536964": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-13T17:10:17.357Z",
+          "lastDailyBonus": null
+        },
+        "1276746993326231676": {
+          "balance": 0.5,
+          "totalEarned": 0.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-15T20:56:13.681Z",
+          "lastDailyBonus": null
+        },
+        "1439611774319202345": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-17T10:53:12.217Z",
+          "lastDailyBonus": null
+        },
+        "1441374715967967268": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-02T19:45:10.885Z",
+          "lastDailyBonus": null
+        },
+        "1445574427042517074": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-03T10:23:27.781Z",
+          "lastDailyBonus": null
+        },
+        "1447617752155160577": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-10T16:31:57.973Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1417967699031625830": {
+      "totalCurrency": 453.5,
+      "baseValue": 1,
+      "currentValue": 1.0790760009426945,
+      "inflationRate": 0,
+      "lastUpdate": "2025-10-20T20:21:53.335Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 88,
+          "totalEarned": 88,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-20T20:21:53.335Z",
+          "lastDailyBonus": null
+        },
+        "1155033451930583111": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-21T06:37:36.088Z",
+          "lastDailyBonus": null
+        },
+        "1176941809746841751": {
+          "balance": 164,
+          "totalEarned": 164,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-14T18:31:36.176Z",
+          "lastDailyBonus": null
+        },
+        "1397671821108842608": {
+          "balance": 90,
+          "totalEarned": 90,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-14T18:00:19.584Z",
+          "lastDailyBonus": null
+        },
+        "1164986081809289368": {
+          "balance": 55.5,
+          "totalEarned": 55.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-02T17:33:48.431Z",
+          "lastDailyBonus": null
+        },
+        "1353024905200799835": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-19T20:34:47.684Z",
+          "lastDailyBonus": null
+        },
+        "1232671313160830979": {
+          "balance": 1.5,
+          "totalEarned": 1.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-22T06:29:20.462Z",
+          "lastDailyBonus": null
+        },
+        "1382248823518138511": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-22T05:38:11.690Z",
+          "lastDailyBonus": null
+        },
+        "1223690418957586443": {
+          "balance": 24,
+          "totalEarned": 24,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-14T17:02:20.693Z",
+          "lastDailyBonus": null
+        },
+        "1098993315350847508": {
+          "balance": 3.5,
+          "totalEarned": 3.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-25T11:54:34.652Z",
+          "lastDailyBonus": null
+        },
+        "1274257010229248033": {
+          "balance": 20,
+          "totalEarned": 20,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-25T15:42:55.064Z",
+          "lastDailyBonus": null
+        },
+        "1365724332688674838": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-09-25T11:36:55.972Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1254376882888114176": {
+      "totalCurrency": 15,
+      "baseValue": 1,
+      "currentValue": 1.4199705077879927,
+      "inflationRate": 0,
+      "lastUpdate": "2025-11-16T08:42:03.117Z",
+      "users": {
+        "840985745182425108": {
+          "balance": 8,
+          "totalEarned": 8,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-16T08:42:03.117Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-07T14:20:05.037Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1428684682433662979": {
+      "totalCurrency": 16.5,
+      "baseValue": 1,
+      "currentValue": 1.4104394898075603,
+      "inflationRate": 0,
+      "lastUpdate": "2025-10-23T20:54:18.186Z",
+      "users": {
+        "840985745182425108": {
+          "balance": 2.5,
+          "totalEarned": 2.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-23T16:58:18.190Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 8,
+          "totalEarned": 8,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-23T20:54:18.186Z",
+          "lastDailyBonus": null
+        },
+        "1360206152645873705": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-21T19:53:49.724Z",
+          "lastDailyBonus": null
+        },
+        "1273756308125909103": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-23T20:00:00.729Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1401971201987055697": {
+      "totalCurrency": 67,
+      "baseValue": 1,
+      "currentValue": 1.270306265959117,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-05T17:51:23.672Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 18,
+          "totalEarned": 18,
+          "totalSpent": 0,
+          "lastActivity": "2025-10-22T11:12:03.541Z",
+          "lastDailyBonus": null
+        },
+        "1360206152645873705": {
+          "balance": 42,
+          "totalEarned": 42,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-20T17:58:50.581Z",
+          "lastDailyBonus": null
+        },
+        "1386261727594680392": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-16T10:40:35.926Z",
+          "lastDailyBonus": null
+        },
+        "1196079199354634372": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-16T11:02:37.275Z",
+          "lastDailyBonus": null
+        },
+        "1353876035153694740": {
+          "balance": 1,
+          "totalEarned": 1,
+          "totalSpent": 0,
+          "lastActivity": "2025-11-16T13:14:24.006Z",
+          "lastDailyBonus": null
+        },
+        "1356583017753088121": {
+          "balance": 4,
+          "totalEarned": 4,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-05T17:51:23.672Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1445880711809728728": {
+      "totalCurrency": 1102,
+      "baseValue": 1,
+      "currentValue": 1,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-21T13:43:34.215Z",
+      "users": {
+        "903230827171807263": {
+          "balance": 417.5,
+          "totalEarned": 417.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-21T13:43:34.215Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 204.5,
+          "totalEarned": 204.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-21T13:27:43.265Z",
+          "lastDailyBonus": null
+        },
+        "1314905030435803198": {
+          "balance": 190.5,
+          "totalEarned": 190.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-21T13:02:44.591Z",
+          "lastDailyBonus": null
+        },
+        "1330300641108688968": {
+          "balance": 17.5,
+          "totalEarned": 17.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T16:27:19.522Z",
+          "lastDailyBonus": null
+        },
+        "779843063131930694": {
+          "balance": 253.5,
+          "totalEarned": 253.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-21T13:04:13.662Z",
+          "lastDailyBonus": null
+        },
+        "1204140730654793751": {
+          "balance": 9.5,
+          "totalEarned": 9.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T16:35:50.864Z",
+          "lastDailyBonus": null
+        },
+        "1450794853804937300": {
+          "balance": 9,
+          "totalEarned": 9,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T16:14:45.833Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1226192664018423940": {
+      "totalCurrency": 10,
+      "baseValue": 1,
+      "currentValue": 1.4605170185988092,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-11T20:51:18.023Z",
+      "users": {
+        "1295832086602715251": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-11T20:48:17.913Z",
+          "lastDailyBonus": null
+        },
+        "1204140730654793751": {
+          "balance": 3,
+          "totalEarned": 3,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-11T20:51:18.023Z",
+          "lastDailyBonus": null
+        },
+        "652775050117644288": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-11T19:51:16.407Z",
+          "lastDailyBonus": null
+        },
+        "1202322570829897732": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-11T19:53:30.922Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1443323283570167871": {
+      "totalCurrency": 54,
+      "baseValue": 1,
+      "currentValue": 1.2918771232417863,
+      "inflationRate": 0,
+      "lastUpdate": "2025-12-20T17:51:04.453Z",
+      "users": {
+        "840985745182425108": {
+          "balance": 7,
+          "totalEarned": 7,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T15:02:25.901Z",
+          "lastDailyBonus": null
+        },
+        "903230827171807263": {
+          "balance": 18.5,
+          "totalEarned": 18.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T17:49:23.213Z",
+          "lastDailyBonus": null
+        },
+        "1295832086602715251": {
+          "balance": 19,
+          "totalEarned": 19,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T17:51:04.453Z",
+          "lastDailyBonus": null
+        },
+        "1329176476553318401": {
+          "balance": 9.5,
+          "totalEarned": 9.5,
+          "totalSpent": 0,
+          "lastActivity": "2025-12-20T17:46:57.746Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    }
+  }
+}

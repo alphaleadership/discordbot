@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1451591594204463355",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1451342125466914938",
+    "channelName": "Opération XRF00001",
+    "content": "<@903230827171807263>  tu est en  rsf ou pas",
+    "timestamp": 1766156805326,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]
