@@ -1,0 +1,38 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "created": "2025-12-21T15:47:20.241Z",
+    "lastModified": "2025-12-21T15:47:20.381Z"
+  },
+  "_settings": {},
+  "guild1_test_user": {
+    "userId": "test_user",
+    "username": "TestUser",
+    "discriminator": "1234",
+    "reason": "test",
+    "addedBy": "mod",
+    "addedAt": "2025-12-21T15:47:20.356Z",
+    "lastSeen": "2025-12-21T15:47:20.381Z",
+    "guildId": "guild1",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1766332040381_7mhmtsino",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Test Guild",
+        "timestamp": "2025-12-21T15:47:20.381Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": null,
+          "joinedAt": "2025-12-21T15:47:20.381Z",
+          "isGlobalWatch": false,
+          "operationId": "join_test_user_1766332040380"
+        }
+      }
+    ],
+    "active": true
+  }
+}

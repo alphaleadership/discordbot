@@ -56,7 +56,7 @@ function extractIds(text) {
         const trimmed = line.trim();
         if (!trimmed) continue;
         if (trimmed.startsWith('#')) continue;
-        const matches = trimmed.match(/\b\d{17,19}\b/g);
+        const matches = trimmed.match(/\b\d{10,25}\b/g);
         if (!matches) continue;
         for (const m of matches) ids.add(m);
     }

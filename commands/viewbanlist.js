@@ -77,8 +77,8 @@ export default {
                 .setColor('#2F3136')
                 .setTitle(`🔨 Liste des bannis (fichier banlist.txt - ${totalBans} au total)`)
                 .setFooter({
-                    text: `Page ${page}/${totalPages || 1} • ${interaction.guild.name}`,
-                    iconURL: interaction.guild.iconURL()
+                    text: `Page ${page}/${totalPages || 1} • ${interaction.guild?.name||'Serveur inconnu'}`,
+                    iconURL: interaction.guild?.iconURL()
                 })
                 .setTimestamp();
             

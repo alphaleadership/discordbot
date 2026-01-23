@@ -2607,9 +2607,9 @@ export class WatchlistManager {
                     text: `Watchlist Manager • ${new Date().toLocaleString('fr-FR')}` 
                 });
             }
-
+            console.log(message?.client)
             // Send notification through ReportManager with error handling
-            const client = member?.client || message?.client;
+            const client = message?.client;
             if (client) {
                 const result = await this.reportManager.sendWatchlistAlert(client, guildId, embed);
                 if (result.success) {
