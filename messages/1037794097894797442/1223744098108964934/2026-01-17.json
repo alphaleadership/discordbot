@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1462136250353057804",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1223744098108964934",
+    "channelName": "「🎭」ʍɛʍɛ",
+    "content": "",
+    "timestamp": 1768670847262,
+    "attachments": [
+      {
+        "id": "1462136250432753877",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1223744098108964934/1462136250432753877/image.png?ex=696d17ff&is=696bc67f&hm=b82235a0b7ea279b91e56f96e7b956a5699f808ccf27870abfb7458a2ef6c778&",
+        "contentType": "image/png",
+        "size": 1348312
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

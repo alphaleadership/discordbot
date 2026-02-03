@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1465619685004411061",
+    "author": {
+      "id": "1463803912229486682",
+      "username": "koreshshark1337x2938",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1237480514651160677",
+    "channelName": "🗞︙𝗟-æ𝘀𝘁",
+    "content": "@everyone",
+    "timestamp": 1769501362802,
+    "attachments": [
+      {
+        "id": "1465619683628683274",
+        "name": "G2yF0cqrB78.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1237480514651160677/1465619683628683274/G2yF0cqrB78.jpg?ex=6979c432&is=697872b2&hm=226aac2d6270339f7c8291682402e9d9821651bc08a388ce8e7c49541ff9e024&",
+        "contentType": "image/jpeg",
+        "size": 67290
+      },
+      {
+        "id": "1465619684090052691",
+        "name": "wj6aiQ66zw3.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1237480514651160677/1465619684090052691/wj6aiQ66zw3.jpg?ex=6979c432&is=697872b2&hm=1f1c515f7406c77dec19de7f8f14320a73c30561bab6847637340068798ccf65&",
+        "contentType": "image/jpeg",
+        "size": 61756
+      },
+      {
+        "id": "1465619684685516953",
+        "name": "Zq2XmNHh0ur.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1237480514651160677/1465619684685516953/Zq2XmNHh0ur.jpg?ex=6979c432&is=697872b2&hm=4cccb3d055e488787c5f4861f7ff074c0204092f9f25604df54779e1fbece4a4&",
+        "contentType": "image/jpeg",
+        "size": 52579
+      },
+      {
+        "id": "1465619684987637943",
+        "name": "Z4Aonvo8teL.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1237480514651160677/1465619684987637943/Z4Aonvo8teL.jpg?ex=6979c432&is=697872b2&hm=9dcfa5519786247664f3fbd861bfbfeb797611f9cafa6269333bf0474aab5ee8&",
+        "contentType": "image/jpeg",
+        "size": 26089
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

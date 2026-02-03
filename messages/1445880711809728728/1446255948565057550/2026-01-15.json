@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1461479944470396948",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1446255948565057550",
+    "channelName": "📢│annonces-internes",
+    "content": "<@903230827171807263> est nommé la nouvelle dirigeante du serveur  !",
+    "timestamp": 1768514371746,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "903230827171807263"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

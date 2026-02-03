@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1463672282122817599",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "https://www.boursorama.com/bourse/actualites/lagarde-bce-quitte-un-diner-apres-des-critiques-virulentes-de-lutnick-contre-l-europe-c648dc1d9a34d1034c323208297bde07",
+    "timestamp": 1769037065774,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1463672405263122535",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "L'ambiance semble tendue à Davos.",
+    "timestamp": 1769037095133,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

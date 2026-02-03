@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1465832579247636722",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "# 𝗠𝗜𝗖𝗥𝗢𝗚𝗢𝗟𝗗𝗘𝗡𝗦 🏆 \n\nLa Nouvelle Orionnite, l'Imago Veritatis et RTL World sont fières de vous présenter les MicroGoldens, il s'agit d'un prix qui récompensera les meilleurs micronationalistes et projet micronationaux de l'année 2025.\n\nVous avez jusqu'au 8 février pour déposer vos projets et candidatures directement auprès de Eden Vassili (goldenemperor4) par MP ou sur le serveur d'Orion par ticket (motif autre).\n\nNous avons hâte de recevoir et d'examiner vos candidatures.\n\n\n<:source:1370514211557609502>  La Nouvelle Orionnite\n<:lieu:1370514302183936021>  République d'Orion\n<:RTL_World:1321224017046147082>  Tris Tolheriön, journaliste, éditorialiste et directeur de la rédaction de RTL World.",
+    "timestamp": 1769552120745,
+    "attachments": [
+      {
+        "id": "1465832577628635228",
+        "name": "2.png",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1465832577628635228/2.png?ex=697a8a78&is=697938f8&hm=f679175427254d271e5b5b79a0c26f423c58253f190b0c12027b1b90d1769aeb&",
+        "contentType": "image/webp",
+        "size": 64552
+      },
+      {
+        "id": "1465832578174025799",
+        "name": "3.png",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1465832578174025799/3.png?ex=697a8a78&is=697938f8&hm=d12559a578115d8ab597cf39edc58688b30eff532254401b07c3c4b39f87f927&",
+        "contentType": "image/png",
+        "size": 130564
+      },
+      {
+        "id": "1465832578463301653",
+        "name": "MicroGoldens.pdf",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1465832578463301653/MicroGoldens.pdf?ex=697a8a78&is=697938f8&hm=0213fbf804e1e42ad87538a555a7d612d7118fcd02506850a507a07deadd267f&",
+        "contentType": "application/pdf",
+        "size": 992085
+      },
+      {
+        "id": "1465832579067412615",
+        "name": "1.png",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1465832579067412615/1.png?ex=697a8a78&is=697938f8&hm=4c4274931d909ad36438afb5c872fb54c3058ac001ff7f3d2972981952ae8708&",
+        "contentType": "image/png",
+        "size": 272312
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

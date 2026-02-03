@@ -1,0 +1,69 @@
+[
+  {
+    "id": "1455142448111026249",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1443336266262511699",
+    "channelName": "📣-annonce",
+    "content": "<@1329176476553318401> <@1176941809746841751> \nVOUS ETES TEMPORAIREMENT SUSPENDU POUR LE TEMP DE L'ENQUÊTE",
+    "timestamp": 1767003394869,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1329176476553318401",
+        "1176941809746841751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455320424509345866",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1443336266262511699",
+    "channelName": "📣-annonce",
+    "content": "# SANCTION #\n\nSuite a un manquement au code de conduite grave de la part de l'agent \n<@1176941809746841751> \n\nJ'annonce les sanction suivante:\n\n-  Suspention jusqu'au 30 fevrier 2025\n- Interdiction operation après  la suspention de 1 mois\n- Suivis de 3 mois **obligatoire**\n- lettre dexcuse et dengagement\n-1 blame (3 blame = exclusion)",
+    "timestamp": 1767045827749,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1176941809746841751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455321954851750101",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1443336266262511699",
+    "channelName": "📣-annonce",
+    "content": "<@1329176476553318401> est officielement promu en Agent P2 !",
+    "timestamp": 1767046192611,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1329176476553318401"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

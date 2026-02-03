@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1467434941901050135",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1467305611170680978",
+    "channelName": "📺rtl-word",
+    "content": "Vielmols merci",
+    "timestamp": 1769934153772,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

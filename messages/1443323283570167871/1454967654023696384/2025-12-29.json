@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1455099736162828381",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1454967654023696384",
+    "channelName": "Opération XRF00003",
+    "content": "yep",
+    "timestamp": 1766993211547,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

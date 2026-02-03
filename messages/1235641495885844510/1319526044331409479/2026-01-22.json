@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1463905710550290544",
+    "author": {
+      "id": "1276746993326231676",
+      "username": "gab_136",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1319526044331409479",
+    "channelName": "🔵𝗷𝗼𝘂𝗿𝗻𝗮𝗹-𝗱𝗲-𝗚𝗮𝘀𝗽𝗮𝗿𝗹𝗮𝗻𝗱",
+    "content": "Fermeture de la chaîne.",
+    "timestamp": 1769092719448,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

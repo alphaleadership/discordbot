@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1453912772588081363",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453912772588081363",
+    "channelName": "DOSSIER ARCHIVE",
+    "content": "https://discord.gg/la-ligne-rouge-1013460909064192050",
+    "timestamp": 1766710217378,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

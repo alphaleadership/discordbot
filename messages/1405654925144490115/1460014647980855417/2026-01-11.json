@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1460014787013640233",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460014647980855417",
+    "channelName": "discution",
+    "content": "<@&1460014219163598933> \n\nFaut choisir quelqun pour <@&1458529206081421425>",
+    "timestamp": 1768165050987,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [
+        "1458529206081421425",
+        "1460014219163598933"
+      ],
+      "channels": []
+    }
+  }
+]

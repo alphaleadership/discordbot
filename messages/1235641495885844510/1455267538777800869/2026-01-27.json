@@ -1,0 +1,508 @@
+[
+  {
+    "id": "1465632805533778012",
+    "author": {
+      "id": "659677578977607701",
+      "username": "grecapolis",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Au secours",
+    "timestamp": 1769504490980,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465632877659164744",
+    "author": {
+      "id": "659677578977607701",
+      "username": "grecapolis",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Un parking ! Un parking !",
+    "timestamp": 1769504508176,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465634553396854837",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Parking souterrain ou en surface ?",
+    "timestamp": 1769504907703,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "659677578977607701"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465641125527294102",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "POV hypixel qui bosse à rtl fm",
+    "timestamp": 1769506474621,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465678471505252569",
+    "author": {
+      "id": "659677578977607701",
+      "username": "grecapolis",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Entterrons les",
+    "timestamp": 1769515378596,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465759584655376708",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Les berryniens ou les places de parking ?",
+    "timestamp": 1769534717478,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "659677578977607701"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465760274949607487",
+    "author": {
+      "id": "659677578977607701",
+      "username": "grecapolis",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "LES BERRYNIENS **SONT** LES PLACES DE PARKING",
+    "timestamp": 1769534882057,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465760455908917425",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "T'es sûr que c'est assez solide pour supporter des voitures.",
+    "timestamp": 1769534925201,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "659677578977607701"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465761637645680805",
+    "author": {
+      "id": "659677578977607701",
+      "username": "grecapolis",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "J'ai pas dit que c'était des bonnes places de parking",
+    "timestamp": 1769535206949,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465777795090219183",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "La 2e option est plus sympa",
+    "timestamp": 1769539059184,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465777839428341943",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "OUIIIII",
+    "timestamp": 1769539069755,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465778072660738088",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Berryne devient un centre commercial (de préférence le centre commercial de Boissy 2 situé à Boissy St Léger et qui doit être détruit depuis environ 10 ans)",
+    "timestamp": 1769539125362,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465778148154015887",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Et les Berryniens sont des places de parking du centre commercial",
+    "timestamp": 1769539143361,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465778207621124341",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "(Ça tombe bien à Boissy 2 elles sont en mauvais état)",
+    "timestamp": 1769539157539,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465778406594445664",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "A bah je connais pas, je connais que Les Halles, Les 4 temps, Rosny, Vélizy et Val d'Europe.",
+    "timestamp": 1769539204978,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779175318093995",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Boissy 2 c’est quelque chose",
+    "timestamp": 1769539388256,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779203541565522",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Un Running gag sans fin",
+    "timestamp": 1769539394985,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779363596341521",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "En gros le truc devait être détruit en 2016 car trop véruste, amiante etc, les commerçants qui étaient tous partis à part un Géant Casino qui restait",
+    "timestamp": 1769539433145,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779470181990400",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Casino a fait faillite depuis.",
+    "timestamp": 1769539458557,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779511093362772",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Au final le Géant Casino qui obtient un retard de 5 ans de la mairie (car les habitants à côté n’avaient pas d’autre magasin)",
+    "timestamp": 1769539468311,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779616802275398",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "En 2020 ils commencent à détruire tout doucement une aile qui était vide",
+    "timestamp": 1769539493514,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779700256477378",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais covid donc retard de 1an et demi",
+    "timestamp": 1769539513411,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465779785476210810",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Le truc reprend fin 2022 et se termine en 2023 pour la première aile",
+    "timestamp": 1769539533729,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465780022840398108",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Et en 2024 début de la destruction de l’aile avec la casino vu qu’il a fait faillite",
+    "timestamp": 1769539590321,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

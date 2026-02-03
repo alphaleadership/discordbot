@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1459964139207135480",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1433922223386661060",
+    "channelName": "📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴",
+    "content": "@everyone \n\nÉLECTION SUSPENDU",
+    "timestamp": 1768152975609,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460007566225572045",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1433922223386661060",
+    "channelName": "📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴",
+    "content": "📢 Annonce officielle\nSuite à certains propos tenus par différentes personnes, ainsi qu’à ma destitution illégale, j’annonce ce jour la reprise officielle de mon mandat, pour une durée restante de 8 mois, conformément aux règles en vigueur.\nLes membres du Conseil Constitutionnel (CC) seront désignés dans les prochains jours.\nJe rappelle par ailleurs la composition du gouvernement actuellement en fonction :\nPrésident : <@1295832086602715251>\nPremier ministre : <@1384070618634391593>\nMinistre de la Justice : <@1395746373139431565>\nMinistre des Affaires étrangères : <@1212431738219925568>\nMinistre de l’Économie : <@1170366911071146097>\nMinistre des Sports : <@947480095730315285>\nMinistre de la Défense : <@1176941809746841751>\nMinistre de l’Activité : poste à pourvoir\nMinistre des Outre-Mer : <@1334432882222956594>\nMinistre du Travail : poste à pourvoir\nToute information officielle sera communiquée par les canaux habituels",
+    "timestamp": 1768163329417,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568",
+        "1384070618634391593",
+        "1395746373139431565",
+        "1170366911071146097",
+        "1334432882222956594",
+        "1295832086602715251",
+        "947480095730315285",
+        "1176941809746841751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

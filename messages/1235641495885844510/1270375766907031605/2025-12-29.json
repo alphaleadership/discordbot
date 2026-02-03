@@ -1,0 +1,576 @@
+[
+  {
+    "id": "1455004904841281546",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Peut-être que je devais créer un nouveau salon pour les brouillons des idiots de l'info.",
+    "timestamp": 1766970601998,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455006105343230002",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Pas besoin je pense",
+    "timestamp": 1766970888220,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455006217775616172",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "C'est pour ne pas s'emmêler quand on écrit plusieurs articles en même temps.",
+    "timestamp": 1766970915026,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455007217924182076",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "<@702155370054811658> pour la fin de l’article pourquoi mettre que les reporters de l’info sont cofondas de l’OMJL?",
+    "timestamp": 1766971153480,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455008974222000280",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "C'est une info importante pour le téléspectateurs, il faut que l'on soit transparent pour dire qu'on a travaillé avec eux par le passé.",
+    "timestamp": 1766971572214,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455009929973727302",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Ah Ui oké",
+    "timestamp": 1766971800083,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455012611086352454",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Est ce que je donne le rôle de journaliste à Mirionaute ou pas, je lui ai proposé d'écrire des articles dans les idiots de l'info ?\n\n<@1212431738219925568>",
+    "timestamp": 1766972439310,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455015149843779799",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Oui tu peux",
+    "timestamp": 1766973044597,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455016093826420888",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "<@1180568766011158690> Bienvenue dans la rédaction de RTL World.",
+    "timestamp": 1766973269660,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1180568766011158690"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455165647624343632",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Bondour yé suis le fiisse du lotus",
+    "timestamp": 1767008926064,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455165883520647239",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Donc ça prépre un truc sur Evarian ?",
+    "timestamp": 1767008982306,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455166048243421258",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Pour l'instant j'ai deux épisodes en préparation, un sur Maddy et un autre sur Stan.",
+    "timestamp": 1767009021579,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1180568766011158690"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455167340709937175",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Okayy, pour stané je penses que c'est peu utile, fin le gars est une légende vivante, les blagues sont répétitives, je pense que pour cette émission c'est mieux de varier les formats, quand tu écris des blagues, tu dois te dire que les quelques lecteurs vont les lire avec la voix la plus monotonne possible, donc à ma connaissance, les seuls trucs qui peuvent être dit sur stané qui n'ont pas l'air \"forcées\" sont les parallèles avec des situations actuels",
+    "timestamp": 1767009329727,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455168580382363824",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Puis faut aussi se dire que de nôtre temps le journalisme est surtout une quête personnelle et un passe-temps de devloppement de nos capacités en raison de la raréfaction des lecteurs sans la fougue micronationale d'antant, donc tant que ça **nous** fait marrer  c'est l'important",
+    "timestamp": 1767009625288,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455168655007682644",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Aussi goated le tag pretendo network",
+    "timestamp": 1767009643080,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455169546028716165",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "On mettra peut-être des scènes de bagarre entre lui et Maddy.",
+    "timestamp": 1767009855516,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1180568766011158690"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455172479222808779",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Ne penses tu pas que faire un épisode sur maddy puis une bagarre, puis greffer l'épisode de stané à posteriori de la bagarre ne créerai pas un fil rouge puis palpitant ?",
+    "timestamp": 1767010554844,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455172891967754308",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "fin, chépa, après on peut ptet remplacer la bagarre par un autre duel insolite en didascalie qui unit leurs 2 personnalités",
+    "timestamp": 1767010653250,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455172994996506728",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "genre si c'est un duel de cuisine c'est un peu too much",
+    "timestamp": 1767010677814,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455173500787626223",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Bah peut-être un duel entre super cana et Maddy.",
+    "timestamp": 1767010798404,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1180568766011158690"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455173628076228650",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Nan mais j'penses que le duel avec stané ça a du potentiel",
+    "timestamp": 1767010828752,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455173641590280354",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "L'épisode 2 : https://discord.com/channels/1235641495885844510/1246536142132875416/1453097971808993444",
+    "timestamp": 1767010831974,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455173846565912589",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "L'épisode 3 en préparation : https://discord.com/channels/1235641495885844510/1293134993241145386/1454165047109615707",
+    "timestamp": 1767010880844,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455174043908178073",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "L'épisode 4 avec Stan : https://discord.com/channels/1235641495885844510/1293134993241145386/1454901382061752552",
+    "timestamp": 1767010927894,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455174085553295462",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Yé lis ça att",
+    "timestamp": 1767010937823,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455174442786361507",
+    "author": {
+      "id": "1180568766011158690",
+      "username": "mirionaute_05640",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Ah genre ça ct l'épisode 2 ?",
+    "timestamp": 1767011022994,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455174659598450790",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Oui, le premier c'était sur Martin Condor il y a six mois.\n\nhttps://discord.com/channels/1235641495885844510/1246536142132875416/1397677563723120691",
+    "timestamp": 1767011074686,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1180568766011158690"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

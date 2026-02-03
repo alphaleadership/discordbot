@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1454565037359497466",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Nos personnages dans les idiots de l'info : \n\n\nMartin Condor - Fondateur de la Cliponie, une personne prenant des décisions sur le coup de la tête et qui consomme souvent de l'alcool.\nMaddy Cuzaq - Fondatrice de Sylvanor, furry trans renarde qui grâce à ses rituels a acquis un pouvoir important et veut dominer le monde et qui adore le s**e\nMiicha - Sous-fifre et esclave ||sexuel|| de Maddy, il lui est dévoué et veux envoyer à l'usine toutes la population.\n\n-# Note de la rédaction : Les idiots de l'information sont une émission parodique et ne doivent pas être pris au premier degré. La description de ces personnages est fictive et correspond à leur rôle dans notre émission. Document confidentielle à ne pas divulguer sauf autorisation expresse du directeur de la rédaction\n\n<:RTL_World:1321224017046147082>  Tris Tolherion, éditorialiste et directeur de la rédaction de RTL World.",
+    "timestamp": 1766865729418,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454583325996879935",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "A rajouter aussi (mais je connais pas assez le perso).",
+    "timestamp": 1766870089769,
+    "attachments": [
+      {
+        "id": "1454583325799878656",
+        "name": "image.png",
+        "url": "https://cdn.discordapp.com/attachments/1270375766907031605/1454583325799878656/image.png?ex=69519dc9&is=69504c49&hm=4bf456801307b94f49f1368fe2504c09405c537640319608e4ec009fdc9d5a7c&",
+        "contentType": "image/png",
+        "size": 58515
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454583340178083842",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "<@1212431738219925568>",
+    "timestamp": 1766870093150,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

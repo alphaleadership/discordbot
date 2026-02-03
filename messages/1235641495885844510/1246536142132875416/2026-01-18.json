@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1462502204836544653",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "# <:RTL_World:1321224017046147082> <:Nesquacie:1327716555727048714> Nesquacie: Élection présidentielle\n●\nLe second tour de l’élection présidentielle en Nesquacie s’est achevé il y a environ 40 minutes, Vassili Loutchenko (PSN-FAS) en est le vainqueur avec 52,1% des suffrages en sa faveur, contre 38% pour son concurrent Jordan Methza (FDN), et 9,9% de votes blancs.",
+    "timestamp": 1768758097610,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1454271182089224383",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "@scrmush",
+    "timestamp": 1766795668862,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454272232770768907",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "<@1126471367894773850> Here is the channel to connect",
+    "timestamp": 1766795919364,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1126471367894773850"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454274185458356467",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "<:RTL_World:1321224017046147082>",
+    "timestamp": 1766796384921,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454484277461913814",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "# <:RTL_World:1321224017046147082> RTL 15:40 UTC 資訊\n●\n## <a:Globe:1294043634093527061> ONV：下次會議日期將於 3 天後公布\n大會成員須在 2026 年 1 月 7 日與 2026 年 1 月 14 日兩者間擇一。目前投票結果顯示 1 月 7 日 14:00 UTC 為領先選項。\n●\n感謝您收看 RTL World 新聞。",
+    "timestamp": 1766846474758,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454485057472561253",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "# <:RTL_WorldZHTW:1454484814748061728> RTL 15:40 UTC 資訊\n●\n## <a:Globe:1294043634093527061> ONV：下次會議日期將於 3 天後公布\n大會成員須在 2026 年 1 月 7 日與 2026 年 1 月 14 日兩者間擇一。目前投票結果顯示 1 月 7 日 14:00 UTC 為領先選項。\n●\n感謝您收看 RTL World 新聞。",
+    "timestamp": 1766846660727,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1454495188738117675",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1453011743738429541",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱-𝗧𝗪-𝗖𝗛",
+    "content": "# 📢 最新消息\n台灣東北部海岸剛發生地震，請務必牢記餘震發生時的應對措施：趴下並保護頭部。",
+    "timestamp": 1766849076209,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

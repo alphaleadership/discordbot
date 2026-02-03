@@ -2,7 +2,7 @@
   "_metadata": {
     "version": "2.0",
     "created": "2025-08-24T14:30:51.779Z",
-    "lastModified": "2025-12-18T22:06:38.604Z",
+    "lastModified": "2026-02-02T20:13:35.282Z",
     "migrated": true
   },
   "_settings": {},
@@ -13,7 +13,7 @@
     "reason": "dc d'un admin du bot utilisée pour des test",
     "addedBy": "702155370054811658",
     "addedAt": "2025-08-24T14:32:08.393Z",
-    "lastSeen": "2025-08-28T21:23:27.381Z",
+    "lastSeen": "2026-01-23T13:51:01.019Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
@@ -70,6 +70,24 @@
           "isGlobalWatch": true,
           "operationId": "msg_957685914329563207_1756416207379",
           "messageUrl": "https://discord.com/channels/1037794097894797442/1200187412278673519/1410736564832829470"
+        }
+      },
+      {
+        "id": "1769176261019_8ctg961a6",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: Les trois.",
+        "timestamp": "2026-01-23T13:51:01.019Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1464256108863557807",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 10,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_957685914329563207_1769176261018",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1464256108863557807"
         }
       }
     ],
@@ -763,7 +781,7 @@
     "reason": "Utilisateur qui fait du prosélitysme religieux, homophobe et soupçonné d'être un sympatisant islamiste.",
     "addedBy": "702155370054811658",
     "addedAt": "2025-08-24T15:26:50.623Z",
-    "lastSeen": "2025-10-08T12:22:41.215Z",
+    "lastSeen": "2026-01-16T13:38:41.887Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
@@ -782,6 +800,24 @@
           "isGlobalWatch": true,
           "memberCount": 19,
           "operationId": "join_924470301461450784_1759926161214"
+        }
+      },
+      {
+        "id": "1768570721887_iy8aefb4g",
+        "type": "message",
+        "description": "Message dans #journaux-membres: Bonjour, deux petites requêtes :\n- Auriez-ous l'amabilité d'archier le salon de micronews, s'il ous plait.\n- Pourriez-ous aussi bien nommer le salon du Neutronien indépendant en \"Neutronien Indépendan...",
+        "timestamp": "2026-01-16T13:38:41.887Z",
+        "channelId": "1273068482069663744",
+        "messageId": "1461716293789941850",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 387,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_924470301461450784_1768570721886",
+          "messageUrl": "https://discord.com/channels/1273064561083416576/1273068482069663744/1461716293789941850"
         }
       }
     ],
@@ -818,7 +854,661 @@
     "active": true,
     "isGlobal": true
   },
-
+  "GLOBAL_1329176476553318401": {
+    "userId": "1329176476553318401",
+    "username": "red_jujul",
+    "discriminator": "0",
+    "reason": "mec sus",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-24T20:04:24.887Z",
+    "lastSeen": "2026-01-31T10:29:51.748Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1756421446313_qwf9kriyi",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur République démocratique de Monteloria [RP]",
+        "timestamp": "2025-08-28T22:50:46.313Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 19450679398,
+          "joinedAt": "2025-08-28T22:50:46.173Z",
+          "isGlobalWatch": true,
+          "memberCount": 45,
+          "operationId": "join_1329176476553318401_1756421446312"
+        }
+      },
+      {
+        "id": "1757804638038_quyx9pkbj",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Les révolutionnaire",
+        "timestamp": "2025-09-13T23:03:58.038Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 20833871123,
+          "joinedAt": "2025-09-13T23:03:57.944Z",
+          "isGlobalWatch": true,
+          "memberCount": 9,
+          "operationId": "join_1329176476553318401_1757804638037"
+        }
+      },
+      {
+        "id": "1757804638115_fz42hrg6r",
+        "type": "message",
+        "description": "Message dans #général: *Message sans contenu texte*",
+        "timestamp": "2025-09-13T23:03:58.115Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560065552318546",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804638114",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560065552318546"
+        }
+      },
+      {
+        "id": "1757804687115_99gkqnqik",
+        "type": "message",
+        "description": "Message dans #général: Tkt",
+        "timestamp": "2025-09-13T23:04:47.115Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560271035596841",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804687114",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560271035596841"
+        }
+      },
+      {
+        "id": "1757804692318_h6m0wf72l",
+        "type": "message",
+        "description": "Message dans #général: Bref je vais me coucher",
+        "timestamp": "2025-09-13T23:04:52.318Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560292728410200",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 23,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804692317",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560292728410200"
+        }
+      },
+      {
+        "id": "1757804695061_vn0hhzdzq",
+        "type": "message",
+        "description": "Message dans #général: Bonne nuit",
+        "timestamp": "2025-09-13T23:04:55.061Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416560303960883282",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 10,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757804695060",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416560303960883282"
+        }
+      },
+      {
+        "id": "1757884761229_9o1awu7id",
+        "type": "message",
+        "description": "Message dans #général: Je vous suggère de construire des tunnel d'explosifs",
+        "timestamp": "2025-09-14T21:19:21.229Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416896126249865307",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 52,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757884761228",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416896126249865307"
+        }
+      },
+      {
+        "id": "1757884767690_mta0g16is",
+        "type": "message",
+        "description": "Message dans #général: Bon je dit ça je dit rien",
+        "timestamp": "2025-09-14T21:19:27.690Z",
+        "channelId": "1416436097646329939",
+        "messageId": "1416896153286479872",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1757884767690",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1416436097646329939/1416896153286479872"
+        }
+      },
+      {
+        "id": "1758053667097_lbd8fsyvx",
+        "type": "message",
+        "description": "Message dans #Toda Irde: Toda Irde",
+        "timestamp": "2025-09-16T20:14:27.097Z",
+        "channelId": "1417604568577085490",
+        "messageId": "1417604568577085490",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 9,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1758053667096",
+          "messageUrl": "https://discord.com/channels/1416436097084424213/1417604568577085490/1417604568577085490"
+        }
+      },
+      {
+        "id": "1759263295635_xlx9zhq1i",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: https://discord.com/channels/1405654925144490115/1405937330778411111/1422677910984331354",
+        "timestamp": "2025-09-30T20:14:55.635Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422678118530945064",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 88,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759263295633",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422678118530945064"
+        }
+      },
+      {
+        "id": "1759263320619_lyd68rlkf",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Je pense vrm savoir czst qui",
+        "timestamp": "2025-09-30T20:15:20.619Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422678223434813571",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759263320618",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422678223434813571"
+        }
+      },
+      {
+        "id": "1759264876011_emplkqhvb",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Jsp si tu savais mais avant on a fait un grp anti toi (je me suis excuser c'est du passé) mais après 1 deuxième grp de genrs 7 personne je dirais on crée un autre grp la bas ya Stan je pense si je me ...",
+        "timestamp": "2025-09-30T20:41:16.011Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422684747208855682",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 210,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759264876011",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422684747208855682"
+        }
+      },
+      {
+        "id": "1759265027553_ov1xhp4hy",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: Jsp j'ai pas d'autre idée",
+        "timestamp": "2025-09-30T20:43:47.553Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422685382645911644",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759265027552",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422685382645911644"
+        }
+      },
+      {
+        "id": "1759265269762_5tzyy80y4",
+        "type": "message",
+        "description": "Message dans #🍫・hrp: 23 wshh",
+        "timestamp": "2025-09-30T20:47:49.762Z",
+        "channelId": "1417956891434287226",
+        "messageId": "1422686398716313600",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1759265269761",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1422686398716313600"
+        }
+      },
+      {
+        "id": "1764326629977_ah31x7wjt",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Arrête de débattre toi aussi",
+        "timestamp": "2025-11-28T10:43:49.977Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443915281930915881",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764326629976",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443915281930915881"
+        }
+      },
+      {
+        "id": "1764332282324_jtttax018",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Merci beaucoup",
+        "timestamp": "2025-11-28T12:18:02.324Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443938989697663017",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764332282324",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443938989697663017"
+        }
+      },
+      {
+        "id": "1764336771820_wlp0f5spv",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Quand ta besoin de moi passe mp",
+        "timestamp": "2025-11-28T13:32:51.820Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443957820046184540",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764336771819",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443957820046184540"
+        }
+      },
+      {
+        "id": "1764340738164_tfyhziewf",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Bien",
+        "timestamp": "2025-11-28T14:38:58.164Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1443974455767597140",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1764340738163",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1443974455767597140"
+        }
+      },
+      {
+        "id": "1766093353802_j80dl5tnk",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Service Espionnage gouvernementale Monteloria",
+        "timestamp": "2025-12-18T21:29:13.802Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 29122586887,
+          "joinedAt": "2025-12-18T21:29:13.604Z",
+          "isGlobalWatch": true,
+          "memberCount": 9,
+          "operationId": "join_1329176476553318401_1766093353801"
+        }
+      },
+      {
+        "id": "1766093410508_l6veuhxqu",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Intéressant ça",
+        "timestamp": "2025-12-18T21:30:10.508Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451325696562434129",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766093410507",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451325696562434129"
+        }
+      },
+      {
+        "id": "1766094038764_fwidxwv0w",
+        "type": "message",
+        "description": "Message dans #discution💬: Bonsoir mes chers compatriotes",
+        "timestamp": "2025-12-18T21:40:38.764Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451328331889770567",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 30,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094038763",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451328331889770567"
+        }
+      },
+      {
+        "id": "1766094071532_8vb0phozf",
+        "type": "message",
+        "description": "Message dans #discution💬: Ya aussi un dossier à faire c'est celui de Sarah thena",
+        "timestamp": "2025-12-18T21:41:11.532Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451328469345763369",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 54,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094071531",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451328469345763369"
+        }
+      },
+      {
+        "id": "1766094974956_y71p7d0i8",
+        "type": "message",
+        "description": "Message dans #discution💬: Elle a invité stan dans le RdT et quznd ya embrouille ça essaye de l'aider et de lui donner raison",
+        "timestamp": "2025-12-18T21:56:14.956Z",
+        "channelId": "1443335764615106620",
+        "messageId": "1451332258219688184",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 98,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766094974955",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443335764615106620/1451332258219688184"
+        }
+      },
+      {
+        "id": "1766095005403_87n0c48rn",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Tkt ils serviront monteloria",
+        "timestamp": "2025-12-18T21:56:45.403Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451332386167062709",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095005403",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451332386167062709"
+        }
+      },
+      {
+        "id": "1766095176423_n2aly868r",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Bha j'ai pas ou emmené les dossiers enft",
+        "timestamp": "2025-12-18T21:59:36.423Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451333103489515580",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 40,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095176422",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451333103489515580"
+        }
+      },
+      {
+        "id": "1766095186042_sxumkgdes",
+        "type": "message",
+        "description": "Message dans #DOSSIER X000001: Et j'ai ps vrm de raison. Le faire",
+        "timestamp": "2025-12-18T21:59:46.042Z",
+        "channelId": "1443878488237936690",
+        "messageId": "1451333143666626592",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095186041",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443878488237936690/1451333143666626592"
+        }
+      },
+      {
+        "id": "1766095476678_gaufffoz6",
+        "type": "message",
+        "description": "Message dans #Dossier X00002: Pseudo:@sarahgl1\nId: \nAccusations: Reine autoritaire dictatrice/aide et soutient à stanislasdeneustrie\nDéposer le 18/12/2025 à 23h05\nPar Jujul\nPreuves: *dans le future*",
+        "timestamp": "2025-12-18T22:04:36.678Z",
+        "channelId": "1451334362581700822",
+        "messageId": "1451334362581700822",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 168,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095476678",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1451334362581700822/1451334362581700822"
+        }
+      },
+      {
+        "id": "1766095598604_h8tx1fpwr",
+        "type": "message",
+        "description": "Message dans #Dossier X00002: Dossier X000002",
+        "timestamp": "2025-12-18T22:06:38.604Z",
+        "channelId": "1451334362581700822",
+        "messageId": "1451334874098044948",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 15,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766095598604",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1451334362581700822/1451334874098044948"
+        }
+      },
+      {
+        "id": "1766604984353_p4r6byhaf",
+        "type": "message",
+        "description": "Message dans #📣-annonce: Hein",
+        "timestamp": "2025-12-24T19:36:24.353Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1453471392778420386",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766604984352",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1453471392778420386"
+        }
+      },
+      {
+        "id": "1766604997716_3yxmb6go4",
+        "type": "message",
+        "description": "Message dans #📣-annonce: Ya une taupe ?",
+        "timestamp": "2025-12-24T19:36:37.716Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1453471448889823412",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766604997716",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1453471448889823412"
+        }
+      },
+      {
+        "id": "1766605102155_zz35ze1zp",
+        "type": "message",
+        "description": "Message dans #📣-annonce: Bonne fête à toi",
+        "timestamp": "2025-12-24T19:38:22.155Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1453471887068893244",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 16,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1766605102155",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1453471887068893244"
+        }
+      },
+      {
+        "id": "1767046172441_zf8xa4yvz",
+        "type": "message",
+        "description": "Message dans #Opération XRF00002: Jpp allez en neustrie j'y suis ban",
+        "timestamp": "2025-12-29T22:09:32.441Z",
+        "channelId": "1453351013431115777",
+        "messageId": "1455321869849854103",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1767046172440",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1453351013431115777/1455321869849854103"
+        }
+      },
+      {
+        "id": "1767175573243_g4u0vci8a",
+        "type": "message",
+        "description": "Message dans #Opération XRF00004: Oui chef",
+        "timestamp": "2025-12-31T10:06:13.243Z",
+        "channelId": "1455533123302457490",
+        "messageId": "1455864615954026590",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 8,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1767175573241",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1455533123302457490/1455864615954026590"
+        }
+      },
+      {
+        "id": "1767175579562_rgb9sobwa",
+        "type": "message",
+        "description": "Message dans #Opération XRF00004: Jai besoin du lien du serveur chef",
+        "timestamp": "2025-12-31T10:06:19.562Z",
+        "channelId": "1455533123302457490",
+        "messageId": "1455864642353238097",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 11,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1767175579561",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1455533123302457490/1455864642353238097"
+        }
+      },
+      {
+        "id": "1769855391748_zlopxddmt",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: Qui était dans la back up ?",
+        "timestamp": "2026-01-31T10:29:51.748Z",
+        "channelId": "1466510918249615655",
+        "messageId": "1467104589257117758",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 27,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1329176476553318401_1769855391747",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1466510918249615655/1467104589257117758"
+        }
+      }
+    ],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1381303115994628311": {
+    "userId": "1381303115994628311",
+    "username": "jujuldesecours",
+    "discriminator": "0",
+    "reason": "ssecond compte",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-08-25T05:46:31.931Z",
+    "lastSeen": null,
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
   "GLOBAL_1409212273809166470": {
     "userId": "1409212273809166470",
     "username": "tito2863356",
@@ -841,7 +1531,7 @@
     "reason": "utilisateur sus",
     "addedBy": "840985745182425108",
     "addedAt": "2025-08-25T17:41:04.598Z",
-    "lastSeen": "2025-10-10T13:02:56.515Z",
+    "lastSeen": "2026-02-02T20:13:35.282Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
@@ -1061,6 +1751,402 @@
           "operationId": "msg_1170366911071146097_1760101376514",
           "messageUrl": "https://discord.com/channels/1405654925144490115/1417956891434287226/1426193284254138489"
         }
+      },
+      {
+        "id": "1768161127179_oz7bgrg92",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251> arrête de ping dans conférence",
+        "timestamp": "2026-01-11T19:52:07.179Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1459998329030181044",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 53,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1768161127178",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1459998329030181044"
+        }
+      },
+      {
+        "id": "1769902365921_filiko8w8",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251> tu veux faire revenir le mec qui a raid",
+        "timestamp": "2026-01-31T23:32:45.921Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467301613596184618",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 62,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769902365920",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467301613596184618"
+        }
+      },
+      {
+        "id": "1769902394213_lfxz8gbqw",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: il t'ai passé quoi derrire la tete pour avoir cette idée ?",
+        "timestamp": "2026-01-31T23:33:14.213Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467301732056043797",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 58,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769902394212",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467301732056043797"
+        }
+      },
+      {
+        "id": "1769945820130_drnb762z5",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Il est bourré ?",
+        "timestamp": "2026-02-01T11:37:00.130Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467483873163214878",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 15,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769945820129",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467483873163214878"
+        }
+      },
+      {
+        "id": "1769946334916_q8zftbrcd",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Si",
+        "timestamp": "2026-02-01T11:45:34.916Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467486030721585183",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769946334915",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467486030721585183"
+        }
+      },
+      {
+        "id": "1769946350721_wgcnuzuc0",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Tu veux faire revenir le mec qui raif",
+        "timestamp": "2026-02-01T11:45:50.721Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467486098434293862",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 37,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769946350720",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467486098434293862"
+        }
+      },
+      {
+        "id": "1769952563532_9tpwnu5v4",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: 🤣 🤣 🤣",
+        "timestamp": "2026-02-01T13:29:23.532Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467512157473210531",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 8,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769952563531",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467512157473210531"
+        }
+      },
+      {
+        "id": "1769952568194_ggncnpiof",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Tu raid",
+        "timestamp": "2026-02-01T13:29:28.194Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467512177127587863",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769952568194",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467512177127587863"
+        }
+      },
+      {
+        "id": "1769952575146_11wjukiod",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: T'a pas de deuxième chance",
+        "timestamp": "2026-02-01T13:29:35.146Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467512206026608856",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 26,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769952575145",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467512206026608856"
+        }
+      },
+      {
+        "id": "1769952606935_nandn9iv2",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: C'est comme si tu tué quelqu'un et que t'allais en Garde à vue puis tu sort pour \"une deuxième chance\"",
+        "timestamp": "2026-02-01T13:30:06.935Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467512339631837338",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 102,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769952606934",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467512339631837338"
+        }
+      },
+      {
+        "id": "1769980505486_lvezkd2x4",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251> tu peux arrêter de everyone ?",
+        "timestamp": "2026-02-01T21:15:05.486Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467629351213338675",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 52,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769980505485",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467629351213338675"
+        }
+      },
+      {
+        "id": "1769985455118_gsyiblwx6",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: meme tristan il fait moins de ping",
+        "timestamp": "2026-02-01T22:37:35.118Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467650114578284667",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769985455117",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467650114578284667"
+        }
+      },
+      {
+        "id": "1769985479720_fee6dksxv",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: -# alors qu'il en fait beaucoup",
+        "timestamp": "2026-02-01T22:37:59.720Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467650217796047073",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1769985479719",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467650217796047073"
+        }
+      },
+      {
+        "id": "1770062079981_xufhjkl84",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251> pk tu ping pour un partenariat <a:emoji_IMangry:1454916305197989921>",
+        "timestamp": "2026-02-02T19:54:39.981Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467971502723829944",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 91,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770062079980",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467971502723829944"
+        }
+      },
+      {
+        "id": "1770062118743_78zxkzmka",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Oui bah non",
+        "timestamp": "2026-02-02T19:55:18.743Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467971665425334526",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 11,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770062118743",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467971665425334526"
+        }
+      },
+      {
+        "id": "1770062139717_6102zbocs",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Pour être poli merci de ping here ou partenariat",
+        "timestamp": "2026-02-02T19:55:39.717Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467971753400729613",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 48,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770062139716",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467971753400729613"
+        }
+      },
+      {
+        "id": "1770062254740_urgdr1oa5",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Pour ton serv si",
+        "timestamp": "2026-02-02T19:57:34.740Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467972235686838506",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 16,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770062254740",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467972235686838506"
+        }
+      },
+      {
+        "id": "1770063009623_7wtm17bki",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Bah bizarre tes accord",
+        "timestamp": "2026-02-02T20:10:09.623Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467975402038235298",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770063009622",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467975402038235298"
+        }
+      },
+      {
+        "id": "1770063177541_q5u5opjn2",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: 149 membres",
+        "timestamp": "2026-02-02T20:12:57.541Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467976106454810862",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 11,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770063177540",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467976106454810862"
+        }
+      },
+      {
+        "id": "1770063185175_lcbchgifq",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Et t'appelle ça un gros serv",
+        "timestamp": "2026-02-02T20:13:05.175Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467976138423795946",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770063185174",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467976138423795946"
+        }
+      },
+      {
+        "id": "1770063189429_ff91od8ra",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: 🤨",
+        "timestamp": "2026-02-02T20:13:09.429Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467976155415183605",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770063189428",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467976155415183605"
+        }
+      },
+      {
+        "id": "1770063215282_uog1mhs81",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: C'est pas notre faute si ton pays a une mauvaise réputation",
+        "timestamp": "2026-02-02T20:13:35.282Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467976264366424074",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 59,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1170366911071146097_1770063215282",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467976264366424074"
+        }
       }
     ],
     "active": true,
@@ -1073,11 +2159,298 @@
     "reason": "sus",
     "addedBy": "840985745182425108",
     "addedAt": "2025-08-26T09:46:18.539Z",
-    "lastSeen": null,
+    "lastSeen": "2025-12-30T06:50:19.731Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "id": "1766936941783_zzkyplpzq",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Groupe RTL",
+        "timestamp": "2025-12-28T15:49:01.783Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 65397014059,
+          "joinedAt": "2025-12-28T15:49:01.681Z",
+          "isGlobalWatch": true,
+          "memberCount": 50,
+          "operationId": "join_1180568766011158690_1766936941782"
+        }
+      },
+      {
+        "id": "1766936942416_o9d2nxmu9",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: *Message sans contenu texte*",
+        "timestamp": "2025-12-28T15:49:02.416Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1454863725474353155",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1766936942415",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1454863725474353155"
+        }
+      },
+      {
+        "id": "1766936959583_gvwomoqgi",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: Hällo !",
+        "timestamp": "2025-12-28T15:49:19.583Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1454863797947863222",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1766936959582",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1454863797947863222"
+        }
+      },
+      {
+        "id": "1767008926135_p89jq12yr",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Bondour yé suis le fiisse du lotus",
+        "timestamp": "2025-12-29T11:48:46.135Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455165647624343632",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767008926134",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455165647624343632"
+        }
+      },
+      {
+        "id": "1767008982407_ufl49o5mt",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Donc ça prépre un truc sur Evarian ?",
+        "timestamp": "2025-12-29T11:49:42.407Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455165883520647239",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 36,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767008982406",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455165883520647239"
+        }
+      },
+      {
+        "id": "1767009329847_v3lphx61x",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Okayy, pour stané je penses que c'est peu utile, fin le gars est une légende vivante, les blagues sont répétitives, je pense que pour cette émission c'est mieux de varier les formats, quand tu écris d...",
+        "timestamp": "2025-12-29T11:55:29.847Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455167340709937175",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 457,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767009329847",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455167340709937175"
+        }
+      },
+      {
+        "id": "1767009625411_sr84z5kff",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Puis faut aussi se dire que de nôtre temps le journalisme est surtout une quête personnelle et un passe-temps de devloppement de nos capacités en raison de la raréfaction des lecteurs sans la fougue m...",
+        "timestamp": "2025-12-29T12:00:25.411Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455168580382363824",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 280,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767009625411",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455168580382363824"
+        }
+      },
+      {
+        "id": "1767009643212_9y8sivd79",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Aussi goated le tag pretendo network",
+        "timestamp": "2025-12-29T12:00:43.212Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455168655007682644",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 36,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767009643211",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455168655007682644"
+        }
+      },
+      {
+        "id": "1767010554911_27uy8juo5",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Ne penses tu pas que faire un épisode sur maddy puis une bagarre, puis greffer l'épisode de stané à posteriori de la bagarre ne créerai pas un fil rouge puis palpitant ?",
+        "timestamp": "2025-12-29T12:15:54.911Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455172479222808779",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 169,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767010554910",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455172479222808779"
+        }
+      },
+      {
+        "id": "1767010653341_x2oidmudw",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: fin, chépa, après on peut ptet remplacer la bagarre par un autre duel insolite en didascalie qui unit leurs 2 personnalités",
+        "timestamp": "2025-12-29T12:17:33.341Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455172891967754308",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 123,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767010653340",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455172891967754308"
+        }
+      },
+      {
+        "id": "1767010677915_2d5tvh6ix",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: genre si c'est un duel de cuisine c'est un peu too much",
+        "timestamp": "2025-12-29T12:17:57.915Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455172994996506728",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 55,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767010677915",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455172994996506728"
+        }
+      },
+      {
+        "id": "1767010828908_sol7swd6u",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Nan mais j'penses que le duel avec stané ça a du potentiel",
+        "timestamp": "2025-12-29T12:20:28.908Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455173628076228650",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 58,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767010828908",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455173628076228650"
+        }
+      },
+      {
+        "id": "1767010937902_nyhe7dffk",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Yé lis ça att",
+        "timestamp": "2025-12-29T12:22:17.902Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455174085553295462",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 13,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767010937902",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455174085553295462"
+        }
+      },
+      {
+        "id": "1767011023109_dxgyteq2a",
+        "type": "message",
+        "description": "Message dans #ʀᴇ́ᴅᴀᴄᴛɪᴏɴ: Ah genre ça ct l'épisode 2 ?",
+        "timestamp": "2025-12-29T12:23:43.109Z",
+        "channelId": "1270375766907031605",
+        "messageId": "1455174442786361507",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767011023108",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1270375766907031605/1455174442786361507"
+        }
+      },
+      {
+        "id": "1767076650886_hmoihrb5b",
+        "type": "message",
+        "description": "Message dans #ʙʀᴏᴜɪʟʟᴏɴs: Contre note 🤓 : Si vous nous prenez au premier degré, le train vers la Pologne est offert par la maison. ( chépa si ça passe  ou pas )",
+        "timestamp": "2025-12-30T06:37:30.886Z",
+        "channelId": "1293134993241145386",
+        "messageId": "1455449705814298746",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 135,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767076650884",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1293134993241145386/1455449705814298746"
+        }
+      },
+      {
+        "id": "1767077419731_19t90g5ov",
+        "type": "message",
+        "description": "Message dans #ʙʀᴏᴜɪʟʟᴏɴs: Après les paroles du paroles du présentateur sur la DEMOCRATTTYYYYY, c'est marrant que maddy le coupe en plein milieu de Neustrie et dise \"Après Berryne et le N-Word s'il-vous-plaît puis elle enchaîne...",
+        "timestamp": "2025-12-30T06:50:19.731Z",
+        "channelId": "1293134993241145386",
+        "messageId": "1455452930596671580",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 375,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1180568766011158690_1767077419730",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1293134993241145386/1455452930596671580"
+        }
+      }
+    ],
     "active": true,
     "isGlobal": true
   },
@@ -1257,26 +2630,1160 @@
     "reason": "premier ministre de neustrie",
     "addedBy": "840985745182425108",
     "addedAt": "2025-09-06T17:11:52.857Z",
-    "lastSeen": null,
+    "lastSeen": "2026-01-24T13:08:14.226Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "id": "1769259672173_ushi4xtku",
+        "type": "join",
+        "description": "Utilisateur surveillé a rejoint le serveur Groupe RTL",
+        "timestamp": "2026-01-24T13:01:12.173Z",
+        "channelId": null,
+        "messageId": null,
+        "severity": "medium",
+        "metadata": {
+          "accountAge": 244592502841,
+          "joinedAt": "2026-01-24T13:01:12.016Z",
+          "isGlobalWatch": true,
+          "memberCount": 56,
+          "operationId": "join_438710647996284949_1769259672172"
+        }
+      },
+      {
+        "id": "1769259672350_xttkrpr8f",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: *Message sans contenu texte*",
+        "timestamp": "2026-01-24T13:01:12.350Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1464605961103609940",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_438710647996284949_1769259672349",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1464605961103609940"
+        }
+      },
+      {
+        "id": "1769259721064_r3cz3fq2q",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: Salam aleykoum",
+        "timestamp": "2026-01-24T13:02:01.064Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1464606164934459558",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_438710647996284949_1769259721064",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1464606164934459558"
+        }
+      },
+      {
+        "id": "1769259878036_vxuqc6txp",
+        "type": "message",
+        "description": "Message dans #🗺ɪᴍᴘʟᴀɴᴛᴀᴛɪᴏɴ: J'implante RTL <@702155370054811658>",
+        "timestamp": "2026-01-24T13:04:38.036Z",
+        "channelId": "1276973331370872932",
+        "messageId": "1464606823960150047",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 36,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_438710647996284949_1769259878036",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1276973331370872932/1464606823960150047"
+        }
+      },
+      {
+        "id": "1769259957373_m4ff3zuwe",
+        "type": "message",
+        "description": "Message dans #🗺ɪᴍᴘʟᴀɴᴛᴀᴛɪᴏɴ: C'est à tulie",
+        "timestamp": "2026-01-24T13:05:57.373Z",
+        "channelId": "1276973331370872932",
+        "messageId": "1464607156522324104",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 13,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_438710647996284949_1769259957372",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1276973331370872932/1464607156522324104"
+        }
+      },
+      {
+        "id": "1769260094226_8xtgv274l",
+        "type": "message",
+        "description": "Message dans #🗺ɪᴍᴘʟᴀɴᴛᴀᴛɪᴏɴ: Que world",
+        "timestamp": "2026-01-24T13:08:14.226Z",
+        "channelId": "1276973331370872932",
+        "messageId": "1464607730965676266",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 9,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_438710647996284949_1769260094226",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1276973331370872932/1464607730965676266"
+        }
+      }
+    ],
     "active": true,
     "isGlobal": true
   },
   "GLOBAL_1296584792284069964": {
     "userId": "1296584792284069964",
-    "username": "massimo_dux21",
+    "username": "massimo_211",
     "discriminator": "0",
     "reason": "neustrien",
     "addedBy": "840985745182425108",
     "addedAt": "2025-09-06T17:15:35.784Z",
-    "lastSeen": null,
+    "lastSeen": "2026-02-01T22:05:07.842Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "id": "1768150172594_t6aqj203j",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Pourquoi c'est pas acceptable",
+        "timestamp": "2026-01-11T16:49:32.594Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459952381843476689",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 29,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150172592",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459952381843476689"
+        }
+      },
+      {
+        "id": "1768150200050_dbh0ryrh0",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Je crois que les attaques étaient justement défensives",
+        "timestamp": "2026-01-11T16:50:00.050Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459952497287233558",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 54,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150200049",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459952497287233558"
+        }
+      },
+      {
+        "id": "1768150216239_aorcks2u4",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Maturité avec Tristan pm... Bon",
+        "timestamp": "2026-01-11T16:50:16.239Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459952565230895124",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 31,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150216238",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459952565230895124"
+        }
+      },
+      {
+        "id": "1768150228044_eyojdty6q",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Si on tape sur Enzo on tape sur Tristan aussi alors",
+        "timestamp": "2026-01-11T16:50:28.044Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459952614752911656",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 51,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150228044",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459952614752911656"
+        }
+      },
+      {
+        "id": "1768150390169_ben3tai4a",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Il m'accuse d'homophobie alors que je suis homo alors bon",
+        "timestamp": "2026-01-11T16:53:10.169Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459953294792327179",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 57,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150390169",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459953294792327179"
+        }
+      },
+      {
+        "id": "1768150440976_q0bi8zm0e",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Oui fin qui s'est développée car bercé par les \"grands\"",
+        "timestamp": "2026-01-11T16:54:00.976Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459953507607117937",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 55,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150440975",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459953507607117937"
+        }
+      },
+      {
+        "id": "1768150486739_x43xeo94q",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Stanislas a pas déclarer la guerre d'abord ?",
+        "timestamp": "2026-01-11T16:54:46.739Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459953696514379896",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 44,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150486738",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459953696514379896"
+        }
+      },
+      {
+        "id": "1768150749431_xny5fcjt7",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Bah tiens, qui m'avait mute?",
+        "timestamp": "2026-01-11T16:59:09.431Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459954801222619167",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150749429",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459954801222619167"
+        }
+      },
+      {
+        "id": "1768150777098_g9r6dsh3s",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Ah bonnn?\nPour quel motif",
+        "timestamp": "2026-01-11T16:59:37.098Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459954917623201842",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150777097",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459954917623201842"
+        }
+      },
+      {
+        "id": "1768150819919_eg2drpgw3",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Étrange",
+        "timestamp": "2026-01-11T17:00:19.919Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955096921178315",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150819918",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955096921178315"
+        }
+      },
+      {
+        "id": "1768150828575_yzs11t7de",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Tu peux regarder les logs ?",
+        "timestamp": "2026-01-11T17:00:28.575Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955133520805988",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 27,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150828575",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955133520805988"
+        }
+      },
+      {
+        "id": "1768150895592_jz22wjd9w",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Et du coup tu proposes quoi ? De placer Monteloria sous tutelle nesquacienne 👀",
+        "timestamp": "2026-01-11T17:01:35.592Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955414644035634",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 79,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150895591",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955414644035634"
+        }
+      },
+      {
+        "id": "1768150917267_ethe6zgqi",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Voilà",
+        "timestamp": "2026-01-11T17:01:57.267Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955504003678414",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 5,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150917266",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955504003678414"
+        }
+      },
+      {
+        "id": "1768150931466_8vdksaeuk",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: C'est quoi cette merde",
+        "timestamp": "2026-01-11T17:02:11.466Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955564862767185",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150931466",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955564862767185"
+        }
+      },
+      {
+        "id": "1768150941009_anyyajyfe",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Il a pas dis ça 🥀",
+        "timestamp": "2026-01-11T17:02:21.009Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955605052723262",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 18,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150941008",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955605052723262"
+        }
+      },
+      {
+        "id": "1768150943940_fjcr2igp6",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Bruh",
+        "timestamp": "2026-01-11T17:02:23.940Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955617232978184",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768150943940",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955617232978184"
+        }
+      },
+      {
+        "id": "1768151017436_jogdci5hl",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Btw il a absolument pas dis ça",
+        "timestamp": "2026-01-11T17:03:37.436Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955923882741912",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 30,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151017436",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955923882741912"
+        }
+      },
+      {
+        "id": "1768151018590_dyyfybdqe",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Mais bon",
+        "timestamp": "2026-01-11T17:03:38.590Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459955930371325982",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 8,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151018590",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459955930371325982"
+        }
+      },
+      {
+        "id": "1768151041499_rdx7yb4o7",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Laisse le parler chef",
+        "timestamp": "2026-01-11T17:04:01.499Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459956026647253104",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 21,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151041498",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459956026647253104"
+        }
+      },
+      {
+        "id": "1768151051471_s4nt2iijw",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Il t'as pas coupé",
+        "timestamp": "2026-01-11T17:04:11.471Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459956068300882121",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 17,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151051470",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459956068300882121"
+        }
+      },
+      {
+        "id": "1768151137100_8ipjnty1y",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Se taire et ensuite répondre",
+        "timestamp": "2026-01-11T17:05:37.100Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459956427568320606",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151137099",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459956427568320606"
+        }
+      },
+      {
+        "id": "1768151270900_aq9qlkgip",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: 💀",
+        "timestamp": "2026-01-11T17:07:50.900Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459956988761866293",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151270899",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459956988761866293"
+        }
+      },
+      {
+        "id": "1768151404806_7ofjrsyi0",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Oui",
+        "timestamp": "2026-01-11T17:10:04.806Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459957550282969191",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151404805",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459957550282969191"
+        }
+      },
+      {
+        "id": "1768151436420_fe48314ai",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Oui fin le bro m'a déclaré la guerre y'a des mois il m'a jamais rien fait",
+        "timestamp": "2026-01-11T17:10:36.420Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459957682633970038",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 73,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151436419",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459957682633970038"
+        }
+      },
+      {
+        "id": "1768151472039_ut5qltro5",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Legionnaris est parfaitement protégée",
+        "timestamp": "2026-01-11T17:11:12.039Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459957831250870332",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 37,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151472038",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459957831250870332"
+        }
+      },
+      {
+        "id": "1768151629230_msjgfyiqe",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Arbinger ❎\nArbanger ✅",
+        "timestamp": "2026-01-11T17:13:49.230Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958491719405671",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 21,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151629230",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958491719405671"
+        }
+      },
+      {
+        "id": "1768151636011_mousk9s1o",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: 🦅",
+        "timestamp": "2026-01-11T17:13:56.011Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958520190472337",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151636010",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958520190472337"
+        }
+      },
+      {
+        "id": "1768151678265_hr5d7up5e",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Bah qui t'as destitué",
+        "timestamp": "2026-01-11T17:14:38.265Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958697341227068",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 21,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151678264",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958697341227068"
+        }
+      },
+      {
+        "id": "1768151687565_nxku38134",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Ptdr",
+        "timestamp": "2026-01-11T17:14:47.565Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958736176156827",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151687565",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958736176156827"
+        }
+      },
+      {
+        "id": "1768151704916_nxkdzfevh",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: 😂",
+        "timestamp": "2026-01-11T17:15:04.916Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958809165430794",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151704916",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958809165430794"
+        }
+      },
+      {
+        "id": "1768151713845_nqd07b80c",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Mdr il se fait engueuler à ma place",
+        "timestamp": "2026-01-11T17:15:13.845Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459958846649925960",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 35,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151713844",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459958846649925960"
+        }
+      },
+      {
+        "id": "1768151952942_217jrlk45",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: 🤔",
+        "timestamp": "2026-01-11T17:19:12.942Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459959849285587181",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768151952940",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459959849285587181"
+        }
+      },
+      {
+        "id": "1768152592218_4p3afw4fh",
+        "type": "message",
+        "description": "Message dans #🔊︙𝘊𝘰𝘯𝘧𝘦́𝘳𝘦𝘯𝘤𝘦: Bon bah salut",
+        "timestamp": "2026-01-11T17:29:52.218Z",
+        "channelId": "1441492250638024735",
+        "messageId": "1459962530310131766",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 13,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 13,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768152592217",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1441492250638024735/1459962530310131766"
+        }
+      },
+      {
+        "id": "1768164505073_eot8yl5nv",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: https://tenor.com/view/i-love-democracy-democacy-i-love-democacy-gif-6657971896725837610",
+        "timestamp": "2026-01-11T20:48:25.073Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1460012496948560007",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 88,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768164505072",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1460012496948560007"
+        }
+      },
+      {
+        "id": "1768164812499_l47w62ov6",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Je propose l'organisation d'élections législatives afin de \"préparer\" le terrain avant les présidentielles",
+        "timestamp": "2026-01-11T20:53:32.499Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1460013786336592049",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 106,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768164812498",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1460013786336592049"
+        }
+      },
+      {
+        "id": "1768164816717_xiycnoi1j",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251>",
+        "timestamp": "2026-01-11T20:53:36.717Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1460013804103663638",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768164816716",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1460013804103663638"
+        }
+      },
+      {
+        "id": "1768164898625_zcdursf1q",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Force",
+        "timestamp": "2026-01-11T20:54:58.625Z",
+        "channelId": "1429914068793163848",
+        "messageId": "1460014147352920297",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 5,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768164898624",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1429914068793163848/1460014147352920297"
+        }
+      },
+      {
+        "id": "1768164972693_qjj2dc94a",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: <@1295832086602715251> je rejoins le parti Conquête Nationale",
+        "timestamp": "2026-01-11T20:56:12.693Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460014458305908766",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 61,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768164972692",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460014458305908766"
+        }
+      },
+      {
+        "id": "1768165077227_hjf9hrwxd",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: Oh mes condoléances",
+        "timestamp": "2026-01-11T20:57:57.227Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460014896791158947",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 19,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768165077226",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460014896791158947"
+        }
+      },
+      {
+        "id": "1768165085783_0t2bqydid",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: On l'a connu..?",
+        "timestamp": "2026-01-11T20:58:05.783Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460014932618776779",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 15,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768165085783",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460014932618776779"
+        }
+      },
+      {
+        "id": "1768165198127_fon08rgzy",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: Ah il avait pas discord ?",
+        "timestamp": "2026-01-11T20:59:58.127Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460015403714482218",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768165198127",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460015403714482218"
+        }
+      },
+      {
+        "id": "1768165795870_vyinknws4",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: Mince..",
+        "timestamp": "2026-01-11T21:09:55.870Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460017910994047129",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 7,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768165795870",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460017910994047129"
+        }
+      },
+      {
+        "id": "1768165805362_hiepx61uv",
+        "type": "message",
+        "description": "Message dans #✊︙𝘚-𝘦𝘯𝘨𝘢𝘨𝘦𝘳: Je peux l'avoir où ?",
+        "timestamp": "2026-01-11T21:10:05.362Z",
+        "channelId": "1433931502919356527",
+        "messageId": "1460017950357590016",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 20,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1768165805361",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1433931502919356527/1460017950357590016"
+        }
+      },
+      {
+        "id": "1769942923016_4n1ijloec",
+        "type": "message",
+        "description": "Message dans #🗳︙𝘉𝘶𝘳𝘦𝘢𝘶-𝘥𝘦-𝘷𝘰𝘵𝘦: Déjà, jsp pourquoi tout le monde peut écrire ici mais bon",
+        "timestamp": "2026-02-01T10:48:43.016Z",
+        "channelId": "1467287985434263623",
+        "messageId": "1467471721018822792",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 57,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769942923015",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287985434263623/1467471721018822792"
+        }
+      },
+      {
+        "id": "1769943007598_kjd0rinfz",
+        "type": "message",
+        "description": "Message dans #🗳︙𝘉𝘶𝘳𝘦𝘢𝘶-𝘥𝘦-𝘷𝘰𝘵𝘦: Le bot m'a mis un avertissement pour spam, à cause de ce message bruh",
+        "timestamp": "2026-02-01T10:50:07.598Z",
+        "channelId": "1467287985434263623",
+        "messageId": "1467472072438452428",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 69,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769943007597",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287985434263623/1467472072438452428"
+        }
+      },
+      {
+        "id": "1769943020601_162unjwyg",
+        "type": "message",
+        "description": "Message dans #🗳︙𝘉𝘶𝘳𝘦𝘢𝘶-𝘥𝘦-𝘷𝘰𝘵𝘦: Un peu nul le bot",
+        "timestamp": "2026-02-01T10:50:20.601Z",
+        "channelId": "1467287985434263623",
+        "messageId": "1467472130139619498",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 17,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769943020600",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287985434263623/1467472130139619498"
+        }
+      },
+      {
+        "id": "1769943038044_87k1y68rk",
+        "type": "message",
+        "description": "Message dans #🗳︙𝘉𝘶𝘳𝘦𝘢𝘶-𝘥𝘦-𝘷𝘰𝘵𝘦: Et un deuxième",
+        "timestamp": "2026-02-01T10:50:38.044Z",
+        "channelId": "1467287985434263623",
+        "messageId": "1467472203124834346",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 14,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769943038043",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287985434263623/1467472203124834346"
+        }
+      },
+      {
+        "id": "1769980684099_e3izle9qk",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: C'est quoi la capitale ?",
+        "timestamp": "2026-02-01T21:18:04.099Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467630102006337760",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 24,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769980684099",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467630102006337760"
+        }
+      },
+      {
+        "id": "1769980687231_nolyybakg",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: <@1295832086602715251>",
+        "timestamp": "2026-02-01T21:18:07.231Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467630114693972080",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769980687230",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467630114693972080"
+        }
+      },
+      {
+        "id": "1769981033648_7guusgs7k",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Legionnaris annonce coupé les relations avec Monteloria tant que l'état ne sera pas stable.",
+        "timestamp": "2026-02-01T21:23:53.648Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467631568188084225",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 91,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981033647",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467631568188084225"
+        }
+      },
+      {
+        "id": "1769981096565_3a7pi6bm0",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: 🤔",
+        "timestamp": "2026-02-01T21:24:56.565Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467631831988830342",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981096564",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467631831988830342"
+        }
+      },
+      {
+        "id": "1769981115202_j3u8yqnjv",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: *Message sans contenu texte*",
+        "timestamp": "2026-02-01T21:25:15.202Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467631910619713747",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 28,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981115202",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467631910619713747"
+        }
+      },
+      {
+        "id": "1769981125945_4it4x5qe4",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Puis là le ban de Storm..",
+        "timestamp": "2026-02-01T21:25:25.945Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467631955477532754",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981125944",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467631955477532754"
+        }
+      },
+      {
+        "id": "1769981199653_cwwf5lcpd",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Après c'est culotté, en avernie y'a 40 ping par jour",
+        "timestamp": "2026-02-01T21:26:39.653Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467632265973727336",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 52,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981199653",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467632265973727336"
+        }
+      },
+      {
+        "id": "1769981550800_vu8esvq58",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Jsp j'y suis plus",
+        "timestamp": "2026-02-01T21:32:30.800Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467633737499021438",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 17,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981550800",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467633737499021438"
+        }
+      },
+      {
+        "id": "1769981552937_1pebw0dr3",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Azy",
+        "timestamp": "2026-02-01T21:32:32.937Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467633747196121243",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769981552937",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467633747196121243"
+        }
+      },
+      {
+        "id": "1769983507842_a1b3v7ova",
+        "type": "message",
+        "description": "Message dans #💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯: Encore un ping mdr",
+        "timestamp": "2026-02-01T22:05:07.842Z",
+        "channelId": "1467287989561589903",
+        "messageId": "1467641947542786118",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 18,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1296584792284069964_1769983507841",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467287989561589903/1467641947542786118"
+        }
+      }
+    ],
     "active": true,
     "isGlobal": true
   },
@@ -1302,7 +3809,7 @@
     "reason": "suspision misogyne",
     "addedBy": "1295832086602715251",
     "addedAt": "2025-09-07T08:56:42.409Z",
-    "lastSeen": "2025-12-11T19:53:30.923Z",
+    "lastSeen": "2025-12-31T23:19:45.667Z",
     "guildId": "GLOBAL",
     "watchLevel": "alert",
     "notes": [],
@@ -1341,6 +3848,24 @@
           "isGlobalWatch": true,
           "operationId": "msg_1202322570829897732_1765482810922",
           "messageUrl": "https://discord.com/channels/1226192664018423940/1226192664018423946/1448764656079343772"
+        }
+      },
+      {
+        "id": "1767223185667_pp6qc861b",
+        "type": "message",
+        "description": "Message dans #💬ɢᴇɴᴇʀᴀʟ: **Bonne année à tous** <a:Gandoulf_qui_fait_la_fete:1208356071266193408>",
+        "timestamp": "2025-12-31T23:19:45.667Z",
+        "channelId": "1235641496351281244",
+        "messageId": "1456064317144305837",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 72,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1202322570829897732_1767223185666",
+          "messageUrl": "https://discord.com/channels/1235641495885844510/1235641496351281244/1456064317144305837"
         }
       }
     ],
@@ -1425,6 +3950,184 @@
     "watchLevel": "alert",
     "notes": [],
     "incidents": [],
+    "active": true,
+    "isGlobal": true
+  },
+  "GLOBAL_1176941809746841751": {
+    "userId": "1176941809746841751",
+    "username": "la_chevre_sw",
+    "discriminator": "0",
+    "reason": "espionnage",
+    "addedBy": "840985745182425108",
+    "addedAt": "2025-12-29T12:34:21.367Z",
+    "lastSeen": "2026-01-31T10:28:32.221Z",
+    "guildId": "GLOBAL",
+    "watchLevel": "alert",
+    "notes": [],
+    "incidents": [
+      {
+        "id": "1769854921811_sfckwo8id",
+        "type": "message",
+        "description": "Message dans #✟crashed-by-smashinator✟: <@1448054438857019402>",
+        "timestamp": "2026-01-31T10:22:01.811Z",
+        "channelId": "1467099849882337366",
+        "messageId": "1467102618693144701",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 22,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769854921809",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467099849882337366/1467102618693144701"
+        }
+      },
+      {
+        "id": "1769854944715_8z0dk2y6t",
+        "type": "message",
+        "description": "Message dans #✟crashed-by-smashinator✟: <@1295832086602715251> faut le ban",
+        "timestamp": "2026-01-31T10:22:24.715Z",
+        "channelId": "1467099849882337366",
+        "messageId": "1467102714755551394",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769854944714",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1467099849882337366/1467102714755551394"
+        }
+      },
+      {
+        "id": "1769855058177_xiqlpca7p",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: <@1212431738219925568> qui a raid?",
+        "timestamp": "2026-01-31T10:24:18.177Z",
+        "channelId": "1466510918249615655",
+        "messageId": "1467103190653866148",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 34,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855058176",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1466510918249615655/1467103190653866148"
+        }
+      },
+      {
+        "id": "1769855075579_pg49zuys2",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: Merci",
+        "timestamp": "2026-01-31T10:24:35.579Z",
+        "channelId": "1466510918249615655",
+        "messageId": "1467103263630430420",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 5,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855075579",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1466510918249615655/1467103263630430420"
+        }
+      },
+      {
+        "id": "1769855079314_5sd19bo99",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: Bah",
+        "timestamp": "2026-01-31T10:24:39.314Z",
+        "channelId": "1466510918249615655",
+        "messageId": "1467103279304413351",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855079314",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1466510918249615655/1467103279304413351"
+        }
+      },
+      {
+        "id": "1769855097386_pkg6vmyxn",
+        "type": "message",
+        "description": "Message dans #📢︙𝘈𝘯𝘯𝘰𝘯𝘤𝘦𝘴: Oki",
+        "timestamp": "2026-01-31T10:24:57.386Z",
+        "channelId": "1466510918249615655",
+        "messageId": "1467103354957205627",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 3,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855097386",
+          "messageUrl": "https://discord.com/channels/1405654925144490115/1466510918249615655/1467103354957205627"
+        }
+      },
+      {
+        "id": "1769855281324_bylh689cd",
+        "type": "message",
+        "description": "Message dans #📣-annonce: <@1295832086602715251> 👿",
+        "timestamp": "2026-01-31T10:28:01.324Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1467104126063349964",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 25,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855281323",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1467104126063349964"
+        }
+      },
+      {
+        "id": "1769855309449_7d5rk3lnj",
+        "type": "message",
+        "description": "Message dans #📣-annonce: Raid",
+        "timestamp": "2026-01-31T10:28:29.449Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1467104244346781706",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 4,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855309448",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1467104244346781706"
+        }
+      },
+      {
+        "id": "1769855312221_yu3hv7wv0",
+        "type": "message",
+        "description": "Message dans #📣-annonce: 😭",
+        "timestamp": "2026-01-31T10:28:32.221Z",
+        "channelId": "1443336266262511699",
+        "messageId": "1467104256044830751",
+        "severity": "medium",
+        "metadata": {
+          "messageLength": 2,
+          "hasAttachments": false,
+          "attachmentCount": 0,
+          "channelType": 0,
+          "isGlobalWatch": true,
+          "operationId": "msg_1176941809746841751_1769855312220",
+          "messageUrl": "https://discord.com/channels/1443323283570167871/1443336266262511699/1467104256044830751"
+        }
+      }
+    ],
     "active": true,
     "isGlobal": true
   }

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1465229690506706985",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246394788660383837",
+    "channelName": "『📧』𝐌𝐚𝐢𝐥",
+    "content": "<@1217516172719947847>",
+    "timestamp": 1769408380868,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1217516172719947847"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

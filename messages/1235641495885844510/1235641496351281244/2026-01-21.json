@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1463665832805797996",
+    "author": {
+      "id": "1185307389616984074",
+      "username": "kdivision.08",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1235641496351281244",
+    "channelName": "💬ɢᴇɴᴇʀᴀʟ",
+    "content": "",
+    "timestamp": 1769035528137,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1338518114983346287"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

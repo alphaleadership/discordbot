@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1463872836199256259",
+    "author": {
+      "id": "752422036973944884",
+      "username": "zykkard",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037352897555464235",
+    "channelName": "「🏠」général",
+    "content": "",
+    "timestamp": 1769084881592,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

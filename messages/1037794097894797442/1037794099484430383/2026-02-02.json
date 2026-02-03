@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1467823974166695957",
+    "author": {
+      "id": "892092107714592839",
+      "username": "phenyklendae",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037794099484430383",
+    "channelName": "「🪧」𝐃𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧-𝐇𝐑𝐏",
+    "content": "Salut Jean !",
+    "timestamp": 1770026906292,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1036745970077147279"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1465823083259756645",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1293134993241145386",
+    "channelName": "ʙʀᴏᴜɪʟʟᴏɴs",
+    "content": "# 𝗠𝗜𝗖𝗥𝗢𝗚𝗢𝗟𝗗𝗘𝗡𝗦 🏆 \n> **Académie des MicroGoldens composée pour le moment de La Nouvelle Orionnite, du Imago Veritatis et de RTL World**\n-# ***Pour participer vous pouvez aussi créer un ticket sur Orion avec la raison \"autres\" et déposer vos candidatures/justificatifs***",
+    "timestamp": 1769549856725,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465829397771583569",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1293134993241145386",
+    "channelName": "ʙʀᴏᴜɪʟʟᴏɴs",
+    "content": "# 𝗠𝗜𝗖𝗥𝗢𝗚𝗢𝗟𝗗𝗘𝗡𝗦 🏆 \n\nLa Nouvelle Orionnite, l'Imago Veritatis et RTL World sont fières de vous présenter les MicroGoldens, il s'agit d'un prix qui récompensera les meilleurs micronationalistes et projet micronationaux de l'année 2025.\n\nVous avez jusqu'au 8 février pour déposer vos projets et candidatures directement auprès de Eden Vassili (goldenemperor4) par MP ou sur le serveur d'Orion par ticket (motif autre).\n\nNous avons hâte de recevoir et d'examiner vos candidatures.\n\n\n<:source:1370514211557609502>  La Nouvelle Orionnite\n<:lieu:1370514302183936021>  République d'Orion\n<:RTL_World:1321224017046147082>  Tris Tolheriön, journaliste, éditorialiste et directeur de la rédaction de RTL World.",
+    "timestamp": 1769551362222,
+    "attachments": [
+      {
+        "id": "1465829396341330040",
+        "name": "1.png",
+        "url": "https://cdn.discordapp.com/attachments/1293134993241145386/1465829396341330040/1.png?ex=697a8781&is=69793601&hm=4728fe0230d87f2605747595b08edea5d5b892d78150189b3b9bb80f361a6bb2&",
+        "contentType": "image/png",
+        "size": 272312
+      },
+      {
+        "id": "1465829396785922128",
+        "name": "2.png",
+        "url": "https://cdn.discordapp.com/attachments/1293134993241145386/1465829396785922128/2.png?ex=697a8781&is=69793601&hm=8d88ad52dda0e878855430e2766f5776250a3b9bb585c6309f965cf444e463f6&",
+        "contentType": "image/webp",
+        "size": 64552
+      },
+      {
+        "id": "1465829397117534364",
+        "name": "3.png",
+        "url": "https://cdn.discordapp.com/attachments/1293134993241145386/1465829397117534364/3.png?ex=697a8782&is=69793602&hm=f2c4816ce51e94002d5764116204a955aa5a9e115ababf339aa78e144a25e6f2&",
+        "contentType": "image/png",
+        "size": 130564
+      },
+      {
+        "id": "1465829397477986436",
+        "name": "MicroGoldens.pdf",
+        "url": "https://cdn.discordapp.com/attachments/1293134993241145386/1465829397477986436/MicroGoldens.pdf?ex=697a8782&is=69793602&hm=927a155ffdde9db5747210d4bef63011a3bf34ab402ec0782369c8fc02b81b15&",
+        "contentType": "application/pdf",
+        "size": 992085
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

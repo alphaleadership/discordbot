@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1460009113600917616",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1433922410310012959",
+    "channelName": "🌍︙𝘐𝘯𝘵𝘦𝘳𝘯𝘢𝘵𝘪𝘰𝘯𝘢𝘭",
+    "content": "📢 Annonce officielle\nSuite à certains propos tenus par différentes personnes, ainsi qu’à ma destitution illégale, j’annonce ce jour la reprise officielle de mon mandat, pour une durée restante de 8 mois, conformément aux règles en vigueur.\nLes membres du Conseil Constitutionnel (CC) seront désignés dans les prochains jours.\nJe rappelle par ailleurs la composition du gouvernement actuellement en fonction :\nPrésident : <@1295832086602715251>\nPremier ministre : <@1384070618634391593>\nMinistre de la Justice : <@1395746373139431565>\nMinistre des Affaires étrangères : @jiv_28\nMinistre de l’Économie : <@1170366911071146097>\nMinistre des Sports : @azerioop\nMinistre de la Défense : <@1176941809746841751>\nMinistre de l’Activité : poste à pourvoir\nMinistre des Outre-Mer : <@1334432882222956594>\nMinistre du Travail : poste à pourvoir\nToute information officielle sera communiquée par les canaux habituels\n@everyone",
+    "timestamp": 1768163698340,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1384070618634391593",
+        "1395746373139431565",
+        "1170366911071146097",
+        "1334432882222956594",
+        "1295832086602715251",
+        "1176941809746841751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

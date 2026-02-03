@@ -1,0 +1,81 @@
+[
+  {
+    "id": "1466515140395536445",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "# 📢 ALERTE INFO: RAID À MONTELORIA: Toutes les infos en notre possession \n●\nMonteloria a subi un raid silencieux à 19h50. Hors une backup a été crée juste avant ce même raid, pour des raisons encore inconnues.\nJiv, qui était admin et possédant le rôle fondateur, avait été dérank de toutes ses perms 7min avant le raid pour «suspicion de raid», hors aucun raid n’était à signaler par les logs.\nCela pourrait être un coup monté de Spaceoff même si rien n’est sûr actuellement.\n●\nDirect à suivre sur RTL World.\n<:lieu:1370514302183936021> *Monteloria* \n<:source:1370514211557609502> *screens en notre disposition*",
+    "timestamp": 1769714856004,
+    "attachments": [
+      {
+        "id": "1466515139711996177",
+        "name": "Screenshot_20260129_200408_Discord.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1466515139711996177/Screenshot_20260129_200408_Discord.jpg?ex=697d0627&is=697bb4a7&hm=78bdab25098cc75e73aa46548f168ade4faff18909e2292c892b7fcf4159df6a&",
+        "contentType": "image/jpeg",
+        "size": 131684
+      },
+      {
+        "id": "1466515140110188859",
+        "name": "Screenshot_20260129_201755_Discord.jpg",
+        "url": "https://cdn.discordapp.com/attachments/1246536142132875416/1466515140110188859/Screenshot_20260129_201755_Discord.jpg?ex=697d0627&is=697bb4a7&hm=1897974808a7b2b3538b667b0e5d887424687135ba99ec3347b984d739f23a6d&",
+        "contentType": "image/jpeg",
+        "size": 117574
+      }
+    ],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466515311627862027",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "T'as oublié de signer ton article.",
+    "timestamp": 1769714896829,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466539426334244948",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "Je signe pas",
+    "timestamp": 1769720646223,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1467295565745488066",
+    "author": {
+      "id": "901403507519791105",
+      "username": "butterlord2243",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Oh les nazes",
+    "timestamp": 1769900923907,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

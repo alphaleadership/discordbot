@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1452304182668169298",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1406320897375338587",
+    "channelName": "warns",
+    "content": "test",
+    "timestamp": 1766326699655,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

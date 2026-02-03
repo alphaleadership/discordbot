@@ -1,0 +1,602 @@
+[
+  {
+    "id": "1455857523583225924",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「newspaper-」actu-hrp",
+    "content": "Le gouvernement veut interdire les réseaux sociaux aux moins de 15 ans dès le 1er septembre 2026\nhttps://www.lefigaro.fr/secteur/high-tech/le-gouvernement-veut-interdire-les-reseaux-sociaux-aux-moins-de-15-ans-des-le-1er-septembre-2026-20251231?utm_source=app&utm_medium=share&utm_campaign=android_Figaro",
+    "timestamp": 1767173882147,
+    "attachments": [],
+    "embeds": [
+      {
+        "url": "https://www.lefigaro.fr/secteur/high-tech/le-gouvernement-veut-interdire-les-reseaux-sociaux-aux-moins-de-15-ans-des-le-1er-septembre-2026-20251231?utm_source=app&utm_medium=share&utm_campaign=android_Figaro",
+        "type": "article",
+        "title": "Le gouvernement veut interdire les réseaux sociaux aux moins de 15...",
+        "thumbnail": {
+          "width": 1200,
+          "url": "https://i.f1g.fr/media/cms/1200x630_crop/2025/12/31/f6636c0fb0c106b3ca8a2afee932cf47e29391397c31bab51f7f5005df3d380b.jpg",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/b3zstKtIB4Oc0OMu14jeomO1j8j2tYkrWtbTwRo3Fmk/https/i.f1g.fr/media/cms/1200x630_crop/2025/12/31/f6636c0fb0c106b3ca8a2afee932cf47e29391397c31bab51f7f5005df3d380b.jpg",
+          "height": 630,
+          "flags": 0,
+          "description": "Le gouvernement souhaite interdire les réseaux sociaux aux moins de 15 ans",
+          "content_type": "image/jpeg"
+        },
+        "provider": {
+          "name": "Le Figaro"
+        },
+        "id": "1455857523583225925",
+        "description": "Dans un second article, le projet de loi entend élargir au lycée l’interdiction de l’usage du téléphone portable.",
+        "content_scan_version": 3,
+        "color": 16777215
+      }
+    ],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890287275540684",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「newspaper-」actu-hrp",
+    "content": "Du grand n'importe quoi cette mesure",
+    "timestamp": 1767181693620,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890345362460798",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「newspaper-」actu-hrp",
+    "content": "Pourquoi ?",
+    "timestamp": 1767181707469,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890541832306708",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Puisque c’est une mesure qui généralise tout",
+    "timestamp": 1767181754311,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890597733990554",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Et que le gouvernement ne se pose pas les bonnes questions",
+    "timestamp": 1767181767639,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890745851641998",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "À l’heure actuelle la position du gouvernement c’est de dire «Ah oui mais les -15 ans savent pas utiliser les réseaux»",
+    "timestamp": 1767181802953,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455890931617103955",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Donc déjà, faudrait peut-être leur apprendre? L’école ça existe pour ça, et ce serait bien plus utile que certaines matières (genre art plastiques)",
+    "timestamp": 1767181847243,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455891119169867816",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Après pour la santé mentale c'est peut-être mieux d'interdire les réseaux sociaux pour les moins de 15 ans.",
+    "timestamp": 1767181891959,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892236096110653",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Non justement",
+    "timestamp": 1767182158255,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892387405758619",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Dire \"les moins de 15 ans savent pas utiliser les réseaux\", c’est comme dire \"les arabes sont des voleurs\"",
+    "timestamp": 1767182194330,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892463490306202",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Bah certains oui, mais beaucoup d'autres non",
+    "timestamp": 1767182212470,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892550513594538",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Puisque ça dépend du niveau de maturité",
+    "timestamp": 1767182233218,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892666830159933",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Donc je pense qu’il faudrait faire une sorte de test avec un certain niveau à atteindre pour pouvoir accéder aux réseaux",
+    "timestamp": 1767182260950,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892764012052666",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Un peu comme Evalang en 3e qui te donne un niveau d’anglais",
+    "timestamp": 1767182284120,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455892776620392572",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Ou Pix",
+    "timestamp": 1767182287126,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455902423519330395",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "On voit bien que ça crée des problèmes, Insta et Tiktok sont pointés du doigt pour leur effet dépressif. Même pour les majeurs d'ailleurs.",
+    "timestamp": 1767184587126,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455906801206689896",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Justement c’est pour ça qu’il faut apprendre à utiliser les réseaux",
+    "timestamp": 1767185630848,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455906830080540734",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Le vrai problème il est là",
+    "timestamp": 1767185637732,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455944014732857436",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "C'est peut-être mieux de les éviter jeunes.",
+    "timestamp": 1767194503244,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993366171877529",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Je dis pas le contraire, mais de là aller à une interdiction c’est stupide",
+    "timestamp": 1767206269544,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993390805291180",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Voir contre-intuitif",
+    "timestamp": 1767206275417,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993569016942768",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Car bon on imagine le gamin de 13 ans qui ne peut aller sur les réseaux car c’est interdit",
+    "timestamp": 1767206317906,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993637685952727",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Y’a pas de cours pour apprendre à les utiliser correctement",
+    "timestamp": 1767206334278,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993734435967201",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Donc à 15 ans il installe un réseau, genre instagram",
+    "timestamp": 1767206357345,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455993884470542444",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Bon bah là il se prend plein de merdes dans la gueule",
+    "timestamp": 1767206393116,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455994068218675210",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Car aujourd'hui un gars de 15 ans qui est sur les réseaux depuis sur 2 ans, bon s’il s’est pris une merde bon il sait à peu près comment réagir",
+    "timestamp": 1767206436925,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455994319864463380",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Là le gamin qui a 15 ans, qui est un peu pressé de découvrir le monde des réseaux, mais qui ne sait pas comment les utiliser",
+    "timestamp": 1767206496922,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1455994508423725147",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1435644332731404399",
+    "channelName": "「📰」actu-hrp",
+    "content": "Bon bah s’il se prend une merde (ce qui selon moi sera plus probable), bah le gamin ne sait pas réagir et il fait peut-être une dépression",
+    "timestamp": 1767206541878,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1467630495478317320",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "# <:RTL_World:1321224017046147082> Une imitation de personnalités publiques est en cours dans un vocal orionnite entre Tris et Martin Condor, la séquence est lunaire.",
+    "timestamp": 1769980777378,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1467638918311575633",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1246536142132875416",
+    "channelName": "📺𝗥𝗧𝗟-𝗪𝗼𝗿𝗹𝗱",
+    "content": "Notons que dans cette discussion un très grand nombre de dérapages ont eu lieu, notamment sur les personnes venant d'Afrique du Nord.",
+    "timestamp": 1769982785538,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

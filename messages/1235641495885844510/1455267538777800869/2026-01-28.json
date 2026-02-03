@@ -1,0 +1,337 @@
+[
+  {
+    "id": "1465868147600134527",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Pour la suite ne pas mettre Maytix directement, voir comment implanter indirectement une caricature bas-marnaise à la manière de Pablo de Nestlé pour la suite de l'émission (mettre un bureaucrate légaliste chiant d'une micronation chiante, qui soit souvent à coté de la plaque et un peu con et à qui Luciole force à bouffer un code civile).",
+    "timestamp": 1769560600901,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465868522113470671",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Merci de ne pas partager cela dans d'autre serveur ou groupe MP ou il peut y avoir des bas-marnais. Je souhaite pouvoir continuer mon émission de manière sereine. Et non Sax c'est pas une persécution tout le monde y passera (moi y compris).",
+    "timestamp": 1769560690192,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465908006742130810",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui",
+    "timestamp": 1769570104061,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1465908051537170586",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "<@1284648869027778642> vraiment fô pas",
+    "timestamp": 1769570114741,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658",
+        "1284648869027778642"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466001871469805710",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Vasy",
+    "timestamp": 1769592483156,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466001979682722027",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais c'est bancal de dire qu'il est con... Ya tellement pire à Orion, Nesquacie, Sylvanor etc. mdrrrrr",
+    "timestamp": 1769592508956,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466025858832793775",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Je cible personne en particulier c'est une caricature qui rassemble les défauts de plusieurs personnes.",
+    "timestamp": 1769598202189,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1284648869027778642"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466028500258390149",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "ah ok",
+    "timestamp": 1769598831954,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466028775912247469",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Par contre je vois pas qui en particulier à Orion, Nesquacie ou Sylvanor pourrait être pire en terme de caricature, tu penses à qui en particulier ?",
+    "timestamp": 1769598897675,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1284648869027778642"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466028951661973575",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "en terme d'absence d'intelligence",
+    "timestamp": 1769598939577,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466092109143605339",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui",
+    "timestamp": 1769613997494,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466092193340068049",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "D’ailleurs faudrait penser à créer un personnage un peu comme le général Sylvestre dans les guignols",
+    "timestamp": 1769614017568,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466092461544837295",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "En gros qui représente un pays global sans prendre exemple sur qqn en particulier",
+    "timestamp": 1769614081513,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466092508160463101",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Ce qui serait plus adapté pour la Basse-Marne je pensr",
+    "timestamp": 1769614092627,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466193767211208764",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "*Une fois arrivée dans le 58ème étage, Maddy et ces deux acolytes s'aventure afin de trouver le bureau de Tris, mais se perdent dans les couleurs*\n\nMaddy : C'est un vrai labyrinthe, comment ils font pour s'y retrouver ?\n\nLuciole : Tient, regarde il est peut-être là. *Luciole montre une porte ou il est inscrit \"Direction RTL Finance & Assurance - BNPL\"*\n\nGreca : Bon la porte est fermé, et j'arrive pas à pirater le système de badge.\n\n*Maddy frappe à la porte mais rien ne se passe*\n\nMaddy : Bon, faut trouver un moyen d'entrer, comment on pourrait faire ?\n\nGreca : Et si on passait par les conduits de ventilation ?\n\nLuciole : Excellente idée, et il se trouve que tu es le plus fin, donc à toi l'honneur\n\nGreca : Mais\n\nMaddy : Parfait, mais faut trouver une bouche d'aération\n\n*Les trois sylvanoriens regarde s'il y a un bureau ouvert, par chance un",
+    "timestamp": 1769638234666,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1466218835219714068",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Risita fait des dessins à caractère NSFW dans le gartic phone.",
+    "timestamp": 1769644211345,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

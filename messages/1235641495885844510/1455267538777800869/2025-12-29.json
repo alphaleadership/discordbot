@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1455267666498687008",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Faire un numéro des idiots de l'info ou Tris lance une OPA hostile contre le Crédit Sylvanorien avec la Banque Populaire du Listenbourg et RTL Finance & Assurance.",
+    "timestamp": 1767033249259,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1457608464238121010",
+    "author": {
+      "id": "1095798700183396422",
+      "username": "laord20",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1037352897555464235",
+    "channelName": "「🏠」général",
+    "content": "",
+    "timestamp": 1767591338930,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

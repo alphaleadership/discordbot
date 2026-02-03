@@ -1,0 +1,440 @@
+[
+  {
+    "id": "1462102743945842699",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "<@1212431738219925568> ?",
+    "timestamp": 1768662858712,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462104103378489552",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "On dit que ce sont des employés de Nestlé",
+    "timestamp": 1768663182826,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462104367669973219",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "À l’avenir dans d’autres épisodes on pourra dire qu’ils sont obnubilés par leur PDG",
+    "timestamp": 1768663245838,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462107643916320989",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "On les appellent comment ?",
+    "timestamp": 1768664026956,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462107684051353662",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Neustrien ou autre chose ?",
+    "timestamp": 1768664036525,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462119908862197760",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Employés de Nestlé",
+    "timestamp": 1768666951147,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462120081533309019",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "En gros:\nStanislas= PDG de Nestlé\nLa Neustrie= Nestlé \nLes neustriens= Employés de Nestlé",
+    "timestamp": 1768666992315,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462120508312260791",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Bon je peux publier ce que j'ai mis dans https://discord.com/channels/1235641495885844510/1246536142132875416",
+    "timestamp": 1768667094067,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121088195625175",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui",
+    "timestamp": 1768667232322,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121155321270325",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais du coup y’a pas la fin?",
+    "timestamp": 1768667248326,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121166129856613",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "C'est quoi déjà le terme après caste rouge qu'utilise Stan ?",
+    "timestamp": 1768667250903,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121226884354110",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Génocidaire?",
+    "timestamp": 1768667265388,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121279967727857",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Un truc avec facho et bolchevik.",
+    "timestamp": 1768667278044,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121310745399581",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Ah oui",
+    "timestamp": 1768667285382,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121408154042611",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "La caste rouge bolchevique neustrianophobe et génocidaire",
+    "timestamp": 1768667308606,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121444480647431",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Non c'est pas ça.",
+    "timestamp": 1768667317267,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121792943558656",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Caste rouge faschisto-bolchevik je crois.",
+    "timestamp": 1768667400347,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462121819606618224",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais j'ai un doute sur l'ortographe.",
+    "timestamp": 1768667406704,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462152174996951213",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "**Les idiots de l'info : Stanislas de Neustrie (titre provisoire)**\n\nPrésentateur : Bonsoir Stanislas, vous êtes le roi de Neustrie, une micronation très controversée qui avez déclaré la guerre à 3/4 des micronations et crée plein de protectorat. Par ailleurs vous dénoncez régulièrement la \"caste rouge\" qui d'après vous dirigerait le monde.\n\nStanislas (nom provisoire) : Bonsoir, ces déclarations de guerre ne sont pas de ma volonté mais une réponse obligatoire face au génocide auquel est victime la population neustrienne, en concertation avec mon premier ministre Sligo et auparavant Mayer.\n\nPrésentateur : Vos premiers ministres ne durent pas très longtemps, comment expliquez-vous cela ?\n\nStan : Malheureusement peu de personne on mon intelligence, nous avons eu peu de bon premier ministre car une fois au pouvoir beaucoup se révèle incompétent et perdent les élections de mi-mandat. Mais je suis attaché à la démocratie et je ne peux pas être roi et premier ministre en même temps.\n\nPrésentateur : Vous dénoncez régulièrement un \"génocide\" en vous disant persécuté par d'autres micronationalistes, vous avez des preuves de ce que vous avancez ?\n\nStan : Oui, nous sommes exterminés et tués par milliards par des micronations hostiles comme la Nesquacie de Basto le pédo, Sylvanor de Maddy la satanique, la basse-marne d'Asmo le violeur, Orion un truc de pd.\n\nPrésentateur : Houla c'est pas un peu homophobe comme propos ?\n\nStan : Absolument pas, je suis le fils de dieu et je suis extrêmement tolérant, sauf envers les envoyé du diable comme les sataniques que j'ai combattu avec mon épée sur mon fidèle destrier.\n\nPrésentateur : Vous avez combattu des sataniques ?\n\nStanislas : Parfaitement, j'ai combattu des sous-fifre de l'horrible Maddy la Satanique comme Grecapolis à qui j'ai foutu une bonne raclée et si je croise un membre de la caste rouge je le fusillerai et si nécessaire je le tuerai de mes propres main.",
+    "timestamp": 1768674643993,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462152289790853262",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Présentateur : Pourtant d'après nos informations ils semblerait que c'est Grecapolis qui a gagné le combat et que vous êtes resté K.O pendant trois jours après.\n\nStan : TAISEZ-VOUS JOURNALEUX FAKE NEWS, JE SUIS LE FILS DE DIEU ET JE DOIS PURIFIER LE MONDE DES SATANIQUES !\n\nVOUS ÊTES DES EMPLOYES DE LA CASTE ROUGE PEDO-SATANIQUE ET VOUS PARTICIPEZ AU GÉNOCIDE NEUSTRIEN, JE VOUS DECLARE LA GUERRE !\n\n*Ouvre son smartphone et rédige un communiqué avec en pièce jointe la déclaration de guerre au Groupe RTL puis l'envoie via le bureau royal neustrien*\n\nEN PLUS QU'EST-CE QUE J'APPREND, VOUS APPARTENEZ A JIV LE JOURNALISTE FAKE NEWS ET SECRETAIRE GENERAL DE L'ONV A QUI J'AI REFUSE D'IMPLANTER SON JOURNAL DE MERDE EN NEUSTRIE ET QUI REFUSE DE FAIRE LA PAIX ET VEUX QUE L'ON REPRENNE LES DOX ET LES RAIDS !\n\n*Ouvre son numéro de téléphone et leak le numéro de téléphone de l'école primaire de Maytix à voix haute et sur le bureau royal Neustrien et spam Basto en l'insultant avec son troisième double compte*\n\nPrésentateur : Jiv a juste dit qu'il n'y avait pas de guerre entre l'ONV et votre micronation et qu'il n'y avait donc pas lieu de faire de traité de paix, puisqu'il n'y a pas de guerre, à aucun moment il vous a invité à continuer de...\n\nStan : NON AU GENOCIDE NEUSTRIEN JE VAIS PURIFIER CES LOCAUX ET RESTAURER LA SAINTE NEUSTRIE *sort son épée et donne un coup sur le mur* JE VAIS COMMENCER PAR TOI ET APRES PURIFIER TOUT CES LOCAUX !\n\n*Une lampe tombe sur Stanislas, fragilisé par le coup porté sur le mur*\n\nPrésentateur : Pourquoi j'ai accepté ce stage à RTL ?\n\n*Pendant ce temps dans les étages supérieur à la direction de RTL, dans les bureaux du directeur de la rédaction.*\n\nTris : *Prend un antidépresseur* Maudit soit le prof de stats, il est déjà incapable de faire cours sans faire endormir tout l'amphi et là il nous pond un sujet qui choque même des profs de l'ENS. *Jette une fléchette sur une cible sur laquelle est fixé un sujet de partiel de Macroéconomie croissance*",
+    "timestamp": 1768674671362,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462162746823938171",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Ah oui",
+    "timestamp": 1768677164513,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

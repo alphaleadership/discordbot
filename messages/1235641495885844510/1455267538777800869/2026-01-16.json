@@ -1,0 +1,672 @@
+[
+  {
+    "id": "1461766676264779807",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Ça me va",
+    "timestamp": 1768582733933,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461834587645808681",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "D'accord, mais pour la fin, on mets quoi ?",
+    "timestamp": 1768598925268,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461835611647377459",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Pas contre Nesquik du coup",
+    "timestamp": 1768599169409,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461835961024381041",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "On met quoi pour la dernière phrase ?",
+    "timestamp": 1768599252707,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836000421613590",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Interview du roi de Neustrie ?",
+    "timestamp": 1768599262100,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836151877931121",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Interview du roi de Nestlé contre la Nesquacie ?",
+    "timestamp": 1768599298210,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836615457575088",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui.",
+    "timestamp": 1768599408736,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836629705625713",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Plus PDG",
+    "timestamp": 1768599412133,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836650022965373",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais c'est oké",
+    "timestamp": 1768599416977,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836684986417283",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Du PDG de Nestlé ?",
+    "timestamp": 1768599425313,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836742482198679",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "C'est un peu bizarre je trouve.",
+    "timestamp": 1768599439021,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836838749868256",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui",
+    "timestamp": 1768599461973,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836916134777136",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Ah et aussi je suis en train de voir pour faire une refonte de la DA du groupe",
+    "timestamp": 1768599480423,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461836999542444136",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Si tu as des suggestions de polices sans sérif ou arrondies sympa je suis preneur",
+    "timestamp": 1768599500309,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461837811425742940",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Un PDG dans une micronation ?",
+    "timestamp": 1768599693877,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838045983670487",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais non c’est justement pour pas qu’on le reconnaisse",
+    "timestamp": 1768599749800,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838141626384437",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui enfin on le reconnaitra dans la suite avec ses déclarations de guerre...",
+    "timestamp": 1768599772603,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838190548746280",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Mais bon pourquoi pas.",
+    "timestamp": 1768599784267,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838248132346070",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Tout est bon, tu as pu relire si j'ai pas fait de faute de frappe ou d'ortographe ?",
+    "timestamp": 1768599797996,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838447600861186",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "<@1212431738219925568>",
+    "timestamp": 1768599845553,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838555650461853",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui mais justement",
+    "timestamp": 1768599871314,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838576802205950",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Faut juste pas le nommer",
+    "timestamp": 1768599876357,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838606594212051",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Je vais voir ça",
+    "timestamp": 1768599883460,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838777650778205",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Je te dirai tout ça demain",
+    "timestamp": 1768599924243,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838830410797087",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "J'allais préparer sa publication...",
+    "timestamp": 1768599936822,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838838220722388",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Là je cherche des polices et je vais aller dormir",
+    "timestamp": 1768599938684,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838874539065395",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui mais c’est pas grave",
+    "timestamp": 1768599947343,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838915676934185",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "C'est vrai qu'on en est plus à un jour prêt...",
+    "timestamp": 1768599957151,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838915890708675",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Au pire tu peux demander à une IA de corriger les fautes",
+    "timestamp": 1768599957202,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461838952146276484",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "Oui😅😂",
+    "timestamp": 1768599965846,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461851328891457890",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "J'ai corrigé l'article pour l'ortographe, par contre on met quoi à la place des neustriens quand on les évoques ?",
+    "timestamp": 1768602916692,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1461851340945752206",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1455267538777800869",
+    "channelName": "brouillons-les-idiots-de-l-information",
+    "content": "<@1212431738219925568>",
+    "timestamp": 1768602919566,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1212431738219925568"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

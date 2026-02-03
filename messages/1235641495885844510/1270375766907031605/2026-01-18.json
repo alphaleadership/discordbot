@@ -1,0 +1,192 @@
+[
+  {
+    "id": "1462551181837733890",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Faudrait se répartir les serveurs de prédilection que traite chaque journaliste.\n\nPar exemple moi je m'occupe des infos à Orion et Gred en Bureaucratie-Marne.",
+    "timestamp": 1768769774637,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462553206507962662",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Moi je m'occupe de peu de choses ces temps ci je t'avoue.",
+    "timestamp": 1768770257356,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462553236379537448",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Mais faut que je reprenne la radio",
+    "timestamp": 1768770264478,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462557879684042805",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Non mais tu en fais quand tu veux, ça ne me dérange pas si on ne parle jamais de la Basse-Marne (de toute façon il s'y passe pas grand chose).",
+    "timestamp": 1768771371528,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1284648869027778642"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462558045396537376",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Tiens d'ailleurs j'ai une question, le serveur Sylvanor républicain existe toujours pour les archives ou pas ?",
+    "timestamp": 1768771411037,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462558263185899804",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Je pense oui",
+    "timestamp": 1768771462962,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462558311785435167",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "La SIP est signée par le Sylvanor républicain de mémoire",
+    "timestamp": 1768771474549,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462561161416540182",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Tu saurais ou je peux trouver un lien pour aller sur le serveur. j'aimerais consulter leurs archives pour m'en inspirer pour mes futurs numéros.",
+    "timestamp": 1768772153954,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1284648869027778642"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1462561721591009470",
+    "author": {
+      "id": "1284648869027778642",
+      "username": "gredetforge2",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Demande à Asmo lol",
+    "timestamp": 1768772287510,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

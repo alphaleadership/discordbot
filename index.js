@@ -37,6 +37,38 @@ import AutoConfigManager from './utils/AutoConfigManager.js';
 let dmTicketManager; // Declare dmTicketManager here
 
 
+
+
+// Charger les variables d'environnement d'abord
+dotenv.config();
+
+const token = process.env.DISCORD_TOKEN;
+const prefix = process.env.BOT_PREFIX || '!';
+const ownerID = process.env.OWNER_ID;
+const defaultCooldown = parseInt(process.env.DEFAULT_COOLDOWN || '3', 10);
+const supportRoleId = process.env.SUPPORT_ROLE_ID;
+const ticketCategory = process.env.TICKET_CATEGORY_ID;
+
+const config = {
+    token,
+    prefix,
+    ownerID,
+    defaultCooldown,
+    supportRoleId,
+    ticketCategory
+};
+
+// Variables de suivi des sauvegardes
+
+
+let isLoggingToGithub = false;  // Déclaration déplacée ici
+const lastBackupTimes = new Map();
+
+// Initialiser les configurations et les gestionnaires
+const guildConfig = enhancedGuildConfig;
+guildConfig.ensureFileExists();
+const adminManager = new AdminManager();
+const permissionValidator = new PermissionValidator(adminManager);
 class WarnManager {
     constructor(filePath = 'warnings.json') {
         this.filePath = path.join(process.cwd(), filePath);
@@ -173,41 +205,11 @@ class WarnManager {
         return this.warnings[userId] ? this.warnings[userId].length : 0;
     }
 }
-
-// Charger les variables d'environnement d'abord
-dotenv.config();
-
-const token = process.env.DISCORD_TOKEN;
-const prefix = process.env.BOT_PREFIX || '!';
-const ownerID = process.env.OWNER_ID;
-const defaultCooldown = parseInt(process.env.DEFAULT_COOLDOWN || '3', 10);
-const supportRoleId = process.env.SUPPORT_ROLE_ID;
-const ticketCategory = process.env.TICKET_CATEGORY_ID;
-
-const config = {
-    token,
-    prefix,
-    ownerID,
-    defaultCooldown,
-    supportRoleId,
-    ticketCategory
-};
-
-// Variables de suivi des sauvegardes
-
-
-let isLoggingToGithub = false;  // Déclaration déplacée ici
-const lastBackupTimes = new Map();
-
-// Initialiser les configurations et les gestionnaires
-const guildConfig = enhancedGuildConfig;
-guildConfig.ensureFileExists();
-const adminManager = new AdminManager();
 const warnManager = new WarnManager('data/warnings.json');
 warnManager.ensureFileExists();
 const blockedWordsManager = new BlockedWordsManager();
 blockedWordsManager.ensureFileExists();
-const permissionValidator = new PermissionValidator(adminManager);
+
 
 // Configuration GitHub
 const GITHUB_OWNER = process.env.GITHUB_OWNER || 'alphaleadership';
@@ -742,8 +744,8 @@ for (const token of tokens) {
                     if (Math.random() < 0.05) {
                         const muteDuration = 10 * 60 * 1000; // 10 minutes en millisecondes
                         try {
-                            await member.timeout(muteDuration, 'Mine terrestre activée');
-                            await message.channel.send(`💥 **${member.user.tag}** a marché sur une mine terrestre et est mis en sourdine pendant 10 minutes !`);
+                         //   await member.timeout(muteDuration, 'Mine terrestre activée');
+                            //await message.channel.send(`💥 **${member.user.tag}** a marché sur une mine terrestre et est mis en sourdine pendant 10 minutes !`);
                             console.log(`[MINE TERRESTRE] ${member.user.tag} a été mis en sourdine pendant 10 minutes.`);
                         } catch (error) {
                             console.error(`Erreur lors de l'application du timeout pour ${member.user.tag}:`, error);
@@ -797,7 +799,10 @@ for (const token of tokens) {
             // Le message a été traité comme spam et l'utilisateur a été banni
             return;
         }
-
+ const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(userId);
+    if (isAdmin) {
+        return false; // Les administrateurs sont immunisés contre la détection de spam
+    }
         // Vérifier les mots bloqués
         if (blockedWordsManager.isBlocked(message.guild.id, message.content)) {
             try {
@@ -866,7 +871,7 @@ for (const token of tokens) {
                 console.error('Error handling dox detection:', error);
             }
         }
-
+ 
         // Ignorer les messages des bots et les messages sans serveur (DM)
         if (message.author.bot || !message.guild) return;
 

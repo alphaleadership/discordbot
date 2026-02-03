@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1457017215172874301",
+    "author": {
+      "id": "702155370054811658",
+      "username": "tollerion",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "Je pense annoncer l'arrêt de mes activités sur RTL et de l'émission les idiots de l'info pendant une durée indéterminée.",
+    "timestamp": 1767450374168,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1457152762155368620",
+    "author": {
+      "id": "1212431738219925568",
+      "username": "jiv_28",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1270375766907031605",
+    "channelName": "ʀᴇ́ᴅᴀᴄᴛɪᴏɴ",
+    "content": "oui, faut se concentrer sur les révisions",
+    "timestamp": 1767482691087,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "702155370054811658"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

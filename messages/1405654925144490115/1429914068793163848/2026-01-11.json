@@ -1,0 +1,603 @@
+[
+  {
+    "id": "1459953033961013320",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "@everyone \nDebat pour presidentiel!!",
+    "timestamp": 1768150327912,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1459957641085325342",
+    "author": {
+      "id": "1155033451930583111",
+      "username": "matisse_1871",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "<@1295832086602715251> je peux avoir la permission de poster dans demande de papiers ?,je voudrais faire un visa citoyen",
+    "timestamp": 1768151426336,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1459957764607709215",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Ticket",
+    "timestamp": 1768151455786,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1155033451930583111"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1459959516262305975",
+    "author": {
+      "id": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "<@1296584792284069964>  tu peut envoyée un message pour voir",
+    "timestamp": 1768151873413,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1296584792284069964"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1459998329030181044",
+    "author": {
+      "id": "1170366911071146097",
+      "username": "saphir1051",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "<@1295832086602715251> arrête de ping dans conférence",
+    "timestamp": 1768161127098,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009273282138377",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "La fête",
+    "timestamp": 1768163736411,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009315657060363",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Hl?",
+    "timestamp": 1768163746514,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1167922907641544754"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009453423427718",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Faisons comme si tu n'avais pas compris mon propos",
+    "timestamp": 1768163779360,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009511959003370",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Si jai bien compris",
+    "timestamp": 1768163793316,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1167922907641544754"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009552107016508",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Sa derange?",
+    "timestamp": 1768163802888,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009594792186041",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Sachant que mon destitution est ilégal",
+    "timestamp": 1768163813065,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009607039680563",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Que tu aies compris ou ton annonce ?",
+    "timestamp": 1768163815985,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009667668213872",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Mon annonce",
+    "timestamp": 1768163830440,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1167922907641544754"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009698278248468",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Oui",
+    "timestamp": 1768163837738,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009745288270050",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Explique",
+    "timestamp": 1768163848946,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460009952205869058",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Tu aurais gagné en légitimité en laissant les élections se faire",
+    "timestamp": 1768163898279,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460010082917159125",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Pas besoin la destitution est ilegal donc je reprend juste mon poste",
+    "timestamp": 1768163929443,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1167922907641544754"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460010164693242192",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Pour une durée réinitialisée",
+    "timestamp": 1768163948940,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460010214177771550",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Je mexcuse <@1395746373139431565> mais je tinvite a te representer dans 8 mois stv",
+    "timestamp": 1768163960738,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1395746373139431565"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460010312962150532",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Javais encore 7mois et 28 jour",
+    "timestamp": 1768163984290,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1167922907641544754"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460010390992978010",
+    "author": {
+      "id": "1167922907641544754",
+      "username": "antoine_56",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "C'est pas 8 mois",
+    "timestamp": 1768164002894,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460012496948560007",
+    "author": {
+      "id": "1296584792284069964",
+      "username": "massimo_211",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "https://tenor.com/view/i-love-democracy-democacy-i-love-democacy-gif-6657971896725837610",
+    "timestamp": 1768164504993,
+    "attachments": [],
+    "embeds": [
+      {
+        "video": {
+          "width": 498,
+          "url": "https://media.tenor.com/XGXeKiTglyoAAAPo/i-love-democracy-democacy.mp4",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/U0xW5KHaNbqAUM5_HXf9q66sI6i9yrnHhDbM3fCdHDc/https/media.tenor.com/XGXeKiTglyoAAAPo/i-love-democracy-democacy.mp4",
+          "placeholder_version": 1,
+          "placeholder": "TygODoQWl3pfhZdpl4d3iHeHBVtTgDY=",
+          "height": 450,
+          "flags": 0
+        },
+        "url": "https://tenor.com/view/i-love-democracy-democacy-i-love-democacy-gif-6657971896725837610",
+        "type": "gifv",
+        "thumbnail": {
+          "width": 498,
+          "url": "https://media.tenor.com/XGXeKiTglyoAAAAe/i-love-democracy-democacy.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/28XODtqyF1hBe6Rg6FvAhrQO8GEV-jyTGLLvYt5wXms/https/media.tenor.com/XGXeKiTglyoAAAAe/i-love-democracy-democacy.png",
+          "placeholder_version": 1,
+          "placeholder": "TygODoQWl3pfhZdpl4d3iHeHBVtTgDY=",
+          "height": 449,
+          "flags": 0,
+          "content_type": ""
+        },
+        "reference_id": "1460012496948560007",
+        "provider": {
+          "url": "https://tenor.co",
+          "name": "Tenor"
+        },
+        "id": "1460012496948560008",
+        "content_scan_version": 3
+      }
+    ],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460013786336592049",
+    "author": {
+      "id": "1296584792284069964",
+      "username": "massimo_211",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Je propose l'organisation d'élections législatives afin de \"préparer\" le terrain avant les présidentielles",
+    "timestamp": 1768164812407,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460013804103663638",
+    "author": {
+      "id": "1296584792284069964",
+      "username": "massimo_211",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "<@1295832086602715251>",
+    "timestamp": 1768164816643,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460013870541312169",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Cest fait les legislatif",
+    "timestamp": 1768164832483,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1296584792284069964"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460013958324027538",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "",
+    "timestamp": 1768164853412,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460014147352920297",
+    "author": {
+      "id": "1296584792284069964",
+      "username": "massimo_211",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1429914068793163848",
+    "channelName": "💬︙𝘋𝘪𝘴𝘤𝘶𝘴𝘴𝘪𝘰𝘯",
+    "content": "Force",
+    "timestamp": 1768164898480,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  }
+]

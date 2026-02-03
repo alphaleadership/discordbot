@@ -1,0 +1,194 @@
+[
+  {
+    "id": "1460340322331525184",
+    "author": {
+      "id": "1204140730654793751",
+      "username": "totocach",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "je pose ma candidature pour le post d'admin",
+    "timestamp": 1768242664655,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460340387272065184",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Bonjour",
+    "timestamp": 1768242680138,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1204140730654793751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460340400014229546",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Bien sur",
+    "timestamp": 1768242683176,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460340452833362003",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Avez vous un cv ou/et lettre de motivation",
+    "timestamp": 1768242695769,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460349387690475621",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "<@1204140730654793751>",
+    "timestamp": 1768244826005,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1204140730654793751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460354215519064096",
+    "author": {
+      "id": "1204140730654793751",
+      "username": "totocach",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Je m’occupe de rédiger cela dans la semaine j’ai combien de temp ?",
+    "timestamp": 1768245977049,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460355558849646592",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "jusqu'a se soir",
+    "timestamp": 1768246297324,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1204140730654793751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460356933407080653",
+    "author": {
+      "id": "1204140730654793751",
+      "username": "totocach",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Ok je fais ça aussi vite que possible",
+    "timestamp": 1768246625044,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1295832086602715251"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  },
+  {
+    "id": "1460358015436984350",
+    "author": {
+      "id": "1295832086602715251",
+      "username": "spaceoff03",
+      "discriminator": "0",
+      "bot": false
+    },
+    "channelId": "1460340192488460309",
+    "channelName": "ticket-19",
+    "content": "Merci",
+    "timestamp": 1768246883020,
+    "attachments": [],
+    "embeds": [],
+    "mentions": {
+      "users": [
+        "1204140730654793751"
+      ],
+      "roles": [],
+      "channels": []
+    }
+  }
+]
