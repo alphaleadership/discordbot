@@ -1,0 +1,17 @@
+{
+  "test-guild": {
+    "users": {
+      "test-user": {
+        "totalCommands": 5,
+        "commands": {
+          "joke": 3,
+          "8ball": 2
+        },
+        "triviaScore": {
+          "correct": 2,
+          "total": 3
+        }
+      }
+    }
+  }
+}

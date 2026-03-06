@@ -2,12 +2,247 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:47.101Z",
-    "lastModified": "2025-09-05T13:03:42.157Z"
+    "lastModified": "2026-02-27T08:05:41.134Z"
   },
   "_settings": {
     "supportServerId": "1254376882888114176",
-    "ticketCounter": 0
+    "ticketCounter": 3
   },
-  "tickets": {},
-  "userTickets": {}
+  "tickets": {
+    "ticket-000001": {
+      "id": "ticket-000001",
+      "userId": "840985745182425108",
+      "username": "vanguard_arbinger",
+      "discriminator": "0",
+      "supportChannelId": "1476839737380835380",
+      "status": "closed",
+      "createdAt": "2026-02-27T06:59:21.327Z",
+      "closedAt": "2026-02-27T07:57:01.943Z",
+      "closedBy": null,
+      "closeReason": null,
+      "messageCount": 3,
+      "sourceGuild": null,
+      "responses": {
+        "initialMessage": "test du système de ticket",
+        "category": {
+          "key": "3",
+          "label": "General Support"
+        },
+        "priority": {
+          "key": "1",
+          "label": "Low - Can wait a few days"
+        },
+        "description": "test du système de ticket",
+        "serverContext": "none",
+        "previousAttempts": "résolution en cours"
+      }
+    },
+    "ticket-000002": {
+      "id": "ticket-000002",
+      "userId": "419033737607512065",
+      "username": ".arbinger",
+      "discriminator": "0",
+      "supportChannelId": "1476847733338804366",
+      "status": "closed",
+      "createdAt": "2026-02-27T07:15:36.718Z",
+      "closedAt": "2026-02-27T07:59:05.091Z",
+      "closedBy": "moderator1",
+      "closeReason": "test",
+      "messageCount": 6,
+      "sourceGuild": null,
+      "responses": {
+        "initialMessage": "test",
+        "category": {
+          "key": "1",
+          "label": "Technical Issue"
+        },
+        "priority": {
+          "key": "4",
+          "label": "Urgent - Immediate attention required"
+        },
+        "description": "le système de ticket est en cours de test",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "archived": true,
+      "archivedAt": "2026-02-27T07:59:05.094Z"
+    },
+    "ticket-000003": {
+      "id": "ticket-000003",
+      "userId": "419033737607512065",
+      "username": ".arbinger",
+      "discriminator": "0",
+      "supportChannelId": "1476852474886488084",
+      "status": "closed",
+      "createdAt": "2026-02-27T08:04:23.333Z",
+      "closedAt": "2026-02-27T08:05:39.317Z",
+      "closedBy": "840985745182425108",
+      "closeReason": "Aucune raison spécifiée",
+      "messageCount": 2,
+      "sourceGuild": null,
+      "responses": {
+        "initialMessage": "test",
+        "category": {
+          "key": "3",
+          "label": "General Support"
+        },
+        "priority": {
+          "key": "3",
+          "label": "High - Needs attention within a few hours"
+        },
+        "description": "test du système de ticket",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "archived": true,
+      "archivedAt": "2026-02-27T08:05:40.382Z"
+    }
+  },
+  "userTickets": {
+    "840985745182425108": [
+      "ticket-000001"
+    ],
+    "419033737607512065": [
+      "ticket-000002",
+      "ticket-000003"
+    ]
+  },
+  "_archive": {
+    "ticket-000002": {
+      "id": "ticket-000002",
+      "userId": "419033737607512065",
+      "username": ".arbinger",
+      "discriminator": "0",
+      "supportChannelId": "1476847733338804366",
+      "status": "closed",
+      "createdAt": "2026-02-27T07:15:36.718Z",
+      "closedAt": "2026-02-27T07:59:05.091Z",
+      "closedBy": "moderator1",
+      "closeReason": "test",
+      "messageCount": 6,
+      "sourceGuild": null,
+      "responses": {
+        "initialMessage": "test",
+        "category": {
+          "key": "1",
+          "label": "Technical Issue"
+        },
+        "priority": {
+          "key": "4",
+          "label": "Urgent - Immediate attention required"
+        },
+        "description": "le système de ticket est en cours de test",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "archived": true,
+      "archivedAt": "2026-02-27T07:59:05.092Z",
+      "conversationLog": [],
+      "questionnaire": {
+        "initialMessage": "test",
+        "category": {
+          "key": "1",
+          "label": "Technical Issue"
+        },
+        "priority": {
+          "key": "4",
+          "label": "Urgent - Immediate attention required"
+        },
+        "description": "le système de ticket est en cours de test",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "statistics": {
+        "totalMessages": 6,
+        "duration": 43,
+        "responseTime": 0
+      }
+    },
+    "ticket-000003": {
+      "id": "ticket-000003",
+      "userId": "419033737607512065",
+      "username": ".arbinger",
+      "discriminator": "0",
+      "supportChannelId": "1476852474886488084",
+      "status": "closed",
+      "createdAt": "2026-02-27T08:04:23.333Z",
+      "closedAt": "2026-02-27T08:05:39.317Z",
+      "closedBy": "840985745182425108",
+      "closeReason": "Aucune raison spécifiée",
+      "messageCount": 2,
+      "sourceGuild": null,
+      "responses": {
+        "initialMessage": "test",
+        "category": {
+          "key": "3",
+          "label": "General Support"
+        },
+        "priority": {
+          "key": "3",
+          "label": "High - Needs attention within a few hours"
+        },
+        "description": "test du système de ticket",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "archived": true,
+      "archivedAt": "2026-02-27T08:05:39.317Z",
+      "conversationLog": [
+        {
+          "id": "1476852477591818304",
+          "author": {
+            "id": "1012782955493601291",
+            "username": "ADVANCED SECURITY",
+            "tag": "ADVANCED SECURITY#6141",
+            "isBot": true
+          },
+          "content": "",
+          "embeds": [
+            {
+              "title": null,
+              "description": "test",
+              "author": {
+                "name": ".arbinger (User)",
+                "iconURL": "https://cdn.discordapp.com/avatars/419033737607512065/689cc11590020c786144c9c08fd32d94.webp"
+              }
+            }
+          ],
+          "timestamp": "2026-02-27T08:04:29.250Z",
+          "attachments": []
+        },
+        {
+          "id": "1476852771629043742",
+          "author": {
+            "id": "840985745182425108",
+            "username": "vanguard_arbinger",
+            "tag": "vanguard_arbinger",
+            "isBot": false
+          },
+          "content": "gdxx",
+          "embeds": [],
+          "timestamp": "2026-02-27T08:05:39.354Z",
+          "attachments": []
+        }
+      ],
+      "questionnaire": {
+        "initialMessage": "test",
+        "category": {
+          "key": "3",
+          "label": "General Support"
+        },
+        "priority": {
+          "key": "3",
+          "label": "High - Needs attention within a few hours"
+        },
+        "description": "test du système de ticket",
+        "serverContext": "none",
+        "previousAttempts": "oui en cours"
+      },
+      "statistics": {
+        "totalMessages": 2,
+        "duration": 1,
+        "responseTime": 1
+      }
+    }
+  }
 }

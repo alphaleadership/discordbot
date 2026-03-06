@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, SlashCommandBuilder } from 'discord.js';
+import { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, SlashCommandBuilder, Partials } from 'discord.js';
 import fs from 'fs';
 import { Octokit } from '@octokit/rest';
 import express from 'express';
@@ -396,14 +396,14 @@ sharedConfig.backupToGitHub = backupToGitHub;
 initInteractionConfig(sharedConfig);
 
 function initOctokit() {
-    if (!process.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN === 'votre_token_github') {
+    if (!process.env.ACCESS_TOKEN || process.env.ACCESS_TOKEN === 'votre_token_github') {
         // console.warn('Avertissement: Aucun token GitHub valide trouvé. La journalisation sera désactivée.'); // Logs de backup désactivés
         return null;
     }
     
     try {
         const instance = new Octokit({
-            auth: process.env.GITHUB_TOKEN,
+            auth: process.env.ACCESS_TOKEN,
             userAgent: 'GitBot',
             timeZone: 'Europe/Paris',
             log: {
@@ -603,6 +603,30 @@ if (warn.count >= 2) {
 }
 
 // ... (le reste du code reste inchangé)
+// Function to clean message storage
+function cleanMessageStorage() {
+    const globalConfig = guildConfig.getGlobalConfig();
+    if (!globalConfig.cleanMessagesOnStartup) {
+        console.log('Nettoyage au démarrage désactivé dans la configuration globale.');
+        return;
+    }
+
+    const messagesDir = 'messages';
+    if (fs.existsSync(messagesDir)) {
+        console.log('Nettoyage du dossier de stockage des messages...');
+        try {
+            fs.rmSync(messagesDir, { recursive: true, force: true });
+            fs.mkdirSync(messagesDir);
+            console.log('Dossier messages nettoyé.');
+        } catch (error) {
+            console.error('Erreur lors du nettoyage du dossier messages:', error);
+        }
+    }
+}
+
+// Clean message storage at startup
+cleanMessageStorage();
+
 // Créer les clients pour chaque token
 for (const token of tokens) {
     const client = new Client({
@@ -626,7 +650,8 @@ for (const token of tokens) {
             GatewayIntentBits.GuildScheduledEvents,
             GatewayIntentBits.AutoModerationConfiguration,
             GatewayIntentBits.AutoModerationExecution
-        ] 
+        ],
+        partials: [Partials.Channel, Partials.Message]
     });
 
     const reportManager = new ReportManager();
@@ -643,7 +668,7 @@ for (const token of tokens) {
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
-    
+  
     // Initialize unified error reporter
     const errorReporter = new UnifiedErrorReporter(reportManager, messageLogger);
     
@@ -679,6 +704,9 @@ for (const token of tokens) {
         if (interaction.isButton() && interaction.customId.startsWith('close_ticket_')) {
             await dmTicketManager.handleTicketClose(interaction);
             return;
+        } else if (interaction.isButton() && interaction.customId.startsWith('reopen_ticket_')) {
+            await dmTicketManager.handleTicketReopen(interaction);
+            return;
         }
         
         // Handle other interactions
@@ -705,9 +733,10 @@ for (const token of tokens) {
         
         // Handle DMs
         if (isDM) { // DM channel ou message sans serveur
+            if (message.author.bot) return; // Ignore les messages du bot lui-même
             // console.log(`DM reçu de ${message.author.tag}: ${message.content}`); // Logs d'analyse de message désactivés
             try {
-                await dmTicketManager.handleDM(message);
+                await dmTicketManager.handleDMMessage(message);
             } catch (error) {
                 // console.error('Erreur dans la gestion du DM:', error); // Logs d'analyse de message désactivés
             }
@@ -728,6 +757,18 @@ for (const token of tokens) {
             }
         }
         if (message.author.bot) return;
+
+        // Traiter les messages venant des salons de support (tickets)
+        if (message.guild && message.channel.name && message.channel.name.startsWith('ticket-')) {
+            try {
+                const handled = await dmTicketManager.handleSupportChannelMessage(message);
+                // Si le message a été traité et renvoyé, on n'a pas nécessairement besoin de l'ignorer pour la suite (economy etc),
+                // mais on peut le faire si on veut qu'il soit purement administratif.
+                // Par souci de simplicité, on le laisse continuer pour l'économie (economyManager), à moins qu'on veuille return.
+            } catch (error) {
+                // Log the error but don't crash
+            }
+        }
 
         // Système de mine terrestre
         // Toute personne qui envoie un message et dont l'ensemble des rôles sont sous le bot a 1% de chance de prendre un mute de 10 minutes.
@@ -791,7 +832,7 @@ for (const token of tokens) {
         
         // Sauvegarder le message dans le système de logs
         await messageLogger.saveMessage(message);
-        
+          backupToGitHub()
         // Vérifier le spam
         const isSpam = await checkSpam(message.author.id, message.content, message.guild, interactionHandler);
         
@@ -799,7 +840,7 @@ for (const token of tokens) {
             // Le message a été traité comme spam et l'utilisateur a été banni
             return;
         }
- const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(userId);
+ const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(message.author.id);
     if (isAdmin) {
         return false; // Les administrateurs sont immunisés contre la détection de spam
     }
@@ -999,13 +1040,14 @@ for (const token of tokens) {
                     console.log(`[RAID DETECTED] Potential raid detected in ${member.guild.name}: ${raidResult.severity} severity`);
                     
                     // Apply protective measures
+                    let measures = null;
                     if (raidDetector.applyProtectiveMeasures) {
-                        await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity);
+                        measures = await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity, raidResult);
                     }
                     
                     // Notify administrators
-                    if (raidDetector.notifyAdministrators) {
-                        await raidDetector.notifyAdministrators(member.guild, raidResult);
+                    if (raidDetector.notifyRaidDetected && measures) {
+                        await raidDetector.notifyRaidDetected(member.guild.id, raidResult, measures);
                     }
                 }
             }

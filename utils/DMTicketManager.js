@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { EmbedBuilder, ChannelType, PermissionFlagsBits } from 'discord.js';
+import { EmbedBuilder, ChannelType, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
 
 export class DMTicketManager {
     constructor(client, guildConfig) {
@@ -9,6 +9,7 @@ export class DMTicketManager {
         this.filePath = path.join(process.cwd(), 'data/tickets.json');
         this.tickets = this.loadTickets();
         this.activeQuestions = new Map(); // Track ongoing questionnaires
+        this.processedMessages = new Set(); // Prevent duplicate processing of the same message
         this.supportServerId = null;
         
         // Question flow configuration
@@ -553,10 +554,27 @@ export class DMTicketManager {
                 throw new Error(`Bot missing required permissions in support server: ${missingPermissions.join(', ')}`);
             }
 
+            // Find or create 'Tickets' category
+            let ticketCategory = supportGuild.channels.cache.find(c => c.type === ChannelType.GuildCategory && (c.name.toLowerCase() === 'tickets' || c.name.toLowerCase() === 'support'));
+            
+            if (!ticketCategory) {
+                ticketCategory = await supportGuild.channels.create({
+                    name: 'Tickets',
+                    type: ChannelType.GuildCategory,
+                    permissionOverwrites: [
+                        {
+                            id: supportGuild.roles.everyone.id,
+                            deny: [PermissionFlagsBits.ViewChannel]
+                        }
+                    ]
+                });
+            }
+
             // Create the channel with enhanced permissions
             const channel = await supportGuild.channels.create({
                 name: `ticket-${ticketId}`,
                 type: ChannelType.GuildText,
+                parent: ticketCategory.id,
                 topic: `Support ticket for ${user.tag} (${user.id}) | Source: ${ticketData.sourceGuild || 'Unknown'}`,
                 permissionOverwrites: [
                     {
@@ -1128,17 +1146,35 @@ export class DMTicketManager {
                     .setFooter({ text: 'Thank you for using our support system!' })
                     .setTimestamp();
 
-                await user.send({ embeds: [closeEmbed] });
+                const row = new ActionRowBuilder()
+                    .addComponents(
+                        new ButtonBuilder()
+                            .setCustomId(`reopen_ticket_${ticketId}`)
+                            .setLabel('Réouvrir le ticket')
+                            .setStyle(ButtonStyle.Primary)
+                            .setEmoji('🔓')
+                    );
+
+                try {
+                    await user.send({ embeds: [closeEmbed], components: [row] });
+                } catch (dmError) {
+                    console.error(`Could not send closure DM to user ${ticket.userId} for ticket ${ticketId}:`, dmError);
+                }
             }
+
+            // Save ticket state first
+            this.saveTickets();
+            console.log(`Ticket ${ticketId} closed by ${moderator.tag}`);
 
             // Delete support channel
             const supportChannel = this.client.channels.cache.get(ticket.supportChannelId);
             if (supportChannel) {
-                await supportChannel.delete('Ticket closed');
+                try {
+                    await supportChannel.delete('Ticket closed');
+                } catch (delError) {
+                    console.error(`Error deleting support channel for ticket ${ticketId}:`, delError);
+                }
             }
-
-            this.saveTickets();
-            console.log(`Ticket ${ticketId} closed by ${moderator.tag}`);
 
             return { success: true, ticket };
 
@@ -1357,22 +1393,27 @@ export class DMTicketManager {
      * Handles messages from support channels
      */
     async handleSupportChannelMessage(message) {
-        try {
-            // Extract ticket ID from channel name
-            const channelName = message.channel.name;
-            const ticketIdMatch = channelName.match(/ticket-(.+)/);
-            
-            if (!ticketIdMatch) {
-                return false; // Not a ticket channel
-            }
+        if (!message || !message.id) return false;
 
-            const ticketId = ticketIdMatch[1];
-            const ticket = this.tickets.tickets[ticketId];
+        // Prevent duplicate processing
+        if (this.processedMessages.has(message.id)) {
+            return false;
+        }
+        this.processedMessages.add(message.id);
+        
+        // Clean up old message IDs
+        setTimeout(() => this.processedMessages.delete(message.id), 60000); // 1 minute
+
+        try {
+            // Retrieve ticket by channel ID
+            const ticket = this.getTicketByChannelId(message.channel.id);
 
             if (!ticket) {
-                console.warn(`Ticket ${ticketId} not found for support channel message`);
+                // Not a ticket channel or ticket not found
                 return false;
             }
+
+            const ticketId = ticket.id;
 
             if (ticket.status !== 'open') {
                 console.warn(`Ticket ${ticketId} is not open, ignoring support message`);
@@ -1455,9 +1496,87 @@ export class DMTicketManager {
     }
 
     /**
+     * Handles ticket reopening from a button click in user DM
+     */
+    async handleTicketReopen(interaction) {
+        try {
+            const ticketId = interaction.customId.replace('reopen_ticket_', '');
+            const ticket = this.tickets.tickets[ticketId];
+            
+            if (!ticket) {
+                return await interaction.reply({ content: '❌ Ce ticket est introuvable.', ephemeral: true });
+            }
+
+            if (ticket.status === 'open') {
+                return await interaction.reply({ content: '❌ Ce ticket est déjà ouvert.', ephemeral: true });
+            }
+
+            // Disable the button immediately
+            const components = [...interaction.message.components];
+            if (components.length > 0 && components[0].components.length > 0) {
+                components[0].components[0].data.disabled = true;
+                await interaction.update({ components });
+            }
+
+            // Update ticket status
+            ticket.status = 'open';
+            ticket.archived = false;
+            // Clear closed info
+            ticket.closedAt = null;
+            ticket.closedBy = null;
+            ticket.closeReason = null;
+
+            // Delete from archive just in case
+            if (this.tickets._archive && this.tickets._archive[ticketId]) {
+                delete this.tickets._archive[ticketId];
+            }
+
+            // Fetch user and recreate support channel
+            const user = await this.client.users.fetch(ticket.userId);
+            const channel = await this.createSupportChannel(ticketId, user, ticket);
+            if (channel) {
+                ticket.supportChannelId = channel.id;
+            }
+
+            this.saveTickets();
+
+            // Notify user
+            const openEmbed = new EmbedBuilder()
+                .setColor('#00ff00')
+                .setTitle(`🔓 Ticket Réouvert - ${ticketId}`)
+                .setDescription('Votre ticket a été réouvert. Un membre de notre équipe vous répondra sous peu.')
+                .setTimestamp();
+
+            await user.send({ embeds: [openEmbed] });
+
+            // Notify staff
+            if (channel) {
+                await channel.send({ content: `ℹ️ L'utilisateur <@${user.id}> a réouvert ce ticket.` });
+            }
+
+        } catch (error) {
+            console.error('Error reopening ticket:', error);
+            if (!interaction.replied && !interaction.deferred) {
+                await interaction.reply({ content: '❌ Une erreur est survenue lors de la réouverture du ticket.', ephemeral: true });
+            }
+        }
+    }
+
+    /**
      * Handles incoming DM messages for ticket system
      */
     async handleDMMessage(message) {
+        if (!message || !message.id) return false;
+
+        // Prevent duplicate processing
+        if (this.processedMessages.has(message.id)) {
+            return false;
+        }
+        this.processedMessages.add(message.id);
+        
+        // Clean up old message IDs from memory to prevent memory leaks
+        setTimeout(() => this.processedMessages.delete(message.id), 60000); // 1 minute
+
         const user = message.author;
         
         // Check if user has an active questionnaire

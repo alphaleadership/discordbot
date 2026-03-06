@@ -18,8 +18,17 @@ class EnhancedGuildConfig extends GuildConfig {
      */
     initializeEnhancedDefaults() {
         let configChanged = false;
+
+        // Initialize global config if missing
+        if (!this.config._global) {
+            this.config._global = {
+                cleanMessagesOnStartup: true
+            };
+            configChanged = true;
+        }
         
         for (const guildId in this.config) {
+            if (guildId.startsWith('_')) continue;
             if (this.initializeEnhancedGuild(guildId)) {
                 configChanged = true;
             }
@@ -117,6 +126,26 @@ class EnhancedGuildConfig extends GuildConfig {
         }
 
         return changed;
+    }
+
+    // Global Configuration Methods
+
+    /**
+     * Get global bot configuration
+     * @returns {Object} Global configuration
+     */
+    getGlobalConfig() {
+        return this.config._global || { cleanMessagesOnStartup: true };
+    }
+
+    /**
+     * Update global bot configuration
+     * @param {Object} settings - Settings to update
+     */
+    updateGlobalConfig(settings) {
+        if (!this.config._global) this.config._global = { cleanMessagesOnStartup: true };
+        Object.assign(this.config._global, settings);
+        this.saveConfig();
     }
 
     // Raid Detection Configuration Methods

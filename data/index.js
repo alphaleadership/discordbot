@@ -655,13 +655,14 @@ for (const token of tokens) {
                     console.log(`[RAID DETECTED] Potential raid detected in ${member.guild.name}: ${raidResult.severity} severity`);
                     
                     // Apply protective measures
+                    let measures = null;
                     if (raidDetector.applyProtectiveMeasures) {
-                        await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity);
+                        measures = await raidDetector.applyProtectiveMeasures(member.guild, raidResult.severity, raidResult);
                     }
                     
                     // Notify administrators
-                    if (raidDetector.notifyAdministrators) {
-                        await raidDetector.notifyAdministrators(member.guild, raidResult);
+                    if (raidDetector.notifyRaidDetected && measures) {
+                        await raidDetector.notifyRaidDetected(member.guild.id, raidResult, measures);
                     }
                 }
             }

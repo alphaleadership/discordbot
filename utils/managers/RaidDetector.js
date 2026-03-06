@@ -16,10 +16,23 @@ export class RaidDetector {
         // Track active raids per guild
         this.activeRaids = new Map(); // guildId -> { raidId, startTime, severity, measures }
         
+        // Track panic mode per guild
+        this.panicMode = new Map(); // guildId -> boolean
+
         // Cleanup interval for old join data
         this.cleanupInterval = setInterval(() => {
             this.cleanupOldJoinData();
         }, 30000); // Clean every 30 seconds
+    }
+
+    /**
+     * Reload the manager settings
+     */
+    reload() {
+        if (!this.panicMode) {
+            this.panicMode = new Map();
+        }
+        console.log('RaidDetector reloaded');
     }
 
     /**
@@ -118,6 +131,14 @@ export class RaidDetector {
             patterns.suspiciousScore += 3;
         }
 
+        // Check for brand new accounts (created within last 1 hour)
+        const oneHourAgo = Date.now() - (60 * 60 * 1000);
+        const brandNewAccounts = users.filter(u => u.accountCreated.getTime() > oneHourAgo);
+        if (brandNewAccounts.length > 0) {
+            patterns.brandNewAccounts = true;
+            patterns.suspiciousScore += 4; // High score for brand new accounts
+        }
+
         // Check for default avatars
         const defaultAvatars = users.filter(u => 
             u.avatar.includes('embed/avatars/') || !u.avatar.includes('cdn.discordapp.com')
@@ -186,6 +207,68 @@ export class RaidDetector {
             const eventEnd = new Date(event.endTime).getTime();
             return timestamp >= eventStart && timestamp <= eventEnd;
         });
+    }
+
+    /**
+     * Enable panic mode for a guild
+     * @param {Object} guild - Discord guild object
+     * @param {string} triggeredBy - User ID who triggered panic mode
+     * @returns {Promise<Object>} Result of enabling panic mode
+     */
+    async enablePanicMode(guild, triggeredBy) {
+        if (!this.panicMode) this.panicMode = new Map();
+        if (this.panicMode.get(guild.id)) {
+            return { success: false, message: 'Panic mode is already enabled' };
+        }
+
+        this.panicMode.set(guild.id, true);
+        
+        // Create a synthetic raid info for panic mode
+        const raidInfo = {
+            isRaid: true,
+            type: 'manual_panic',
+            severity: 'critical',
+            affectedUsers: [],
+            joinCount: 0,
+            timeWindow: 0,
+            patterns: { suspiciousScore: 10 },
+            timestamp: Date.now()
+        };
+
+        // Apply critical protective measures immediately
+        const measures = await this.applyProtectiveMeasures(guild, 'critical', raidInfo);
+        
+        // Notify
+        await this.notifyRaidDetected(guild.id, raidInfo, measures);
+
+        return { 
+            success: true, 
+            measures: measures,
+            message: 'Panic mode enabled - Critical protection measures applied'
+        };
+    }
+
+    /**
+     * Disable panic mode for a guild
+     * @param {Object} guild - Discord guild object
+     * @param {string} triggeredBy - User ID who disabled panic mode
+     * @returns {Promise<Object>} Result of disabling panic mode
+     */
+    async disablePanicMode(guild, triggeredBy) {
+        if (!this.panicMode) this.panicMode = new Map();
+        if (!this.panicMode.get(guild.id)) {
+            return { success: false, message: 'Panic mode is not enabled' };
+        }
+
+        this.panicMode.set(guild.id, false);
+        
+        // Resolve any active raid/measures associated with this guild
+        const result = await this.resolveRaid(guild.id, triggeredBy);
+        
+        return { 
+            success: true, 
+            message: 'Panic mode disabled - Protective measures are being removed'
+        };
     }
 
     /**
@@ -261,6 +344,12 @@ export class RaidDetector {
 
         // Remove from active raids
         this.activeRaids.delete(guildId);
+        
+        // Clear panic mode if it was active
+        if (!this.panicMode) this.panicMode = new Map();
+        if (this.panicMode.get(guildId)) {
+            this.panicMode.set(guildId, false);
+        }
 
         return true;
     }
@@ -1048,6 +1137,7 @@ export class RaidDetector {
         
         if (patterns.similarNames) detectedPatterns.push('🔸 Similar usernames detected');
         if (patterns.newAccounts) detectedPatterns.push('🔸 High percentage of new accounts');
+        if (patterns.brandNewAccounts) detectedPatterns.push('🔸 Brand new accounts (< 1h) detected');
         if (patterns.noAvatars) detectedPatterns.push('🔸 Many default avatars');
         if (patterns.coordinatedTiming) detectedPatterns.push('🔸 Coordinated join timing');
         

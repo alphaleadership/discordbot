@@ -53,49 +53,25 @@ export default {
             }
 
             // Close the ticket
+            await interaction.reply({ content: '🔒 Fermeture du ticket en cours...', ephemeral: true });
             const result = await dmTicketManager.closeTicket(ticketId, reason, interaction.user);
             
-            if (result.success) {
-                const embed = new EmbedBuilder()
-                    .setColor('#ff9900')
-                    .setTitle('🔒 Ticket Fermé')
-                    .setDescription(`Le ticket **${ticketId}** a été fermé avec succès.`)
-                    .addFields(
-                        { name: 'Utilisateur', value: `<@${ticket.userId}>`, inline: true },
-                        { name: 'Fermé par', value: `${interaction.user.tag}`, inline: true },
-                        { name: 'Raison', value: reason, inline: false },
-                        { name: 'Durée', value: this.calculateDuration(ticket.createdAt), inline: true }
-                    )
-                    .setFooter({ text: 'Le canal de support sera supprimé dans quelques secondes' })
-                    .setTimestamp();
-
-                await interaction.reply({ embeds: [embed] });
-
-                // Delete the support channel after a short delay
-                setTimeout(async () => {
-                    try {
-                        const channel = interaction.client.channels.cache.get(ticket.supportChannelId);
-                        if (channel) {
-                            await channel.delete('Ticket fermé');
-                        }
-                    } catch (error) {
-                        console.error('Error deleting support channel:', error);
-                    }
-                }, 5000);
-
-            } else {
-                await interaction.reply({
+            if (!result.success) {
+                await interaction.editReply({
                     content: `❌ Erreur lors de la fermeture du ticket: ${result.error}`,
                     ephemeral: true
                 });
             }
+            // If success, nothing else to do. `closeTicket` already deletes the channel and notifies the user.
 
         } catch (error) {
             console.error('Error in close-ticket command:', error);
-            await interaction.reply({
-                content: '❌ Une erreur est survenue lors de la fermeture du ticket.',
-                ephemeral: true
-            });
+            if (!interaction.replied && !interaction.deferred) {
+                await interaction.reply({
+                    content: '❌ Une erreur est survenue lors de la fermeture du ticket.',
+                    ephemeral: true
+                });
+            }
         }
     },
 

@@ -2,7 +2,7 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:46.016Z",
-    "lastModified": "2026-02-03T07:36:34.008Z"
+    "lastModified": "2026-02-27T08:05:35.498Z"
   },
   "guilds": {
     "1037794097894797442": {
@@ -2558,17 +2558,17 @@
       }
     },
     "1254376882888114176": {
-      "totalCurrency": 26,
+      "totalCurrency": 32,
       "baseValue": 1,
-      "currentValue": 1.3649658740960655,
+      "currentValue": 1.344201937618241,
       "inflationRate": 0,
-      "lastUpdate": "2026-01-30T13:05:54.988Z",
+      "lastUpdate": "2026-02-27T08:05:35.498Z",
       "users": {
         "840985745182425108": {
-          "balance": 13,
-          "totalEarned": 13,
+          "balance": 19,
+          "totalEarned": 19,
           "totalSpent": 0,
-          "lastActivity": "2026-01-20T20:39:06.393Z",
+          "lastActivity": "2026-02-27T08:05:35.495Z",
           "lastDailyBonus": null
         },
         "1295832086602715251": {

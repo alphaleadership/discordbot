@@ -15,15 +15,18 @@ export default class DoxDetector {
         
         // Discord ID pattern for exclusion (17-19 digits)
         this.discordIdPattern = /\b\d{17,19}\b/g;
+
+        // URL pattern to exclude links from scanning
+        this.urlPattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
         
         // Personal information patterns
         this.patterns = {
             // Phone numbers (various international formats) - more specific to avoid false positives
             phone: [
-                /(?:\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})\b/g, // US format
-                /(?:\+33|0)[1-9](?:[.\s-]?[0-9]{2}){4}\b/g, // French format
-                /(?:\+44|0)[1-9][0-9]{8,9}\b/g, // UK format
-                /(?:\+49|0)[1-9][0-9]{7,11}\b/g // German format
+                /(?<!\w)(?:\+?1\s?[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})\b/g, // US format
+                /(?<!\w)(?:\+33\s?|0)[1-9](?:[.\s-]?[0-9]{2}){4}\b/g, // French format
+                /(?<!\w)(?:\+44\s?|0)[1-9](?:[.\s-]?[0-9]{2,4}){2,5}\b/g, // UK format
+                /(?<!\w)(?:\+49\s?|0)[1-9](?:[.\s-]?[0-9]{2,6}){1,5}\b/g // German format
             ],
             
             // Email addresses
@@ -33,8 +36,8 @@ export default class DoxDetector {
             
             // Social Security Numbers (US format) - more specific patterns
             ssn: [
-                /\b\d{3}-\d{2}-\d{4}\b/g, // XXX-XX-XXXX format only
-                /\b(?!.*\d{4}[-\s]\d{4}[-\s]\d{4}[-\s]\d{4})\d{9}\b/g // 9 digits but not credit card
+                /\b\d{3}-\d{2}-\d{4}\b/g, // XXX-XX-XXXX format
+                /\b\d{3}\s\d{2}\s\d{4}\b/g // XXX XX XXXX format
             ],
             
             // Credit card numbers (more specific patterns)
@@ -273,6 +276,19 @@ export default class DoxDetector {
     }
 
     /**
+     * Excludes URLs from content before analysis
+     * @param {string} content - The content to process
+     * @returns {string} Content with URLs replaced with placeholders
+     */
+    excludeUrls(content) {
+        if (!content || typeof content !== 'string') {
+            return content;
+        }
+        
+        return content.replace(this.urlPattern, '[URL]');
+    }
+
+    /**
      * Detects personal information in text content
      * @param {string} content - The text content to analyze
      * @param {string} guildId - The guild ID for exception checking
@@ -289,8 +305,9 @@ export default class DoxDetector {
 
         const detections = [];
         
-        // Pre-process content to exclude Discord IDs
-        const processedContent = this.excludeDiscordIds(content);
+        // Pre-process content to exclude Discord IDs and URLs
+        let processedContent = this.excludeDiscordIds(content);
+        processedContent = this.excludeUrls(processedContent);
         
         // Check each pattern type
         for (const [type, patterns] of Object.entries(this.patterns)) {
