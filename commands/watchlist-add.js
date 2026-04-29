@@ -89,7 +89,60 @@ export default {
                 console.log(`Utilisateur ${targetUser.tag} non trouvé sur le serveur, ajout à la surveillance par ID`);
             }
 
-            // Add to watchlist
+            // Add to watchlist or create pending request for agents
+            if (permissionResult.isAgent) {
+                const pendingResult = await watchlistManager.addPendingRequest({
+                    userId: targetUser.id,
+                    username: targetUser.username,
+                    discriminator: targetUser.discriminator,
+                    reason: reason,
+                    watchLevel: watchLevel,
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name
+                });
+
+                if (!pendingResult.success) {
+                    return interaction.reply({
+                        content: `❌ Erreur lors de la création de la demande: ${pendingResult.error}`,
+                        ephemeral: true
+                    });
+                }
+
+                const pendingEmbed = new EmbedBuilder()
+                    .setColor('#FFFF00')
+                    .setTitle('⏳ Demande de surveillance soumise')
+                    .setDescription('Votre demande a été enregistrée et doit être validée par un administrateur du bot.')
+                    .addFields(
+                        { name: 'Utilisateur', value: `${targetUser.tag} (${targetUser.id})` },
+                        { name: 'Raison', value: reason },
+                        { name: 'Niveau demandé', value: this.getWatchLevelDisplay(watchLevel) },
+                        { name: 'Agent', value: interaction.user.tag }
+                    )
+                    .setFooter({ text: 'ID de la demande: ' + pendingResult.request.id });
+
+                await interaction.reply({ embeds: [pendingEmbed] });
+
+                // Optionnel: Notifier les admins dans un canal de log
+                if (reportManager && reportManager.sendSystemAlert) {
+                    await reportManager.sendSystemAlert(
+                        interaction.client,
+                        '👮 Nouvelle demande de surveillance (Agent)',
+                        `L'agent **${interaction.user.tag}** demande la surveillance de **${targetUser.tag}**.`,
+                        [
+                            { name: 'Raison', value: reason, inline: false },
+                            { name: 'Niveau', value: watchLevel, inline: true },
+                            { name: 'ID Demande', value: pendingResult.request.id, inline: true }
+                        ],
+                        0xFFFF00
+                    );
+                }
+
+                return;
+            }
+
+            // Direct add for admins
             const result = await watchlistManager.addToWatchlist(
                 targetUser.id,
                 reason,

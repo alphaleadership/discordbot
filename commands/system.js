@@ -24,12 +24,17 @@ export default {
             subcommand
                 .setName('clean-storage')
                 .setDescription('Nettoyer manuellement le stockage des messages maintenant')
+        )
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('cleanup')
+                .setDescription('Nettoyer la banlist et watchlist des comptes supprimés par Discord')
         ),
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
             // Seul l'owner du bot ou un admin peut gérer le système global
-            const isAdmin = await adminManager.isAdmin(interaction.user.id);
-            if (!isAdmin && !interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+            const isBotAdmin = await adminManager.isAdmin(interaction.user.id);
+            if (!isBotAdmin && !interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
                 return interaction.reply({
                     content: '❌ Cette commande est réservée aux administrateurs du bot.',
                     ephemeral: true
@@ -37,6 +42,24 @@ export default {
             }
 
             const subcommand = interaction.options.getSubcommand();
+
+            if (subcommand === 'cleanup') {
+                await interaction.deferReply({ ephemeral: true });
+                
+                const banResults = await banlistManager.cleanupDeletedUsers(interaction.client);
+                const watchResults = await watchlistManager.cleanupDeletedUsers(interaction.client);
+                
+                const embed = new EmbedBuilder()
+                    .setColor('#00FF00')
+                    .setTitle('🧹 Nettoyage des comptes supprimés terminé')
+                    .addFields(
+                        { name: 'Banlist', value: `Vérifiés: ${banResults.checked}\nSupprimés: ${banResults.removed}`, inline: true },
+                        { name: 'Watchlist', value: `Vérifiés: ${watchResults.checked}\nSupprimés: ${watchResults.removed}`, inline: true }
+                    )
+                    .setTimestamp();
+                    
+                return interaction.editReply({ embeds: [embed] });
+            }
 
             if (subcommand === 'config') {
                 const cleanStartup = interaction.options.getBoolean('nettoyage-demarrage');

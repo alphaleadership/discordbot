@@ -78,14 +78,9 @@ class ConfigValidator {
             }
         });
         
-        if (typeof config.ocrEnabled !== 'boolean') {
-            errors.push('doxDetection.ocrEnabled must be a boolean');
-        }
-        
         if (typeof config.autoDelete !== 'boolean') {
             errors.push('doxDetection.autoDelete must be a boolean');
         }
-        
         return {
             isValid: errors.length === 0,
             errors

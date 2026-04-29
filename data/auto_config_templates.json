@@ -43,7 +43,7 @@
         "doxDetection": {
           "enabled": true,
           "autoDelete": true,
-          "ocrEnabled": false
+          
         },
         "funCommands": {
           "enabled": true,
@@ -124,7 +124,7 @@
         "doxDetection": {
           "enabled": true,
           "autoDelete": true,
-          "ocrEnabled": true
+          
         },
         "funCommands": {
           "enabled": true,
@@ -246,7 +246,7 @@
         "doxDetection": {
           "enabled": true,
           "autoDelete": true,
-          "ocrEnabled": true
+          
         },
         "funCommands": {
           "enabled": true,

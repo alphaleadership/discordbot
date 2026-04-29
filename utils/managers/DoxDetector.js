@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Tesseract from 'tesseract.js';
 import fetch from 'node-fetch';
 import { WebhookClient } from 'discord.js';
 
@@ -1106,7 +1105,7 @@ export default class DoxDetector {
 
     /**
      * Gets detection history for a user
-     * @param {string} userId - The user ID
+     * @param {string} userId - User ID
      * @param {string} guildId - The guild ID (optional)
      * @returns {Array} Array of detection records
      */
@@ -1135,158 +1134,7 @@ export default class DoxDetector {
     }
 
     /**
-     * Downloads and processes an image for OCR text extraction
-     * @param {Object} attachment - Discord attachment object
-     * @returns {Promise<string>} Extracted text from image
-     */
-    async downloadAndProcessImage(attachment) {
-        try {
-            // Validate attachment is an image
-            if (!this.isImageAttachment(attachment)) {
-                throw new Error('Attachment is not a supported image format');
-            }
-            
-            // Download the image
-            const response = await fetch(attachment.url);
-            if (!response.ok) {
-                throw new Error(`Failed to download image: ${response.statusText}`);
-            }
-            
-            const imageBuffer = await response.buffer();
-            
-            // Process with OCR
-            const { data: { text } } = await Tesseract.recognize(imageBuffer, 'eng', {
-                logger: m => {
-                    if (m.status === 'recognizing text') {
-                        console.log(`OCR Progress: ${Math.round(m.progress * 100)}%`);
-                    }
-                }
-            });
-            
-            return text.trim();
-            
-        } catch (error) {
-            console.error('Error processing image for OCR:', error);
-            throw error;
-        }
-    }
-
-    /**
-     * Checks if attachment is a supported image format
-     * @param {Object} attachment - Discord attachment object
-     * @returns {boolean} True if supported image format
-     */
-    isImageAttachment(attachment) {
-        const supportedFormats = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
-        const fileExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
-        
-        // Check content type
-        if (attachment.contentType && supportedFormats.includes(attachment.contentType.toLowerCase())) {
-            return true;
-        }
-        
-        // Check file extension as fallback
-        const fileName = attachment.name?.toLowerCase() || '';
-        return fileExtensions.some(ext => fileName.endsWith(ext));
-    }
-
-    /**
-     * Scans image attachments for personal information
-     * @param {Array} attachments - Array of Discord attachment objects
-     * @param {string} guildId - Guild ID for exception checking
-     * @returns {Promise<Object>} OCR scan results
-     */
-    async scanImageForText(attachments, guildId) {
-        const results = {
-            processed: 0,
-            failed: 0,
-            detections: [],
-            errors: []
-        };
-        
-        if (!Array.isArray(attachments)) {
-            attachments = [attachments];
-        }
-        
-        for (const attachment of attachments) {
-            try {
-                if (!this.isImageAttachment(attachment)) {
-                    continue; // Skip non-image attachments
-                }
-                
-                console.log(`Processing image: ${attachment.name} (${attachment.size} bytes)`);
-                
-                // Extract text from image
-                const extractedText = await this.downloadAndProcessImage(attachment);
-                
-                if (extractedText && extractedText.length > 0) {
-                    console.log(`Extracted text (${extractedText.length} chars): ${extractedText.substring(0, 100)}...`);
-                    
-                    // Analyze extracted text for personal information
-                    const textAnalysis = this.detectPersonalInfo(extractedText, guildId);
-                    
-                    if (textAnalysis.detected) {
-                        results.detections.push({
-                            attachment: {
-                                name: attachment.name,
-                                url: attachment.url,
-                                size: attachment.size
-                            },
-                            extractedText: extractedText.substring(0, 500), // Limit stored text
-                            analysis: textAnalysis
-                        });
-                    }
-                }
-                
-                results.processed++;
-                
-            } catch (error) {
-                console.error(`Failed to process image ${attachment.name}:`, error);
-                results.failed++;
-                results.errors.push({
-                    attachment: attachment.name,
-                    error: error.message
-                });
-            }
-        }
-        
-        return {
-            ...results,
-            hasDetections: results.detections.length > 0,
-            totalRiskLevel: this.calculateCombinedRiskLevel(results.detections)
-        };
-    }
-
-    /**
-     * Calculates combined risk level from multiple image detections
-     * @param {Array} detections - Array of detection results
-     * @returns {string} Combined risk level
-     */
-    calculateCombinedRiskLevel(detections) {
-        if (detections.length === 0) return 'none';
-        
-        const riskLevels = detections.map(d => d.analysis.riskLevel);
-        const riskValues = {
-            'none': 0,
-            'low': 1,
-            'medium': 2,
-            'high': 3,
-            'critical': 4
-        };
-        
-        const maxRisk = Math.max(...riskLevels.map(level => riskValues[level] || 0));
-        const avgRisk = riskLevels.reduce((sum, level) => sum + (riskValues[level] || 0), 0) / riskLevels.length;
-        
-        // If any detection is critical, overall is critical
-        if (maxRisk >= 4) return 'critical';
-        if (maxRisk >= 3 || avgRisk >= 2.5) return 'high';
-        if (maxRisk >= 2 || avgRisk >= 1.5) return 'medium';
-        if (maxRisk >= 1) return 'low';
-        return 'none';
-    }
-
-    /**
-     * Processes a Discord message for both text and image content
+     * Processes a Discord message for text content
      * @param {Object} message - Discord message object
      * @returns {Promise<Object>} Complete analysis results
      */
@@ -1297,7 +1145,6 @@ export default class DoxDetector {
             guildId: message.guild?.id,
             timestamp: new Date().toISOString(),
             textAnalysis: null,
-            imageAnalysis: null,
             overallRisk: 'none',
             hasDetections: false
         };
@@ -1308,23 +1155,9 @@ export default class DoxDetector {
                 results.textAnalysis = this.detectPersonalInfo(message.content, results.guildId);
             }
             
-            // Analyze image attachments
-            if (message.attachments && message.attachments.size > 0) {
-                const attachmentArray = Array.from(message.attachments.values());
-                results.imageAnalysis = await this.scanImageForText(attachmentArray, results.guildId);
-            }
-            
             // Calculate overall risk
-            const textRisk = results.textAnalysis?.riskLevel || 'none';
-            const imageRisk = results.imageAnalysis?.totalRiskLevel || 'none';
-            
-            results.overallRisk = this.calculateCombinedRiskLevel([
-                { analysis: { riskLevel: textRisk } },
-                { analysis: { riskLevel: imageRisk } }
-            ]);
-            
-            results.hasDetections = (results.textAnalysis?.detected || false) || 
-                                   (results.imageAnalysis?.hasDetections || false);
+            results.overallRisk = results.textAnalysis?.riskLevel || 'none';
+            results.hasDetections = results.textAnalysis?.detected || false;
             
         } catch (error) {
             console.error('Error analyzing message:', error);
@@ -1371,6 +1204,17 @@ export default class DoxDetector {
             const escalationLevel = await this.determineEscalationLevel(message.author.id, message.guild?.id, analysis.overallRisk);
             actionResults.escalationLevel = escalationLevel;
             
+            // Create detection record
+            const detectionRecord = this.logDetection({
+                userId: message.author.id,
+                guildId: message.guild?.id,
+                channelId: message.channel.id,
+                content: message.content,
+                riskLevel: analysis.overallRisk,
+                escalationLevel,
+                detections: analysis.textAnalysis?.detections || []
+            });
+
             // Delete the message immediately for any detection
             try {
                 // Envoyer d'abord le message censuré au webhook
@@ -1414,12 +1258,6 @@ export default class DoxDetector {
         
         if (analysis.textAnalysis?.detections) {
             types.push(...analysis.textAnalysis.detections.map(d => d.type));
-        }
-        
-        if (analysis.imageAnalysis?.detections) {
-            for (const detection of analysis.imageAnalysis.detections) {
-                types.push(...detection.analysis.detections.map(d => d.type));
-            }
         }
         
         return [...new Set(types)]; // Remove duplicates
@@ -1467,7 +1305,7 @@ export default class DoxDetector {
             initial: 'Attention: Le partage d\'informations personnelles est interdit sur ce serveur. Ceci est votre premier avertissement.',
             elevated: '⚠️ AVERTISSEMENT: Vous avez partagé des informations personnelles. Ceci est un avertissement sérieux.',
             moderate: '🚨 AVERTISSEMENT FINAL: Partage répété d\'informations personnelles détecté. Le prochain incident pourrait entraîner des sanctions.',
-            severe: '🔴 VIOLATION GRAVE: Partage d\'informations critiques détecté. Des mesures disciplinaires sont en cours d\'évaluation.'
+            severe: '🔴 VIOLATION GRAVE: Partage d\'informations critiques détecté. Des mesures disciplisaires sont en cours d\'évaluation.'
         };
         
         const warningReasons = {
@@ -1615,15 +1453,6 @@ export default class DoxDetector {
                 });
             }
             
-            // Add image analysis info if available
-            if (analysis.imageAnalysis && analysis.imageAnalysis.processed > 0) {
-                reportEmbed.fields.push({
-                    name: '🖼️ Analyse d\'images',
-                    value: `${analysis.imageAnalysis.processed} image(s) traitée(s)\n${analysis.imageAnalysis.detections.length} détection(s) dans les images`,
-                    inline: true
-                });
-            }
-            
             const reportResult = await this.reportManager.sendSystemAlert(
                 client,
                 '🔒 Détection d\'informations personnelles',
@@ -1733,8 +1562,7 @@ export default class DoxDetector {
             await this.webhookClient.send({
                 username: 'Dox Detection',
                 avatarURL: message.client.user.displayAvatarURL(),
-                embeds: [embed],
-                files: message.attachments.map(a => a.url)
+                embeds: [embed]
             });
             
             console.log(`Message censuré envoyé au webhook pour le message ${message.id}`);

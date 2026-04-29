@@ -93,5 +93,62 @@
       "phone"
     ],
     "riskLevel": "low"
+  },
+  {
+    "id": "1776025441345cgyomz3kv",
+    "timestamp": "2026-04-12T20:24:01.345Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg789",
+    "content": "Phone: 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1776025441373s4boltiga",
+    "timestamp": "2026-04-12T20:24:01.373Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17760254413742mlv019h2",
+    "timestamp": "2026-04-12T20:24:01.374Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg2",
+    "detectionType": [
+      "email"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "1776025441420jvqumdptl",
+    "timestamp": "2026-04-12T20:24:01.420Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg1",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
+  },
+  {
+    "id": "17760254414737p296sxrm",
+    "timestamp": "2026-04-12T20:24:01.473Z",
+    "userId": "user123",
+    "guildId": "guild456",
+    "messageId": "msg123",
+    "content": "My phone is 555-123-4567",
+    "detectionType": [
+      "phone"
+    ],
+    "riskLevel": "low"
   }
 ]

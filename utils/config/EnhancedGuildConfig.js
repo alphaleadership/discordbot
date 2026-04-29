@@ -22,8 +22,12 @@ class EnhancedGuildConfig extends GuildConfig {
         // Initialize global config if missing
         if (!this.config._global) {
             this.config._global = {
-                cleanMessagesOnStartup: true
+                cleanMessagesOnStartup: true,
+                supportGuildId: '1254376882888114176'
             };
+            configChanged = true;
+        } else if (this.config._global.supportGuildId === undefined || this.config._global.supportGuildId === '1412117754919780544') {
+            this.config._global.supportGuildId = '1254376882888114176';
             configChanged = true;
         }
         
@@ -49,6 +53,12 @@ class EnhancedGuildConfig extends GuildConfig {
         super.initializeGuild(guildId);
         
         let changed = false;
+
+        // Initialize announcement config
+        if (this.config[guildId].announcementChannelId === undefined) {
+            this.config[guildId].announcementChannelId = null;
+            changed = true;
+        }
         
         // Initialize raid detection config
         if (!this.config[guildId].raidDetection) {
@@ -83,8 +93,8 @@ class EnhancedGuildConfig extends GuildConfig {
                     '\\b\\d{9}\\b'                      // 9 consecutive digits
                 ],
                 exceptions: [],
-                ocrEnabled: false,
-                autoDelete: true
+                autoDelete: false
+
             };
             changed = true;
         }
@@ -135,7 +145,7 @@ class EnhancedGuildConfig extends GuildConfig {
      * @returns {Object} Global configuration
      */
     getGlobalConfig() {
-        return this.config._global || { cleanMessagesOnStartup: true };
+        return this.config._global || { cleanMessagesOnStartup: true, supportGuildId: '1254376882888114176' };
     }
 
     /**
@@ -143,9 +153,32 @@ class EnhancedGuildConfig extends GuildConfig {
      * @param {Object} settings - Settings to update
      */
     updateGlobalConfig(settings) {
-        if (!this.config._global) this.config._global = { cleanMessagesOnStartup: true };
+        if (!this.config._global) this.config._global = { cleanMessagesOnStartup: true, supportGuildId: '1254376882888114176' };
         Object.assign(this.config._global, settings);
         this.saveConfig();
+    }
+
+    // Announcement Configuration Methods
+
+    /**
+     * Set the announcement channel for a guild
+     * @param {string} guildId - Guild ID
+     * @param {string} channelId - Channel ID
+     */
+    setAnnouncementChannelId(guildId, channelId) {
+        this.initializeEnhancedGuild(guildId);
+        this.config[guildId].announcementChannelId = channelId;
+        this.saveConfig();
+    }
+
+    /**
+     * Get the announcement channel for a guild
+     * @param {string} guildId - Guild ID
+     * @returns {string|null} Channel ID
+     */
+    getAnnouncementChannelId(guildId) {
+        this.initializeEnhancedGuild(guildId);
+        return this.config[guildId].announcementChannelId || null;
     }
 
     // Raid Detection Configuration Methods
@@ -586,7 +619,6 @@ class EnhancedGuildConfig extends GuildConfig {
             Array.isArray(config.addressPatterns) &&
             Array.isArray(config.ssnPatterns) &&
             Array.isArray(config.exceptions) &&
-            typeof config.ocrEnabled === 'boolean' &&
             typeof config.autoDelete === 'boolean'
         );
     }

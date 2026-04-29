@@ -108,9 +108,9 @@ Each guild now has extended configuration options:
         emailPatterns: [string],
         addressPatterns: [string],
         ssnPatterns: [string],
-        exceptions: [string],
-        ocrEnabled: boolean,
+        exceptions: string[],
         autoDelete: boolean
+
     },
     
     telegram: {

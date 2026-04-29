@@ -10,8 +10,10 @@ const fsMkdir = promisify(fs.mkdir);
 export class WatchlistManager {
     constructor(filePath = 'data/watchlist.json', reportManager = null) {
         this.filePath = path.join(process.cwd(), filePath);
+        this.pendingFilePath = path.join(process.cwd(), 'data/watchlist_pending.json');
         this.reportManager = reportManager;
         this.watchlist = {};
+        this.pendingRequests = [];
         this.isLoading = false;
         this.isSaving = false;
         this.lockFile = `${this.filePath}.lock`;
@@ -31,6 +33,7 @@ export class WatchlistManager {
         
         // Initialize watchlist with error handling
         this.initializeWatchlist();
+        this.loadPendingRequests();
     }
 
     /**
@@ -43,6 +46,139 @@ export class WatchlistManager {
         } catch (error) {
             console.error('Failed to initialize WatchlistManager:', error);
             this.watchlist = this.getDefaultWatchlistData();
+        }
+    }
+
+    /**
+     * Loads pending requests from file
+     */
+    loadPendingRequests() {
+        try {
+            if (fs.existsSync(this.pendingFilePath)) {
+                const data = fs.readFileSync(this.pendingFilePath, 'utf-8');
+                this.pendingRequests = JSON.parse(data);
+            } else {
+                this.pendingRequests = [];
+            }
+        } catch (error) {
+            console.error('Error loading pending requests:', error);
+            this.pendingRequests = [];
+        }
+    }
+
+    /**
+     * Saves pending requests to file
+     */
+    savePendingRequests() {
+        try {
+            const dir = path.dirname(this.pendingFilePath);
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            fs.writeFileSync(this.pendingFilePath, JSON.stringify(this.pendingRequests, null, 2), 'utf-8');
+            return true;
+        } catch (error) {
+            console.error('Error saving pending requests:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Adds a pending watchlist request
+     * @param {Object} requestData - The request data
+     * @returns {Object} Result
+     */
+    async addPendingRequest(requestData) {
+        try {
+            const requestId = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+            const request = {
+                id: requestId,
+                ...requestData,
+                timestamp: new Date().toISOString(),
+                status: 'pending'
+            };
+            
+            this.pendingRequests.push(request);
+            this.savePendingRequests();
+            
+            return { success: true, request };
+        } catch (error) {
+            console.error('Error adding pending request:', error);
+            return { success: false, error: error.message };
+        }
+    }
+
+    /**
+     * Gets all pending requests
+     * @returns {Array} Pending requests
+     */
+    getPendingRequests() {
+        return this.pendingRequests.filter(r => r.status === 'pending');
+    }
+
+    /**
+     * Approves a pending request
+     * @param {string} requestId - The request ID
+     * @param {string} adminId - The admin ID who approved
+     * @returns {Promise<Object>} Result
+     */
+    async approveRequest(requestId, adminId) {
+        try {
+            const index = this.pendingRequests.findIndex(r => r.id === requestId);
+            if (index === -1) return { success: false, error: 'Demande non trouvée' };
+            
+            const request = this.pendingRequests[index];
+            if (request.status !== 'pending') return { success: false, error: 'La demande n\'est plus en attente' };
+            
+            // Add to watchlist
+            const result = await this.addToWatchlist(
+                request.userId,
+                request.reason,
+                request.moderatorId,
+                request.guildId,
+                {
+                    watchLevel: request.watchLevel,
+                    username: request.username,
+                    discriminator: request.discriminator
+                }
+            );
+            
+            if (result.success) {
+                request.status = 'approved';
+                request.resolvedBy = adminId;
+                request.resolvedAt = new Date().toISOString();
+                this.savePendingRequests();
+                return { success: true, entry: result.entry };
+            } else {
+                return { success: false, error: result.error };
+            }
+        } catch (error) {
+            console.error('Error approving request:', error);
+            return { success: false, error: error.message };
+        }
+    }
+
+    /**
+     * Rejects a pending request
+     * @param {string} requestId - The request ID
+     * @param {string} adminId - The admin ID who rejected
+     * @returns {Object} Result
+     */
+    async rejectRequest(requestId, adminId) {
+        try {
+            const index = this.pendingRequests.findIndex(r => r.id === requestId);
+            if (index === -1) return { success: false, error: 'Demande non trouvée' };
+            
+            const request = this.pendingRequests[index];
+            request.status = 'rejected';
+            request.resolvedBy = adminId;
+            request.resolvedAt = new Date().toISOString();
+            
+            this.savePendingRequests();
+            return { success: true };
+        } catch (error) {
+            console.error('Error rejecting request:', error);
+            return { success: false, error: error.message };
         }
     }
 
@@ -1689,11 +1825,56 @@ export class WatchlistManager {
     }
 
     /**
-     * Gets the watchlist key for a user in a guild
-     * @param {string} userId - Discord user ID
-     * @param {string} guildId - Guild ID
-     * @returns {string|null} Watchlist key or null if not found
+     * Cleans up entries for users who no longer exist on Discord
+     * @param {import('discord.js').Client} client - The Discord client
+     * @returns {Promise<Object>} Results of the cleanup
      */
+    async cleanupDeletedUsers(client) {
+        console.log('Starting cleanup of deleted users from watchlist...');
+        const results = { checked: 0, removed: 0, errors: 0 };
+        const keysToRemove = [];
+
+        try {
+            for (const [key, entry] of Object.entries(this.watchlist)) {
+                if (key.startsWith('_') || !entry.userId) continue;
+                
+                results.checked++;
+                try {
+                    // Attempt to fetch the user from Discord
+                    await client.users.fetch(entry.userId);
+                } catch (error) {
+                    // Discord error code 10013 is "Unknown User"
+                    if (error.code === 10013 || error.message.includes('Unknown User')) {
+                        console.log(`User ${entry.userId} (${entry.username}) no longer exists on Discord. Removing from watchlist.`);
+                        keysToRemove.push(key);
+                        results.removed++;
+                    } else {
+                        results.errors++;
+                    }
+                }
+
+                // Add a small delay every 10 checks to avoid hitting rate limits too hard
+                if (results.checked % 10 === 0) {
+                    await this.delay(200);
+                }
+            }
+
+            // Remove the identified keys
+            for (const key of keysToRemove) {
+                delete this.watchlist[key];
+            }
+
+            if (results.removed > 0) {
+                await this.saveWatchlistWithRetry();
+            }
+
+            console.log(`Watchlist cleanup finished: ${results.removed} users removed.`);
+            return results;
+        } catch (error) {
+            console.error('Error during watchlist cleanup:', error);
+            return { ...results, error: error.message };
+        }
+    }   
     getWatchlistKey(userId, guildId) {
         const directKey = `${guildId}_${userId}`;
         

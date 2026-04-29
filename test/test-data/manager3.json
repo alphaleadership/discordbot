@@ -1,22 +1,8 @@
 {
-  "guild3_user3": {
-    "userId": "user3",
-    "username": "Unknown",
-    "discriminator": "0",
-    "reason": "reason3",
-    "addedBy": "mod",
-    "addedAt": "2026-02-27T06:54:06.697Z",
-    "lastSeen": null,
-    "guildId": "guild3",
-    "watchLevel": "observe",
-    "notes": [],
-    "incidents": [],
-    "active": true
-  },
   "_metadata": {
     "version": "2.0",
-    "created": "2026-02-27T06:54:06.697Z",
-    "lastModified": "2026-02-27T06:54:06.697Z"
+    "created": "2026-04-12T20:22:55.458Z",
+    "lastModified": "2026-04-12T20:22:55.458Z"
   },
   "_settings": {}
 }

@@ -38,14 +38,9 @@ export default {
 
             // Validate permissions using PermissionValidator
             // If user is not in guild, we pass the user object instead of member
-            const permissionResult = permissionValidator.validateModerationAction(
+            const permissionResult = permissionValidator.validateBanPermission(
                 interaction.member,
-                targetMember || targetUser,
-                PermissionsBitField.Flags.BanMembers,
-                {
-                    preventBotActions: true,
-                    preventOwnerActions: true
-                }
+                targetMember || targetUser
             );
 
             if (!permissionResult.success) {
@@ -69,6 +64,55 @@ export default {
                     content: permissionResult.message || '❌ Vous n\'avez pas la permission d\'effectuer cette action.',
                     ephemeral: true
                 });
+            }
+
+            // Handle agents: create pending request instead of direct ban
+            if (permissionResult.isAgent) {
+                const pendingResult = await banlistManager.addPendingRequest({
+                    userId: targetUser.id,
+                    username: targetUser.tag,
+                    reason: reason,
+                    moderatorId: interaction.user.id,
+                    moderatorTag: interaction.user.tag,
+                    guildId: interaction.guild.id,
+                    guildName: interaction.guild.name,
+                    deleteMessageDays: deleteMessageDays
+                });
+
+                if (!pendingResult.success) {
+                    return interaction.reply({
+                        content: `❌ Erreur lors de la création de la demande: ${pendingResult.error}`,
+                        ephemeral: true
+                    });
+                }
+
+                const pendingEmbed = new EmbedBuilder()
+                    .setColor('#FFFF00')
+                    .setTitle('⏳ Demande de bannissement soumise')
+                    .setDescription('Votre demande a été enregistrée et doit être validée par un administrateur du bot.')
+                    .addFields(
+                        { name: 'Utilisateur', value: `${targetUser.tag} (${targetUser.id})` },
+                        { name: 'Raison', value: reason },
+                        { name: 'Agent', value: interaction.user.tag }
+                    )
+                    .setFooter({ text: 'ID de la demande: ' + pendingResult.request.id });
+
+                await interaction.reply({ embeds: [pendingEmbed] });
+
+                if (reportManager && reportManager.sendSystemAlert) {
+                    await reportManager.sendSystemAlert(
+                        interaction.client,
+                        '🔨 Nouvelle demande de bannissement (Agent)',
+                        `L'agent **${interaction.user.tag}** demande le bannissement de **${targetUser.tag}**.`,
+                        [
+                            { name: 'Raison', value: reason, inline: false },
+                            { name: 'ID Demande', value: pendingResult.request.id, inline: true }
+                        ],
+                        0xFFFF00
+                    );
+                }
+
+                return;
             }
 
             // Create ban embed for DM

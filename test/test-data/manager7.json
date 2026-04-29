@@ -1,22 +1,8 @@
 {
-  "guild7_user7": {
-    "userId": "user7",
-    "username": "Unknown",
-    "discriminator": "0",
-    "reason": "reason7",
-    "addedBy": "mod",
-    "addedAt": "2026-02-27T06:54:07.774Z",
-    "lastSeen": null,
-    "guildId": "guild7",
-    "watchLevel": "observe",
-    "notes": [],
-    "incidents": [],
-    "active": true
-  },
   "_metadata": {
     "version": "2.0",
-    "created": "2026-02-27T06:54:07.774Z",
-    "lastModified": "2026-02-27T06:54:07.774Z"
+    "created": "2026-04-12T20:22:56.607Z",
+    "lastModified": "2026-04-12T20:22:56.607Z"
   },
   "_settings": {}
 }

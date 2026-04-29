@@ -34,7 +34,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -100,7 +100,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -166,7 +166,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -232,7 +232,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -298,7 +298,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -364,7 +364,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -430,7 +430,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -496,7 +496,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -562,7 +562,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -628,7 +628,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -694,7 +694,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -760,7 +760,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -826,7 +826,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -892,7 +892,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -958,7 +958,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1024,7 +1024,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1090,7 +1090,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1156,7 +1156,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1222,7 +1222,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1288,7 +1288,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1354,7 +1354,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1420,7 +1420,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1486,7 +1486,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1552,7 +1552,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1618,7 +1618,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1684,7 +1684,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1758,7 +1758,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1824,7 +1824,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1890,7 +1890,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {
@@ -1956,7 +1956,7 @@
         "\\b\\d{9}\\b"
       ],
       "exceptions": [],
-      "ocrEnabled": false,
+      
       "autoDelete": true
     },
     "telegram": {

@@ -354,7 +354,7 @@ export class CommandHandler {
      * @returns {boolean} True if it's a moderation command
      */
     isModerationCommand(commandName) {
-        const moderationCommands = ['ban', 'kick', 'timeout', 'clear', 'unban', 'warn', 'clearwarns'];
+        const moderationCommands = ['ban', 'kick', 'timeout', 'clear', 'unban', 'warn', 'clearwarns', 'admin'];
         return moderationCommands.includes(commandName);
     }
 
@@ -367,6 +367,7 @@ export class CommandHandler {
         const watchlistCommands = [
             'watchlist-add', 'watchlist-remove', 'watchlist-list',
             'watchlist-info', 'watchlist-note', 'watchlist-status',
+            'watchlist-validate',
             'global-watchlist-add', 'global-watchlist-remove',
             'global-watchlist-list', 'global-watchlist-info'
         ];

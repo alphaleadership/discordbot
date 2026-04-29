@@ -321,14 +321,6 @@ describe('Enhanced Testing Infrastructure', () => {
       expect(result.text).toBe('Mock message');
     });
 
-    it('should mock Tesseract.js OCR', async () => {
-      const { recognize } = await import('tesseract.js');
-      
-      const result = await recognize('mock_image_data');
-      expect(result.data.text).toBe('Mock OCR text');
-      expect(result.data.confidence).toBe(95);
-    });
-
     it('should mock GitHub API', async () => {
       const { Octokit } = await import('@octokit/rest');
       const octokit = new Octokit({ auth: 'mock_token' });

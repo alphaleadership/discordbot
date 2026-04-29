@@ -430,50 +430,6 @@ describe('DoxDetector', () => {
         });
     });
 
-    describe('OCR Functionality', () => {
-        test('should handle OCR processing', async () => {
-            // Mock attachment
-            const mockAttachment = {
-                url: 'https://example.com/image.png',
-                contentType: 'image/png',
-                size: 1024000
-            };
-
-            // Note: This would require actual OCR implementation
-            // For now, we test the interface
-            const result = await doxDetector.scanImageForText(mockAttachment);
-            
-            expect(result).toBeDefined();
-            expect(typeof result.success).toBe('boolean');
-        });
-
-        test('should handle OCR errors gracefully', async () => {
-            const invalidAttachment = {
-                url: 'invalid-url',
-                contentType: 'text/plain',
-                size: 0
-            };
-
-            const result = await doxDetector.scanImageForText(invalidAttachment);
-            
-            expect(result.success).toBe(false);
-            expect(result.error).toBeDefined();
-        });
-
-        test('should reject oversized images', async () => {
-            const oversizedAttachment = {
-                url: 'https://example.com/huge-image.png',
-                contentType: 'image/png',
-                size: 50 * 1024 * 1024 // 50MB
-            };
-
-            const result = await doxDetector.scanImageForText(oversizedAttachment);
-            
-            expect(result.success).toBe(false);
-            expect(result.error).toContain('size');
-        });
-    });
-
     describe('Message Handling', () => {
         test('should handle message with personal info', async () => {
             const mockMessage = {

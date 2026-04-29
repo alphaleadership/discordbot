@@ -10,7 +10,6 @@ Nous sommes ravis de vous présenter la **Version 2.0** de notre bot Discord de 
 
 ### 🔍 **Système de Détection de Dox Avancé**
 - **Détection automatique** d'informations personnelles (téléphones, emails, adresses, SSN)
-- **Analyse OCR** des images pour détecter du texte sensible
 - **Suppression instantanée** des messages contenant des données personnelles
 - **Système d'escalade intelligent** avec avertissements progressifs
 - **Exceptions configurables** pour les informations légitimes (contacts d'entreprise)

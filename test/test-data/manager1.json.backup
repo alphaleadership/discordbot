@@ -5,7 +5,7 @@
     "discriminator": "0",
     "reason": "reason1",
     "addedBy": "mod",
-    "addedAt": "2026-02-27T06:54:06.666Z",
+    "addedAt": "2026-04-12T20:22:54.372Z",
     "lastSeen": null,
     "guildId": "guild1",
     "watchLevel": "observe",
@@ -15,7 +15,7 @@
   },
   "_metadata": {
     "version": "2.0",
-    "created": "2026-02-27T06:54:06.666Z",
-    "lastModified": "2026-02-27T06:54:06.666Z"
+    "created": "2026-04-12T20:22:54.372Z",
+    "lastModified": "2026-04-12T20:22:54.372Z"
   }
 }

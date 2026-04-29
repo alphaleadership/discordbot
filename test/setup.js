@@ -33,30 +33,6 @@ vi.mock('axios', () => ({
   }
 }));
 
-// Mock tesseract.js for OCR tests
-vi.mock('tesseract.js', () => ({
-  recognize: vi.fn().mockResolvedValue({
-    data: { 
-      text: 'Mock OCR text',
-      confidence: 95,
-      words: [
-        { text: 'Mock', confidence: 95 },
-        { text: 'OCR', confidence: 95 },
-        { text: 'text', confidence: 95 }
-      ]
-    }
-  }),
-  createWorker: vi.fn().mockResolvedValue({
-    load: vi.fn().mockResolvedValue(),
-    loadLanguage: vi.fn().mockResolvedValue(),
-    initialize: vi.fn().mockResolvedValue(),
-    recognize: vi.fn().mockResolvedValue({
-      data: { text: 'Mock OCR text', confidence: 95 }
-    }),
-    terminate: vi.fn().mockResolvedValue()
-  })
-}));
-
 // Mock node-telegram-bot-api
 vi.mock('node-telegram-bot-api', () => ({
   default: vi.fn().mockImplementation(() => ({

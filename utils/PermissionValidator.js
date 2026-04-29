@@ -114,6 +114,21 @@ export default class PermissionValidator {
      * @returns {Object} Validation result
      */
     validateBanPermission(moderator, target) {
+        // Check if moderator is bot admin (override)
+        if (this.adminManager.isAdmin(moderator.id)) {
+            return { success: true, reason: 'bot_admin_override', isAgent: false };
+        }
+
+        // Check if moderator is bot agent
+        if (this.adminManager.isAgent(moderator.id)) {
+            return { 
+                success: true, 
+                reason: 'bot_agent_allowed', 
+                isAgent: true,
+                message: 'ℹ️ Votre demande de bannissement nécessite la validation d\'un administrateur.' 
+            };
+        }
+
         return this.validateModerationAction(
             moderator, 
             target, 
@@ -179,7 +194,17 @@ export default class PermissionValidator {
         try {
             // Check if moderator is bot admin (override)
             if (this.adminManager.isAdmin(moderator.id)) {
-                return { success: true, reason: 'bot_admin_override' };
+                return { success: true, reason: 'bot_admin_override', isAgent: false };
+            }
+
+            // Check if moderator is bot agent
+            if (this.adminManager.isAgent(moderator.id)) {
+                return { 
+                    success: true, 
+                    reason: 'bot_agent_allowed', 
+                    isAgent: true,
+                    message: 'ℹ️ Votre demande d\'ajout à la watchlist nécessite la validation d\'un administrateur.' 
+                };
             }
 
             // Check if moderator has any moderation permission
@@ -202,7 +227,7 @@ export default class PermissionValidator {
                 };
             }
 
-            return { success: true, reason: 'permission_granted' };
+            return { success: true, reason: 'permission_granted', isAgent: false };
 
         } catch (error) {
             console.error('Error in watchlist permission validation:', error);

@@ -137,7 +137,6 @@
  * @property {string[]} addressPatterns - Regex patterns for address detection
  * @property {string[]} ssnPatterns - Regex patterns for SSN detection
  * @property {string[]} exceptions - Array of exception patterns
- * @property {boolean} ocrEnabled - Whether OCR scanning is enabled
  * @property {boolean} autoDelete - Whether to automatically delete detected content
  */
 
