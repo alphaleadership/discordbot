@@ -35,7 +35,10 @@ const mockAdminManager = {
 const mockPermissionValidator = {
     validateModerationAction: vi.fn().mockReturnValue({ success: true }),
     validateWatchlistPermission: vi.fn().mockReturnValue({ success: true }),
-    validateGlobalWatchlistPermission: vi.fn().mockReturnValue({ success: true })
+    validateGlobalWatchlistPermission: vi.fn().mockReturnValue({ success: true }),
+    validateBanPermission: vi.fn().mockReturnValue({ success: true }),
+    validateKickPermission: vi.fn().mockReturnValue({ success: true }),
+    validateTimeoutPermission: vi.fn().mockReturnValue({ success: true })
 };
 
 const mockWatchlistManager = {
@@ -174,7 +177,7 @@ describe('Moderation Logging Integration', () => {
             const banCommand = await import('../../commands/ban.js');
             
             // Mock permission denial
-            mockPermissionValidator.validateModerationAction.mockReturnValue({
+            mockPermissionValidator.validateBanPermission.mockReturnValue({
                 success: false,
                 message: 'Insufficient permissions'
             });
@@ -439,9 +442,20 @@ describe('Moderation Logging Integration', () => {
 
             await banCommand.default.execute(
                 mockInteraction,
-                mockAdminManager, null, null, null, null,
+                mockAdminManager,
+                null, // warnManager
+                null, // guildConfig
+                null, // sharedConfig
+                null, // backupToGitHub
                 mockReportManager,
-                null, null, null, null, null, null, null, null,
+                null, // banlistManager
+                null, // blockedWordsManager
+                null, // watchlistManager
+                null, // telegramIntegration
+                null, // funCommandsManager
+                null, // raidDetector
+                null, // doxDetector
+                null, // enhancedReloadSystem
                 mockPermissionValidator
             );
 

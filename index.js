@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, SlashCommandBuilder, Partials } from 'discord.js';
+import { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, SlashCommandBuilder, Partials, ChannelType } from 'discord.js';
 import fs from 'fs';
 import { Octokit } from '@octokit/rest';
 import express from 'express';
@@ -18,14 +18,15 @@ import path from 'path';
 
 import GuildConfig from './utils/GuildConfig.js';
 import enhancedGuildConfig from './utils/config/EnhancedGuildConfig.js';
+import ModerationLogger from './utils/ModerationLogger.js';
 
 // Import all new managers
 import {
     RaidDetector,
     DoxDetector,
-    FunCommandsManager,
-    EnhancedReloadSystem
+    FunCommandsManager
 } from './utils/managers/index.js';
+import { EnhancedReloadSystem } from './utils/EnhancedReloadSystem.js';
 import AutoWatchHandler from './utils/handlers/AutoWatchHandler.js';
 import UnifiedErrorReporter from './utils/UnifiedErrorReporter.js';
 import PermissionValidator from './utils/PermissionValidator.js';
@@ -412,7 +413,10 @@ function initOctokit() {
                 error: console.error
             },
             request: {
-                timeout: 10000
+                timeout: 10000,
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
             }
         });
         
@@ -655,6 +659,7 @@ for (const token of tokens) {
     });
 
     const reportManager = new ReportManager();
+    reportManager.moderationLogger = new ModerationLogger(reportManager);
     const banlistManager = new BanlistManager();
     const blockedWordsManager = new BlockedWordsManager();
     const watchlistManager = new WatchlistManager('data/watchlist.json', reportManager);
@@ -681,7 +686,24 @@ for (const token of tokens) {
     // Initialize interaction handler with new managers
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
     dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
-    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager,dmTicketManager);
+    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager);
+    
+    // Initialize EnhancedReloadSystem dependencies after CommandHandler creation
+    enhancedReloadSystem.commandHandler = commandHandler;
+    enhancedReloadSystem.reportManager = reportManager;
+    enhancedReloadSystem.managers = {
+        adminManager,
+        guildConfig,
+        reportManager,
+        banlistManager,
+        blockedWordsManager,
+        watchlistManager,
+        telegramIntegration,
+        funCommandsManager,
+        raidDetector,
+        doxDetector
+    };
+
     commandHandler.loadCommands();
 
     // Enregistrer les commandes
@@ -692,10 +714,54 @@ for (const token of tokens) {
         console.log(`ID du bot: ${client.user.id}`);
         console.log(`Présent sur ${client.guilds.cache.size} serveurs`);
         // Initialize configuration for all guilds the bot is currently in
-        client.guilds.cache.forEach(guild => {
+        for (const guild of client.guilds.cache.values()) {
             guildConfig.initializeGuild(guild.id);
             console.log(`Initialized config for guild: ${guild.name} (${guild.id})`);
-        });
+            
+            // Vérification et création automatique du salon Honeypot
+            const honeypotConfig = guildConfig.getHoneypotConfig(guild.id);
+            if (honeypotConfig && honeypotConfig.enabled) {
+                let channel = honeypotConfig.channelId ? guild.channels.cache.get(honeypotConfig.channelId) : null;
+                
+                if (!channel) {
+                    console.log(`[HONEYPOT] Salon manquant pour ${guild.name}. Création en cours...`);
+                    try {
+                        channel = await guild.channels.create({
+                            name: 'honeypot-raid',
+                            type: ChannelType.GuildText,
+                            permissionOverwrites: [
+                                {
+                                    id: guild.id, // @everyone
+                                    allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages],
+                                },
+                                {
+                                    id: client.user.id,
+                                    allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages, PermissionsBitField.Flags.ReadMessageHistory, PermissionsBitField.Flags.ManageChannels],
+                                }
+                            ],
+                            topic: '⚠️ NE PAS ÉCRIRE ICI - SYSTÈME DE PROTECTION ANTI-RAID ⚠️ Toute personne envoyant un message ici sera bannie.'
+                        });
+                        
+                        guildConfig.setHoneypotChannelId(guild.id, channel.id);
+                        
+                        const embed = new EmbedBuilder()
+                            .setColor('#FF0000')
+                            .setTitle('🛡️ Système Honeypot Activé')
+                            .setDescription('Ce salon sert de piège pour les robots de raid et les comptes compromis.\n\n⚠️ **ATTENTION** : Toute personne (hors administrateurs) qui envoie un message dans ce salon sera **immédiatement bannie** du serveur.')
+                            .addFields(
+                                { name: 'Pourquoi ce salon ?', value: 'Les outils de raid automatisés tentent souvent de poster dans tous les salons visibles. Ce salon permet de les détecter et de les éliminer instantanément.' },
+                                { name: 'Sécurité', value: 'Ce salon est visible par tout le monde afin de piéger les comptes compromis. Ne postez jamais ici.' }
+                            )
+                            .setTimestamp();
+                        
+                        await channel.send({ embeds: [embed] });
+                        console.log(`[HONEYPOT] Salon créé avec succès pour ${guild.name}`);
+                    } catch (error) {
+                        console.error(`[HONEYPOT] Erreur lors de la création auto pour ${guild.name}:`, error);
+                    }
+                }
+            }
+        }
     });
 
     // Gestion des interactions (boutons et commandes slash)
@@ -741,6 +807,70 @@ for (const token of tokens) {
                 // console.error('Erreur dans la gestion du DM:', error); // Logs d'analyse de message désactivés
             }
             return;
+        }
+
+        // Système de Honeypot (Autoban)
+        if (message.guild) {
+            const honeypotConfig = guildConfig.getHoneypotConfig(message.guild.id);
+            if (honeypotConfig && honeypotConfig.enabled && honeypotConfig.channelId === message.channel.id) {
+                // Vérifier si l'utilisateur est un admin ou le proprio
+                const isAdmin = await adminManager.isAdmin(message.author.id);
+                const isOwner = message.author.id === message.guild.ownerId;
+                const hasAdminPerm = message.member && message.member.permissions.has(PermissionsBitField.Flags.Administrator);
+                
+                if (!isAdmin && !isOwner && !hasAdminPerm && !message.author.bot) {
+                    try {
+                        console.log(`[HONEYPOT] ${message.author.tag} (${message.author.id}) a écrit dans le salon honeypot. Bannissement en cours...`);
+                        
+                        // 1. Ajouter d'abord à la banlist (blocklist globale)
+                        if (banlistManager) {
+                            try {
+                                await banlistManager.addToBanlist(message.author.id, 'Honeypot : Autoban (anti-raid)', client.user.id);
+                            } catch (e) {
+                                console.error("Erreur lors de l'ajout à la banlist :", e);
+                            }
+                        }
+                        
+                        // 2. Bannir l'utilisateur du serveur local
+                        await message.guild.members.ban(message.author.id, { 
+                            reason: 'Honeypot : Autoban pour avoir écrit dans un salon interdit (protection anti-raid/compte compromis)' 
+                        });
+
+                        // Envoyer un log dans le salon de log si configuré
+                        const guildConfigData = guildConfig.loadConfig()[message.guild.id] || {};
+                        if (guildConfigData.logChannelId) {
+                            const logChannel = message.guild.channels.cache.get(guildConfigData.logChannelId);
+                            if (logChannel) {
+                                const embed = new EmbedBuilder()
+                                    .setColor('#FF0000')
+                                    .setTitle('🚨 Honeypot Déclenché')
+                                    .setDescription(`**${message.author.tag}** a été banni automatiquement pour avoir écrit dans le salon honeypot.`)
+                                    .addFields(
+                                        { name: 'Utilisateur', value: `${message.author.tag} (${message.author.id})`, inline: true },
+                                        { name: 'Salon', value: message.channel.name, inline: true },
+                                        { name: 'Message', value: message.content || '(aucun contenu)', inline: false }
+                                    )
+                                    .setTimestamp();
+                                await logChannel.send({ embeds: [embed] });
+                            }
+                        }
+                        
+                        // Nettoyer le salon en supprimant le message s'il est encore là
+                        if (message.deletable) {
+                            await message.delete().catch(() => {});
+                        }
+                        
+                        return; // Arrêter le traitement pour ce message
+                    } catch (error) {
+                        console.error(`Erreur lors du bannissement honeypot pour ${message.author.tag}:`, error);
+                        if (error.code === 50013) {
+                            await message.channel.send(`⚠️ **Erreur** : Je n'ai pas la permission de bannir ${message.author}. Vérifiez que j'ai la permission "Bannir des membres" et que mon rôle est placé au-dessus du sien dans les paramètres du serveur.`);
+                        }
+                    }
+                } else if (!message.author.bot && (hasAdminPerm || isOwner || isAdmin)) {
+                    await message.reply("⚠️ *En tant qu'administrateur, vous êtes immunisé contre le honeypot. Cependant, gardez à l'esprit que ce salon bannira immédiatement tout membre normal qui y écrira !*");
+                }
+            }
         }
         
         // Vérifier le spam
