@@ -12,6 +12,15 @@ export default {
     
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, dmTicketManager, economyManager) {
         try {
+            // Permission check: only bot administrators can run this command
+            const isAdmin = await adminManager.isAdmin(interaction.user.id);
+            if (!isAdmin) {
+                return await interaction.reply({
+                    content: '❌ Vous n\'avez pas la permission d\'utiliser cette commande. Cette commande est réservée aux administrateurs du bot.',
+                    ephemeral: true
+                });
+            }
+
             const guildIdInput = interaction.options.getString('guild-id');
             let guild = interaction.guild;
 
@@ -38,11 +47,12 @@ export default {
             // Fetch owner
             const owner = await guild.members.fetch(guild.ownerId).catch(() => null);
 
-            // Count channels
-            const channels = await guild.channels.fetch().catch(() => new Map());
-            const textChannels = channels.filter(c => c.type === ChannelType.GuildText).size;
-            const voiceChannels = channels.filter(c => c.type === ChannelType.GuildVoice).size;
-            const categoryChannels = channels.filter(c => c.type === ChannelType.GuildCategory).size;
+            // Count channels safely (handling fallback if fetch returns Map or fails)
+            const channels = await guild.channels.fetch().catch(() => null);
+            const textChannels = channels && typeof channels.filter === 'function' ? channels.filter(c => c.type === ChannelType.GuildText).size : 0;
+            const voiceChannels = channels && typeof channels.filter === 'function' ? channels.filter(c => c.type === ChannelType.GuildVoice).size : 0;
+            const categoryChannels = channels && typeof channels.filter === 'function' ? channels.filter(c => c.type === ChannelType.GuildCategory).size : 0;
+            const totalChannels = channels ? (channels.size ?? 0) : 0;
 
             // Guild config details
             const config = (guildConfig && guildConfig.config) ? (guildConfig.config[guild.id] || {}) : {};
@@ -76,7 +86,7 @@ export default {
                     { name: '📅 Date de création', value: `<t:${Math.floor(guild.createdTimestamp / 1000)}:F> (<t:${Math.floor(guild.createdTimestamp / 1000)}:R>)`, inline: false },
                     { 
                         name: '📁 Salons', 
-                        value: `💬 Texte : **${textChannels}**\n🔊 Vocal : **${voiceChannels}**\n📁 Catégories : **${categoryChannels}**\nTotal : **${channels.size}**`, 
+                        value: `💬 Texte : **${textChannels}**\n🔊 Vocal : **${voiceChannels}**\n📁 Catégories : **${categoryChannels}**\nTotal : **${totalChannels}**`, 
                         inline: true 
                     },
                     {
@@ -116,10 +126,17 @@ export default {
 
         } catch (error) {
             console.error('Erreur lors de l\'exécution de la commande server-info:', error);
-            await interaction.reply({
-                content: '❌ Une erreur est survenue lors de la récupération des informations du serveur.',
-                ephemeral: true
-            });
+            if (!interaction.replied && !interaction.deferred) {
+                await interaction.reply({
+                    content: '❌ Une erreur est survenue lors de la récupération des informations du serveur.',
+                    ephemeral: true
+                }).catch(() => {});
+            } else {
+                await interaction.followUp({
+                    content: '❌ Une erreur est survenue lors de la récupération des informations du serveur.',
+                    ephemeral: true
+                }).catch(() => {});
+            }
         }
     }
 };

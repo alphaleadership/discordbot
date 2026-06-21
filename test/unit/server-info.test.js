@@ -98,13 +98,45 @@ describe('Server Info Command', () => {
             }
         };
 
+        const mockAdminManager = {
+            isAdmin: vi.fn().mockResolvedValue(true)
+        };
+
         await serverInfoCommand.default.execute(
             mockInteraction,
-            {}, // adminManager
+            mockAdminManager,
             {}, // warnManager
             mockGuildConfig
         );
 
         expect(mockInteraction.reply).toHaveBeenCalled();
+    });
+
+    test('should deny execution if user is not bot admin', async () => {
+        const serverInfoCommand = await import('../../commands/server-info.js');
+
+        const mockInteraction = {
+            user: {
+                id: 'unauthorized-user-123'
+            },
+            reply: vi.fn().mockResolvedValue(true)
+        };
+
+        const mockAdminManager = {
+            isAdmin: vi.fn().mockResolvedValue(false)
+        };
+
+        await serverInfoCommand.default.execute(
+            mockInteraction,
+            mockAdminManager,
+            {},
+            {}
+        );
+
+        expect(mockAdminManager.isAdmin).toHaveBeenCalledWith('unauthorized-user-123');
+        expect(mockInteraction.reply).toHaveBeenCalledWith(expect.objectContaining({
+            content: expect.stringContaining('pas la permission'),
+            ephemeral: true
+        }));
     });
 });
