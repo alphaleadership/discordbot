@@ -34,6 +34,7 @@ import { DMTicketManager } from './utils/DMTicketManager.js';
 import { EconomyManager } from './utils/EconomyManager.js';
 import { ForumReportManager } from './utils/ForumReportManager.js';
 import AutoConfigManager from './utils/AutoConfigManager.js';
+import { EspionageManager } from './utils/EspionageManager.js';
 
 let dmTicketManager; // Declare dmTicketManager here
 
@@ -670,6 +671,7 @@ for (const token of tokens) {
     const economyManager = new EconomyManager('data/economy.json');
     const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
     const autoConfigManager = new AutoConfigManager(client, guildConfig);
+    const espionageManager = new EspionageManager(client, guildConfig, warnManager);
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
@@ -686,7 +688,7 @@ for (const token of tokens) {
     // Initialize interaction handler with new managers
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
     dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
-    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager);
+    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, undefined, espionageManager);
     
     // Initialize EnhancedReloadSystem dependencies after CommandHandler creation
     enhancedReloadSystem.commandHandler = commandHandler;
@@ -792,6 +794,9 @@ for (const token of tokens) {
         }
     });
 
+    // Cache pour la détection des messages identiques d'affilée
+    const duplicateMessagesCache = new Map(); // key: `${userId}-${guildId}` -> content
+
     // Gestion des messages
     client.on('messageCreate', async message => {
         const isDM = message.guild === null;
@@ -807,6 +812,112 @@ for (const token of tokens) {
                 // console.error('Erreur dans la gestion du DM:', error); // Logs d'analyse de message désactivés
             }
             return;
+        }
+
+        // Remplissage automatique des dossiers d'espionnage
+        if (message.guild && !message.author.bot) {
+            await espionageManager.recordMessage(message).catch(() => null);
+        }
+
+        // Système de détection de double message identique d'affilée
+        if (message.guild && !message.author.bot && message.content) {
+            // Vérifier si l'utilisateur est admin ou modérateur pour éviter de fausses alertes sur eux
+            const isAdmin = await adminManager.isAdmin(message.author.id);
+            const isOwner = message.author.id === message.guild.ownerId;
+            const hasAdminPerm = message.member && (
+                message.member.permissions.has(PermissionsBitField.Flags.Administrator) ||
+                message.member.permissions.has(PermissionsBitField.Flags.ManageGuild)
+            );
+
+            if (!isAdmin && !isOwner && !hasAdminPerm) {
+                const cacheKey = `${message.author.id}-${message.guild.id}`;
+                const lastContent = duplicateMessagesCache.get(cacheKey);
+
+                if (lastContent === message.content) {
+                    try {
+                        console.log(`[DUPLICATE DETECTION] ${message.author.tag} (${message.author.id}) a envoyé deux fois le même message d'affilée.`);
+                        
+                        // 1. Supprimer le message actuel
+                        if (message.deletable) {
+                            await message.delete().catch(() => {});
+                        }
+
+                        // 2. Mettre en quarantaine
+                        let settings = guildConfig.getQuarantineSettings(message.guild.id);
+                        const botMember = message.guild.members.me;
+
+                        // Auto-setup de la quarantaine si non configuré
+                        if ((!settings || !settings.roleId) && 
+                            botMember.permissions.has(PermissionsBitField.Flags.ManageRoles) && 
+                            botMember.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
+                            try {
+                                const role = await message.guild.roles.create({
+                                    name: 'Quarantaine',
+                                    color: '#ff0000',
+                                    reason: 'Auto-setup quarantaine pour double message identique'
+                                });
+                                const channel = await message.guild.channels.create({
+                                    name: 'quarantaine',
+                                    type: ChannelType.GuildText,
+                                    permissionOverwrites: [
+                                        { id: message.guild.id, deny: [PermissionsBitField.Flags.ViewChannel] },
+                                        { id: role.id, allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.ReadMessageHistory], deny: [PermissionsBitField.Flags.SendMessages, PermissionsBitField.Flags.AddReactions] }
+                                    ],
+                                    reason: 'Auto-setup quarantaine pour double message identique'
+                                });
+                                guildConfig.setQuarantineSettings(message.guild.id, role.id, channel.id);
+                                settings = guildConfig.getQuarantineSettings(message.guild.id);
+                            } catch (e) {
+                                console.error('Auto-setup quarantaine échoué:', e);
+                            }
+                        }
+
+                        if (settings && settings.roleId) {
+                            const member = message.member || await message.guild.members.fetch(message.author.id).catch(() => null);
+                            if (member) {
+                                await member.roles.add(settings.roleId, 'Auto-quarantaine : Envoi de deux messages identiques d\'affilée (Automod)');
+                                
+                                const alertEmbed = new EmbedBuilder()
+                                    .setColor('#FF0000')
+                                    .setTitle('🔒 Auto-Quarantaine : Répétition de message')
+                                    .setDescription(`L'utilisateur **${message.author.tag}** (${message.author.id}) a été placé en quarantaine automatiquement pour avoir envoyé deux fois le même message d'affilée.`)
+                                    .setTimestamp();
+
+                                await message.channel.send({ embeds: [alertEmbed] });
+                            }
+                        }
+
+                        // 3. Créer un report global
+                        if (forumReportManager) {
+                            try {
+                                const reportData = {
+                                    reportedUserId: message.author.id,
+                                    reportedUsername: message.author.username,
+                                    reporterUserId: client.user.id,
+                                    reporterUsername: client.user.username,
+                                    category: 'spam',
+                                    reason: `Double message identique d'affilée (Automod)`,
+                                    evidence: `Message : "${message.content}"`,
+                                    messageId: message.id,
+                                    channelId: message.channel.id,
+                                    timestamp: new Date().toISOString()
+                                };
+                                await forumReportManager.createForumReport(reportData, message.guild.id);
+                            } catch (reportErr) {
+                                console.error('Erreur lors de la création du rapport global pour double message :', reportErr);
+                            }
+                        }
+
+                        // Nettoyer le cache pour cet utilisateur pour éviter de reboucler
+                        duplicateMessagesCache.delete(cacheKey);
+                        return; // Arrêter le traitement pour ce message
+                    } catch (err) {
+                        console.error('Erreur lors de la gestion du double message d\'affilée :', err);
+                    }
+                } else {
+                    duplicateMessagesCache.set(cacheKey, message.content);
+                }
+            }
         }
 
         // Système de Honeypot (Autoban)
@@ -953,6 +1064,27 @@ for (const token of tokens) {
         
         // Handle watchlist monitoring
         if (watchlistManager.handleUserMessage) {
+            try {
+                const userId = message.author.id;
+                const guildId = message.guild.id;
+                const watchlistEntry = watchlistManager.getWatchlistEntry(userId, guildId) || watchlistManager.getWatchlistEntry(userId, 'GLOBAL');
+                
+                if (watchlistEntry && espionageManager) {
+                    const member = await message.guild.members.fetch(userId).catch(() => null);
+                    if (member) {
+                        const contentPreview = message.content.length > 200 
+                            ? message.content.substring(0, 200) + '...' 
+                            : message.content;
+                        await espionageManager.addNote(
+                            member,
+                            `👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#${message.channel.id}> (Niveau: ${watchlistEntry.watchLevel})\n**Contenu** : "${contentPreview}"`,
+                            'system'
+                        ).catch(() => null);
+                    }
+                }
+            } catch (err) {
+                console.error('Error integrating watchlist with espionage manager:', err);
+            }
             watchlistManager.handleUserMessage(message);
         }
         
@@ -1119,7 +1251,7 @@ for (const token of tokens) {
     client.on('guildMemberAdd', async member => {
         try {
             // Vérifier si l'utilisateur est dans la banlist
-            const { banned, reason } = await banlistManager.isBanned(member.id);
+            const { banned, reason } = await banlistManager.isBanned(member.id, member.guild.id);
             
             if (banned) {
                 // Bannir l'utilisateur avec la raison du bannissement
@@ -1187,6 +1319,48 @@ for (const token of tokens) {
                 guildId: member.guild.id,
                 memberTag: member.user.tag
             }, client);
+        }
+    });
+
+    // Gestion de l'enregistrement automatique dans le dossier d'espionnage lors d'un ban
+    client.on('guildBanAdd', async (ban) => {
+        try {
+            const guild = ban.guild;
+            const user = ban.user;
+            const reason = ban.reason || "Aucune raison fournie (Bannissement Discord)";
+            
+            if (espionageManager) {
+                // Simuler un membre du serveur (car non présent)
+                const fakeMember = {
+                    guild: guild,
+                    id: user.id,
+                    user: user,
+                    roles: {
+                        cache: {
+                            filter: () => ({ map: () => [] })
+                        }
+                    },
+                    joinedTimestamp: Date.now()
+                };
+                
+                const thread = await espionageManager.getOrCreateMemberDossier(fakeMember);
+                if (thread) {
+                    await espionageManager.addNote(
+                        fakeMember,
+                        `🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : ${reason}`,
+                        'system'
+                    );
+                    
+                    const guildData = espionageManager.getGuildConfig(guild.id);
+                    if (guildData.targets[user.id]) {
+                        guildData.targets[user.id].threatLevel = 'Critical';
+                        espionageManager.saveDossiers();
+                        await espionageManager.updateDossier(fakeMember);
+                    }
+                }
+            }
+        } catch (error) {
+            console.error("Erreur lors de la gestion de guildBanAdd pour l'espionnage :", error);
         }
     });
 

@@ -20,7 +20,7 @@ export default {
                 .setDescription('Avertissement global (visible dans tous les serveurs)')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager) {
+    async execute(interaction, adminManager, warnManagerParam, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, customsManager, espionageManager) {
         const isGlobal = interaction.options.getBoolean('global') ?? false;
         const warnManager = isGlobal ? globalWarnManager : localWarnManager;
         const guildId = isGlobal ? 'global' : interaction.guild.id;
@@ -59,6 +59,18 @@ export default {
         try {
             const warn = warnManager.addWarn(guildId, user.id, reason, interaction.user.id);
             const warnCount = warnManager.getWarnCount(guildId, user.id);
+
+            // Remplissage automatique du dossier d'espionnage lors d'un warn
+            if (espionageManager && interaction.guild) {
+                const member = await interaction.guild.members.fetch(user.id).catch(() => null);
+                if (member) {
+                    await espionageManager.addNote(
+                        member, 
+                        `⚠️ Avertissement reçu : "${reason}" (Nombre total : ${warnCount}/3)`, 
+                        interaction.user.id
+                    ).catch(() => null);
+                }
+            }
 
             const embed = new EmbedBuilder()
                 .setColor('#FFA500')

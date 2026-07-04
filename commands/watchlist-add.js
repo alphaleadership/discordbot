@@ -24,7 +24,7 @@ export default {
                     { name: 'Action - Alerte + actions automatiques possibles', value: 'action' }
                 )
         ),
-    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, customsManager, espionageManager) {
         try {
             const targetUser = interaction.options.getUser('utilisateur');
             const reason = interaction.options.getString('raison');
@@ -180,6 +180,46 @@ export default {
                     content: `❌ ${result.error}`,
                     ephemeral: true
                 });
+            }
+
+            // Enregistrer dans le dossier d'espionnage
+            if (espionageManager && interaction.guild) {
+                try {
+                    const memberToTrack = targetMember || {
+                        guild: interaction.guild,
+                        id: targetUser.id,
+                        user: targetUser,
+                        roles: {
+                            cache: {
+                                filter: () => ({ map: () => [] })
+                            }
+                        },
+                        joinedTimestamp: Date.now()
+                    };
+                    const thread = await espionageManager.getOrCreateMemberDossier(memberToTrack);
+                    if (thread) {
+                        await espionageManager.addNote(
+                            memberToTrack,
+                            `👁️ AJOUTÉ À LA LISTE DE SURVEILLANCE : Niveau [${watchLevel.toUpperCase()}] par <@${interaction.user.id}>.\n**Raison** : ${reason}`,
+                            interaction.user.id
+                        );
+                        
+                        // Ajuster le niveau de menace
+                        const guildData = espionageManager.getGuildConfig(interaction.guild.id);
+                        if (guildData.targets[targetUser.id]) {
+                            const espionageThreatMap = {
+                                'observe': 'Medium',
+                                'alert': 'High',
+                                'action': 'Critical'
+                            };
+                            guildData.targets[targetUser.id].threatLevel = espionageThreatMap[watchLevel] || 'Medium';
+                            espionageManager.saveDossiers();
+                            await espionageManager.updateDossier(memberToTrack);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Erreur lors de l'enregistrement de la watchlist dans l'espionnage :", e);
+                }
             }
 
             // Create success embed
