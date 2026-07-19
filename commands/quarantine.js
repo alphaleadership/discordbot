@@ -1,4 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, ChannelType } from 'discord.js';
+import fs from 'fs';
+import path from 'path';
 
 
 export default {
@@ -127,11 +129,40 @@ export default {
             }
 
             try {
+                // Sauvegarder les rôles actuels avant de les enlever
+                const rolesPath = path.join(process.cwd(), 'data', 'quarantine_roles.json');
+                let savedRoles = {};
+                try {
+                    if (fs.existsSync(rolesPath)) {
+                        savedRoles = JSON.parse(fs.readFileSync(rolesPath, 'utf8'));
+                    }
+                } catch (e) {
+                    console.error('Erreur lecture quarantine_roles.json:', e);
+                }
+
+                // Filtrer les rôles gérables et non @everyone
+                const currentRoles = member.roles.cache
+                    .filter(r => r.id !== interaction.guild.roles.everyone.id && r.id !== settings.roleId)
+                    .map(r => r.id);
+
+                savedRoles[`${guildId}_${targetUser.id}`] = currentRoles;
+                
+                const dir = path.dirname(rolesPath);
+                if (!fs.existsSync(dir)) {
+                    fs.mkdirSync(dir, { recursive: true });
+                }
+                fs.writeFileSync(rolesPath, JSON.stringify(savedRoles, null, 2), 'utf8');
+
+                // Enlever tous les autres rôles et attribuer le rôle de quarantaine
+                const rolesToRemove = member.roles.cache.filter(r => r.id !== interaction.guild.roles.everyone.id && r.managed === false);
+                for (const [_, role] of rolesToRemove) {
+                    await member.roles.remove(role).catch(() => null);
+                }
                 await member.roles.add(settings.roleId, `Mis en quarantaine par ${interaction.user.tag} - Raison: ${reason}`);
 
                 const embed = new EmbedBuilder()
                     .setTitle('🔒 Utilisateur en quarantaine')
-                    .setDescription(`${targetUser} a été mis en quarantaine.`)
+                    .setDescription(`${targetUser} a été mis en quarantaine et ses rôles ont été sauvegardés.`)
                     .addFields(
                         { name: 'Raison', value: reason },
                         { name: 'Modérateur', value: interaction.user.tag }
@@ -163,11 +194,36 @@ export default {
             }
 
             try {
+                // Retirer le rôle de quarantaine
                 await member.roles.remove(settings.roleId, `Retiré de la quarantaine par ${interaction.user.tag}`);
+
+                // Restaurer les anciens rôles sauvegardés
+                const rolesPath = path.join(process.cwd(), 'data', 'quarantine_roles.json');
+                let restoredCount = 0;
+                if (fs.existsSync(rolesPath)) {
+                    try {
+                        const savedRoles = JSON.parse(fs.readFileSync(rolesPath, 'utf8'));
+                        const key = `${guildId}_${targetUser.id}`;
+                        if (savedRoles[key]) {
+                            const rolesToRestore = savedRoles[key];
+                            for (const roleId of rolesToRestore) {
+                                const role = interaction.guild.roles.cache.get(roleId);
+                                if (role) {
+                                    await member.roles.add(role).catch(() => null);
+                                    restoredCount++;
+                                }
+                            }
+                            delete savedRoles[key];
+                            fs.writeFileSync(rolesPath, JSON.stringify(savedRoles, null, 2), 'utf8');
+                        }
+                    } catch (e) {
+                        console.error('Erreur restauration des rôles:', e);
+                    }
+                }
 
                 const embed = new EmbedBuilder()
                     .setTitle('🔓 Utilisateur libéré')
-                    .setDescription(`${targetUser} a été retiré de la quarantaine.`)
+                    .setDescription(`${targetUser} a été retiré de la quarantaine et ses rôles (${restoredCount} restauré(s)) ont été remis.`)
                     .setColor('#00ff00')
                     .setTimestamp();
 
