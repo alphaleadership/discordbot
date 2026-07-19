@@ -42,8 +42,7 @@
         },
         "doxDetection": {
           "enabled": true,
-          "autoDelete": true,
-          
+          "autoDelete": true
         },
         "funCommands": {
           "enabled": true,
@@ -123,8 +122,7 @@
         },
         "doxDetection": {
           "enabled": true,
-          "autoDelete": true,
-          
+          "autoDelete": true
         },
         "funCommands": {
           "enabled": true,
@@ -245,8 +243,7 @@
         },
         "doxDetection": {
           "enabled": true,
-          "autoDelete": true,
-          
+          "autoDelete": true
         },
         "funCommands": {
           "enabled": true,

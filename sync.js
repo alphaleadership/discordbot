@@ -126,6 +126,12 @@ async function main() {
         const remoteMessages = './messages';
         const localMessages = path.join(__dirname, 'messages');
         await downloadDirectory(sftp, remoteMessages, localMessages);
+
+        // 4. DOWNLOAD du fichier des dossiers d'espionnage
+        console.log('\n🔄 Récupération des dossiers d\'espionnage du serveur...');
+        const remoteEspionage = './espionage_dossiers.json';
+        const localEspionage = path.join(__dirname, 'espionage_dossiers.json');
+        await downloadFile(sftp, remoteEspionage, localEspionage);
         
         console.log('\n🎉 Synchronisation globale terminée avec succès !');
     } catch (err) {

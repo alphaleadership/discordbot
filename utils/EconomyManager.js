@@ -491,7 +491,8 @@ export class EconomyManager {
             this.ensureUserExists(guildId, userId);
             
             const user = this.economy.guilds[guildId].users[userId];
-            const config = this.economy.guilds[guildId].config;
+            const guild = this.economy.guilds[guildId];
+            const config = guild.config;
             const now = new Date();
             const today = now.toDateString();
             
@@ -509,6 +510,11 @@ export class EconomyManager {
             if (result.success) {
                 user.lastDailyBonus = now.toISOString();
                 await this.saveEconomy();
+                return {
+                    ...result,
+                    amountClaimed: config.dailyBonus,
+                    currentValue: guild.currentValue
+                };
             }
             
             return result;

@@ -1,0 +1,71 @@
+{
+  "guilds": {
+    "1037794097894797442": {
+      "forumChannelId": null,
+      "targets": {
+        "702155370054811658": {
+          "threadId": null,
+          "messageCount": 24,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1212431738219925568": {
+          "threadId": null,
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1070602999329722368": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "781224979919274014": {
+          "threadId": null,
+          "messageCount": 8,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1276746993326231676": {
+          "threadId": null,
+          "messageCount": 8,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1405654925144490115": {
+      "forumChannelId": null,
+      "targets": {
+        "1310282740851146944": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "840985745182425108": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1475239703853928523": {
+      "forumChannelId": "forum-123",
+      "targets": {
+        "user-123": {
+          "threadId": "thread-123",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "lastModified": "2026-07-19T14:18:29.743Z"
+  }
+}

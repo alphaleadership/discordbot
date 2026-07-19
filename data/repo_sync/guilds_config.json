@@ -1,0 +1,1489 @@
+{
+  "_global": {
+    "cleanMessagesOnStartup": true,
+    "supportGuildId": "1254376882888114176",
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000
+  },
+  "844831346727845939": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918935058616482",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "873854534324211743": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936077697187",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1037794097894797442": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "high",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia",
+        "meme"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": true,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918937294180502",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": "1037794097894797442",
+      "minAccountAgeDays": 7,
+      "minGuildJoinDays": 1,
+      "maxWarnings": 1,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": "1517859326705008682",
+      "logChannelId": "1168337085065863311",
+      "bypassRoles": []
+    }
+  },
+  "1057781820869054494": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "high",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia",
+        "meme"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": true,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918939013972029",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1101569746333351986": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936258318356",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1145856849451687976": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1254376882888114176": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936405119080",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1273064561083416576": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1340513779829702721": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1408164216749428837": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1432698141714681949": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936014917713",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1455207252071022656": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936203530412",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1475239703853928523": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918935817654293",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1483835947564011640": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1489641261441749245": {
+    "antiInvite": {
+      "enabled": false,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": false,
+      "rapidJoinThreshold": 5,
+      "timeWindowMs": 60000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": false,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": false
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": false,
+      "cooldownMs": 5000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "meme",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1489946973497725009": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "logChannelId": "1517918936623091904",
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    }
+  },
+  "1516883405873221682": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": "1518581757870608515",
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": true,
+      "channelId": "1518581198371295233"
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    },
+    "logChannelId": "1520006216598814821"
+  },
+  "1405654925144490115": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "announcementChannelId": null,
+    "raidDetection": {
+      "enabled": true,
+      "rapidJoinThreshold": 3,
+      "timeWindowMs": 30000,
+      "whitelistedEvents": [],
+      "protectionLevel": "medium",
+      "autoSlowMode": true,
+      "autoJoinRestrictions": true
+    },
+    "doxDetection": {
+      "enabled": true,
+      "phonePatterns": [
+        "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\+\\d{1,3}[-.]?\\d{1,14}\\b"
+      ],
+      "emailPatterns": [
+        "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+      ],
+      "addressPatterns": [
+        "\\b\\d+\\s+[A-Za-z0-9\\s,.-]+\\b"
+      ],
+      "ssnPatterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ],
+      "exceptions": [],
+      "autoDelete": true
+    },
+    "telegram": {
+      "botToken": "",
+      "channelId": "",
+      "bridgeChannelId": "",
+      "notificationsEnabled": false,
+      "bridgeEnabled": false,
+      "allowedEventTypes": [
+        "moderation",
+        "raid",
+        "dox"
+      ]
+    },
+    "funCommands": {
+      "enabled": true,
+      "cooldownMs": 10000,
+      "enabledCommands": [
+        "joke",
+        "8ball",
+        "trivia"
+      ],
+      "disabledChannels": [],
+      "leaderboardEnabled": true
+    },
+    "watchlist": {
+      "enabled": false,
+      "defaultWatchLevel": "observe",
+      "autoNotifications": true,
+      "reportIntervalHours": 24
+    },
+    "honeypot": {
+      "enabled": false,
+      "channelId": null
+    },
+    "customs": {
+      "enabled": false,
+      "partnerGuildId": null,
+      "requiredRoleId": null,
+      "minAccountAgeDays": 0,
+      "minGuildJoinDays": 0,
+      "maxWarnings": 3,
+      "actionOnFail": "quarantine",
+      "quarantineRoleId": null,
+      "logChannelId": null,
+      "bypassRoles": []
+    },
+    "logChannelId": "1520006217848586431"
+  }
+}

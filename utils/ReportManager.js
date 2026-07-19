@@ -1,4 +1,5 @@
-
+import fs from 'fs';
+import path from 'path';
 import { EmbedBuilder } from 'discord.js';
 
 export class ReportManager {
@@ -42,6 +43,37 @@ export class ReportManager {
                 .setFooter({ text: 'Système de rapport', iconURL: client.user.displayAvatarURL() });
             
             await reportChannel.send({ embeds: [embed] });
+
+            // Envoyer une copie au serveur de support si configuré
+            try {
+                const configPath = path.join(process.cwd(), 'data/forum_reports.json');
+                if (fs.existsSync(configPath)) {
+                    const forumReportsData = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+                    const supportGuildId = forumReportsData.config?.supportGuildId;
+                    const reportsForumId = forumReportsData.config?.reportsForumId;
+                    
+                    if (supportGuildId && reportsForumId) {
+                        const supportGuild = client.guilds.cache.get(supportGuildId);
+                        if (supportGuild) {
+                            const forumChannel = supportGuild.channels.cache.get(reportsForumId);
+                            if (forumChannel && forumChannel.id !== this.REPORT_CHANNEL_ID) {
+                                const threadName = `copie-report-${reported ? reported.username : reportedId}`;
+                                const embedCopy = EmbedBuilder.from(embed)
+                                    .setTitle(`🚨 [COPIE] Nouveau rapport`);
+                                    
+                                await forumChannel.threads.create({
+                                    name: threadName,
+                                    message: {
+                                        embeds: [embedCopy]
+                                    }
+                                }).catch(err => console.error('Erreur lors de la copie du rapport sur le serveur de support:', err));
+                            }
+                        }
+                    }
+                }
+            } catch (err) {
+                console.error('Erreur lors de la lecture de la configuration du serveur de support pour copie:', err);
+            }
             
             return {
                 success: true,

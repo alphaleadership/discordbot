@@ -579,6 +579,21 @@ if (warn.count >= 2) {
         // Si c'est le deuxième avertissement, bannir
         if (warn.count >= 2) {
             try {
+                // Envoyer un message en MP avant de bannir
+                const banUser = await guild.client.users.fetch(userId).catch(() => null);
+                if (banUser) {
+                    const banEmbed = new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('🔨 Bannissement')
+                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
+                        .addFields(
+                            { name: 'Raison', value: `Spam détecté (${speed.toFixed(2)} caractères/seconde, après 2 avertissements)` },
+                            { name: 'Modérateur', value: guild.client.user.tag },
+                            { name: 'Date', value: new Date().toLocaleString('fr-FR') }
+                        );
+                    await banUser.send({ embeds: [banEmbed] }).catch(() => {});
+                }
+
                 await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
                 // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
                 
@@ -671,7 +686,7 @@ for (const token of tokens) {
     const economyManager = new EconomyManager('data/economy.json');
     const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
     const autoConfigManager = new AutoConfigManager(client, guildConfig);
-    const espionageManager = new EspionageManager(client, guildConfig, warnManager);
+    const espionageManager = new EspionageManager(client, guildConfig, warnManager, banlistManager);
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
@@ -689,6 +704,7 @@ for (const token of tokens) {
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
     dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
     const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, undefined, espionageManager);
+    client.commandHandler = commandHandler;
     
     // Initialize EnhancedReloadSystem dependencies after CommandHandler creation
     enhancedReloadSystem.commandHandler = commandHandler;
@@ -706,7 +722,7 @@ for (const token of tokens) {
         doxDetector
     };
 
-    commandHandler.loadCommands();
+    await commandHandler.loadCommands();
 
     // Enregistrer les commandes
     client.once('ready', async () => {
@@ -986,7 +1002,8 @@ for (const token of tokens) {
         
         // Vérifier le spam
         if (!message.author.bot && message.content) {
-            const isSpam = await checkSpam(
+            const isOwner = message.author.id === message.guild.ownerId;
+            const isSpam = !isOwner && await checkSpam(
                 message.author.id,
                 message.content,
                 message.guild,
@@ -1096,16 +1113,17 @@ for (const token of tokens) {
         await messageLogger.saveMessage(message);
           backupToGitHub()
         // Vérifier le spam
-        const isSpam = await checkSpam(message.author.id, message.content, message.guild, interactionHandler);
+        const isOwner = message.author.id === message.guild.ownerId;
+        const isSpam = !isOwner && await checkSpam(message.author.id, message.content, message.guild, interactionHandler);
         
         if (isSpam) {
             // Le message a été traité comme spam et l'utilisateur a été banni
             return;
         }
- const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(message.author.id);
-    if (isAdmin) {
-        return false; // Les administrateurs sont immunisés contre la détection de spam
-    }
+        const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(message.author.id);
+        if (isAdmin || isOwner) {
+            return; // Les admins et le propriétaire sont immunisés contre les filtres suivants
+        }
         // Vérifier les mots bloqués
         if (blockedWordsManager.isBlocked(message.guild.id, message.content)) {
             try {
@@ -1181,6 +1199,11 @@ for (const token of tokens) {
         // Vérifier si l'anti-invite est activé pour ce salon
         if (!guildConfig.isAntiInviteEnabled(message.guild.id, message.channel.id)) {
             return; // Anti-invite désactivé pour ce salon
+        }
+
+        // Le propriétaire est immunisé contre l'anti-invite
+        if (message.author.id === message.guild.ownerId) {
+            return;
         }
 
         // Vérifier si le message contient un lien d'invitation

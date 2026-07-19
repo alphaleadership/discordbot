@@ -1,0 +1,40 @@
+[
+  {
+    "id": "1783631976544_vuxo0k4rk",
+    "timestamp": "2026-07-09T21:19:36.544Z",
+    "component": "watchlist-add",
+    "error": {
+      "name": "DiscordAPIError[10062]",
+      "message": "Unknown interaction",
+      "stack": "DiscordAPIError[10062]: Unknown interaction\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async Object.execute (file:///home/container/commands/watchlist-add.js?t=1783630556704:246:13)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:435:13)\n    at async Client.<anonymous> (file:///home/container/index.js:783:17)",
+      "code": 10062
+    },
+    "context": {
+      "moderatorId": "840985745182425108",
+      "moderatorTag": "vanguard_arbinger",
+      "targetUserId": "1455848916619890782",
+      "guildId": "1405654925144490115",
+      "guildName": "3eme republique de Monteloria cursurien"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1783631976688_lg81xhwc9",
+    "timestamp": "2026-07-09T21:19:36.688Z",
+    "component": "command-execution-watchlist-add",
+    "error": {
+      "name": "DiscordAPIError[10062]",
+      "message": "Unknown interaction",
+      "stack": "DiscordAPIError[10062]: Unknown interaction\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async Object.execute (file:///home/container/commands/watchlist-add.js?t=1783630556704:293:17)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:435:13)\n    at async Client.<anonymous> (file:///home/container/index.js:783:17)",
+      "code": 10062
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1405654925144490115",
+      "guildName": "3eme republique de Monteloria cursurien",
+      "commandName": "watchlist-add"
+    },
+    "logType": "error"
+  }
+]

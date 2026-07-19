@@ -171,6 +171,33 @@ class GuildConfig {
         return guildConfig.antiInvite.enabled === true;
     }
 
+    /**
+     * Définit les paramètres de quarantaine
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} roleId - L'ID du rôle de quarantaine
+     * @param {string} channelId - L'ID du salon de quarantaine
+     */
+    setQuarantineSettings(guildId, roleId, channelId) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        this.config[guildId].quarantine = {
+            roleId,
+            channelId
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère les paramètres de quarantaine
+     * @param {string} guildId - L'ID du serveur
+     * @returns {Object|null} Les paramètres de quarantaine ou null si non configuré
+     */
+    getQuarantineSettings(guildId) {
+        const guildConfig = this.config[guildId];
+        return guildConfig ? guildConfig.quarantine : null;
+    }
+
     reload() {
         this.config = this.loadConfig();
     }

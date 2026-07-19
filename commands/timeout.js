@@ -73,7 +73,7 @@ export default {
             const timeoutEmbed = new EmbedBuilder()
                 .setColor('#FFA500')
                 .setTitle('⏰ Timeout')
-                .setDescription(`Vous avez été mis en timeout sur **${interaction.guild.name}**.`)
+                .setDescription(`Vous avez été mis en timeout sur **${interaction.guild.name}**.\n\n*Si vous souhaitez contester cette sanction ou vous expliquer, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Durée', value: durationStr },

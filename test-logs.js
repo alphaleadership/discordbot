@@ -54,7 +54,12 @@ async function sendLogsToGitHub(logs) {
         const octokit = new Octokit({
             auth: process.env.GITHUB_TOKEN,
             userAgent: 'GitBot Test',
-            timeZone: 'Europe/Paris'
+            timeZone: 'Europe/Paris',
+            request: {
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            }
         });
         
         // Préparer le contenu

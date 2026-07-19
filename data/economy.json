@@ -2,15 +2,15 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:46.016Z",
-    "lastModified": "2026-02-27T08:05:35.498Z"
+    "lastModified": "2026-06-21T06:33:29.104Z"
   },
   "guilds": {
     "1037794097894797442": {
-      "totalCurrency": 2912,
+      "totalCurrency": 2915,
       "baseValue": 1,
       "currentValue": 1,
       "inflationRate": 0,
-      "lastUpdate": "2026-02-02T10:08:26.363Z",
+      "lastUpdate": "2026-06-21T06:33:29.103Z",
       "users": {
         "1036745970077147279": {
           "balance": 66.5,
@@ -97,10 +97,10 @@
           "lastDailyBonus": null
         },
         "840985745182425108": {
-          "balance": 50,
-          "totalEarned": 50,
+          "balance": 51,
+          "totalEarned": 51,
           "totalSpent": 0,
-          "lastActivity": "2026-01-31T21:03:30.535Z",
+          "lastActivity": "2026-06-21T06:33:29.103Z",
           "lastDailyBonus": null
         },
         "1368604399370502165": {
@@ -384,10 +384,10 @@
           "lastDailyBonus": null
         },
         "1218938070246883399": {
-          "balance": 0.5,
-          "totalEarned": 0.5,
+          "balance": 2.5,
+          "totalEarned": 2.5,
           "totalSpent": 0,
-          "lastActivity": "2025-11-03T17:12:49.773Z",
+          "lastActivity": "2026-06-20T16:08:18.888Z",
           "lastDailyBonus": null
         },
         "1157627151332421764": {
@@ -2897,6 +2897,38 @@
           "totalEarned": 2,
           "totalSpent": 0,
           "lastActivity": "2026-01-12T20:58:59.902Z",
+          "lastDailyBonus": null
+        }
+      },
+      "config": {
+        "messageReward": 1,
+        "reactionReward": 0.5,
+        "voiceTimeReward": 2,
+        "dailyBonus": 50,
+        "baseValue": 1,
+        "inflationThreshold": 10000,
+        "deflationThreshold": 1000
+      }
+    },
+    "1455207252071022656": {
+      "totalCurrency": 4,
+      "baseValue": 1,
+      "currentValue": 1.5521460917862246,
+      "inflationRate": 0,
+      "lastUpdate": "2026-06-20T16:18:43.197Z",
+      "users": {
+        "1275065525382414407": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2026-06-20T16:14:03.336Z",
+          "lastDailyBonus": null
+        },
+        "1265017745934913699": {
+          "balance": 2,
+          "totalEarned": 2,
+          "totalSpent": 0,
+          "lastActivity": "2026-06-20T16:18:43.197Z",
           "lastDailyBonus": null
         }
       },

@@ -1,4 +1,4 @@
-import TelegramIntegration from '../../utils/managers/TelegramIntegration.js';
+import TelegramIntegration from '../../utils/TelegramIntegration.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

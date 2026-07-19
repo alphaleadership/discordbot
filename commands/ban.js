@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, ChannelType } from 'discord.js';
 
 export default {
     data: new SlashCommandBuilder()
@@ -66,60 +66,13 @@ export default {
                 });
             }
 
-            // Handle agents: create pending request instead of direct ban
-            if (permissionResult.isAgent) {
-                const pendingResult = await banlistManager.addPendingRequest({
-                    userId: targetUser.id,
-                    username: targetUser.tag,
-                    reason: reason,
-                    moderatorId: interaction.user.id,
-                    moderatorTag: interaction.user.tag,
-                    guildId: interaction.guild.id,
-                    guildName: interaction.guild.name,
-                    deleteMessageDays: deleteMessageDays
-                });
 
-                if (!pendingResult.success) {
-                    return interaction.reply({
-                        content: `❌ Erreur lors de la création de la demande: ${pendingResult.error}`,
-                        ephemeral: true
-                    });
-                }
-
-                const pendingEmbed = new EmbedBuilder()
-                    .setColor('#FFFF00')
-                    .setTitle('⏳ Demande de bannissement soumise')
-                    .setDescription('Votre demande a été enregistrée et doit être validée par un administrateur du bot.')
-                    .addFields(
-                        { name: 'Utilisateur', value: `${targetUser.tag} (${targetUser.id})` },
-                        { name: 'Raison', value: reason },
-                        { name: 'Agent', value: interaction.user.tag }
-                    )
-                    .setFooter({ text: 'ID de la demande: ' + pendingResult.request.id });
-
-                await interaction.reply({ embeds: [pendingEmbed] });
-
-                if (reportManager && reportManager.sendSystemAlert) {
-                    await reportManager.sendSystemAlert(
-                        interaction.client,
-                        '🔨 Nouvelle demande de bannissement (Agent)',
-                        `L'agent **${interaction.user.tag}** demande le bannissement de **${targetUser.tag}**.`,
-                        [
-                            { name: 'Raison', value: reason, inline: false },
-                            { name: 'ID Demande', value: pendingResult.request.id, inline: true }
-                        ],
-                        0xFFFF00
-                    );
-                }
-
-                return;
-            }
 
             // Create ban embed for DM
             const banEmbed = new EmbedBuilder()
                 .setColor('#FF0000')
                 .setTitle('🔨 Bannissement')
-                .setDescription(`Vous avez été banni de **${interaction.guild.name}**.`)
+                .setDescription(`Vous avez été banni de **${interaction.guild.name}**.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Modérateur', value: interaction.user.tag },

@@ -75,7 +75,7 @@ export default {
             const embed = new EmbedBuilder()
                 .setColor('#FFA500')
                 .setTitle(isGlobal ? '⚠️ Avertissement Global' : '⚠️ Avertissement')
-                .setDescription(`Vous avez reçu un avertissement ${isGlobal ? 'global' : `sur ${interaction.guild.name}`}.`)
+                .setDescription(`Vous avez reçu un avertissement ${isGlobal ? 'global' : `sur ${interaction.guild.name}`}.\n\n*Si vous souhaitez contester cette sanction ou vous expliquer, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Avertissements actuels', value: `${warnCount}/3` },
@@ -101,7 +101,7 @@ export default {
                 const banEmbed = new EmbedBuilder()
                     .setColor('#FF0000')
                     .setTitle('🔨 Bannissement')
-                    .setDescription(`Vous avez été banni de ${interaction.guild.name} pour avoir atteint 3 avertissements.`)
+                    .setDescription(`Vous avez été banni de ${interaction.guild.name} pour avoir atteint 3 avertissements.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                     .addFields(
                         { name: 'Dernier avertissement', value: reason },
                         { name: 'Modérateur', value: interaction.user.tag },

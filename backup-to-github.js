@@ -24,7 +24,12 @@ if (process.env.GITHUB_TOKEN) {
     octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
         userAgent: 'GitBot Backup',
-        timeZone: 'Europe/Paris'
+        timeZone: 'Europe/Paris',
+        request: {
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        }
     });
 } else {
     console.error('❌ GITHUB_TOKEN non défini dans .env');

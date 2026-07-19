@@ -2,7 +2,7 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:47.101Z",
-    "lastModified": "2026-02-27T08:05:41.134Z"
+    "lastModified": "2026-07-19T14:17:02.479Z"
   },
   "_settings": {
     "supportServerId": "1254376882888114176",
@@ -244,5 +244,177 @@
         "responseTime": 1
       }
     }
-  }
+  },
+  "_queue": [
+    {
+      "id": "queued-1781640120399-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-16T20:02:00.399Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1781640263854-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-16T20:04:23.854Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1781944395573-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-20T08:33:15.573Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1781960653529-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-20T13:04:13.529Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1781969274846-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-20T15:27:54.846Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782025445375-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-21T07:04:05.375Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782057238121-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-21T15:53:58.121Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782299610565-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-24T11:13:30.565Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782307548463-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-24T13:25:48.463Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782310114301-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-24T14:08:34.301Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782319470360-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-24T16:44:30.360Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782466888019-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-26T09:41:28.019Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782467080085-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-26T09:44:40.085Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782653339598-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-06-28T13:28:59.598Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1782977724459-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-07-02T07:35:24.459Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1783183383091-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-07-04T16:43:03.091Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1784470622479-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-07-19T14:17:02.479Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    }
+  ]
 }

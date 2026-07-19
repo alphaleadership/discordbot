@@ -106,11 +106,6 @@ export class EnhancedReloadSystem extends EventEmitter {
      */
     setupConfigWatching() {
         const configFiles = [
-            'guilds_config.json',
-            'data/admins.json',
-            'data/warnings.json',
-            'data/blocked_words.json',
-            'data/watchlist.json',
             '.env'
         ];
         
@@ -459,7 +454,79 @@ export class EnhancedReloadSystem extends EventEmitter {
         
         console.log(`[EnhancedReloadSystem] Reloading component: ${componentName}`);
         
-        // Call component's reload method if it exists
+        // Define paths and exports for each manager to allow hot reloading source files
+        const componentPaths = {
+            'adminManager': { path: './AdminManager.js', isDefault: true, args: () => [] },
+            'guildConfig': { path: './config/EnhancedGuildConfig.js', isDefault: true, args: () => [] },
+            'reportManager': { path: './ReportManager.js', isDefault: false, key: 'ReportManager', args: () => [] },
+            'banlistManager': { path: './BanlistManager.js', isDefault: false, key: 'BanlistManager', args: () => [] },
+            'blockedWordsManager': { path: './BlockedWordsManager.js', isDefault: false, key: 'BlockedWordsManager', args: () => [] },
+            'watchlistManager': { path: './WatchlistManager.js', isDefault: false, key: 'WatchlistManager', args: () => ['data/watchlist.json', this.managers['reportManager']] },
+            'telegramIntegration': { path: './TelegramIntegration.js', isDefault: false, key: 'TelegramIntegration', args: () => [process.env.TELEGRAM_BOT_TOKEN, this.commandHandler.client] },
+            'funCommandsManager': { path: './managers/FunCommandsManager.js', isDefault: false, key: 'FunCommandsManager', args: () => [this.managers['guildConfig']] },
+            'raidDetector': { path: './managers/RaidDetector.js', isDefault: false, key: 'RaidDetector', args: () => [this.commandHandler.client, this.managers['guildConfig'], this.managers['reportManager']] },
+            'doxDetector': { path: './managers/DoxDetector.js', isDefault: true, args: () => [this.commandHandler.client.warnManager, this.managers['reportManager']] },
+            'customsManager': { path: './managers/CustomsManager.js', isDefault: false, key: 'CustomsManager', args: () => [this.commandHandler.client, this.managers['guildConfig'], this.managers['reportManager']] }
+        };
+
+        const config = componentPaths[componentName];
+        if (config) {
+            try {
+                // Dynamically reimport with cache busting
+                const modulePath = pathToFileURL(path.resolve(path.join('utils', config.path))).href + '?t=' + Date.now();
+                const imported = await import(modulePath);
+                const ComponentClass = config.isDefault ? (imported.default || imported) : imported[config.key];
+                
+                if (ComponentClass) {
+                    const args = config.args();
+                    const newInstance = new ComponentClass(...args);
+                    
+                    // Copy non-function properties from old instance to new instance to preserve basic properties
+                    for (const [key, value] of Object.entries(component)) {
+                        if (typeof value !== 'function' && !['config', 'data', 'cache', 'timers', 'connections'].includes(key)) {
+                            newInstance[key] = value;
+                        }
+                    }
+                    
+                    // Replace in managers map
+                    this.managers[componentName] = newInstance;
+                    
+                    // Update dependencies in other managers
+                    if (componentName === 'reportManager') {
+                        if (newInstance && this.managers['watchlistManager']) this.managers['watchlistManager'].reportManager = newInstance;
+                        if (newInstance && this.managers['raidDetector']) this.managers['raidDetector'].reportManager = newInstance;
+                        if (newInstance && this.managers['doxDetector']) this.managers['doxDetector'].reportManager = newInstance;
+                        if (newInstance && this.managers['customsManager']) this.managers['customsManager'].reportManager = newInstance;
+                        newInstance.moderationLogger = component.moderationLogger;
+                    }
+                    if (componentName === 'guildConfig') {
+                        if (newInstance && this.managers['funCommandsManager']) this.managers['funCommandsManager'].guildConfig = newInstance;
+                        if (newInstance && this.managers['raidDetector']) this.managers['raidDetector'].guildConfig = newInstance;
+                        if (newInstance && this.managers['customsManager']) this.managers['customsManager'].guildConfig = newInstance;
+                    }
+
+                    // Replace in CommandHandler
+                    if (this.commandHandler) {
+                        this.commandHandler[componentName] = newInstance;
+                    }
+                    
+                    console.log(`[EnhancedReloadSystem] Successfully reimported source and instantiated ${componentName}`);
+                    
+                    // Call new instance reload to load files/configs if it has one
+                    if (typeof newInstance.reload === 'function') {
+                        await newInstance.reload();
+                    }
+                    
+                    // Restore preserved state on new instance
+                    this.restorePreservedState(componentName, newInstance);
+                    return;
+                }
+            } catch (importError) {
+                console.error(`[EnhancedReloadSystem] Failed to dynamically reimport ${componentName}, falling back to calling reload() on existing instance:`, importError);
+            }
+        }
+        
+        // Fallback: Call component's reload method if it exists
         if (typeof component.reload === 'function') {
             await component.reload();
         } else {

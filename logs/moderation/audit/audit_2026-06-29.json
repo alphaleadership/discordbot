@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1782730086935_iz8shpcs7",
+    "timestamp": "2026-06-29T10:48:06.935Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "1176852992067129406",
+      "tag": "abb.13k13"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1468703054244352153"
+    },
+    "reason": "insulte a la micronation",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-06-29T10:48:06.937Z"
+  },
+  {
+    "id": "1782730115370_bhzggg6xi",
+    "timestamp": "2026-06-29T10:48:35.370Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "660849271225974784",
+      "tag": "leopoldmescam"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1468703054244352153"
+    },
+    "reason": "insuute a la micronation",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-06-29T10:48:35.370Z"
+  }
+]

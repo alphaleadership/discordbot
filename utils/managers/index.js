@@ -10,6 +10,7 @@ import TelegramIntegration from './TelegramIntegration.js';
 import WatchlistManager from './WatchlistManager.js';
 import FunCommandsManager from './FunCommandsManager.js';
 import EnhancedReloadSystem from './EnhancedReloadSystem.js';
+import { CustomsManager } from './CustomsManager.js';
 
 // Export all managers
 export {
@@ -18,7 +19,8 @@ export {
     TelegramIntegration,
     WatchlistManager,
     FunCommandsManager,
-    EnhancedReloadSystem
+    EnhancedReloadSystem,
+    CustomsManager
 };
 
 // Default export for convenience
@@ -28,5 +30,6 @@ export default {
     TelegramIntegration,
     WatchlistManager,
     FunCommandsManager,
-    EnhancedReloadSystem
+    EnhancedReloadSystem,
+    CustomsManager
 };

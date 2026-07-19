@@ -6,6 +6,97 @@ export class BanlistManager {
         this.pendingFilePath = path.join(process.cwd(), 'data/ban_pending.json');
         this.pendingRequests = [];
         this.loadPendingRequests();
+        
+        this.whitelistFilePath = path.join(process.cwd(), 'data/ban_whitelist.json');
+        this.whitelist = {};
+        this.loadWhitelist();
+    }
+
+    /**
+     * Loads whitelist from file
+     */
+    loadWhitelist() {
+        try {
+            if (fs.existsSync(this.whitelistFilePath)) {
+                const data = fs.readFileSync(this.whitelistFilePath, 'utf-8');
+                this.whitelist = JSON.parse(data);
+                if (Array.isArray(this.whitelist)) {
+                    this.whitelist = {};
+                }
+            } else {
+                this.whitelist = {};
+            }
+        } catch (error) {
+            console.error('Error loading whitelist:', error);
+            this.whitelist = {};
+        }
+    }
+
+    /**
+     * Saves whitelist to file
+     */
+    saveWhitelist() {
+        try {
+            const dir = path.dirname(this.whitelistFilePath);
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            fs.writeFileSync(this.whitelistFilePath, JSON.stringify(this.whitelist, null, 2), 'utf-8');
+            return true;
+        } catch (error) {
+            console.error('Error saving whitelist:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Adds a user to the whitelist of a server
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @returns {boolean} Success
+     */
+    addToWhitelist(userId, guildId) {
+        if (!guildId) return false;
+        if (!this.whitelist[guildId]) {
+            this.whitelist[guildId] = [];
+        }
+        if (!this.whitelist[guildId].includes(userId)) {
+            this.whitelist[guildId].push(userId);
+            this.saveWhitelist();
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Removes a user from the whitelist of a server
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @returns {boolean} Success
+     */
+    removeFromWhitelist(userId, guildId) {
+        if (!guildId || !this.whitelist[guildId]) return false;
+        const index = this.whitelist[guildId].indexOf(userId);
+        if (index !== -1) {
+            this.whitelist[guildId].splice(index, 1);
+            if (this.whitelist[guildId].length === 0) {
+                delete this.whitelist[guildId];
+            }
+            this.saveWhitelist();
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Checks if a user is whitelisted on a server
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @returns {boolean} Whether user is whitelisted
+     */
+    isWhitelisted(userId, guildId) {
+        if (!guildId || !this.whitelist[guildId]) return false;
+        return this.whitelist[guildId].includes(userId);
     }
 
     /**
@@ -90,31 +181,56 @@ export class BanlistManager {
             const request = this.pendingRequests[index];
             if (request.status !== 'pending') return { success: false, error: 'La demande n\'est plus en attente' };
             
-            // Execute ban on server if user is in server or if we have guild
-            if (guild) {
-                try {
-                    await guild.members.ban(request.userId, { reason: `${request.reason} (Validé par ${adminId})` });
-                } catch (banError) {
-                    console.error('Error executing ban during approval:', banError);
-                    // We continue to add to banlist even if server ban fails (might not be in server)
+            const requestType = request.type || 'add';
+            
+            if (requestType === 'remove') {
+                // Execute unban on server if we have guild
+                if (guild) {
+                    try {
+                        await guild.members.unban(request.userId, `${request.reason} (Validé par ${adminId})`);
+                    } catch (unbanError) {
+                        console.error('Error executing unban during approval:', unbanError);
+                    }
                 }
-            }
-            
-            // Add to banlist file
-            const result = await this.addToBanlist(
-                request.userId,
-                request.reason,
-                request.moderatorId
-            );
-            
-            if (result.success) {
-                request.status = 'approved';
-                request.resolvedBy = adminId;
-                request.resolvedAt = new Date().toISOString();
-                this.savePendingRequests();
-                return { success: true };
+                
+                // Remove from banlist file
+                const result = await this.removeFromBanlist(request.userId);
+                
+                if (result.success) {
+                    request.status = 'approved';
+                    request.resolvedBy = adminId;
+                    request.resolvedAt = new Date().toISOString();
+                    this.savePendingRequests();
+                    return { success: true };
+                } else {
+                    return { success: false, error: result.message };
+                }
             } else {
-                return { success: false, error: result.message };
+                // Execute ban on server if user is in server or if we have guild
+                if (guild) {
+                    try {
+                        await guild.members.ban(request.userId, { reason: `${request.reason} (Validé par ${adminId})` });
+                    } catch (banError) {
+                        console.error('Error executing ban during approval:', banError);
+                    }
+                }
+                
+                // Add to banlist file
+                const result = await this.addToBanlist(
+                    request.userId,
+                    request.reason,
+                    request.moderatorId
+                );
+                
+                if (result.success) {
+                    request.status = 'approved';
+                    request.resolvedBy = adminId;
+                    request.resolvedAt = new Date().toISOString();
+                    this.savePendingRequests();
+                    return { success: true };
+                } else {
+                    return { success: false, error: result.message };
+                }
             }
         } catch (error) {
             console.error('Error approving request:', error);
@@ -248,12 +364,55 @@ export class BanlistManager {
     }
 
     /**
+     * Ajoute plusieurs utilisateurs à la liste de bannissement
+     * @param {string[]} userIds - Tableau d'IDs d'utilisateurs
+     * @param {string} reason - La raison du bannissement
+     * @param {string} authorId - L'ID de l'auteur
+     * @returns {Promise<{success: boolean, message: string, added: number, errors: number}>}
+     */
+    async addManyToBanlist(userIds, reason, authorId) {
+        try {
+            let addedCount = 0;
+            let errorCount = 0;
+            
+            for (const userId of userIds) {
+                const result = await this.addToBanlist(userId, reason, authorId);
+                if (result.success) {
+                    addedCount++;
+                } else {
+                    errorCount++;
+                }
+            }
+            
+            return {
+                success: addedCount > 0 || userIds.length === 0,
+                message: `Import terminé: ${addedCount} ajoutés, ${errorCount} erreurs/déjà existants sur ${userIds.length} IDs.`,
+                added: addedCount,
+                errors: errorCount
+            };
+        } catch (error) {
+            console.error('Erreur lors de l\'ajout multiple à la banlist:', error);
+            return {
+                success: false,
+                message: 'Une erreur est survenue lors de l\'importation en masse.',
+                added: 0,
+                errors: userIds.length
+            };
+        }
+    }
+
+    /**
      * Vérifie si un utilisateur est dans la liste de bannissement
      * @param {string} userId - L'ID de l'utilisateur à vérifier
      * @returns {Promise<{banned: boolean, reason: string}>}
      */
-    async isBanned(userId) {
+    async isBanned(userId, guildId = null) {
         try {
+            // Si l'utilisateur est sur la liste blanche (whitelist), on ne le considère pas comme banni
+            if (guildId && this.isWhitelisted(userId, guildId)) {
+                return { banned: false, reason: 'Utilisateur sur la liste blanche (whitelist)' };
+            }
+
             if (!fs.existsSync('banlist.txt')) {
                 return { banned: false, reason: '' };
             }
@@ -277,8 +436,49 @@ export class BanlistManager {
         }
     }
 
+    /**
+     * Retire un utilisateur de la liste de bannissement
+     * @param {string} userId - L'ID de l'utilisateur à retirer
+     * @returns {Promise<{success: boolean, message: string}>}
+     */
+    async removeFromBanlist(userId) {
+        try {
+            if (!fs.existsSync('banlist.txt')) {
+                return {
+                    success: false,
+                    message: "La liste de bannissement est vide."
+                };
+            }
+            
+            const fileContent = fs.readFileSync('banlist.txt', 'utf-8');
+            const lines = fileContent.split('\n').filter(line => line.trim() !== '');
+            
+            const index = lines.findIndex(line => line.startsWith(`${userId} -`));
+            if (index === -1) {
+                return {
+                    success: false,
+                    message: `L'utilisateur avec l'ID ${userId} n'est pas dans la liste de bannissement.`
+                };
+            }
+            
+            lines.splice(index, 1);
+            fs.writeFileSync('banlist.txt', lines.join('\n') + (lines.length > 0 ? '\n' : ''), 'utf-8');
+            
+            return {
+                success: true,
+                message: `L'utilisateur avec l'ID ${userId} a été retiré de la liste de bannissement.`
+            };
+        } catch (error) {
+            console.error('Erreur lors du retrait de la banlist:', error);
+            return {
+                success: false,
+                message: 'Une erreur est survenue lors du retrait de la liste de bannissement.'
+            };
+        }
+    }
+
     reload() {
-        // BanlistManager n'a pas de fichier de configuration à recharger
-        console.log('BanlistManager rechargé (pas de fichier de configuration).');
+        this.loadWhitelist();
+        console.log('BanlistManager rechargé.');
     }
 }

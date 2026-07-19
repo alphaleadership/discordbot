@@ -55,7 +55,7 @@ export default {
             }
 
             const embed = new EmbedBuilder()
-                .setTitle('⏳ Demandes d\'ajout à la banlist en attente')
+                .setTitle('⏳ Demandes de banlist en attente')
                 .setDescription(`Il y a actuellement **${pendingRequests.length}** demande(s) en attente de validation.`)
                 .setColor('#FFA500')
                 .setTimestamp()
@@ -63,9 +63,10 @@ export default {
 
             // Afficher les 10 premières demandes
             pendingRequests.slice(0, 10).forEach(request => {
+                const requestType = request.type === 'remove' ? '📤 **Retrait**' : '📥 **Ajout**';
                 embed.addFields({
                     name: `Demande ID: ${request.id}`,
-                    value: `👤 **Utilisateur:** ${request.username} (${request.userId})\n👮 **Modérateur:** ${request.moderatorTag} (${request.moderatorId})\n📝 **Raison:** ${request.reason}\n🏠 **Serveur:** ${request.guildName}\n📅 **Date:** ${new Date(request.timestamp).toLocaleString('fr-FR')}`,
+                    value: `Type: ${requestType}\n👤 **Utilisateur:** ${request.username} (${request.userId})\n👮 **Modérateur:** ${request.moderatorTag} (${request.moderatorId})\n📝 **Raison:** ${request.reason}\n🏠 **Serveur:** ${request.guildName}\n📅 **Date:** ${new Date(request.timestamp).toLocaleString('fr-FR')}`,
                     inline: false
                 });
             });
@@ -90,10 +91,14 @@ export default {
             const result = await banlistManager.approveRequest(requestId, interaction.user.id, interaction.guild);
 
             if (result.success) {
+                const actionText = request?.type === 'remove' 
+                    ? "retiré de la banlist et débanni du serveur si présent" 
+                    : "ajouté à la banlist et banni du serveur si présent";
+
                 // Tentative de logging si le manager est disponible
                 if (reportManager && reportManager.moderationLogger && request) {
                     await reportManager.moderationLogger.logModerationAction({
-                        type: 'banlist-approved',
+                        type: request.type === 'remove' ? 'banlist-remove-approved' : 'banlist-approved',
                         moderatorId: interaction.user.id,
                         moderatorTag: interaction.user.tag,
                         targetId: request.userId,
@@ -112,7 +117,7 @@ export default {
                 }
 
                 return interaction.editReply({
-                    content: `✅ La demande **${requestId}** a été approuvée avec succès. L'utilisateur a été ajouté à la banlist et banni du serveur si présent.`
+                    content: `✅ La demande **${requestId}** a été approuvée avec succès. L'utilisateur a été ${actionText}.`
                 });
             } else {
                 return interaction.editReply({

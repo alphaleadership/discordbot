@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1783275396830_67grzzx7r",
+    "timestamp": "2026-07-05T18:16:36.830Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "1204140730654793751",
+      "tag": "totocach"
+    },
+    "guild": {
+      "id": "1475239703853928523",
+      "name": "Service espionnage Gouvernemental Monteloria"
+    },
+    "channel": {
+      "id": "1475450318446792774"
+    },
+    "reason": "virée du renseignement",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": true,
+      "targetInGuild": true
+    },
+    "logType": "moderation_action"
+  }
+]

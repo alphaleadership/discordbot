@@ -10,8 +10,7 @@ export default {
                 .setRequired(true)),
     
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator,EconomyManager,ForumReportManager ,AutoConfigManager, dmTicketManager) {
-        console.log(typeof dmTicketManager)
-        console.log(dmTicketManager)
+
         try {
             // Check if user is an admin
             if (!adminManager.isAdmin(interaction.user.id)) {

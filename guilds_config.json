@@ -1064,15 +1064,15 @@
     },
     "logChannelId": "1517918935817654293",
     "customs": {
-      "enabled": false,
-      "partnerGuildId": null,
-      "requiredRoleId": null,
-      "minAccountAgeDays": 0,
+      "enabled": true,
+      "partnerGuildId": "1483835947564011640",
+      "requiredRoleId": "1460158389450444883",
+      "minAccountAgeDays": 7,
       "minGuildJoinDays": 0,
       "maxWarnings": 3,
       "actionOnFail": "quarantine",
-      "quarantineRoleId": null,
-      "logChannelId": null,
+      "quarantineRoleId": "1524770829399756911",
+      "logChannelId": "1520006217848586431",
       "bypassRoles": []
     }
   },

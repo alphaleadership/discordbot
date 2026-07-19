@@ -30,7 +30,7 @@ export default {
                 .setDescription('Nom de la commande spécifique à recharger (optionnel)')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, enhancedReloadSystem) {
+    async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         // Vérifier les permissions administrateur
         if (!adminManager.isAdmin(interaction.user.id)) {
             return interaction.reply({

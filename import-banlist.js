@@ -60,7 +60,6 @@ function extractIds(text) {
         if (!matches) continue;
         for (const m of matches) ids.add(m);
     }
-    console.log(ids)
     return Array.from(ids);
 }
 

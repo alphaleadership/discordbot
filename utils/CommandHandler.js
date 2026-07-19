@@ -161,7 +161,7 @@ export class CommandHandler {
             commandList.forEach(cmd => {
                 const type = this.isModerationCommand(cmd.name) ? '[MOD]' :
                     this.isWatchlistCommand(cmd.name) ? '[WATCH]' : '[OTHER]';
-                console.log(`  ${type} /${cmd.name} (ID: ${cmd.id})`);
+                console.log(`🚀 [PUBLIÉ] Commande slash active et publiée: /${cmd.name} (Type: ${type}, ID: ${cmd.id})`);
             });
 
             return {

@@ -224,7 +224,11 @@ describe('CommandHandler', () => {
                 mockManagers.raidDetector,
                 mockManagers.doxDetector,
                 mockManagers.enhancedReloadSystem,
-                mockManagers.permissionValidator
+                mockManagers.permissionValidator,
+                undefined,
+                undefined,
+                undefined,
+                undefined
             );
         });
 
