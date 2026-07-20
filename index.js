@@ -523,6 +523,29 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
         }
 if (warn.count >= 2) {
             try {
+                // Envoyer un message en MP avant de bannir
+                const banUser = await guild.client.users.fetch(userId).catch(() => null);
+                if (banUser) {
+                    const banEmbed = new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('🔨 Bannissement')
+                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
+                        .addFields(
+                            { name: 'Raison', value: `lien suspect (après 2 avertissements)` },
+                            { name: 'Modérateur', value: guild.client.user.tag },
+                            { name: 'Date', value: new Date().toLocaleString('fr-FR') }
+                        );
+                    await banUser.send({ embeds: [banEmbed] }).catch(() => {});
+                }
+
                 await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
                 // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
                 
@@ -585,7 +608,15 @@ if (warn.count >= 2) {
                     const banEmbed = new EmbedBuilder()
                         .setColor('#FF0000')
                         .setTitle('🔨 Bannissement')
-                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
+                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                         .addFields(
                             { name: 'Raison', value: `Spam détecté (${speed.toFixed(2)} caractères/seconde, après 2 avertissements)` },
                             { name: 'Modérateur', value: guild.client.user.tag },
@@ -1159,7 +1190,15 @@ for (const token of tokens) {
                     const banEmbed = new EmbedBuilder()
                         .setColor('#FF0000')
                         .setTitle('🔨 Bannissement')
-                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.`)
+                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                         .addFields(
                             { name: 'Dernier avertissement', value: 'Utilisation de mots bloqués' },
                             { name: 'Date', value: new Date().toLocaleString('fr-FR') }
@@ -1245,11 +1284,18 @@ for (const token of tokens) {
                         reason: '3 avertissements atteints (liens d\'invitation)'
                     }).catch(console.error);
                     
-                    // Envoyer un message de bannissement
                     const banEmbed = new EmbedBuilder()
                         .setColor('#FF0000')
                         .setTitle('🔨 Bannissement')
-                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.`)
+                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                         .addFields(
                             { name: 'Dernier avertissement', value: 'Envoi de lien d\'invitation non autorisé' },
                             { name: 'Date', value: new Date().toLocaleString('fr-FR') }
