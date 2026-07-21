@@ -1,4 +1,12 @@
-function login() {
+function checkAuth() {
+    const savedPassword = localStorage.getItem('admin_password');
+    if (savedPassword) {
+        document.getElementById('password').value = savedPassword;
+        login(true);
+    }
+}
+
+function login(isAuto = false) {
     const password = document.getElementById('password').value;
     fetch('/login', {
         method: 'POST',
@@ -8,15 +16,22 @@ function login() {
     .then(res => res.json())
     .then(data => {
         if (data.success) {
+            localStorage.setItem('admin_password', password);
             document.getElementById('login-container').style.display = 'none';
             document.getElementById('control-panel').style.display = 'block';
             loadBanlist();
             loadServers();
         } else {
-            alert('Incorrect password');
+            localStorage.removeItem('admin_password');
+            if (!isAuto) {
+                alert('Incorrect password');
+            }
         }
     });
 }
+
+// Check auth on load
+window.addEventListener('DOMContentLoaded', checkAuth);
 
 function loadBanlist() {
     fetch('/banlist')
