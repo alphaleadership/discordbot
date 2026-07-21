@@ -679,6 +679,7 @@ function cleanMessageStorage() {
 cleanMessageStorage();
 
 // Créer les clients pour chaque token
+const clients = [];
 for (const token of tokens) {
     const client = new Client({
         intents: [
@@ -1485,7 +1486,7 @@ NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUN
         console.error(`Failed to login with token: ${token.substring(0, 5)}...`, error);
     });
 
-    //clients.push(client);
+    clients.push(client);
 }
 
 const app = express();
