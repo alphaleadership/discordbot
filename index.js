@@ -1491,7 +1491,20 @@ NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUN
 
 const app = express();
 app.use(express.json());
-app.use(express.static('public'));
+
+// Désactiver le cache pour toutes les requêtes (API et statiques)
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+});
+
+app.use(express.static('public', {
+    etag: false,
+    lastModified: false,
+    setHeaders: (res, path) => {
+        res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    }
+}));
 
 // --- Configuration de la sauvegarde GitHub ---
 let logQueue = [];
