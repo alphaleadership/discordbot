@@ -1915,8 +1915,8 @@ app.get('/messages', async (req, res) => {
 
 // Démarrer le serveur web seulement si activé
 if (webServerEnabled) {
-    app.listen(3000, () => {
-        console.log('Web server listening on port 3000');
+    app.listen(10004, () => {
+        console.log('Web server listening on port 10004');
     });
 } else {
     console.log('Web server disabled. Set WEB_SERVER_ENABLED=true in .env to enable it.');

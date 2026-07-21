@@ -68,11 +68,18 @@ export default {
 
 
 
-            // Create ban embed for DM
             const banEmbed = new EmbedBuilder()
                 .setColor('#FF0000')
                 .setTitle('🔨 Bannissement')
-                .setDescription(`Vous avez été banni de **${interaction.guild.name}**.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
+                .setDescription(`Vous avez été banni de **${interaction.guild.name}**.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Modérateur', value: interaction.user.tag },
