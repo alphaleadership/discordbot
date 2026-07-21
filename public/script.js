@@ -27,7 +27,18 @@ function loadBanlist() {
 }
 
 function updateBanlist() {
-    const banlist = document.getElementById('banlist').value;
+    const rawInput = document.getElementById('banlist').value;
+    
+    // Parser front-end : extraire les ID numériques valides (17 à 20 chiffres) et supprimer les doublons et les lignes vides
+    const cleanedIds = Array.from(new Set(
+        rawInput.split(/[\n,;\s]+/)
+            .map(id => id.trim())
+            .filter(id => /^\d{17,20}$/.test(id))
+    ));
+    
+    const banlist = cleanedIds.join('\n');
+    document.getElementById('banlist').value = banlist; // Mettre à jour le champ visuel avec les données propres
+    
     fetch('/banlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -36,9 +47,9 @@ function updateBanlist() {
     .then(res => res.json())
     .then(data => {
         if (data.success) {
-            log('Banlist updated successfully.');
+            log(`Banlist mise à jour avec succès (${cleanedIds.length} ID(s) valide(s) enregistré(s)).`);
         } else {
-            log('Error updating banlist.');
+            log('Erreur lors de la mise à jour de la banlist.');
         }
     });
 }
