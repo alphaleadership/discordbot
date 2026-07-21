@@ -1877,7 +1877,7 @@ app.get('/channels', (req, res) => {
         return res.status(404).send('Server not found.');
     }
 
-    const textChannels = guild.channels.cache.filter(channel => channel.type === 0); // 0 for GUILD_TEXT
+    const textChannels = guild.channels.cache.filter(channel => channel.type === ChannelType.GuildText);
     const channelList = textChannels.map(channel => ({ id: channel.id, name: channel.name }));
     res.json(channelList);
 });
@@ -1895,7 +1895,7 @@ app.get('/messages', async (req, res) => {
     }
 
     const channel = guild.channels.cache.get(channelId);
-    if (!channel || channel.type !== 0) { // 0 for GUILD_TEXT
+    if (!channel || channel.type !== ChannelType.GuildText) {
         return res.status(404).send('Text channel not found.');
     }
 
