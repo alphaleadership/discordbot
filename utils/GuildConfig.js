@@ -198,6 +198,33 @@ class GuildConfig {
         return guildConfig ? guildConfig.quarantine : null;
     }
 
+    /**
+     * Définit les paramètres de prise de service
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} roleId - L'ID du rôle de service
+     * @param {string} logChannelId - L'ID du salon de logs de service
+     */
+    setServiceSettings(guildId, roleId, logChannelId) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        this.config[guildId].service = {
+            roleId,
+            logChannelId
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère les paramètres de prise de service
+     * @param {string} guildId - L'ID du serveur
+     * @returns {Object|null} Les paramètres de service ou null si non configurés
+     */
+    getServiceSettings(guildId) {
+        const guildConfig = this.config[guildId];
+        return guildConfig ? guildConfig.service : null;
+    }
+
     reload() {
         this.config = this.loadConfig();
     }
