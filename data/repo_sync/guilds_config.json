@@ -1484,6 +1484,10 @@
       "logChannelId": null,
       "bypassRoles": []
     },
-    "logChannelId": "1520006217848586431"
+    "logChannelId": "1520006217848586431",
+    "service": {
+      "roleId": "1489641261441749245",
+      "logChannelId": "1520006217848586431"
+    }
   }
 }

@@ -1321,5 +1321,17 @@
       "logChannelId": null,
       "bypassRoles": []
     }
+  },
+  "1405654925144490115": {
+    "antiInvite": {
+      "enabled": true,
+      "whitelistedChannels": []
+    },
+    "charLimit": 2000,
+    "logChannelId": "1520006217848586431",
+    "service": {
+      "roleId": "1489641261441749245",
+      "logChannelId": "1520006217848586431"
+    }
   }
 }
