@@ -1805,9 +1805,17 @@ app.post('/massban', async (req, res) => {
             return res.status(500).json({ message: 'Error reading banlist.txt' });
         }
 
-        const idsToBan = data.split(/\r?\n/).filter(id => id.trim() !== '');
+        const idsToBan = data.split(/\r?\n/)
+            .map(line => {
+                const cleanLine = line.trim();
+                const idPart = cleanLine.split(/[\s\-;,#]+/)[0].trim();
+                return idPart;
+            })
+            .filter(id => /^\d{17,20}$/.test(id))
+            .filter((id, index, self) => self.indexOf(id) === index);
+
         if (idsToBan.length === 0) {
-            return res.status(400).json({ message: 'The ban list is empty.' });
+            return res.status(400).json({ message: 'The ban list does not contain any valid Discord user IDs.' });
         }
 
         let successfulBans = 0;

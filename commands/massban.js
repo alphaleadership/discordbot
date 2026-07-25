@@ -34,9 +34,14 @@ export default {
             if (fs.existsSync('banlist.txt')) {
                 const fileContent = fs.readFileSync('banlist.txt', 'utf-8');
                 userIds = fileContent
-                    .split('\n')
-                    .filter(line => line.trim() !== '')
-                    .map(line => line.split(' - ')[0].trim())
+                    .split(/\r?\n/)
+                    .map(line => {
+                        const cleanLine = line.trim();
+                        // Supprimer tout texte après un espace, tiret, virgule, point-virgule ou dièse
+                        const idPart = cleanLine.split(/[\s\-;,#]+/)[0].trim();
+                        return idPart;
+                    })
+                    .filter(id => /^\d{17,20}$/.test(id))
                     .filter((id, index, self) => self.indexOf(id) === index);
             } else {
                 return interaction.editReply({
