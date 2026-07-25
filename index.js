@@ -1805,29 +1805,39 @@ app.post('/massban', async (req, res) => {
             return res.status(500).json({ message: 'Error reading banlist.txt' });
         }
 
-        const idsToBan = data.split(/\r?\n/)
-            .map(line => {
-                const cleanLine = line.trim();
-                const idPart = cleanLine.split(/[\s\-;,#]+/)[0].trim();
-                return idPart;
-            })
-            .filter(id => /^\d{17,20}$/.test(id))
-            .filter((id, index, self) => self.indexOf(id) === index);
+        const bansToExecute = [];
+        const uniqueIds = new Set();
+        
+        data.split(/\r?\n/).forEach(line => {
+            const cleanLine = line.trim();
+            if (!cleanLine) return;
 
-        if (idsToBan.length === 0) {
+            const parts = cleanLine.split('|');
+            const firstPart = parts[0].trim();
+            const id = firstPart.split(/[\s\-;,#]+/)[0].trim();
+            
+            if (/^\d{17,20}$/.test(id) && !uniqueIds.has(id)) {
+                uniqueIds.add(id);
+                const inlineReason = parts.slice(1).join('|').trim();
+                bansToExecute.push({ id, inlineReason: inlineReason || null });
+            }
+        });
+
+        if (bansToExecute.length === 0) {
             return res.status(400).json({ message: 'The ban list does not contain any valid Discord user IDs.' });
         }
 
         let successfulBans = 0;
         let failedBans = 0;
 
-        for (const id of idsToBan) {
+        for (const banInfo of bansToExecute) {
             try {
-                await guild.members.ban(id, { reason: 'Mass ban from web interface.' });
+                const banReason = banInfo.inlineReason ? banInfo.inlineReason : 'Mass ban from web interface.';
+                await guild.members.ban(banInfo.id, { reason: `Massban: ${banReason}` });
                 successfulBans++;
             } catch (error) {
                 failedBans++;
-                console.error(`Failed to ban ${id} on server ${guild.name}:`, error);
+                console.error(`Failed to ban ${banInfo.id} on server ${guild.name}:`, error);
             }
         }
 
