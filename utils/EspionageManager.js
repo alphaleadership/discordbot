@@ -504,7 +504,17 @@ export class EspionageManager {
             const banGuildId = member?.guild?.id || ESPIONAGE_GUILD_ID;
             const banCheck = await this.banlistManager.isBanned(user.id, banGuildId);
             if (banCheck.banned) {
-                banStatusText = `🔴 **BANNI**\n**Raison :** ${banCheck.reason}`;
+                banStatusText = `🔴 **BANNI (Banlist Interne)**\n**Raison :** ${banCheck.reason}`;
+            } else if (member?.guild) {
+                // Tenter de récupérer le ban directement depuis Discord pour voir s'il y a un ban actif et sa raison
+                try {
+                    const discordBan = await member.guild.bans.fetch(user.id).catch(() => null);
+                    if (discordBan) {
+                        banStatusText = `🔴 **BANNI (Discord)**\n**Raison :** ${discordBan.reason || 'Aucune raison spécifiée dans l\'audit log'}`;
+                    }
+                } catch (e) {
+                    // Ignorer les erreurs de permission si le bot ne peut pas lister les bans
+                }
             }
         }
 

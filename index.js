@@ -4,6 +4,7 @@ import { Octokit } from '@octokit/rest';
 import express from 'express';
 import dotenv from 'dotenv';
 import cron from 'node-cron';
+import { WebSocketServer } from 'ws';
 import MessageLogger from './utils/MessageLogger.js';
 import AdminManager from './utils/AdminManager.js';
 import { InteractionHandler } from './utils/InteractionHandler.js';
@@ -1781,6 +1782,7 @@ app.post('/github-webhook', async (req, res) => {
                                  .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.')
                                  .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
                             await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'issue', action: payload.action, repository: `${repoOwner}/${repoName}`, number: issue.number, title: issue.title, author: payload.sender.login, url: issue.html_url });
                         } 
                         else if (event === 'pull_request' && ['opened', 'closed', 'reopened'].includes(payload.action)) {
                             const pr = payload.pull_request;
@@ -1794,6 +1796,7 @@ app.post('/github-webhook', async (req, res) => {
                                  .setColor(prColor)
                                  .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
                             await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'pull_request', action: actionLabel, repository: `${repoOwner}/${repoName}`, number: pr.number, title: pr.title, author: payload.sender.login, url: pr.html_url });
                         }
                         else if (event === 'issue_comment' && payload.action === 'created') {
                             const comment = payload.comment;
@@ -1803,6 +1806,7 @@ app.post('/github-webhook', async (req, res) => {
                                  .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
                                  .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
                             await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'comment', target: isPR ? 'pull_request' : 'issue', repository: `${repoOwner}/${repoName}`, number: payload.issue.number, author: payload.sender.login, content: comment.body, url: comment.html_url });
                         }
                         else if (event === 'pull_request_review_comment' && payload.action === 'created') {
                             const comment = payload.comment;
@@ -1811,6 +1815,7 @@ app.post('/github-webhook', async (req, res) => {
                                  .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
                                  .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
                             await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'review_comment', repository: `${repoOwner}/${repoName}`, number: payload.pull_request.number, author: payload.sender.login, content: comment.body, url: comment.html_url });
                         }
                         else if (event === 'release' && payload.action === 'published') {
                             const release = payload.release;
@@ -1820,6 +1825,7 @@ app.post('/github-webhook', async (req, res) => {
                                  .setColor('#0969da')
                                  .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
                             await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'release', action: 'published', repository: `${repoOwner}/${repoName}`, tag: release.tag_name, name: release.name || release.tag_name, author: payload.sender.login, url: release.html_url });
                         }
                     }
                 }
@@ -2028,13 +2034,37 @@ app.get('/messages', async (req, res) => {
 });
 
 
+let serverInstance;
+
 // Démarrer le serveur web seulement si activé
 if (webServerEnabled) {
-    app.listen(10004, () => {
+    serverInstance = app.listen(10004, () => {
         console.log('Web server listening on port 10004');
     });
 } else {
     console.log('Web server disabled. Set WEB_SERVER_ENABLED=true in .env to enable it.');
+}
+
+// WebSocket Server
+let wss = null;
+if (serverInstance) {
+    wss = new WebSocketServer({ server: serverInstance });
+    wss.on('connection', (ws) => {
+        console.log('[WS] Client connected');
+        ws.send(JSON.stringify({ type: 'welcome', message: 'Connected to GitBot WebSocket API' }));
+    });
+}
+
+// Fonction globale pour diffuser un message en temps réel aux clients connectés
+function broadcastWs(data) {
+    if (wss) {
+        const msg = JSON.stringify(data);
+        wss.clients.forEach(client => {
+            if (client.readyState === 1) { // 1 = OPEN
+                client.send(msg);
+            }
+        });
+    }
 }
 
 // --- Système de polling Cron + Octokit pour les dépôts GitHub liés ---
