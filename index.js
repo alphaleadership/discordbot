@@ -3,6 +3,7 @@ import fs from 'fs';
 import { Octokit } from '@octokit/rest';
 import express from 'express';
 import dotenv from 'dotenv';
+import cron from 'node-cron';
 import MessageLogger from './utils/MessageLogger.js';
 import AdminManager from './utils/AdminManager.js';
 import { InteractionHandler } from './utils/InteractionHandler.js';
@@ -1747,6 +1748,88 @@ async function processLogQueue() {
 }
 
 // Web Server
+app.post('/github-webhook', async (req, res) => {
+    const event = req.headers['x-github-event'];
+    const payload = req.body;
+
+    if (!payload || !payload.repository) {
+        return res.status(400).send('Invalid webhook payload');
+    }
+
+    const repoOwner = payload.repository.owner.login;
+    const repoName = payload.repository.name;
+
+    // Parcourir tous les serveurs et leurs configurations pour trouver les salons liés à ce dépôt
+    for (const client of clients) {
+        for (const guild of client.guilds.cache.values()) {
+            const guildSettings = guildConfig.config[guild.id];
+            if (guildSettings && guildSettings.githubLinks) {
+                for (const [channelId, linkSettings] of Object.entries(guildSettings.githubLinks)) {
+                    if (
+                        linkSettings.owner.toLowerCase() === repoOwner.toLowerCase() &&
+                        linkSettings.repo.toLowerCase() === repoName.toLowerCase()
+                    ) {
+                        const channel = guild.channels.cache.get(channelId);
+                        if (!channel) continue;
+
+                        let embed = new EmbedBuilder().setColor('#24292f').setTimestamp();
+
+                        if (event === 'issues' && ['opened', 'closed', 'reopened'].includes(payload.action)) {
+                            const issue = payload.issue;
+                            embed.setTitle(`🛠️ Issue ${payload.action}: #${issue.number} ${issue.title}`)
+                                 .setURL(issue.html_url)
+                                 .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.')
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                        } 
+                        else if (event === 'pull_request' && ['opened', 'closed', 'reopened'].includes(payload.action)) {
+                            const pr = payload.pull_request;
+                            const isMerged = payload.action === 'closed' && pr.merged;
+                            const actionLabel = isMerged ? 'merged' : payload.action;
+                            const prColor = isMerged ? '#8250df' : (payload.action === 'closed' ? '#cf222e' : '#2da44e');
+                            
+                            embed.setTitle(`🔀 Pull Request ${actionLabel}: #${pr.number} ${pr.title}`)
+                                 .setURL(pr.html_url)
+                                 .setDescription(pr.body ? (pr.body.length > 200 ? pr.body.substring(0, 200) + '...' : pr.body) : 'Aucune description.')
+                                 .setColor(prColor)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                        }
+                        else if (event === 'issue_comment' && payload.action === 'created') {
+                            const comment = payload.comment;
+                            const isPR = !!payload.issue.pull_request;
+                            embed.setTitle(`💬 Nouveau commentaire sur ${isPR ? 'la PR' : 'l\'issue'} #${payload.issue.number}`)
+                                 .setURL(comment.html_url)
+                                 .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                        }
+                        else if (event === 'pull_request_review_comment' && payload.action === 'created') {
+                            const comment = payload.comment;
+                            embed.setTitle(`💬 Nouveau commentaire de revue sur la PR #${payload.pull_request.number}`)
+                                 .setURL(comment.html_url)
+                                 .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                        }
+                        else if (event === 'release' && payload.action === 'published') {
+                            const release = payload.release;
+                            embed.setTitle(`🚀 Nouvelle Release publiée: ${release.tag_name} (${release.name || release.tag_name})`)
+                                 .setURL(release.html_url)
+                                 .setDescription(release.body ? (release.body.length > 300 ? release.body.substring(0, 300) + '...' : release.body) : 'Aucun changelog.')
+                                 .setColor('#0969da')
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    res.status(200).send('Webhook processed');
+});
+
 app.post('/login', (req, res) => {
     if (req.body.password === webPassword) {
         res.json({ success: true });
@@ -1953,3 +2036,122 @@ if (webServerEnabled) {
 } else {
     console.log('Web server disabled. Set WEB_SERVER_ENABLED=true in .env to enable it.');
 }
+
+// --- Système de polling Cron + Octokit pour les dépôts GitHub liés ---
+const processedEvents = new Map(); // key: channelId_repo -> { lastIssueCheck: Date, lastPrCheck: Date, lastReleaseCheck: Date, lastCommentCheck: Date }
+
+cron.schedule('* * * * *', async () => {
+    if (!octokit) return;
+
+    for (const client of clients) {
+        for (const guild of client.guilds.cache.values()) {
+            const guildSettings = guildConfig.config[guild.id];
+            if (guildSettings && guildSettings.githubLinks) {
+                for (const [channelId, linkSettings] of Object.entries(guildSettings.githubLinks)) {
+                    const channel = guild.channels.cache.get(channelId);
+                    if (!channel) continue;
+
+                    const repoOwner = linkSettings.owner;
+                    const repoName = linkSettings.repo;
+                    const mapKey = `${channelId}_${repoOwner}/${repoName}`;
+
+                    if (!processedEvents.has(mapKey)) {
+                        processedEvents.set(mapKey, {
+                            lastCheck: new Date()
+                        });
+                        continue; // skip first run to establish reference timestamp
+                    }
+
+                    const state = processedEvents.get(mapKey);
+                    const now = new Date();
+
+                    try {
+                        // 1. Issues & Pull Requests (using /issues api list)
+                        const issuesResponse = await octokit.issues.listForRepo({
+                            owner: repoOwner,
+                            repo: repoName,
+                            state: 'all',
+                            since: state.lastCheck.toISOString(),
+                            per_page: 10
+                        });
+
+                        for (const issue of issuesResponse.data) {
+                            const isPR = !!issue.pull_request;
+                            const createdTime = new Date(issue.created_at);
+                            const updatedTime = new Date(issue.updated_at);
+
+                            // Nouveau ticket
+                            if (createdTime > state.lastCheck) {
+                                const embed = new EmbedBuilder()
+                                    .setColor(isPR ? '#2da44e' : '#24292f')
+                                    .setTimestamp(createdTime)
+                                    .setAuthor({ name: issue.user.login, iconURL: issue.user.avatar_url })
+                                    .setURL(issue.html_url);
+
+                                if (isPR) {
+                                    embed.setTitle(`🔀 Pull Request ouverte: #${issue.number} ${issue.title}`)
+                                         .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.');
+                                } else {
+                                    embed.setTitle(`🛠️ Issue ouverte: #${issue.number} ${issue.title}`)
+                                         .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.');
+                                }
+                                await channel.send({ embeds: [embed] }).catch(() => {});
+                            }
+
+                            // Commentaires sur ce ticket (récupérer s'il y a eu de l'activité)
+                            if (updatedTime > state.lastCheck) {
+                                const commentsResponse = await octokit.issues.listComments({
+                                    owner: repoOwner,
+                                    repo: repoName,
+                                    issue_number: issue.number,
+                                    since: state.lastCheck.toISOString()
+                                });
+
+                                for (const comment of commentsResponse.data) {
+                                    const commentCreated = new Date(comment.created_at);
+                                    if (commentCreated > state.lastCheck) {
+                                        const embed = new EmbedBuilder()
+                                            .setColor('#24292f')
+                                            .setTimestamp(commentCreated)
+                                            .setAuthor({ name: comment.user.login, iconURL: comment.user.avatar_url })
+                                            .setURL(comment.html_url)
+                                            .setTitle(`💬 Nouveau commentaire sur ${isPR ? 'la PR' : 'l\'issue'} #${issue.number}`)
+                                            .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body);
+                                        await channel.send({ embeds: [embed] }).catch(() => {});
+                                    }
+                                }
+                            }
+                        }
+
+                        // 2. Releases
+                        const releasesResponse = await octokit.repos.listReleases({
+                            owner: repoOwner,
+                            repo: repoName,
+                            per_page: 5
+                        });
+
+                        for (const release of releasesResponse.data) {
+                            const publishedTime = new Date(release.published_at);
+                            if (publishedTime > state.lastCheck) {
+                                const embed = new EmbedBuilder()
+                                    .setColor('#0969da')
+                                    .setTimestamp(publishedTime)
+                                    .setAuthor({ name: release.author.login, iconURL: release.author.avatar_url })
+                                    .setURL(release.html_url)
+                                    .setTitle(`🚀 Nouvelle Release publiée: ${release.tag_name} (${release.name || release.tag_name})`)
+                                    .setDescription(release.body ? (release.body.length > 300 ? release.body.substring(0, 300) + '...' : release.body) : 'Aucun changelog.');
+                                await channel.send({ embeds: [embed] }).catch(() => {});
+                            }
+                        }
+
+                        // Mettre à jour la date de dernière vérification
+                        state.lastCheck = now;
+
+                    } catch (err) {
+                        console.error(`Erreur lors du check GitHub Cron pour ${repoOwner}/${repoName}:`, err);
+                    }
+                }
+            }
+        }
+    }
+});
