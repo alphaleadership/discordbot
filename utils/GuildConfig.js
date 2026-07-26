@@ -225,6 +225,39 @@ class GuildConfig {
         return guildConfig ? guildConfig.service : null;
     }
 
+    /**
+     * Définit la liaison d'un dépôt GitHub à un salon Discord
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} channelId - L'ID du salon Discord
+     * @param {string} repoOwner - Le propriétaire du dépôt GitHub
+     * @param {string} repoName - Le nom du dépôt GitHub
+     */
+    setGithubLink(guildId, channelId, repoOwner, repoName) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        if (!this.config[guildId].githubLinks) {
+            this.config[guildId].githubLinks = {};
+        }
+        this.config[guildId].githubLinks[channelId] = {
+            owner: repoOwner,
+            repo: repoName
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère la liaison GitHub pour un salon Discord donné
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} channelId - L'ID du salon Discord
+     * @returns {Object|null} Les paramètres du dépôt {owner, repo} ou null si non lié
+     */
+    getGithubLink(guildId, channelId) {
+        const guildConfig = this.config[guildId];
+        if (!guildConfig || !guildConfig.githubLinks) return null;
+        return guildConfig.githubLinks[channelId] || null;
+    }
+
     reload() {
         this.config = this.loadConfig();
     }
