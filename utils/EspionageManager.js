@@ -14,8 +14,9 @@ const ESPIONAGE_GUILD_ID = '1475239703853928523';
  * qu'un éventuel GuildMember (facultatif, uniquement si la personne est encore là).
  */
 export class EspionageManager {
-    constructor(client, guildConfig, warnManager = null, banlistManager = null) {
-        this.client = client;
+    constructor(clientOrClients, guildConfig, warnManager = null, banlistManager = null) {
+        this.clients = Array.isArray(clientOrClients) ? clientOrClients : [clientOrClients];
+        this.client = this.clients[0]; // pour la compatibilité descendante
         this.guildConfig = guildConfig;
         this.warnManager = warnManager;
         this.banlistManager = banlistManager;
@@ -505,15 +506,23 @@ export class EspionageManager {
             const banCheck = await this.banlistManager.isBanned(user.id, banGuildId);
             if (banCheck.banned) {
                 banStatusText = `🔴 **BANNI (Banlist Interne)**\n**Raison :** ${banCheck.reason}`;
-            } else if (member?.guild) {
-                // Tenter de récupérer le ban directement depuis Discord pour voir s'il y a un ban actif et sa raison
-                try {
-                    const discordBan = await member.guild.bans.fetch(user.id).catch(() => null);
-                    if (discordBan) {
-                        banStatusText = `🔴 **BANNI (Discord)**\n**Raison :** ${discordBan.reason || 'Aucune raison spécifiée dans l\'audit log'}`;
+            } else {
+                // Tenter de récupérer le ban directement depuis tous les serveurs de toutes les instances de client
+                const activeBans = [];
+                for (const clientInstance of this.clients) {
+                    for (const guild of clientInstance.guilds.cache.values()) {
+                        try {
+                            const discordBan = await guild.bans.fetch(user.id).catch(() => null);
+                            if (discordBan) {
+                                activeBans.push(`**${guild.name}** : ${discordBan.reason || 'Aucune raison spécifiée dans l\'audit log'}`);
+                            }
+                        } catch (e) {
+                            // Ignorer les erreurs si l'instance n'a pas la permission sur ce serveur
+                        }
                     }
-                } catch (e) {
-                    // Ignorer les erreurs de permission si le bot ne peut pas lister les bans
+                }
+                if (activeBans.length > 0) {
+                    banStatusText = `🔴 **BANNI (Discord)**\n${activeBans.join('\n')}`;
                 }
             }
         }

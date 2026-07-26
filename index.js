@@ -720,7 +720,7 @@ for (const token of tokens) {
     const economyManager = new EconomyManager('data/economy.json');
     const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
     const autoConfigManager = new AutoConfigManager(client, guildConfig);
-    const espionageManager = new EspionageManager(client, guildConfig, warnManager, banlistManager);
+    const espionageManager = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
