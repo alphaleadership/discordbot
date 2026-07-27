@@ -54,6 +54,7 @@ async function downloadDirectory(sftp, remotePath, localPath) {
         }
     } catch (err) {
         console.warn(`⚠️ Échec du téléchargement de ${remotePath}:`, err.message);
+        throw err;
     }
 }
 
@@ -69,6 +70,7 @@ async function downloadFile(sftp, remoteFile, localFile) {
         }
     } catch (err) {
         console.warn(`⚠️ Échec du téléchargement de ${remoteFile}:`, err.message);
+        throw err;
     }
 }
 
@@ -136,6 +138,7 @@ async function main() {
         console.log('\n🎉 Synchronisation globale terminée avec succès !');
     } catch (err) {
         console.error('\n❌ Une erreur critique est survenue lors de la synchronisation :', err.message);
+        process.exitCode = 1;
     } finally {
         await sftp.end();
         console.log('🔌 Déconnexion du serveur SFTP.');

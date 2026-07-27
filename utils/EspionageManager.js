@@ -230,7 +230,8 @@ export class EspionageManager {
             const threatEmoji = this.getThreatEmoji('Low');
             const threadName = `${threatEmoji} dossiers-${user.username}-${userId.slice(-6)}`;
 
-            const embed = await this.buildDossierEmbed(user, member, 'Low', 0, []);
+            const existingCount = (guildData.targets[userId] && guildData.targets[userId].messageCount) || 0;
+            const embed = await this.buildDossierEmbed(user, member, 'Low', existingCount, []);
 
             const thread = await forumChannel.threads.create({
                 name: threadName,
@@ -241,9 +242,9 @@ export class EspionageManager {
 
             guildData.targets[userId] = {
                 threadId: thread.id,
-                messageCount: 0,
+                messageCount: existingCount,
                 threatLevel: 'Low',
-                notes: []
+                notes: (guildData.targets[userId] && guildData.targets[userId].notes) || []
             };
             this.saveDossiers();
 
@@ -321,9 +322,15 @@ export class EspionageManager {
 
             const embed = await this.buildDossierEmbed(user, member, threatLevel, targetData.messageCount, targetData.notes);
 
-            const firstMessage = await thread.fetchStarterMessage().catch(() => null) || await thread.messages.fetch(thread.id).catch(() => null);
-            if (firstMessage && firstMessage.author.id === this.client.user.id) {
-                await firstMessage.edit({ embeds: [embed] });
+            let starterMessage = null;
+            try {
+                starterMessage = await thread.fetchStarterMessage();
+            } catch (e) {
+                // Fallback direct sur l'id du thread
+                starterMessage = await thread.messages.fetch(thread.id).catch(() => null);
+            }
+            if (starterMessage && starterMessage.author.id === this.client.user.id) {
+                await starterMessage.edit({ embeds: [embed] });
             }
 
         } catch (err) {

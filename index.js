@@ -881,9 +881,9 @@ for (const token of tokens) {
 
             if (!isAdmin && !isOwner && !hasAdminPerm) {
                 const cacheKey = `${message.author.id}-${message.guild.id}`;
-                const lastContent = duplicateMessagesCache.get(cacheKey);
+                const cacheEntry = duplicateMessagesCache.get(cacheKey);
 
-                if (lastContent === message.content) {
+                if (cacheEntry && cacheEntry.content === message.content && (Date.now() - cacheEntry.timestamp < 120000)) {
                     try {
                         console.log(`[DUPLICATE DETECTION] ${message.author.tag} (${message.author.id}) a envoyé deux fois le même message d'affilée.`);
                         
@@ -965,7 +965,14 @@ for (const token of tokens) {
                         console.error('Erreur lors de la gestion du double message d\'affilée :', err);
                     }
                 } else {
-                    duplicateMessagesCache.set(cacheKey, message.content);
+                    duplicateMessagesCache.set(cacheKey, { content: message.content, timestamp: Date.now() });
+                    // Supprimer après 2 minutes pour éviter les fuites de mémoire
+                    setTimeout(() => {
+                        const currentEntry = duplicateMessagesCache.get(cacheKey);
+                        if (currentEntry && currentEntry.content === message.content) {
+                            duplicateMessagesCache.delete(cacheKey);
+                        }
+                    }, 120000);
                 }
             }
         }
