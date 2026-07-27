@@ -16,13 +16,16 @@ const ESPIONAGE_GUILD_ID = '1475239703853928523';
 export class EspionageManager {
     constructor(clientOrClients, guildConfig, warnManager = null, banlistManager = null) {
         this.clients = Array.isArray(clientOrClients) ? clientOrClients : [clientOrClients];
-        this.client = this.clients[0]; // pour la compatibilité descendante
         this.guildConfig = guildConfig;
         this.warnManager = warnManager;
         this.banlistManager = banlistManager;
         this.filePath = path.join(process.cwd(), 'espionage_dossiers.json');
         this.dossiersData = this.loadDossiers();
         this.ensureFileExists();
+    }
+
+    get client() {
+        return this.clients && this.clients.length > 0 ? this.clients[0] : null;
     }
 
     ensureFileExists() {
