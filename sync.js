@@ -111,6 +111,11 @@ async function main() {
         const localBanlist = path.join(__dirname, 'banlist.txt');
         const remoteBanlist = './banlist.txt';
         await uploadFile(sftp, localBanlist, remoteBanlist);
+
+        // Upload de package.json (indispensable pour l'installation des dépendances comme node-cron)
+        const localPackage = path.join(__dirname, 'package.json');
+        const remotePackage = './package.json';
+        await uploadFile(sftp, localPackage, remotePackage);
         
         // 2. DOWNLOAD des logs distants vers local
         console.log('\n🔄 Récupération des logs du serveur...');
