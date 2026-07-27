@@ -87,6 +87,11 @@ export class EspionageManager {
      * Résout la guilde d'espionnage principale (avec repli sur une guilde fournie).
      */
     async getEspionageGuild(fallbackGuild = null) {
+        if (!this.client && this.clients && this.clients.length > 0) {
+            this.client = this.clients[0];
+        }
+        if (!this.client || !this.client.guilds) return fallbackGuild || null;
+
         let guild = this.client.guilds.cache.get(ESPIONAGE_GUILD_ID) || fallbackGuild || null;
         try {
             if (!guild || guild.id !== ESPIONAGE_GUILD_ID) {
