@@ -1,0 +1,186 @@
+[
+  {
+    "id": "1781971677546_ht3rzhg4l",
+    "timestamp": "2026-06-20T16:07:57.541Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677552_stuqp7048",
+    "timestamp": "2026-06-20T16:07:57.552Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677572_idiwtv15y",
+    "timestamp": "2026-06-20T16:07:57.572Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677583_dyk6hqzo6",
+    "timestamp": "2026-06-20T16:07:57.583Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677595_o20bq7swe",
+    "timestamp": "2026-06-20T16:07:57.595Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677606_8uqgb4sfo",
+    "timestamp": "2026-06-20T16:07:57.606Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677620_9yg7bchpf",
+    "timestamp": "2026-06-20T16:07:57.620Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1781971677635_fdy9t1i97",
+    "timestamp": "2026-06-20T16:07:57.635Z",
+    "component": "command-registration",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'commands')",
+      "stack": "TypeError: Cannot read properties of null (reading 'commands')\n    at CommandHandler.registerCommands (file:///C:/Users/alpha/twitter/gitbot/utils/CommandHandler.js:143:43)\n    at EnhancedReloadSystem.reloadCommand (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:509:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Timeout._onTimeout (file:///C:/Users/alpha/twitter/gitbot/utils/EnhancedReloadSystem.js:222:17)"
+    },
+    "context": {
+      "commandCount": 80,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 80,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  }
+]

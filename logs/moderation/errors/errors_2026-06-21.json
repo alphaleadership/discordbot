@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1782022805919_6qp7knfsj",
+    "timestamp": "2026-06-21T06:20:05.919Z",
+    "component": "command-execution-server-info",
+    "error": {
+      "name": "DiscordAPIError[40060]",
+      "message": "Interaction has already been acknowledged.",
+      "stack": "DiscordAPIError[40060]: Interaction has already been acknowledged.\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async Object.execute (file:///home/container/commands/server-info.js?t=1782022774343:82:13)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:433:13)\n    at async Client.<anonymous> (file:///home/container/index.js:821:17)",
+      "code": 40060
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1432698141714681949",
+      "guildName": "test a la con",
+      "commandName": "server-info"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1782023022018_6ipwcqj4n",
+    "timestamp": "2026-06-21T06:23:42.018Z",
+    "component": "command-execution-ban",
+    "error": {
+      "name": "DiscordAPIError[40060]",
+      "message": "Interaction has already been acknowledged.",
+      "stack": "DiscordAPIError[40060]: Interaction has already been acknowledged.\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:433:13)\n    at async Client.<anonymous> (file:///home/container/index.js:821:17)",
+      "code": 40060
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1057781820869054494",
+      "guildName": "Médias du Listenbourg et des micronations (OLGIA)",
+      "commandName": "ban"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1782026188394_s2tr2vqdb",
+    "timestamp": "2026-06-21T07:16:28.394Z",
+    "component": "command-execution-setup-honeypot",
+    "error": {
+      "name": "DiscordAPIError[40060]",
+      "message": "Interaction has already been acknowledged.",
+      "stack": "DiscordAPIError[40060]: Interaction has already been acknowledged.\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async Object.execute (file:///home/container/commands/setup-honeypot.js?t=1782021847111:162:13)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:433:13)\n    at async Client.<anonymous> (file:///home/container/index.js:821:17)",
+      "code": 40060
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1037794097894797442",
+      "guildName": "Le Parlement du Listenbourg",
+      "commandName": "setup-honeypot"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1782026206841_2wsg67wdp",
+    "timestamp": "2026-06-21T07:16:46.841Z",
+    "component": "command-execution-server-info",
+    "error": {
+      "name": "DiscordAPIError[10062]",
+      "message": "Unknown interaction",
+      "stack": "DiscordAPIError[10062]: Unknown interaction\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async Object.execute (file:///home/container/commands/server-info.js?t=1782026145172:119:13)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:433:13)\n    at async Client.<anonymous> (file:///home/container/index.js:821:17)",
+      "code": 10062
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1037794097894797442",
+      "guildName": "Le Parlement du Listenbourg",
+      "commandName": "server-info"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1782026639529_99u6w9hvc",
+    "timestamp": "2026-06-21T07:23:59.529Z",
+    "component": "command-execution-report",
+    "error": {
+      "name": "DiscordAPIError[10062]",
+      "message": "Unknown interaction",
+      "stack": "DiscordAPIError[10062]: Unknown interaction\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:866:23)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:433:13)\n    at async Client.<anonymous> (file:///home/container/index.js:821:17)",
+      "code": 10062
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1254376882888114176",
+      "guildName": "spartan-arbinger",
+      "commandName": "report"
+    },
+    "logType": "error"
+  }
+]

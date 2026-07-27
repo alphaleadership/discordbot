@@ -187,6 +187,7 @@ class MockRole {
     this.managed = data.managed || false;
     this.mentionable = data.mentionable || false;
     this.createdTimestamp = data.createdTimestamp || Date.now();
+    this.members = data.members || new MockCollection();
   }
 
   get createdAt() {
@@ -273,6 +274,7 @@ class MockPermissions {
     UseEmbeddedActivities: 1n << 39n,
     ModerateMembers: 1n << 40n
   };
+  static Flags = MockPermissions.FLAGS;
 }
 
 // Mock Channel classes

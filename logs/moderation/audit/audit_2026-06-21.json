@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1782023021886_a69919ucu",
+    "timestamp": "2026-06-21T06:23:41.886Z",
+    "type": "ban",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1516696388451438622",
+      "tag": "shardbastet28"
+    },
+    "guild": {
+      "id": "1057781820869054494",
+      "name": "Médias du Listenbourg et des micronations (OLGIA)"
+    },
+    "channel": {
+      "id": "1057781822001512510"
+    },
+    "reason": "compte compromis",
+    "success": false,
+    "details": {
+      "deleteMessageDays": 1,
+      "errorCode": 50013,
+      "errorMessage": "Missing Permissions"
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-06-21T06:23:41.886Z"
+  }
+]

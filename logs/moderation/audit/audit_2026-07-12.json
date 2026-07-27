@@ -1,0 +1,89 @@
+[
+  {
+    "id": "1783853979957_fbdh2mfg4",
+    "timestamp": "2026-07-12T10:59:39.957Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "1090291198184407070",
+      "tag": "ombre1030"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1495568098076655819"
+    },
+    "reason": "Aucune raison spécifiée",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-07-12T10:59:39.957Z"
+  },
+  {
+    "id": "1783856867539_x57tan0c0",
+    "timestamp": "2026-07-12T11:47:47.539Z",
+    "type": "banlist-rejected",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1090291198184407070",
+      "tag": "ombre1030"
+    },
+    "guild": {
+      "id": "1460147809151094934",
+      "name": "Douane de Monteloria"
+    },
+    "channel": {
+      "id": "1460150614691545155"
+    },
+    "reason": "Rejet demande banlist (ID: 1783854023731_ug7h1ddae)",
+    "success": true,
+    "details": {
+      "requestId": "1783854023731_ug7h1ddae",
+      "originalReason": "raideur et hackeur",
+      "originalModerator": "spaceoff03"
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-07-12T11:47:47.539Z"
+  },
+  {
+    "id": "1783861919313_nvkj6jy0o",
+    "timestamp": "2026-07-12T13:11:59.313Z",
+    "type": "ban",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1482425286170640567",
+      "tag": "nathounax_1"
+    },
+    "guild": {
+      "id": "1460147809151094934",
+      "name": "Douane de Monteloria"
+    },
+    "channel": {
+      "id": "1460147810400735235"
+    },
+    "reason": "Aucune raison spécifiée",
+    "success": false,
+    "details": {
+      "deleteMessageDays": 0,
+      "errorCode": 50013,
+      "errorMessage": "Missing Permissions"
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-07-12T13:11:59.313Z"
+  }
+]

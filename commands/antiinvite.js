@@ -44,7 +44,7 @@ export default {
                     
                 case 'disable_here':
                     guildConfig.setAntiInvite(guildId, true, channelId);
-                    response = `🔇 La protection contre les invitations a été désacée dans ce salon.`;
+                    response = `🔇 La protection contre les invitations a été désactivée dans ce salon.`;
                     break;
                     
                 case 'enable_here':

@@ -36,6 +36,7 @@ describe('Economy Commands Integration', () => {
         const transferCommand = await import('../../commands/transfer.js');
         const shopCommand = await import('../../commands/shop.js');
         const economyStatsCommand = await import('../../commands/economy-stats.js');
+        const dailyBonusCommand = await import('../../commands/daily-bonus.js');
 
         // Check that commands have the required structure
         expect(balanceCommand.default).toBeDefined();
@@ -58,6 +59,12 @@ describe('Economy Commands Integration', () => {
         expect(economyStatsCommand.default).toBeDefined();
         expect(economyStatsCommand.default.data).toBeDefined();
         expect(economyStatsCommand.default.execute).toBeDefined();
+        expect(typeof economyStatsCommand.default.execute).toBe('function');
+
+        expect(dailyBonusCommand.default).toBeDefined();
+        expect(dailyBonusCommand.default.data).toBeDefined();
+        expect(dailyBonusCommand.default.execute).toBeDefined();
+        expect(typeof dailyBonusCommand.default.execute).toBe('function');
         expect(typeof economyStatsCommand.default.execute).toBe('function');
         expect(typeof economyStatsCommand.default.handleOverview).toBe('function');
         expect(typeof economyStatsCommand.default.handleMarketAnalysis).toBe('function');
@@ -190,11 +197,13 @@ describe('Economy Commands Integration', () => {
         const transferCommand = await import('../../commands/transfer.js');
         const shopCommand = await import('../../commands/shop.js');
         const economyStatsCommand = await import('../../commands/economy-stats.js');
+        const dailyBonusCommand = await import('../../commands/daily-bonus.js');
 
         // Verify command data exists (SlashCommandBuilder should have been called)
         expect(balanceCommand.default.data).toBeDefined();
         expect(transferCommand.default.data).toBeDefined();
         expect(shopCommand.default.data).toBeDefined();
         expect(economyStatsCommand.default.data).toBeDefined();
+        expect(dailyBonusCommand.default.data).toBeDefined();
     });
 });

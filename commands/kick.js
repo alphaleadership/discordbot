@@ -47,7 +47,7 @@ export default {
             const kickEmbed = new EmbedBuilder()
                 .setColor('#FF6B35')
                 .setTitle('🦶 Expulsion')
-                .setDescription(`Vous avez été expulsé de **${interaction.guild.name}**.`)
+                .setDescription(`Vous avez été expulsé de **${interaction.guild.name}**.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Modérateur', value: interaction.user.tag },

@@ -405,3 +405,5 @@ async function handleBulk(interaction, messageLogger) {
         });
     }
 }
+
+export default { data, execute };

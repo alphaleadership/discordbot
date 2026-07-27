@@ -39,6 +39,69 @@ class MessageLogger {
     }
 
     /**
+     * Write log entry to a daily centralized log file to prevent disk clutter
+     * @param {string} directory - Path to the directory
+     * @param {string} prefix - Log file prefix
+     * @param {Object} logEntry - The log entry object
+     */
+    async writeToDailyLog(directory, prefix, logEntry) {
+        const date = new Date().toISOString().split('T')[0];
+        const filepath = path.join(directory, `${prefix}_${date}.json`);
+        try {
+            const dir = path.dirname(filepath);
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            let entries = [];
+            if (fs.existsSync(filepath)) {
+                try {
+                    const content = fs.readFileSync(filepath, 'utf8');
+                    entries = JSON.parse(content);
+                } catch (e) {
+                    console.error(`Error parsing daily log ${filepath}:`, e);
+                }
+            }
+            entries.push(logEntry);
+            fs.writeFileSync(filepath, JSON.stringify(entries, null, 2), 'utf8');
+        } catch (error) {
+            console.error(`Error writing daily log ${filepath}:`, error);
+        }
+    }
+
+    /**
+     * Safely increment a log stat count in cached stats file
+     * @param {string} key - Stats key to increment
+     * @param {number} count - Amount to increment
+     */
+    incrementStat(key, count = 1) {
+        const statsPath = 'data/log_stats.json';
+        try {
+            const dir = path.dirname(statsPath);
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            let stats = {
+                raidEvents: 0,
+                doxDetections: 0,
+                watchlistIncidents: 0,
+                systemErrors: 0,
+                systemEvents: 0,
+                messageDeletions: 0,
+                bulkDeletions: 0
+            };
+            if (fs.existsSync(statsPath)) {
+                try {
+                    stats = { ...stats, ...JSON.parse(fs.readFileSync(statsPath, 'utf8')) };
+                } catch (e) {}
+            }
+            stats[key] = (stats[key] || 0) + count;
+            fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
+        } catch (error) {
+            console.error('Error updating log stats:', error);
+        }
+    }
+
+    /**
      * Log message deletion event
      * @param {Object} deletedMessage - Deleted message data
      * @param {import('discord.js').Client} client - Discord client for reporting
@@ -100,9 +163,10 @@ class MessageLogger {
             deletions.push(logEntry);
             fs.writeFileSync(deletionLogPath, JSON.stringify(deletions, null, 2), 'utf8');
 
-            // Also save to system logs for monitoring
-            const systemLogPath = path.join('data/system_logs', `message_deletion_${Date.now()}.json`);
-            fs.writeFileSync(systemLogPath, JSON.stringify(logEntry, null, 2));
+            // Also save to system logs for monitoring (using daily logs to avoid file clutter)
+            await this.writeToDailyLog('data/system_logs', 'system_events', logEntry);
+            this.incrementStat('messageDeletions');
+            this.incrementStat('systemEvents');
 
             // Report suspicious deletions (multiple deletions in short time, etc.)
             if (this.reportManager && client) {
@@ -189,6 +253,8 @@ class MessageLogger {
 
             bulkDeletions.push(logEntry);
             fs.writeFileSync(bulkLogPath, JSON.stringify(bulkDeletions, null, 2), 'utf8');
+            
+            this.incrementStat('bulkDeletions');
 
             // Always report bulk deletions as they're significant events
             if (this.reportManager && client) {
@@ -600,9 +666,9 @@ class MessageLogger {
                 logType: 'system_error'
             };
 
-            // Save to file
-            const filePath = path.join('data/error_logs', `error_${Date.now()}.json`);
-            fs.writeFileSync(filePath, JSON.stringify(logEntry, null, 2));
+            // Save to file (using daily logs to avoid file clutter)
+            await this.writeToDailyLog('data/error_logs', 'errors', logEntry);
+            this.incrementStat('systemErrors');
 
             // Route critical errors through ReportManager
             if (this.reportManager && client && errorEvent.level === 'critical') {
@@ -640,9 +706,9 @@ class MessageLogger {
                 logType: 'system_event'
             };
 
-            // Save to file
-            const filePath = path.join('data/system_logs', `${systemEvent.type}_${Date.now()}.json`);
-            fs.writeFileSync(filePath, JSON.stringify(logEntry, null, 2));
+            // Save to file (using daily logs to avoid file clutter)
+            await this.writeToDailyLog('data/system_logs', 'system_events', logEntry);
+            this.incrementStat('systemEvents');
 
             // Route important system events through ReportManager
             if (this.reportManager && client && systemEvent.reportToChannel) {
@@ -667,68 +733,86 @@ class MessageLogger {
      */
     getEnhancedLogStats() {
         try {
-            const stats = {
-                raidEvents: 0,
-                doxDetections: 0,
-                watchlistIncidents: 0,
-                systemErrors: 0,
-                systemEvents: 0,
-                messageDeletions: 0,
-                bulkDeletions: 0
-            };
+            const statsPath = 'data/log_stats.json';
+            
+            // If the stats file doesn't exist, calculate it once from files
+            if (!fs.existsSync(statsPath)) {
+                const stats = {
+                    raidEvents: 0,
+                    doxDetections: 0,
+                    watchlistIncidents: 0,
+                    systemErrors: 0,
+                    systemEvents: 0,
+                    messageDeletions: 0,
+                    bulkDeletions: 0
+                };
 
-            // Count files in each directory
-            const logDirs = [
-                { dir: 'data/raid_events', key: 'raidEvents' },
-                { dir: 'data/dox_detections', key: 'doxDetections' },
-                { dir: 'data/watchlist_incidents', key: 'watchlistIncidents' },
-                { dir: 'data/error_logs', key: 'systemErrors' },
-                { dir: 'data/system_logs', key: 'systemEvents' }
-            ];
+                const logDirs = [
+                    { dir: 'data/raid_events', key: 'raidEvents' },
+                    { dir: 'data/dox_detections', key: 'doxDetections' },
+                    { dir: 'data/watchlist_incidents', key: 'watchlistIncidents' },
+                    { dir: 'data/error_logs', key: 'systemErrors' },
+                    { dir: 'data/system_logs', key: 'systemEvents' }
+                ];
 
-            logDirs.forEach(({ dir, key }) => {
-                if (fs.existsSync(dir)) {
-                    stats[key] = fs.readdirSync(dir).filter(file => file.endsWith('.json')).length;
-                }
-            });
-
-            // Count message deletions across all guilds
-            if (fs.existsSync(MESSAGES_DIR)) {
-                const guildDirs = fs.readdirSync(MESSAGES_DIR, { withFileTypes: true })
-                    .filter(dirent => dirent.isDirectory())
-                    .map(dirent => dirent.name);
-                
-                guildDirs.forEach(guildId => {
-                    const deletionsDir = path.join(MESSAGES_DIR, guildId, 'deletions');
-                    const bulkDeletionsDir = path.join(MESSAGES_DIR, guildId, 'bulk_deletions');
-                    
-                    if (fs.existsSync(deletionsDir)) {
-                        const deletionFiles = fs.readdirSync(deletionsDir).filter(file => file.endsWith('.json'));
-                        deletionFiles.forEach(file => {
+                logDirs.forEach(({ dir, key }) => {
+                    if (fs.existsSync(dir)) {
+                        const files = fs.readdirSync(dir).filter(file => file.endsWith('.json'));
+                        files.forEach(file => {
                             try {
-                                const deletions = JSON.parse(fs.readFileSync(path.join(deletionsDir, file), 'utf8'));
-                                stats.messageDeletions += deletions.length;
+                                const content = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+                                if (Array.isArray(content)) {
+                                    stats[key] += content.length;
+                                } else {
+                                    stats[key]++;
+                                }
                             } catch (e) {
-                                // Ignore corrupted files
-                            }
-                        });
-                    }
-                    
-                    if (fs.existsSync(bulkDeletionsDir)) {
-                        const bulkFiles = fs.readdirSync(bulkDeletionsDir).filter(file => file.endsWith('.json'));
-                        bulkFiles.forEach(file => {
-                            try {
-                                const bulkDeletions = JSON.parse(fs.readFileSync(path.join(bulkDeletionsDir, file), 'utf8'));
-                                stats.bulkDeletions += bulkDeletions.length;
-                            } catch (e) {
-                                // Ignore corrupted files
+                                // Fallback to 1 if file parsing fails or is not JSON array
+                                stats[key]++;
                             }
                         });
                     }
                 });
+
+                // Count message deletions across all guilds
+                if (fs.existsSync(MESSAGES_DIR)) {
+                    const guildDirs = fs.readdirSync(MESSAGES_DIR, { withFileTypes: true })
+                        .filter(dirent => dirent.isDirectory())
+                        .map(dirent => dirent.name);
+                    
+                    guildDirs.forEach(guildId => {
+                        const deletionsDir = path.join(MESSAGES_DIR, guildId, 'deletions');
+                        const bulkDeletionsDir = path.join(MESSAGES_DIR, guildId, 'bulk_deletions');
+                        
+                        if (fs.existsSync(deletionsDir)) {
+                            const deletionFiles = fs.readdirSync(deletionsDir).filter(file => file.endsWith('.json'));
+                            deletionFiles.forEach(file => {
+                                try {
+                                    const deletions = JSON.parse(fs.readFileSync(path.join(deletionsDir, file), 'utf8'));
+                                    stats.messageDeletions += deletions.length;
+                                } catch (e) {}
+                            });
+                        }
+                        
+                        if (fs.existsSync(bulkDeletionsDir)) {
+                            const bulkFiles = fs.readdirSync(bulkDeletionsDir).filter(file => file.endsWith('.json'));
+                            bulkFiles.forEach(file => {
+                                try {
+                                    const bulkDeletions = JSON.parse(fs.readFileSync(path.join(bulkDeletionsDir, file), 'utf8'));
+                                    stats.bulkDeletions += bulkDeletions.length;
+                                } catch (e) {}
+                            });
+                        }
+                    });
+                }
+
+                // Save initial stats
+                fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
+                return stats;
             }
 
-            return stats;
+            // Return cached stats
+            return JSON.parse(fs.readFileSync(statsPath, 'utf8'));
         } catch (error) {
             console.error('Erreur lors de la récupération des statistiques de logs:', error);
             return {};

@@ -1,4 +1,47 @@
 {
-  "guilds": {},
-  "lastUpdated": "2025-08-23T09:25:08.317Z"
+  "guilds": {
+    "new-guild": {
+      "telegramChannelId": "new-telegram-chat",
+      "discordChannelId": "new-discord-channel",
+      "enabled": true,
+      "notificationTypes": {
+        "moderation": true,
+        "raids": true,
+        "dox": true,
+        "status": true,
+        "stats": false
+      },
+      "bridgeEnabled": true,
+      "lastConfigured": "2026-07-19T14:18:13.494Z"
+    },
+    "": {
+      "telegramChannelId": "telegram-chat",
+      "discordChannelId": "discord-channel",
+      "enabled": true,
+      "notificationTypes": {
+        "moderation": true,
+        "raids": true,
+        "dox": true,
+        "status": true,
+        "stats": false
+      },
+      "bridgeEnabled": true,
+      "lastConfigured": "2026-07-19T14:18:13.506Z"
+    },
+    "test-guild-2": {
+      "telegramChannelId": "telegram-chat-2",
+      "discordChannelId": "non-existent-channel",
+      "enabled": true,
+      "notificationTypes": {
+        "moderation": true,
+        "raids": true,
+        "dox": true,
+        "status": true,
+        "stats": false
+      },
+      "bridgeEnabled": true,
+      "lastConfigured": "2026-07-19T14:18:13.519Z"
+    }
+  },
+  "lastUpdated": "2026-07-19T14:18:13.519Z"
 }

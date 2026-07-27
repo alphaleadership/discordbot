@@ -2685,10 +2685,28 @@ export class WatchlistManager {
                     break;
 
                 case 'message':
+                    let channelTypeText = 'Inconnu';
+                    if (message && message.channel && message.channel.type !== undefined) {
+                        const types = {
+                            0: 'Texte (Salon)',
+                            1: 'Message Privé (DM)',
+                            2: 'Vocal',
+                            3: 'Groupe Privé',
+                            4: 'Catégorie',
+                            5: 'Annonces',
+                            10: 'Fil d\'Annonces',
+                            11: 'Fil Public',
+                            12: 'Fil Privé',
+                            13: 'Scène (Vocal)',
+                            14: 'Répertoire',
+                            15: 'Forum'
+                        };
+                        channelTypeText = types[message.channel.type] || `Autre (${message.channel.type})`;
+                    }
                     embed.setDescription('💬 Un utilisateur surveillé a envoyé un message')
                         .addFields(
                             { name: 'Canal', value: message ? `<#${message.channel.id}>` : 'Inconnu', inline: true },
-                            { name: 'Type de canal', value: message?.channel?.type || 'Inconnu', inline: true }
+                            { name: 'Type de canal', value: channelTypeText, inline: true }
                         );
                     
                     if (message) {

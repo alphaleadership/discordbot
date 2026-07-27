@@ -10,3 +10,4 @@ node_modules
 .augment/rules/byterover-rules.md
 .npm/
 messages/
+sync.js

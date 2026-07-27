@@ -126,7 +126,9 @@ export default {
 
             // Si toujours pas de salon (pas configuré, création échouée ou salon supprimé)
             // On cherche un salon de secours pour garantir l'envoi sur TOUS les serveurs
+            let usedFallback = false;
             if (!channel || !channel.isTextBased()) {
+                usedFallback = true;
                 channel = guild.systemChannel || 
                           guild.publicUpdatesChannel || 
                           guild.channels.cache.find(c => c.isTextBased() && c.permissionsFor(guild.members.me).has(PermissionFlagsBits.SendMessages));
@@ -134,7 +136,11 @@ export default {
 
             if (channel) {
                 try {
-                    await channel.send({ embeds: [embed] });
+                    const sendOptions = { embeds: [embed] };
+                    if (usedFallback) {
+                        sendOptions.content = "ℹ️ *Note : Les annonces sont envoyées ici car le bot n'a pas pu trouver ou créer son salon dédié. Si vous donnez au bot la permission « Gérer les salons », les futures annonces seront faites dans un canal dédié exclusif.*";
+                    }
+                    await channel.send(sendOptions);
                     successCount++;
                 } catch (error) {
                     console.error(`Erreur d'envoi d'annonce au serveur ${guild.name} (${guildId}):`, error);

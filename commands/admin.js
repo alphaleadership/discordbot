@@ -65,7 +65,29 @@ export default {
                         return interaction.reply({ content: 'ℹ️ Cet utilisateur est déjà agent.', ephemeral: true });
                     }
                     adminManager.addAgent(targetUser.id);
-                    return interaction.reply({ content: `✅ **${targetUser.tag}** a été ajouté comme agent du bot.`, ephemeral: true });
+                    
+                    let dmStatus = '';
+                    try {
+                        const welcomeEmbed = new EmbedBuilder()
+                            .setColor('#0099FF')
+                            .setTitle('👮 Bienvenue dans l\'équipe des Agents !')
+                            .setDescription('Vous venez d\'être ajouté en tant qu\'**Agent** du bot. Voici votre briefing de sécurité et les commandes disponibles pour votre rôle :')
+                            .addFields(
+                                { name: '📥 Gestion de la Banlist', value: '• `/add-to-banlist <utilisateur> <raison>` : Soumet une demande d\'ajout à la banlist globale (met aussi l\'utilisateur en quarantaine).\n• `/remove-from-banlist <utilisateur-id> <raison>` : Soumet une demande de retrait de la banlist.' },
+                                { name: '🔍 Gestion de la Watchlist', value: '• `/watchlist-add` : Met un utilisateur sous surveillance locale (avec niveau Observe, Alerte ou Action).\n• `/watchlist-remove` : Enlève un utilisateur de la liste locale.\n• `/watchlist-note` : Ajoute une note à l\'historique d\'un utilisateur surveillé.\n• `/watchlist-info` : Affiche l\'historique complet (incidents, notes) d\'un utilisateur.\n• `/watchlist-list` : Liste les utilisateurs surveillés sur le serveur.' },
+                                { name: '⏳ Processus de validation', value: 'En tant qu\'agent, vos actions sur la banlist globale requièrent la validation finale d\'un administrateur du bot. Elles restent en attente jusqu\'à approbation.' }
+                            )
+                            .setTimestamp()
+                            .setFooter({ text: 'Système de modération gitbot' });
+
+                        await targetUser.send({ embeds: [welcomeEmbed] });
+                        dmStatus = ' Un message privé de briefing lui a été envoyé.';
+                    } catch (dmError) {
+                        console.error(`Impossible d'envoyer le MP à l'agent ${targetUser.tag}:`, dmError);
+                        dmStatus = ' (Impossible de lui envoyer le MP de briefing, ses DMs sont probablement fermés).';
+                    }
+
+                    return interaction.reply({ content: `✅ **${targetUser.tag}** a été ajouté comme agent du bot.${dmStatus}`, ephemeral: true });
                 }
             }
 

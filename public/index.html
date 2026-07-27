@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Control Panel</title>
+    <title>Console de Contrôle - Discord Bot</title>
+    <!-- Modern Typography from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bot Control Panel</h1>
-        <div id="login-container">
-            <input type="password" id="password" placeholder="Enter password">
-            <button onclick="login()">Login</button>
+        <h1>🛡️ Discord Bot Panel</h1>
+        
+        <!-- Auth view card -->
+        <div id="login-container" class="panel-card">
+            <h2>Authentification Requise</h2>
+            <input type="password" id="password" placeholder="Mot de passe d'administration">
+            <button onclick="login()">Se connecter</button>
         </div>
+        
+        <!-- Dashboard management panel wrapper -->
         <div id="control-panel" style="display: none;">
-            <h2>Ban List Management</h2>
-            <textarea id="banlist" rows="10" cols="50"></textarea><br>
-            <button onclick="updateBanlist()">Update Banlist</button>
+            
+            <div class="panel-card">
+                <h2>Gestion de la Banlist</h2>
+                <textarea id="banlist" rows="10" placeholder="Une ID d'utilisateur par ligne..."></textarea>
+                <button onclick="updateBanlist()">Mettre à jour la Banlist</button>
+            </div>
 
-            <h2>Server Actions</h2>
-            <select id="server-select"></select>
-            <button onclick="massBan()">Mass Ban from List</button>
-            <button onclick="exportBans()">Export Server Bans</button>
-            <button onclick="exportMembers()">Export Server Members</button>
+            <div class="panel-card">
+                <h2>Actions de Serveur</h2>
+                <select id="server-select"></select>
+                <div class="button-grid">
+                    <button onclick="massBan()" class="btn-secondary">Bannissement de masse</button>
+                    <button onclick="exportBans()">Exporter les Bans</button>
+                    <button onclick="exportMembers()">Exporter les Membres</button>
+                </div>
+            </div>
 
-            <h2>Channel Messages</h2>
-            <select id="channel-select"></select>
-            <button onclick="getMessages()">Get Messages</button>
-            <div id="messages-container"></div>
+            <div class="panel-card">
+                <h2>Messages du Salon</h2>
+                <select id="channel-select"></select>
+                <button onclick="getMessages()">Récupérer les Messages</button>
+                <div id="messages-container"></div>
+            </div>
 
-            <h2>Logs</h2>
-            <pre id="logs"></pre>
+            <div class="panel-card">
+                <h2>Logs d'activité</h2>
+                <pre id="logs"></pre>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

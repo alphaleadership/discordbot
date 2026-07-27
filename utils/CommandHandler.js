@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
 export class CommandHandler {
-    constructor(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager,dmTicketManager) {
+    constructor(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, customsManager, espionageManager) {
         this.client = client;
         this.client.commands = new Collection();
         this.adminManager = adminManager;
@@ -26,6 +26,8 @@ export class CommandHandler {
         this.forumReportManager = forumReportManager;
         this.autoConfigManager = autoConfigManager;
         this.dmTicketManager = dmTicketManager;
+        this.customsManager = customsManager;
+        this.espionageManager = espionageManager;
     }
     async loadCommands() {
         const __filename = fileURLToPath(import.meta.url);
@@ -46,9 +48,9 @@ export class CommandHandler {
             if (import.meta.url === modulePath) return; // Ne pas recharger le gestionnaire de commandes
 
             // Importer la commande
-            const command = (await import(modulePath + '?t=' + Date.now())).default;
-            console.log(command)
-            if ('data' in command && 'execute' in command) {
+            const imported = await import(modulePath + '?t=' + Date.now());
+            const command = imported.default || imported;
+            if (command && typeof command === 'object' && 'data' in command && 'execute' in command) {
                 // Validate command data structure
                 if (!command.data.name) {
                     console.log(`[WARNING] La commande dans ${filePath} n'a pas de nom défini.`);
@@ -159,7 +161,7 @@ export class CommandHandler {
             commandList.forEach(cmd => {
                 const type = this.isModerationCommand(cmd.name) ? '[MOD]' :
                     this.isWatchlistCommand(cmd.name) ? '[WATCH]' : '[OTHER]';
-                console.log(`  ${type} /${cmd.name} (ID: ${cmd.id})`);
+                console.log(`🚀 [PUBLIÉ] Commande slash active et publiée: /${cmd.name} (Type: ${type}, ID: ${cmd.id})`);
             });
 
             return {
@@ -450,7 +452,9 @@ export class CommandHandler {
                 this.economyManager,
                 this.forumReportManager,
                 this.autoConfigManager,
-                this.dmTicketManager
+                this.dmTicketManager,
+                this.customsManager,
+                this.espionageManager
             );
 
         } catch (error) {

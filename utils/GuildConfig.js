@@ -171,6 +171,93 @@ class GuildConfig {
         return guildConfig.antiInvite.enabled === true;
     }
 
+    /**
+     * Définit les paramètres de quarantaine
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} roleId - L'ID du rôle de quarantaine
+     * @param {string} channelId - L'ID du salon de quarantaine
+     */
+    setQuarantineSettings(guildId, roleId, channelId) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        this.config[guildId].quarantine = {
+            roleId,
+            channelId
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère les paramètres de quarantaine
+     * @param {string} guildId - L'ID du serveur
+     * @returns {Object|null} Les paramètres de quarantaine ou null si non configuré
+     */
+    getQuarantineSettings(guildId) {
+        const guildConfig = this.config[guildId];
+        return guildConfig ? guildConfig.quarantine : null;
+    }
+
+    /**
+     * Définit les paramètres de prise de service
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} roleId - L'ID du rôle de service
+     * @param {string} logChannelId - L'ID du salon de logs de service
+     */
+    setServiceSettings(guildId, roleId, logChannelId) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        this.config[guildId].service = {
+            roleId,
+            logChannelId
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère les paramètres de prise de service
+     * @param {string} guildId - L'ID du serveur
+     * @returns {Object|null} Les paramètres de service ou null si non configurés
+     */
+    getServiceSettings(guildId) {
+        const guildConfig = this.config[guildId];
+        return guildConfig ? guildConfig.service : null;
+    }
+
+    /**
+     * Définit la liaison d'un dépôt GitHub à un salon Discord
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} channelId - L'ID du salon Discord
+     * @param {string} repoOwner - Le propriétaire du dépôt GitHub
+     * @param {string} repoName - Le nom du dépôt GitHub
+     */
+    setGithubLink(guildId, channelId, repoOwner, repoName) {
+        if (!this.config[guildId]) {
+            this.config[guildId] = {};
+        }
+        if (!this.config[guildId].githubLinks) {
+            this.config[guildId].githubLinks = {};
+        }
+        this.config[guildId].githubLinks[channelId] = {
+            owner: repoOwner,
+            repo: repoName
+        };
+        this.saveConfig();
+    }
+
+    /**
+     * Récupère la liaison GitHub pour un salon Discord donné
+     * @param {string} guildId - L'ID du serveur
+     * @param {string} channelId - L'ID du salon Discord
+     * @returns {Object|null} Les paramètres du dépôt {owner, repo} ou null si non lié
+     */
+    getGithubLink(guildId, channelId) {
+        const guildConfig = this.config[guildId];
+        if (!guildConfig || !guildConfig.githubLinks) return null;
+        return guildConfig.githubLinks[channelId] || null;
+    }
+
     reload() {
         this.config = this.loadConfig();
     }

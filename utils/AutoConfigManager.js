@@ -14,7 +14,9 @@ class AutoConfigManager {
     constructor(client, guildConfig) {
         this.client = client;
         this.guildConfig = guildConfig;
-        this.templatesPath = path.join(process.cwd(), 'data', 'auto_config_templates.json');
+        this.templatesPath = fs.existsSync(path.join(__dirname, '..', 'data', 'auto_config_templates.json'))
+            ? path.join(__dirname, '..', 'data', 'auto_config_templates.json')
+            : path.join(process.cwd(), 'data', 'auto_config_templates.json');
         this.templates = this.loadTemplates();
     }
 
@@ -24,12 +26,18 @@ class AutoConfigManager {
      */
     loadTemplates() {
         try {
+            console.log(`[AutoConfigManager] Tentative de chargement des templates depuis : ${this.templatesPath}`);
             if (fs.existsSync(this.templatesPath)) {
                 const data = fs.readFileSync(this.templatesPath, 'utf8');
-                return JSON.parse(data).templates;
+                const parsed = JSON.parse(data);
+                const loaded = parsed.templates ? Object.keys(parsed.templates) : [];
+                console.log(`[AutoConfigManager] Templates chargés avec succès : ${loaded.join(', ')}`);
+                return parsed.templates;
+            } else {
+                console.warn(`[AutoConfigManager] Le fichier de templates n'existe pas à l'emplacement : ${this.templatesPath}`);
             }
         } catch (error) {
-            console.error('Error loading auto-config templates:', error);
+            console.error('[AutoConfigManager] Erreur lors du chargement des templates auto-config:', error);
         }
         return {};
     }
@@ -429,7 +437,11 @@ class AutoConfigManager {
                 this.getTemplateForGuild(guild);
 
             if (!template) {
-                throw new Error(`Template not found: ${templateName || 'auto-detected'}`);
+                console.warn(`[AutoConfigManager] Template not found: ${templateName || 'auto-detected'}. Auto-configuration skipped.`);
+                return {
+                    success: false,
+                    error: `Template not found: ${templateName || 'auto-detected'}`
+                };
             }
 
             // Validate template
@@ -460,6 +472,17 @@ class AutoConfigManager {
             if (template.channels) {
                 const channelResults = await this.createChannels(guild, template.channels);
                 results.channels = channelResults;
+
+                // Associer le salon moderation-log à logChannelId
+                const logChannelInfo = channelResults.created.find(c => c.name === 'moderation-log') ||
+                                       Array.from(guild.channels.cache.values()).find(c => c.name === 'moderation-log');
+                if (logChannelInfo) {
+                    if (!this.guildConfig.config[guild.id]) {
+                        this.guildConfig.config[guild.id] = {};
+                    }
+                    this.guildConfig.config[guild.id].logChannelId = logChannelInfo.id;
+                    this.guildConfig.saveConfig();
+                }
             }
 
             // Apply bot configuration

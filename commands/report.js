@@ -45,16 +45,19 @@ export default {
             try {
                 // Create forum report with enhanced data
                 const reportData = {
-                    reportedUser: targetUser.id,
-                    reportedBy: interaction.user.id,
+                    reportedUserId: targetUser.id,
+                    reportedUsername: targetUser.username,
+                    reporterUserId: interaction.user.id,
+                    reporterUsername: interaction.user.username,
                     reason: reason,
-                    proof: proof,
-                    category: 'general', // Default category, could be enhanced with options
-                    sourceGuild: interaction.guild.id,
+                    evidence: proof,
+                    category: 'other', // Default category, using 'other' as 'general' is not in this.categories
+                    messageId: interaction.id, // using interaction ID as fallback message ID
+                    channelId: interaction.channelId,
                     timestamp: new Date().toISOString()
                 };
                 
-                result = await forumReportManager.createForumReport(reportData, interaction.guild);
+                result = await forumReportManager.createForumReport(reportData, interaction.guildId);
                 
                 if (result.success) {
                     await interaction.reply({

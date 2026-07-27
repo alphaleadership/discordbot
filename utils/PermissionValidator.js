@@ -99,6 +99,22 @@ export default class PermissionValidator {
      * @returns {Object} Validation result
      */
     validateKickPermission(moderator, target) {
+        if (this.adminManager.isAgent(moderator.id)) {
+            // Prevent self-moderation
+            if (moderator.id === target.id) {
+                return { success: false, error: 'self_moderation_denied', message: '❌ Vous ne pouvez pas effectuer cette action sur vous-même.' };
+            }
+            // Prevent action on bot admins
+            if (this.adminManager.isAdmin(target.id)) {
+                return { success: false, error: 'target_is_bot_admin', message: '❌ Vous ne pouvez pas effectuer cette action sur un administrateur du bot.' };
+            }
+            // Prevent action on bots
+            if (target.bot) {
+                return { success: false, error: 'target_is_bot', message: '❌ Vous ne pouvez pas effectuer cette action sur un bot.' };
+            }
+            return { success: true, reason: 'bot_agent_override' };
+        }
+
         return this.validateModerationAction(
             moderator, 
             target, 
@@ -119,15 +135,6 @@ export default class PermissionValidator {
             return { success: true, reason: 'bot_admin_override', isAgent: false };
         }
 
-        // Check if moderator is bot agent
-        if (this.adminManager.isAgent(moderator.id)) {
-            return { 
-                success: true, 
-                reason: 'bot_agent_allowed', 
-                isAgent: true,
-                message: 'ℹ️ Votre demande de bannissement nécessite la validation d\'un administrateur.' 
-            };
-        }
 
         return this.validateModerationAction(
             moderator, 
@@ -382,6 +389,95 @@ export default class PermissionValidator {
                 error: 'validation_error',
                 message: '❌ Une erreur est survenue lors de la validation du nombre de messages.'
             };
+        }
+    }
+
+    /**
+     * Checks if the bot lacks critical permissions in a guild and notifies the owner via DM.
+     * Implements a 12-hour cooldown per guild to prevent spam.
+     * @param {Guild} guild - The Discord guild
+     * @returns {Promise<Object>} Verification and notification status
+     */
+    async checkBotPermissionsAndNotifyOwner(guild) {
+        try {
+            const botMember = guild.members.me || await guild.members.fetch(guild.client.user.id).catch(() => null);
+            if (!botMember) {
+                return { success: false, error: 'Could not fetch bot member' };
+            }
+
+            const requiredPermissions = [
+                { perm: PermissionsBitField.Flags.ViewChannel, name: 'Voir les salons (ViewChannel)' },
+                { perm: PermissionsBitField.Flags.SendMessages, name: 'Envoyer des messages (SendMessages)' },
+                { perm: PermissionsBitField.Flags.EmbedLinks, name: 'Intégrer des liens (EmbedLinks)' },
+                { perm: PermissionsBitField.Flags.ManageMessages, name: 'Gérer les messages (ManageMessages)' },
+                { perm: PermissionsBitField.Flags.ModerateMembers, name: 'Exclure temporairement des membres (ModerateMembers)' },
+                { perm: PermissionsBitField.Flags.BanMembers, name: 'Bannir des membres (BanMembers)' },
+                { perm: PermissionsBitField.Flags.KickMembers, name: 'Expulser des membres (KickMembers)' },
+                { perm: PermissionsBitField.Flags.ManageRoles, name: 'Gérer les rôles (ManageRoles)' },
+                { perm: PermissionsBitField.Flags.ManageChannels, name: 'Gérer les salons (ManageChannels)' }
+            ];
+
+            const missing = requiredPermissions.filter(p => !botMember.permissions.has(p.perm));
+            if (missing.length === 0) {
+                return { success: true, hasAllPermissions: true };
+            }
+
+            // Anti-spam cooldown check (12 hours)
+            const fs = await import('fs');
+            const path = await import('path');
+            const alertsPath = path.join(process.cwd(), 'data', 'bot_permissions_alerts.json');
+            
+            let alerts = {};
+            if (fs.existsSync(alertsPath)) {
+                try {
+                    alerts = JSON.parse(fs.readFileSync(alertsPath, 'utf8'));
+                } catch (e) {
+                    console.error('Error parsing permission alerts file:', e);
+                }
+            }
+
+            if (alerts[guild.id]) {
+                return { 
+                    success: true, 
+                    hasAllPermissions: false, 
+                    notified: false, 
+                    reason: 'already_notified_once' 
+                };
+            }
+
+            // Notify owner
+            const owner = await guild.members.fetch(guild.ownerId).catch(() => null);
+            if (owner) {
+                const { EmbedBuilder } = await import('discord.js');
+                const embed = new EmbedBuilder()
+                    .setColor('#FF3333')
+                    .setTitle(`⚠️ Permissions manquantes détectées sur ${guild.name}`)
+                    .setDescription(`Bonjour,\n\nIl semblerait qu'il me manque des permissions cruciales sur votre serveur **${guild.name}**. Sans celles-ci, certaines fonctionnalités de modération et d'automatisation ne pourront pas s'exécuter correctement.`)
+                    .addFields(
+                        { name: '❌ Permissions manquantes', value: missing.map(p => `• ${p.name}`).join('\n') },
+                        { name: '🔧 Comment résoudre ?', value: 'Veuillez vous assurer que mon rôle possède ces permissions activées ou attribuez-moi un rôle d\'administrateur.' }
+                    )
+                    .setTimestamp();
+
+                await owner.send({ embeds: [embed] }).catch(err => {
+                    console.error(`Failed to DM owner of guild ${guild.id} (${guild.name}):`, err);
+                });
+
+                // Update alert state
+                alerts[guild.id] = true;
+                const dataDir = path.dirname(alertsPath);
+                if (!fs.existsSync(dataDir)) {
+                    fs.mkdirSync(dataDir, { recursive: true });
+                }
+                fs.writeFileSync(alertsPath, JSON.stringify(alerts, null, 2), 'utf8');
+
+                return { success: true, hasAllPermissions: false, notified: true };
+            }
+
+            return { success: false, error: 'Could not fetch guild owner' };
+        } catch (error) {
+            console.error('Error checking bot permissions:', error);
+            return { success: false, error: error.message };
         }
     }
 }

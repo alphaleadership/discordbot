@@ -1,0 +1,895 @@
+{
+  "guilds": {
+    "1037794097894797442": {
+      "forumChannelId": "1524694604421795992",
+      "targets": {
+        "702155370054811658": {
+          "threadId": null,
+          "messageCount": 41,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1212431738219925568": {
+          "threadId": null,
+          "messageCount": 23,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1070602999329722368": {
+          "threadId": null,
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "781224979919274014": {
+          "threadId": null,
+          "messageCount": 8,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1276746993326231676": {
+          "threadId": null,
+          "messageCount": 19,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1359216686720483672": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "588739887440855050": {
+          "threadId": null,
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1397652765773267074": {
+          "threadId": null,
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1496865180435484827": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1522307971647012864": {
+          "threadId": null,
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "532953963591499809": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1082018328350031892": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "840985745182425108": {
+          "threadId": null,
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1036745970077147279": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "714869958097502299": {
+          "threadId": null,
+          "messageCount": 6,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1405654925144490115": {
+      "forumChannelId": "1524904578770927705",
+      "targets": {
+        "1310282740851146944": {
+          "threadId": null,
+          "messageCount": 38,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "840985745182425108": {
+          "threadId": null,
+          "messageCount": 10,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1295832086602715251": {
+          "threadId": "1524876687119089837",
+          "messageCount": 204,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783629333217",
+              "content": "👁️ AJOUTÉ À LA LISTE DE SURVEILLANCE : Niveau [OBSERVE] par <@840985745182425108>.\n**Raison** : accord inter micronation",
+              "author": "840985745182425108",
+              "timestamp": "2026-07-09T20:35:33.217Z"
+            }
+          ]
+        },
+        "1170366911071146097": {
+          "threadId": "1523810357733363893",
+          "messageCount": 12,
+          "threatLevel": "High",
+          "notes": [
+            {
+              "id": "1783375100455",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"va dormir\"",
+              "author": "system",
+              "timestamp": "2026-07-06T21:58:20.455Z"
+            },
+            {
+              "id": "1783375123236",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"il est 00h\"",
+              "author": "system",
+              "timestamp": "2026-07-06T21:58:43.236Z"
+            },
+            {
+              "id": "1783375134087",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"<@1295832086602715251> il veux\"",
+              "author": "system",
+              "timestamp": "2026-07-06T21:58:54.087Z"
+            }
+          ]
+        },
+        "1455848916619890782": {
+          "threadId": "1524479547070742569",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783534647675",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-08T18:17:27.675Z"
+            }
+          ]
+        },
+        "1271029067214491739": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1209704901878480897": {
+          "threadId": null,
+          "messageCount": 56,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1212431738219925568": {
+          "threadId": null,
+          "messageCount": 29,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1338518114983346287": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1258525792497963030": {
+          "threadId": "1524876991311122554",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783629405806",
+              "content": "👁️ AJOUTÉ À LA LISTE DE SURVEILLANCE : Niveau [OBSERVE] par <@840985745182425108>.\n**Raison** : accord mic",
+              "author": "840985745182425108",
+              "timestamp": "2026-07-09T20:36:45.806Z"
+            }
+          ]
+        },
+        "1167922907641544754": {
+          "threadId": null,
+          "messageCount": 43,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1265017745934913699": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1195852206000316628": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1090291198184407070": {
+          "threadId": "1525818923222696007",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783853979765",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-12T10:59:39.765Z"
+            }
+          ]
+        },
+        "1482425286170640567": {
+          "threadId": "1525843212705468427",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783859770913",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-12T12:36:10.913Z"
+            }
+          ]
+        }
+      }
+    },
+    "1475239703853928523": {
+      "forumChannelId": "1523005745224880158",
+      "targets": {
+        "1204140730654793751": {
+          "threadId": "1528386432434176153",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783275396693",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-05T18:16:36.693Z"
+            }
+          ]
+        },
+        "840985745182425108": {
+          "threadId": "1528386435390902455",
+          "messageCount": 21,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1113455911906857082": {
+          "threadId": "1528386438373183570",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783333329454",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-06T10:22:09.454Z"
+            },
+            {
+              "id": "1784574424210",
+              "content": "Si Montbéliard réintègre effectivement le COIM, nous lui montrerons de quoi nous sommes capables.",
+              "author": "840985745182425108",
+              "timestamp": "2026-07-20T19:07:04.210Z"
+            }
+          ]
+        },
+        "1404116678211797002": {
+          "threadId": "1528386441087029302",
+          "messageCount": 15,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783333332403",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-06T10:22:12.403Z"
+            }
+          ]
+        },
+        "1338518114983346287": {
+          "threadId": "1528386452617035897",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783333357652",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-06T10:22:37.652Z"
+            }
+          ]
+        },
+        "1288073689052741642": {
+          "threadId": "1528386455867494404",
+          "messageCount": 14,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1784313163176",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-17T18:32:43.176Z"
+            }
+          ]
+        },
+        "660849271225974784": {
+          "threadId": "1528386460435218463",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783333490461",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-06T10:24:50.461Z"
+            }
+          ]
+        },
+        "1455848916619890782": {
+          "threadId": "1528386466110242957",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783527224259",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-08T16:13:44.259Z"
+            }
+          ]
+        },
+        "1329176476553318401": {
+          "threadId": "1528386469457297450",
+          "messageCount": 12,
+          "threatLevel": "High",
+          "notes": [
+            {
+              "id": "1783336747418",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Oui ?\"",
+              "author": "system",
+              "timestamp": "2026-07-06T11:19:07.418Z"
+            },
+            {
+              "id": "1783336889677",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Je vous écoute\"",
+              "author": "system",
+              "timestamp": "2026-07-06T11:21:29.677Z"
+            },
+            {
+              "id": "1783336904538",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Sur le royaume du thé ?\"",
+              "author": "system",
+              "timestamp": "2026-07-06T11:21:44.538Z"
+            },
+            {
+              "id": "1783336924215",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Pour le moment je sais qu'ils ne veulent pas ban lulu malgré les accusations faites sur lui\"",
+              "author": "system",
+              "timestamp": "2026-07-06T11:22:04.215Z"
+            },
+            {
+              "id": "1783336940919",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Nop aucune idées pour ça par contre\"",
+              "author": "system",
+              "timestamp": "2026-07-06T11:22:20.919Z"
+            },
+            {
+              "id": "1783342542757",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"La justice n'a pas de limite\"",
+              "author": "system",
+              "timestamp": "2026-07-06T12:55:42.757Z"
+            },
+            {
+              "id": "1783342978456",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1481421595674415205> (Niveau: alert)\n**Contenu** : \"Ook\"",
+              "author": "system",
+              "timestamp": "2026-07-06T13:02:58.456Z"
+            },
+            {
+              "id": "1783597112068",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Je vais y réfléchir\"",
+              "author": "system",
+              "timestamp": "2026-07-09T11:38:32.068Z"
+            },
+            {
+              "id": "1783597122691",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Et pour la raid de Monteloria je n'ai encore trouvé aucun indice\"",
+              "author": "system",
+              "timestamp": "2026-07-09T11:38:42.691Z"
+            },
+            {
+              "id": "1783597140511",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Ils sont caché c'est une Singerie\"",
+              "author": "system",
+              "timestamp": "2026-07-09T11:39:00.511Z"
+            },
+            {
+              "id": "1783597143536",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Ils ont laissé aucune trace où on a fait une enquête un peu trop tard\"",
+              "author": "system",
+              "timestamp": "2026-07-09T11:39:03.536Z"
+            },
+            {
+              "id": "1783607591484",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Tu peux leurs demander de passer mp s'il te plaît ?\"",
+              "author": "system",
+              "timestamp": "2026-07-09T14:33:11.484Z"
+            },
+            {
+              "id": "1783762837655",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1523648657168142396> (Niveau: alert)\n**Contenu** : \"Merci\"",
+              "author": "system",
+              "timestamp": "2026-07-11T09:40:37.655Z"
+            }
+          ]
+        },
+        "1258525792497963030": {
+          "threadId": "1528386512524415169",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783527244267",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-08T16:14:04.267Z"
+            }
+          ]
+        },
+        "1265017745934913699": {
+          "threadId": "1528386516470988852",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783707004754",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-10T18:10:04.754Z"
+            }
+          ]
+        },
+        "1484202542236700812": {
+          "threadId": "1528386521571266701",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1783860040458",
+              "content": "🚨 BLACKLIST GLOBAL (Bot) : L'utilisateur a été ajouté à la banlist du bot par <@840985745182425108>.\n**Raison** : dox",
+              "author": "840985745182425108",
+              "timestamp": "2026-07-12T12:40:40.458Z"
+            }
+          ]
+        },
+        "1209704901878480897": {
+          "threadId": "1528386526457630781",
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1167922907641544754": {
+          "threadId": "1528386528810631350",
+          "messageCount": 14,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "714869958097502299": {
+          "threadId": "1528386531318960270",
+          "messageCount": 29,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1212431738219925568": {
+          "threadId": "1528386533332226360",
+          "messageCount": 32,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "702155370054811658": {
+          "threadId": "1528386535911719054",
+          "messageCount": 22,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "453592216175116308": {
+          "threadId": "1528386544329687041",
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1279434661293985793": {
+          "threadId": "1528386547647254562",
+          "messageCount": 0,
+          "threatLevel": "Medium",
+          "notes": [
+            {
+              "id": "1783958853279",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-07-13T16:07:33.279Z"
+            },
+            {
+              "id": "1783958880796",
+              "content": "🚨 BLACKLIST GLOBAL (Bot) : L'utilisateur a été ajouté à la banlist du bot par <@840985745182425108>.\n**Raison** : lien suspect",
+              "author": "840985745182425108",
+              "timestamp": "2026-07-13T16:08:00.796Z"
+            }
+          ]
+        },
+        "1122841754241089586": {
+          "threadId": "1528386557705322547",
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1310282740851146944": {
+          "threadId": "1528386559739560037",
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1479819629751697439": {
+          "threadId": "1528386561547305042",
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1276746993326231676": {
+          "threadId": "1528386564286189682",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1397652765773267074": {
+          "threadId": "1528386566748377140",
+          "messageCount": 6,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1096780328934318130": {
+          "threadId": "1528386569260630018",
+          "messageCount": 27,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1195852206000316628": {
+          "threadId": "1528386571055927322",
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "900711922821890058": {
+          "threadId": "1528386573312458896",
+          "messageCount": 18,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1397671821108842608": {
+          "threadId": "1528386575325593732",
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1526069534740447296": {
+          "threadId": "1528386578102358053",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1525283843270115410": {
+          "threadId": "1528386602336911512",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1070602999329722368": {
+          "threadId": "1528386605155487816",
+          "messageCount": 18,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1170366911071146097": {
+          "threadId": "1528386607336521789",
+          "messageCount": 5,
+          "threatLevel": "High",
+          "notes": [
+            {
+              "id": "1784197961348",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"🤣 🤣\"",
+              "author": "system",
+              "timestamp": "2026-07-16T10:32:41.348Z"
+            },
+            {
+              "id": "1784313697590",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"<@1295832086602715251> arrête de ping pour tout\"",
+              "author": "system",
+              "timestamp": "2026-07-17T18:41:37.590Z"
+            },
+            {
+              "id": "1784313802337",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"Va voir un addictologue ?\"",
+              "author": "system",
+              "timestamp": "2026-07-17T18:43:22.337Z"
+            },
+            {
+              "id": "1784313820566",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"Déjà fait\"",
+              "author": "system",
+              "timestamp": "2026-07-17T18:43:40.566Z"
+            },
+            {
+              "id": "1784313835680",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"Si c'est une dépendance c'est un addictologue\"",
+              "author": "system",
+              "timestamp": "2026-07-17T18:43:55.680Z"
+            },
+            {
+              "id": "1784313926554",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467287989561589903> (Niveau: alert)\n**Contenu** : \"Pas grave\"",
+              "author": "system",
+              "timestamp": "2026-07-17T18:45:26.554Z"
+            }
+          ]
+        },
+        "879384380152381460": {
+          "threadId": "1528386633076834305",
+          "messageCount": 11,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1176941809746841751": {
+          "threadId": "1528386635216064513",
+          "messageCount": 2,
+          "threatLevel": "High",
+          "notes": [
+            {
+              "id": "1784274821902",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: alert)\n**Contenu** : \"🫩\"",
+              "author": "system",
+              "timestamp": "2026-07-17T07:53:41.902Z"
+            },
+            {
+              "id": "1784274873265",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: alert)\n**Contenu** : \"Je rappelle que je ne suis (accessoirement) \n# PAS A VENDRE\nMerci de notre (in)compréhension \n-# la chèvre, le goat, etc\"",
+              "author": "system",
+              "timestamp": "2026-07-17T07:54:33.265Z"
+            },
+            {
+              "id": "1784562641975",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1478746181629906944> (Niveau: alert)\n**Contenu** : \"Jpp\"",
+              "author": "system",
+              "timestamp": "2026-07-20T15:50:41.975Z"
+            }
+          ]
+        },
+        "1484212119204532456": {
+          "threadId": "1528386642732388453",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1155033451930583111": {
+          "threadId": "1528386646096085156",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "630438429041360907": {
+          "threadId": "1528386648222466212",
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1509929865405534310": {
+          "threadId": "1528386650131009547",
+          "messageCount": 6,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1251294003949994075": {
+          "threadId": null,
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1295832086602715251": {
+          "threadId": "1528524391485276201",
+          "messageCount": 7,
+          "threatLevel": "High",
+          "notes": [
+            {
+              "id": "1784499013725",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"@everyone \n\n# ESPAGNE CHAMPION DU MONDE!!!!! #\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:10:13.725Z"
+            },
+            {
+              "id": "1784499078665",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Ragez bien les argentin retour au pays bande enorme merde!!!\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:11:18.665Z"
+            },
+            {
+              "id": "1784499093925",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Tg\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:11:33.925Z"
+            },
+            {
+              "id": "1784499116949",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Les argentin son des pute\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:11:56.949Z"
+            },
+            {
+              "id": "1784499127747",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Pas grave\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:12:07.747Z"
+            },
+            {
+              "id": "1784499131171",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Oui pardon\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:12:11.171Z"
+            },
+            {
+              "id": "1784499150906",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1467437757810086073> (Niveau: observe)\n**Contenu** : \"Mais sa resre des pute les argentin\"",
+              "author": "system",
+              "timestamp": "2026-07-19T22:12:30.906Z"
+            },
+            {
+              "id": "1784540906621",
+              "content": "👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#1478746181629906944> (Niveau: observe)\n**Contenu** : \"<@&1430200770376110222> on se bouge la ya que arbinger qui se bouge\"",
+              "author": "system",
+              "timestamp": "2026-07-20T09:48:26.621Z"
+            }
+          ]
+        },
+        "1140556277634834523": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1402265395196592138": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1037342276994748417": {
+      "forumChannelId": null,
+      "targets": {
+        "1521770199492333660": {
+          "threadId": null,
+          "messageCount": 7,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "702155370054811658": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1455207252071022656": {
+      "forumChannelId": null,
+      "targets": {
+        "1295832086602715251": {
+          "threadId": null,
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1271029067214491739": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1096780328934318130": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1275065525382414407": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1273064561083416576": {
+      "forumChannelId": null,
+      "targets": {
+        "1305501975068020751": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1486267349068681318": {
+      "forumChannelId": null,
+      "targets": {
+        "1431925567699025950": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1479819629751697439": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1295832086602715251": {
+          "threadId": null,
+          "messageCount": 5,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1460147809151094934": {
+      "forumChannelId": "1525821220090675241",
+      "targets": {
+        "1295832086602715251": {
+          "threadId": null,
+          "messageCount": 4,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1329176476553318401": {
+          "threadId": null,
+          "messageCount": 2,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "840985745182425108": {
+          "threadId": null,
+          "messageCount": 3,
+          "threatLevel": "Low",
+          "notes": []
+        },
+        "1482425286170640567": {
+          "threadId": null,
+          "messageCount": 1,
+          "threatLevel": "Low",
+          "notes": []
+        }
+      }
+    },
+    "1489641261441749245": {
+      "forumChannelId": null,
+      "targets": {}
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "lastModified": "2026-07-20T19:07:05.592Z"
+  }
+}

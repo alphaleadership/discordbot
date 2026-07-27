@@ -54,6 +54,9 @@ async function testWatchlistNotifications() {
         
         console.log('✅ Managers initialized successfully\n');
         
+        // Ensure mock user is not already on watchlist from a previous run
+        await watchlistManager.removeFromWatchlist(mockMember.id, mockMember.guild.id).catch(() => {});
+        
         // Test 1: Add user to watchlist
         console.log('📝 Test 1: Adding user to watchlist...');
         const addResult = await watchlistManager.addToWatchlist(

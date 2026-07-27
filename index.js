@@ -3,6 +3,8 @@ import fs from 'fs';
 import { Octokit } from '@octokit/rest';
 import express from 'express';
 import dotenv from 'dotenv';
+import cron from 'node-cron';
+import { WebSocketServer } from 'ws';
 import MessageLogger from './utils/MessageLogger.js';
 import AdminManager from './utils/AdminManager.js';
 import { InteractionHandler } from './utils/InteractionHandler.js';
@@ -34,6 +36,7 @@ import { DMTicketManager } from './utils/DMTicketManager.js';
 import { EconomyManager } from './utils/EconomyManager.js';
 import { ForumReportManager } from './utils/ForumReportManager.js';
 import AutoConfigManager from './utils/AutoConfigManager.js';
+import { EspionageManager } from './utils/EspionageManager.js';
 
 let dmTicketManager; // Declare dmTicketManager here
 
@@ -522,6 +525,29 @@ async function checkSpam(userId, messageContent, guild, interactionHandler) {
         }
 if (warn.count >= 2) {
             try {
+                // Envoyer un message en MP avant de bannir
+                const banUser = await guild.client.users.fetch(userId).catch(() => null);
+                if (banUser) {
+                    const banEmbed = new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('🔨 Bannissement')
+                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
+                        .addFields(
+                            { name: 'Raison', value: `lien suspect (après 2 avertissements)` },
+                            { name: 'Modérateur', value: guild.client.user.tag },
+                            { name: 'Date', value: new Date().toLocaleString('fr-FR') }
+                        );
+                    await banUser.send({ embeds: [banEmbed] }).catch(() => {});
+                }
+
                 await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
                 // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
                 
@@ -578,6 +604,29 @@ if (warn.count >= 2) {
         // Si c'est le deuxième avertissement, bannir
         if (warn.count >= 2) {
             try {
+                // Envoyer un message en MP avant de bannir
+                const banUser = await guild.client.users.fetch(userId).catch(() => null);
+                if (banUser) {
+                    const banEmbed = new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('🔨 Bannissement')
+                        .setDescription(`Vous avez été banni de **${guild.name}** pour spam répétitif.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
+                        .addFields(
+                            { name: 'Raison', value: `Spam détecté (${speed.toFixed(2)} caractères/seconde, après 2 avertissements)` },
+                            { name: 'Modérateur', value: guild.client.user.tag },
+                            { name: 'Date', value: new Date().toLocaleString('fr-FR') }
+                        );
+                    await banUser.send({ embeds: [banEmbed] }).catch(() => {});
+                }
+
                 await guild.members.ban(userId, { reason: `Spam détecté après 2 avertissements` });
                 // console.log(`Utilisateur ${userId} banni après 2 avertissements`); // Logs d'analyse de message désactivés
                 
@@ -632,6 +681,7 @@ function cleanMessageStorage() {
 cleanMessageStorage();
 
 // Créer les clients pour chaque token
+const clients = [];
 for (const token of tokens) {
     const client = new Client({
         intents: [
@@ -670,6 +720,7 @@ for (const token of tokens) {
     const economyManager = new EconomyManager('data/economy.json');
     const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
     const autoConfigManager = new AutoConfigManager(client, guildConfig);
+    const espionageManager = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
@@ -686,7 +737,8 @@ for (const token of tokens) {
     // Initialize interaction handler with new managers
     interactionHandler = new InteractionHandler(adminManager, reportManager, raidDetector, doxDetector, watchlistManager);
     dmTicketManager = new DMTicketManager(client, config, reportManager, messageLogger);
-    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager);
+    const commandHandler = new CommandHandler(client, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, undefined, espionageManager);
+    client.commandHandler = commandHandler;
     
     // Initialize EnhancedReloadSystem dependencies after CommandHandler creation
     enhancedReloadSystem.commandHandler = commandHandler;
@@ -704,7 +756,7 @@ for (const token of tokens) {
         doxDetector
     };
 
-    commandHandler.loadCommands();
+    await commandHandler.loadCommands();
 
     // Enregistrer les commandes
     client.once('ready', async () => {
@@ -792,6 +844,9 @@ for (const token of tokens) {
         }
     });
 
+    // Cache pour la détection des messages identiques d'affilée
+    const duplicateMessagesCache = new Map(); // key: `${userId}-${guildId}` -> content
+
     // Gestion des messages
     client.on('messageCreate', async message => {
         const isDM = message.guild === null;
@@ -807,6 +862,119 @@ for (const token of tokens) {
                 // console.error('Erreur dans la gestion du DM:', error); // Logs d'analyse de message désactivés
             }
             return;
+        }
+
+        // Remplissage automatique des dossiers d'espionnage
+        if (message.guild && !message.author.bot) {
+            await espionageManager.recordMessage(message).catch(() => null);
+        }
+
+        // Système de détection de double message identique d'affilée
+        if (message.guild && !message.author.bot && message.content) {
+            // Vérifier si l'utilisateur est admin ou modérateur pour éviter de fausses alertes sur eux
+            const isAdmin = await adminManager.isAdmin(message.author.id);
+            const isOwner = message.author.id === message.guild.ownerId;
+            const hasAdminPerm = message.member && (
+                message.member.permissions.has(PermissionsBitField.Flags.Administrator) ||
+                message.member.permissions.has(PermissionsBitField.Flags.ManageGuild)
+            );
+
+            if (!isAdmin && !isOwner && !hasAdminPerm) {
+                const cacheKey = `${message.author.id}-${message.guild.id}`;
+                const cacheEntry = duplicateMessagesCache.get(cacheKey);
+
+                if (cacheEntry && cacheEntry.content === message.content && (Date.now() - cacheEntry.timestamp < 120000)) {
+                    try {
+                        console.log(`[DUPLICATE DETECTION] ${message.author.tag} (${message.author.id}) a envoyé deux fois le même message d'affilée.`);
+                        
+                        // 1. Supprimer le message actuel
+                        if (message.deletable) {
+                            await message.delete().catch(() => {});
+                        }
+
+                        // 2. Mettre en quarantaine
+                        let settings = guildConfig.getQuarantineSettings(message.guild.id);
+                        const botMember = message.guild.members.me;
+
+                        // Auto-setup de la quarantaine si non configuré
+                        if ((!settings || !settings.roleId) && 
+                            botMember.permissions.has(PermissionsBitField.Flags.ManageRoles) && 
+                            botMember.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
+                            try {
+                                const role = await message.guild.roles.create({
+                                    name: 'Quarantaine',
+                                    color: '#ff0000',
+                                    reason: 'Auto-setup quarantaine pour double message identique'
+                                });
+                                const channel = await message.guild.channels.create({
+                                    name: 'quarantaine',
+                                    type: ChannelType.GuildText,
+                                    permissionOverwrites: [
+                                        { id: message.guild.id, deny: [PermissionsBitField.Flags.ViewChannel] },
+                                        { id: role.id, allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.ReadMessageHistory], deny: [PermissionsBitField.Flags.SendMessages, PermissionsBitField.Flags.AddReactions] }
+                                    ],
+                                    reason: 'Auto-setup quarantaine pour double message identique'
+                                });
+                                guildConfig.setQuarantineSettings(message.guild.id, role.id, channel.id);
+                                settings = guildConfig.getQuarantineSettings(message.guild.id);
+                            } catch (e) {
+                                console.error('Auto-setup quarantaine échoué:', e);
+                            }
+                        }
+
+                        if (settings && settings.roleId) {
+                            const member = message.member || await message.guild.members.fetch(message.author.id).catch(() => null);
+                            if (member) {
+                                await member.roles.add(settings.roleId, 'Auto-quarantaine : Envoi de deux messages identiques d\'affilée (Automod)');
+                                
+                                const alertEmbed = new EmbedBuilder()
+                                    .setColor('#FF0000')
+                                    .setTitle('🔒 Auto-Quarantaine : Répétition de message')
+                                    .setDescription(`L'utilisateur **${message.author.tag}** (${message.author.id}) a été placé en quarantaine automatiquement pour avoir envoyé deux fois le même message d'affilée.`)
+                                    .setTimestamp();
+
+                                await message.channel.send({ embeds: [alertEmbed] });
+                            }
+                        }
+
+                        // 3. Créer un report global
+                        if (forumReportManager) {
+                            try {
+                                const reportData = {
+                                    reportedUserId: message.author.id,
+                                    reportedUsername: message.author.username,
+                                    reporterUserId: client.user.id,
+                                    reporterUsername: client.user.username,
+                                    category: 'spam',
+                                    reason: `Double message identique d'affilée (Automod)`,
+                                    evidence: `Message : "${message.content}"`,
+                                    messageId: message.id,
+                                    channelId: message.channel.id,
+                                    timestamp: new Date().toISOString()
+                                };
+                                await forumReportManager.createForumReport(reportData, message.guild.id);
+                            } catch (reportErr) {
+                                console.error('Erreur lors de la création du rapport global pour double message :', reportErr);
+                            }
+                        }
+
+                        // Nettoyer le cache pour cet utilisateur pour éviter de reboucler
+                        duplicateMessagesCache.delete(cacheKey);
+                        return; // Arrêter le traitement pour ce message
+                    } catch (err) {
+                        console.error('Erreur lors de la gestion du double message d\'affilée :', err);
+                    }
+                } else {
+                    duplicateMessagesCache.set(cacheKey, { content: message.content, timestamp: Date.now() });
+                    // Supprimer après 2 minutes pour éviter les fuites de mémoire
+                    setTimeout(() => {
+                        const currentEntry = duplicateMessagesCache.get(cacheKey);
+                        if (currentEntry && currentEntry.content === message.content) {
+                            duplicateMessagesCache.delete(cacheKey);
+                        }
+                    }, 120000);
+                }
+            }
         }
 
         // Système de Honeypot (Autoban)
@@ -875,7 +1043,8 @@ for (const token of tokens) {
         
         // Vérifier le spam
         if (!message.author.bot && message.content) {
-            const isSpam = await checkSpam(
+            const isOwner = message.author.id === message.guild.ownerId;
+            const isSpam = !isOwner && await checkSpam(
                 message.author.id,
                 message.content,
                 message.guild,
@@ -953,6 +1122,27 @@ for (const token of tokens) {
         
         // Handle watchlist monitoring
         if (watchlistManager.handleUserMessage) {
+            try {
+                const userId = message.author.id;
+                const guildId = message.guild.id;
+                const watchlistEntry = watchlistManager.getWatchlistEntry(userId, guildId) || watchlistManager.getWatchlistEntry(userId, 'GLOBAL');
+                
+                if (watchlistEntry && espionageManager) {
+                    const member = await message.guild.members.fetch(userId).catch(() => null);
+                    if (member) {
+                        const contentPreview = message.content.length > 200 
+                            ? message.content.substring(0, 200) + '...' 
+                            : message.content;
+                        await espionageManager.addNote(
+                            member,
+                            `👁️ DÉTECTION SURVEILLANCE : Message intercepté dans <#${message.channel.id}> (Niveau: ${watchlistEntry.watchLevel})\n**Contenu** : "${contentPreview}"`,
+                            'system'
+                        ).catch(() => null);
+                    }
+                }
+            } catch (err) {
+                console.error('Error integrating watchlist with espionage manager:', err);
+            }
             watchlistManager.handleUserMessage(message);
         }
         
@@ -964,16 +1154,17 @@ for (const token of tokens) {
         await messageLogger.saveMessage(message);
           backupToGitHub()
         // Vérifier le spam
-        const isSpam = await checkSpam(message.author.id, message.content, message.guild, interactionHandler);
+        const isOwner = message.author.id === message.guild.ownerId;
+        const isSpam = !isOwner && await checkSpam(message.author.id, message.content, message.guild, interactionHandler);
         
         if (isSpam) {
             // Le message a été traité comme spam et l'utilisateur a été banni
             return;
         }
- const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(message.author.id);
-    if (isAdmin) {
-        return false; // Les administrateurs sont immunisés contre la détection de spam
-    }
+        const isAdmin = interactionHandler.adminManager && await interactionHandler.adminManager.isAdmin(message.author.id);
+        if (isAdmin || isOwner) {
+            return; // Les admins et le propriétaire sont immunisés contre les filtres suivants
+        }
         // Vérifier les mots bloqués
         if (blockedWordsManager.isBlocked(message.guild.id, message.content)) {
             try {
@@ -1009,7 +1200,15 @@ for (const token of tokens) {
                     const banEmbed = new EmbedBuilder()
                         .setColor('#FF0000')
                         .setTitle('🔨 Bannissement')
-                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.`)
+                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                         .addFields(
                             { name: 'Dernier avertissement', value: 'Utilisation de mots bloqués' },
                             { name: 'Date', value: new Date().toLocaleString('fr-FR') }
@@ -1051,6 +1250,11 @@ for (const token of tokens) {
             return; // Anti-invite désactivé pour ce salon
         }
 
+        // Le propriétaire est immunisé contre l'anti-invite
+        if (message.author.id === message.guild.ownerId) {
+            return;
+        }
+
         // Vérifier si le message contient un lien d'invitation
         if (containsInviteLink(message.content)) {
             try {
@@ -1090,11 +1294,18 @@ for (const token of tokens) {
                         reason: '3 avertissements atteints (liens d\'invitation)'
                     }).catch(console.error);
                     
-                    // Envoyer un message de bannissement
                     const banEmbed = new EmbedBuilder()
                         .setColor('#FF0000')
                         .setTitle('🔨 Bannissement')
-                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.`)
+                        .setDescription(`Vous avez été banni de **${message.guild.name}** pour avoir atteint 3 avertissements.` + "\n\n" +
+`Hey, your account got hacked and has sent a mister beast scam to everyone in every servers you’re in
+i advize you to CHANGE EVERY PASSWORD YOU HAVE IN EVERY WEBSITES and REFRESH INSTALL YOUR OS
+here’s a video on how to do it with windows 11 : https://www.youtube.com/watch?v=ZsMdXlPIgYs
+
+also watch this video that will make you learn about common discord scams so you won’t be hacked again : https://youtu.be/Jz-3goOPj9o
+
+also, last thing i have to say :
+NEVER EXECUTE ANY FILES PEOPLE SEND YOU RANDOMLY ON DISCORD NOR SHARE ANY ACCOUNT PASSWORD EMAIL ADRESS OR TOKEN TO ANYONE EVEN IF THEY ASK YOU TO IN ANY DMS OR BOTS. (About friends, ask them if they intended to send the file because there’s a non-0% chance luck they got hacked).`)
                         .addFields(
                             { name: 'Dernier avertissement', value: 'Envoi de lien d\'invitation non autorisé' },
                             { name: 'Date', value: new Date().toLocaleString('fr-FR') }
@@ -1119,7 +1330,7 @@ for (const token of tokens) {
     client.on('guildMemberAdd', async member => {
         try {
             // Vérifier si l'utilisateur est dans la banlist
-            const { banned, reason } = await banlistManager.isBanned(member.id);
+            const { banned, reason } = await banlistManager.isBanned(member.id, member.guild.id);
             
             if (banned) {
                 // Bannir l'utilisateur avec la raison du bannissement
@@ -1190,6 +1401,48 @@ for (const token of tokens) {
         }
     });
 
+    // Gestion de l'enregistrement automatique dans le dossier d'espionnage lors d'un ban
+    client.on('guildBanAdd', async (ban) => {
+        try {
+            const guild = ban.guild;
+            const user = ban.user;
+            const reason = ban.reason || "Aucune raison fournie (Bannissement Discord)";
+            
+            if (espionageManager) {
+                // Simuler un membre du serveur (car non présent)
+                const fakeMember = {
+                    guild: guild,
+                    id: user.id,
+                    user: user,
+                    roles: {
+                        cache: {
+                            filter: () => ({ map: () => [] })
+                        }
+                    },
+                    joinedTimestamp: Date.now()
+                };
+                
+                const thread = await espionageManager.getOrCreateMemberDossier(fakeMember);
+                if (thread) {
+                    await espionageManager.addNote(
+                        fakeMember,
+                        `🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : ${reason}`,
+                        'system'
+                    );
+                    
+                    const guildData = espionageManager.getGuildConfig(guild.id);
+                    if (guildData.targets[user.id]) {
+                        guildData.targets[user.id].threatLevel = 'Critical';
+                        espionageManager.saveDossiers();
+                        await espionageManager.updateDossier(fakeMember);
+                    }
+                }
+            }
+        } catch (error) {
+            console.error("Erreur lors de la gestion de guildBanAdd pour l'espionnage :", error);
+        }
+    });
+
     // Détection des liens d'invitation dans les messages
     client.on('messageCreate', async message => {
     
@@ -1242,12 +1495,25 @@ for (const token of tokens) {
         console.error(`Failed to login with token: ${token.substring(0, 5)}...`, error);
     });
 
-    //clients.push(client);
+    clients.push(client);
 }
 
 const app = express();
 app.use(express.json());
-app.use(express.static('public'));
+
+// Désactiver le cache pour toutes les requêtes (API et statiques)
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+});
+
+app.use(express.static('public', {
+    etag: false,
+    lastModified: false,
+    setHeaders: (res, path) => {
+        res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    }
+}));
 
 // --- Configuration de la sauvegarde GitHub ---
 let logQueue = [];
@@ -1490,6 +1756,93 @@ async function processLogQueue() {
 }
 
 // Web Server
+app.post('/github-webhook', async (req, res) => {
+    const event = req.headers['x-github-event'];
+    const payload = req.body;
+
+    if (!payload || !payload.repository) {
+        return res.status(400).send('Invalid webhook payload');
+    }
+
+    const repoOwner = payload.repository.owner.login;
+    const repoName = payload.repository.name;
+
+    // Parcourir tous les serveurs et leurs configurations pour trouver les salons liés à ce dépôt
+    for (const client of clients) {
+        for (const guild of client.guilds.cache.values()) {
+            const guildSettings = guildConfig.config[guild.id];
+            if (guildSettings && guildSettings.githubLinks) {
+                for (const [channelId, linkSettings] of Object.entries(guildSettings.githubLinks)) {
+                    if (
+                        linkSettings.owner.toLowerCase() === repoOwner.toLowerCase() &&
+                        linkSettings.repo.toLowerCase() === repoName.toLowerCase()
+                    ) {
+                        const channel = guild.channels.cache.get(channelId);
+                        if (!channel) continue;
+
+                        let embed = new EmbedBuilder().setColor('#24292f').setTimestamp();
+
+                        if (event === 'issues' && ['opened', 'closed', 'reopened'].includes(payload.action)) {
+                            const issue = payload.issue;
+                            embed.setTitle(`🛠️ Issue ${payload.action}: #${issue.number} ${issue.title}`)
+                                 .setURL(issue.html_url)
+                                 .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.')
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'issue', action: payload.action, repository: `${repoOwner}/${repoName}`, number: issue.number, title: issue.title, author: payload.sender.login, url: issue.html_url });
+                        } 
+                        else if (event === 'pull_request' && ['opened', 'closed', 'reopened'].includes(payload.action)) {
+                            const pr = payload.pull_request;
+                            const isMerged = payload.action === 'closed' && pr.merged;
+                            const actionLabel = isMerged ? 'merged' : payload.action;
+                            const prColor = isMerged ? '#8250df' : (payload.action === 'closed' ? '#cf222e' : '#2da44e');
+                            
+                            embed.setTitle(`🔀 Pull Request ${actionLabel}: #${pr.number} ${pr.title}`)
+                                 .setURL(pr.html_url)
+                                 .setDescription(pr.body ? (pr.body.length > 200 ? pr.body.substring(0, 200) + '...' : pr.body) : 'Aucune description.')
+                                 .setColor(prColor)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'pull_request', action: actionLabel, repository: `${repoOwner}/${repoName}`, number: pr.number, title: pr.title, author: payload.sender.login, url: pr.html_url });
+                        }
+                        else if (event === 'issue_comment' && payload.action === 'created') {
+                            const comment = payload.comment;
+                            const isPR = !!payload.issue.pull_request;
+                            embed.setTitle(`💬 Nouveau commentaire sur ${isPR ? 'la PR' : 'l\'issue'} #${payload.issue.number}`)
+                                 .setURL(comment.html_url)
+                                 .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'comment', target: isPR ? 'pull_request' : 'issue', repository: `${repoOwner}/${repoName}`, number: payload.issue.number, author: payload.sender.login, content: comment.body, url: comment.html_url });
+                        }
+                        else if (event === 'pull_request_review_comment' && payload.action === 'created') {
+                            const comment = payload.comment;
+                            embed.setTitle(`💬 Nouveau commentaire de revue sur la PR #${payload.pull_request.number}`)
+                                 .setURL(comment.html_url)
+                                 .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body)
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'review_comment', repository: `${repoOwner}/${repoName}`, number: payload.pull_request.number, author: payload.sender.login, content: comment.body, url: comment.html_url });
+                        }
+                        else if (event === 'release' && payload.action === 'published') {
+                            const release = payload.release;
+                            embed.setTitle(`🚀 Nouvelle Release publiée: ${release.tag_name} (${release.name || release.tag_name})`)
+                                 .setURL(release.html_url)
+                                 .setDescription(release.body ? (release.body.length > 300 ? release.body.substring(0, 300) + '...' : release.body) : 'Aucun changelog.')
+                                 .setColor('#0969da')
+                                 .setAuthor({ name: payload.sender.login, iconURL: payload.sender.avatar_url });
+                            await channel.send({ embeds: [embed] }).catch(() => {});
+                            broadcastWs({ type: 'release', action: 'published', repository: `${repoOwner}/${repoName}`, tag: release.tag_name, name: release.name || release.tag_name, author: payload.sender.login, url: release.html_url });
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    res.status(200).send('Webhook processed');
+});
+
 app.post('/login', (req, res) => {
     if (req.body.password === webPassword) {
         res.json({ success: true });
@@ -1548,21 +1901,39 @@ app.post('/massban', async (req, res) => {
             return res.status(500).json({ message: 'Error reading banlist.txt' });
         }
 
-        const idsToBan = data.split(/\r?\n/).filter(id => id.trim() !== '');
-        if (idsToBan.length === 0) {
-            return res.status(400).json({ message: 'The ban list is empty.' });
+        const bansToExecute = [];
+        const uniqueIds = new Set();
+        
+        data.split(/\r?\n/).forEach(line => {
+            const cleanLine = line.trim();
+            if (!cleanLine) return;
+
+            const parts = cleanLine.split('|');
+            const firstPart = parts[0].trim();
+            const id = firstPart.split(/[\s\-;,#]+/)[0].trim();
+            
+            if (/^\d{17,20}$/.test(id) && !uniqueIds.has(id)) {
+                uniqueIds.add(id);
+                const inlineReason = parts.slice(1).join('|').trim();
+                bansToExecute.push({ id, inlineReason: inlineReason || null });
+            }
+        });
+
+        if (bansToExecute.length === 0) {
+            return res.status(400).json({ message: 'The ban list does not contain any valid Discord user IDs.' });
         }
 
         let successfulBans = 0;
         let failedBans = 0;
 
-        for (const id of idsToBan) {
+        for (const banInfo of bansToExecute) {
             try {
-                await guild.members.ban(id, { reason: 'Mass ban from web interface.' });
+                const banReason = banInfo.inlineReason ? banInfo.inlineReason : 'Mass ban from web interface.';
+                await guild.members.ban(banInfo.id, { reason: `Massban: ${banReason}` });
                 successfulBans++;
             } catch (error) {
                 failedBans++;
-                console.error(`Failed to ban ${id} on server ${guild.name}:`, error);
+                console.error(`Failed to ban ${banInfo.id} on server ${guild.name}:`, error);
             }
         }
 
@@ -1633,7 +2004,7 @@ app.get('/channels', (req, res) => {
         return res.status(404).send('Server not found.');
     }
 
-    const textChannels = guild.channels.cache.filter(channel => channel.type === 0); // 0 for GUILD_TEXT
+    const textChannels = guild.channels.cache.filter(channel => channel.type === ChannelType.GuildText);
     const channelList = textChannels.map(channel => ({ id: channel.id, name: channel.name }));
     res.json(channelList);
 });
@@ -1651,7 +2022,7 @@ app.get('/messages', async (req, res) => {
     }
 
     const channel = guild.channels.cache.get(channelId);
-    if (!channel || channel.type !== 0) { // 0 for GUILD_TEXT
+    if (!channel || channel.type !== ChannelType.GuildText) {
         return res.status(404).send('Text channel not found.');
     }
 
@@ -1670,11 +2041,154 @@ app.get('/messages', async (req, res) => {
 });
 
 
+let serverInstance;
+
 // Démarrer le serveur web seulement si activé
 if (webServerEnabled) {
-    app.listen(3000, () => {
-        console.log('Web server listening on port 3000');
+    serverInstance = app.listen(10004, () => {
+        console.log('Web server listening on port 10004');
     });
 } else {
     console.log('Web server disabled. Set WEB_SERVER_ENABLED=true in .env to enable it.');
 }
+
+// WebSocket Server
+let wss = null;
+if (serverInstance) {
+    wss = new WebSocketServer({ server: serverInstance });
+    wss.on('connection', (ws) => {
+        console.log('[WS] Client connected');
+        ws.send(JSON.stringify({ type: 'welcome', message: 'Connected to GitBot WebSocket API' }));
+    });
+}
+
+// Fonction globale pour diffuser un message en temps réel aux clients connectés
+function broadcastWs(data) {
+    if (wss) {
+        const msg = JSON.stringify(data);
+        wss.clients.forEach(client => {
+            if (client.readyState === 1) { // 1 = OPEN
+                client.send(msg);
+            }
+        });
+    }
+}
+
+// --- Système de polling Cron + Octokit pour les dépôts GitHub liés ---
+const processedEvents = new Map(); // key: channelId_repo -> { lastIssueCheck: Date, lastPrCheck: Date, lastReleaseCheck: Date, lastCommentCheck: Date }
+
+cron.schedule('* * * * *', async () => {
+    if (!octokit) return;
+
+    for (const client of clients) {
+        for (const guild of client.guilds.cache.values()) {
+            const guildSettings = guildConfig.config[guild.id];
+            if (guildSettings && guildSettings.githubLinks) {
+                for (const [channelId, linkSettings] of Object.entries(guildSettings.githubLinks)) {
+                    const channel = guild.channels.cache.get(channelId);
+                    if (!channel) continue;
+
+                    const repoOwner = linkSettings.owner;
+                    const repoName = linkSettings.repo;
+                    const mapKey = `${channelId}_${repoOwner}/${repoName}`;
+
+                    if (!processedEvents.has(mapKey)) {
+                        processedEvents.set(mapKey, {
+                            lastCheck: new Date()
+                        });
+                        continue; // skip first run to establish reference timestamp
+                    }
+
+                    const state = processedEvents.get(mapKey);
+                    const now = new Date();
+
+                    try {
+                        // 1. Issues & Pull Requests (using /issues api list)
+                        const issuesResponse = await octokit.issues.listForRepo({
+                            owner: repoOwner,
+                            repo: repoName,
+                            state: 'all',
+                            since: state.lastCheck.toISOString(),
+                            per_page: 10
+                        });
+
+                        for (const issue of issuesResponse.data) {
+                            const isPR = !!issue.pull_request;
+                            const createdTime = new Date(issue.created_at);
+                            const updatedTime = new Date(issue.updated_at);
+
+                            // Nouveau ticket
+                            if (createdTime > state.lastCheck) {
+                                const embed = new EmbedBuilder()
+                                    .setColor(isPR ? '#2da44e' : '#24292f')
+                                    .setTimestamp(createdTime)
+                                    .setAuthor({ name: issue.user.login, iconURL: issue.user.avatar_url })
+                                    .setURL(issue.html_url);
+
+                                if (isPR) {
+                                    embed.setTitle(`🔀 Pull Request ouverte: #${issue.number} ${issue.title}`)
+                                         .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.');
+                                } else {
+                                    embed.setTitle(`🛠️ Issue ouverte: #${issue.number} ${issue.title}`)
+                                         .setDescription(issue.body ? (issue.body.length > 200 ? issue.body.substring(0, 200) + '...' : issue.body) : 'Aucune description.');
+                                }
+                                await channel.send({ embeds: [embed] }).catch(() => {});
+                            }
+
+                            // Commentaires sur ce ticket (récupérer s'il y a eu de l'activité)
+                            if (updatedTime > state.lastCheck) {
+                                const commentsResponse = await octokit.issues.listComments({
+                                    owner: repoOwner,
+                                    repo: repoName,
+                                    issue_number: issue.number,
+                                    since: state.lastCheck.toISOString()
+                                });
+
+                                for (const comment of commentsResponse.data) {
+                                    const commentCreated = new Date(comment.created_at);
+                                    if (commentCreated > state.lastCheck) {
+                                        const embed = new EmbedBuilder()
+                                            .setColor('#24292f')
+                                            .setTimestamp(commentCreated)
+                                            .setAuthor({ name: comment.user.login, iconURL: comment.user.avatar_url })
+                                            .setURL(comment.html_url)
+                                            .setTitle(`💬 Nouveau commentaire sur ${isPR ? 'la PR' : 'l\'issue'} #${issue.number}`)
+                                            .setDescription(comment.body.length > 200 ? comment.body.substring(0, 200) + '...' : comment.body);
+                                        await channel.send({ embeds: [embed] }).catch(() => {});
+                                    }
+                                }
+                            }
+                        }
+
+                        // 2. Releases
+                        const releasesResponse = await octokit.repos.listReleases({
+                            owner: repoOwner,
+                            repo: repoName,
+                            per_page: 5
+                        });
+
+                        for (const release of releasesResponse.data) {
+                            const publishedTime = new Date(release.published_at);
+                            if (publishedTime > state.lastCheck) {
+                                const embed = new EmbedBuilder()
+                                    .setColor('#0969da')
+                                    .setTimestamp(publishedTime)
+                                    .setAuthor({ name: release.author.login, iconURL: release.author.avatar_url })
+                                    .setURL(release.html_url)
+                                    .setTitle(`🚀 Nouvelle Release publiée: ${release.tag_name} (${release.name || release.tag_name})`)
+                                    .setDescription(release.body ? (release.body.length > 300 ? release.body.substring(0, 300) + '...' : release.body) : 'Aucun changelog.');
+                                await channel.send({ embeds: [embed] }).catch(() => {});
+                            }
+                        }
+
+                        // Mettre à jour la date de dernière vérification
+                        state.lastCheck = now;
+
+                    } catch (err) {
+                        console.error(`Erreur lors du check GitHub Cron pour ${repoOwner}/${repoName}:`, err);
+                    }
+                }
+            }
+        }
+    }
+});

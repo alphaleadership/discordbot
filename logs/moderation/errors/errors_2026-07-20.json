@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1784526486559_jccf36zp3",
+    "timestamp": "2026-07-20T05:48:06.559Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 88,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 88,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1784573215492_aj9zm17s0",
+    "timestamp": "2026-07-20T18:46:55.492Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 88,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 88,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1784573606387_yi9r17hmi",
+    "timestamp": "2026-07-20T18:53:26.386Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 88,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 88,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  }
+]

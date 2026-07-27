@@ -11,7 +11,8 @@ describe('PermissionValidator', () => {
     beforeEach(() => {
         // Mock AdminManager
         mockAdminManager = {
-            isAdmin: vi.fn()
+            isAdmin: vi.fn(),
+            isAgent: vi.fn()
         };
 
         permissionValidator = new PermissionValidator(mockAdminManager);

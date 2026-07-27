@@ -332,7 +332,7 @@ export class RaidDetector {
      * @param {string} resolvedBy - ID of user who resolved the raid
      * @returns {boolean} Whether raid was successfully resolved
      */
-    resolveRaid(guildId, resolvedBy) {
+    async resolveRaid(guildId, resolvedBy) {
         const activeRaid = this.activeRaids.get(guildId);
         if (!activeRaid) {
             return false;
@@ -342,6 +342,9 @@ export class RaidDetector {
         activeRaid.resolvedBy = resolvedBy;
         activeRaid.resolvedAt = Date.now();
 
+        // Remove protective measures before deleting
+        const cleanupResult = await this.removeProtectiveMeasures(guildId, activeRaid.measures);
+
         // Remove from active raids
         this.activeRaids.delete(guildId);
         
@@ -350,6 +353,9 @@ export class RaidDetector {
         if (this.panicMode.get(guildId)) {
             this.panicMode.set(guildId, false);
         }
+
+        // Notify that the raid is resolved
+        await this.notifyRaidResolved(guildId, activeRaid.raidId, resolvedBy, cleanupResult);
 
         return true;
     }
@@ -818,6 +824,27 @@ export class RaidDetector {
                 return { success: false, error: 'Guild not found' };
             }
 
+            // Generate server invite link dynamically for investigations
+            let inviteLink = 'Impossible de générer une invite (permissions insuffisantes)';
+            try {
+                // Find a suitable channel to create the invite
+                const targetChannel = guild.channels.cache.find(c => 
+                    c.type === 0 && // Text channel
+                    c.permissionsFor(guild.members.me).has('CreateInstantInvite')
+                );
+                if (targetChannel) {
+                    const invite = await targetChannel.createInvite({
+                        maxAge: 86400, // 24 hours
+                        maxUses: 0, // unlimited uses
+                        unique: true,
+                        reason: 'Raid alert - Server invite link for investigation'
+                    });
+                    inviteLink = invite.url;
+                }
+            } catch (inviteErr) {
+                console.error('Error generating invite for raid alert:', inviteErr);
+            }
+
             // Create detailed raid alert embed
             const embed = new EmbedBuilder()
                 .setColor(this.getSeverityColor(raidInfo.severity))
@@ -826,6 +853,7 @@ export class RaidDetector {
                 .addFields(
                     { name: '📊 Detection Details', value: this.formatRaidDetails(raidInfo), inline: false },
                     { name: '🛡️ Protective Measures', value: this.formatAppliedMeasures(measures), inline: false },
+                    { name: '🔗 Server Invite Link', value: inviteLink, inline: false },
                     { name: '👥 Affected Users', value: this.formatAffectedUsers(raidInfo.affectedUsers), inline: false }
                 )
                 .setTimestamp()
@@ -1178,3 +1206,5 @@ export class RaidDetector {
         this.activeRaids.clear();
     }
 }
+
+export default RaidDetector;

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "1783629334867_ooya1c69f",
+    "timestamp": "2026-07-09T20:35:34.867Z",
+    "operation": "add",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "isGlobal": false,
+    "data": {
+      "reason": "accord inter micronation",
+      "watchLevel": "observe",
+      "warnings": []
+    },
+    "success": true,
+    "logType": "watchlist_operation"
+  },
+  {
+    "id": "1783629407594_roylplm1l",
+    "timestamp": "2026-07-09T20:36:47.594Z",
+    "operation": "add",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1258525792497963030",
+      "tag": "nyxora1234687"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "isGlobal": false,
+    "data": {
+      "reason": "accord mic",
+      "watchLevel": "observe",
+      "warnings": []
+    },
+    "success": true,
+    "logType": "watchlist_operation"
+  },
+  {
+    "id": "1783632611399_sbln4boj0",
+    "timestamp": "2026-07-09T21:30:11.399Z",
+    "operation": "add",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1455848916619890782",
+      "tag": "swayloic"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "isGlobal": false,
+    "data": {
+      "reason": "accord mic",
+      "watchLevel": "action",
+      "error": "User is already on the watchlist for this server"
+    },
+    "success": false,
+    "logType": "watchlist_operation"
+  },
+  {
+    "id": "1783632672291_7b7zmvqet",
+    "timestamp": "2026-07-09T21:31:12.291Z",
+    "operation": "add",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1455848916619890782",
+      "tag": "swayloic"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "isGlobal": true,
+    "data": {
+      "reason": "accord mic",
+      "watchLevel": "alert"
+    },
+    "success": true,
+    "logType": "watchlist_operation"
+  },
+  {
+    "id": "1783632788721_6m76peoof",
+    "timestamp": "2026-07-09T21:33:08.721Z",
+    "operation": "add",
+    "moderator": {
+      "id": "840985745182425108",
+      "tag": "vanguard_arbinger"
+    },
+    "target": {
+      "id": "1258525792497963030",
+      "tag": "nyxora1234687"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "isGlobal": true,
+    "data": {
+      "reason": "accord mic",
+      "watchLevel": "alert"
+    },
+    "success": true,
+    "logType": "watchlist_operation"
+  }
+]

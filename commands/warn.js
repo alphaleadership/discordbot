@@ -20,7 +20,7 @@ export default {
                 .setDescription('Avertissement global (visible dans tous les serveurs)')
                 .setRequired(false)
         ),
-    async execute(interaction, adminManager) {
+    async execute(interaction, adminManager, warnManagerParam, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, customsManager, espionageManager) {
         const isGlobal = interaction.options.getBoolean('global') ?? false;
         const warnManager = isGlobal ? globalWarnManager : localWarnManager;
         const guildId = isGlobal ? 'global' : interaction.guild.id;
@@ -60,10 +60,22 @@ export default {
             const warn = warnManager.addWarn(guildId, user.id, reason, interaction.user.id);
             const warnCount = warnManager.getWarnCount(guildId, user.id);
 
+            // Remplissage automatique du dossier d'espionnage lors d'un warn
+            if (espionageManager && interaction.guild) {
+                const member = await interaction.guild.members.fetch(user.id).catch(() => null);
+                if (member) {
+                    await espionageManager.addNote(
+                        member, 
+                        `⚠️ Avertissement reçu : "${reason}" (Nombre total : ${warnCount}/3)`, 
+                        interaction.user.id
+                    ).catch(() => null);
+                }
+            }
+
             const embed = new EmbedBuilder()
                 .setColor('#FFA500')
                 .setTitle(isGlobal ? '⚠️ Avertissement Global' : '⚠️ Avertissement')
-                .setDescription(`Vous avez reçu un avertissement ${isGlobal ? 'global' : `sur ${interaction.guild.name}`}.`)
+                .setDescription(`Vous avez reçu un avertissement ${isGlobal ? 'global' : `sur ${interaction.guild.name}`}.\n\n*Si vous souhaitez contester cette sanction ou vous expliquer, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                 .addFields(
                     { name: 'Raison', value: reason },
                     { name: 'Avertissements actuels', value: `${warnCount}/3` },
@@ -89,7 +101,7 @@ export default {
                 const banEmbed = new EmbedBuilder()
                     .setColor('#FF0000')
                     .setTitle('🔨 Bannissement')
-                    .setDescription(`Vous avez été banni de ${interaction.guild.name} pour avoir atteint 3 avertissements.`)
+                    .setDescription(`Vous avez été banni de ${interaction.guild.name} pour avoir atteint 3 avertissements.\n\n*Si vous estimez qu'il s'agit d'une erreur ou si vous souhaitez contester cette sanction, vous pouvez soumettre une demande d'appel en répondant directement à ce bot par message privé (MP).*`)
                     .addFields(
                         { name: 'Dernier avertissement', value: reason },
                         { name: 'Modérateur', value: interaction.user.tag },

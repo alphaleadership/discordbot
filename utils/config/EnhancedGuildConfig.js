@@ -135,6 +135,32 @@ class EnhancedGuildConfig extends GuildConfig {
             changed = true;
         }
 
+        // Initialize honeypot config
+        if (!this.config[guildId].honeypot) {
+            this.config[guildId].honeypot = {
+                enabled: false,
+                channelId: null
+            };
+            changed = true;
+        }
+
+        // Initialize customs config
+        if (!this.config[guildId].customs) {
+            this.config[guildId].customs = {
+                enabled: false,
+                partnerGuildId: null,
+                requiredRoleId: null,
+                minAccountAgeDays: 0,
+                minGuildJoinDays: 0,
+                maxWarnings: 3,
+                actionOnFail: 'quarantine', // 'kick', 'ban', 'quarantine'
+                quarantineRoleId: null,
+                logChannelId: null,
+                bypassRoles: []
+            };
+            changed = true;
+        }
+
         return changed;
     }
 
@@ -349,6 +375,40 @@ class EnhancedGuildConfig extends GuildConfig {
         this.initializeEnhancedGuild(guildId);
         Object.assign(this.config[guildId].watchlist, settings);
         this.saveConfig();
+    }
+
+    // Honeypot Configuration Methods
+
+    /**
+     * Enable or disable honeypot for a guild
+     * @param {string} guildId - Guild ID
+     * @param {boolean} enabled - Whether to enable honeypot
+     */
+    setHoneypotEnabled(guildId, enabled) {
+        this.initializeEnhancedGuild(guildId);
+        this.config[guildId].honeypot.enabled = enabled;
+        this.saveConfig();
+    }
+
+    /**
+     * Set honeypot channel for a guild
+     * @param {string} guildId - Guild ID
+     * @param {string} channelId - Channel ID
+     */
+    setHoneypotChannelId(guildId, channelId) {
+        this.initializeEnhancedGuild(guildId);
+        this.config[guildId].honeypot.channelId = channelId;
+        this.saveConfig();
+    }
+
+    /**
+     * Get honeypot configuration for a guild
+     * @param {string} guildId - Guild ID
+     * @returns {Object} Honeypot configuration
+     */
+    getHoneypotConfig(guildId) {
+        this.initializeEnhancedGuild(guildId);
+        return this.config[guildId].honeypot;
     }
 
     // Utility Methods
@@ -586,6 +646,13 @@ class EnhancedGuildConfig extends GuildConfig {
             }
         }
 
+        // Validate customs config
+        if (guildConfig.customs) {
+            if (!this.validateCustomsConfig(guildConfig.customs)) {
+                return false;
+            }
+        }
+
         return true;
     }
 
@@ -704,6 +771,47 @@ class EnhancedGuildConfig extends GuildConfig {
         }
         
         return result;
+    }
+
+    /**
+     * Validate customs configuration
+     * @param {Object} config - Customs config
+     * @returns {boolean} Whether config is valid
+     */
+    validateCustomsConfig(config) {
+        return (
+            typeof config.enabled === 'boolean' &&
+            (config.partnerGuildId === null || typeof config.partnerGuildId === 'string') &&
+            (config.requiredRoleId === null || typeof config.requiredRoleId === 'string') &&
+            typeof config.minAccountAgeDays === 'number' &&
+            typeof config.minGuildJoinDays === 'number' &&
+            typeof config.maxWarnings === 'number' &&
+            ['kick', 'ban', 'quarantine'].includes(config.actionOnFail) &&
+            (config.quarantineRoleId === null || typeof config.quarantineRoleId === 'string') &&
+            (config.logChannelId === null || typeof config.logChannelId === 'string') &&
+            Array.isArray(config.bypassRoles)
+        );
+    }
+
+    /**
+     * Get customs configuration for a guild
+     * @param {string} guildId - Guild ID
+     * @returns {Object} Customs configuration
+     */
+    getCustomsConfig(guildId) {
+        this.initializeEnhancedGuild(guildId);
+        return this.config[guildId].customs;
+    }
+
+    /**
+     * Update customs configuration for a guild
+     * @param {string} guildId - Guild ID
+     * @param {Object} settings - Settings to update
+     */
+    updateCustomsConfig(guildId, settings) {
+        this.initializeEnhancedGuild(guildId);
+        Object.assign(this.config[guildId].customs, settings);
+        this.saveConfig();
     }
 }
 

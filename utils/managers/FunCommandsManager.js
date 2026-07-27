@@ -905,6 +905,106 @@ export default class FunCommandsManager {
     }
 
     /**
+     * Check prerequisites for a fun command
+     */
+    async checkPrerequisites(interaction, warnManager, commandName) {
+        const guildId = interaction.guild.id;
+        const channelId = interaction.channel.id;
+        const userId = interaction.user.id;
+        
+        if (!this.areFunCommandsEnabled(guildId, channelId)) return { allowed: false, msg: "Les commandes amusantes sont désactivées dans ce serveur ou ce salon." };
+        if (!this.isCommandEnabled(guildId, commandName)) return { allowed: false, msg: `La commande ${commandName} est désactivée dans ce serveur.` };
+        
+        const cooldownStatus = this.checkCooldown(userId, guildId, commandName);
+        if (cooldownStatus.onCooldown) {
+            if (cooldownStatus.reason === 'abuse') return { allowed: false, msg: cooldownStatus.message };
+            return { allowed: false, msg: `Tu dois attendre encore ${cooldownStatus.remainingTime} secondes avant d'utiliser cette commande.` };
+        }
+        
+        if (warnManager) {
+            const abuseCheck = this.checkForAbuse(userId, guildId);
+            if (abuseCheck.hasAbuse) {
+                const moderationResult = this.applyModerationAction(userId, guildId, warnManager, abuseCheck.reasons.join(', '));
+                if (moderationResult.success) return { allowed: false, msg: `⚠️ **Abus détecté !** ${moderationResult.message}` };
+            }
+        }
+        
+        return { allowed: true };
+    }
+
+    async executeCoinflip(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'coinflip');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'coinflip');
+        return Math.random() < 0.5 ? "🪙 Pile !" : "🪙 Face !";
+    }
+
+    async executeRoll(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'roll');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'roll');
+        return `🎲 Tu as lancé un dé et obtenu : ${Math.floor(Math.random() * 6) + 1} !`;
+    }
+
+    async executeRps(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'rps');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'rps');
+        
+        const userChoice = interaction.options.getString('choix');
+        const choices = ['pierre', 'feuille', 'ciseaux'];
+        const botChoice = choices[Math.floor(Math.random() * choices.length)];
+        
+        let result = "";
+        if (userChoice === botChoice) result = "C'est une égalité !";
+        else if (
+            (userChoice === 'pierre' && botChoice === 'ciseaux') ||
+            (userChoice === 'feuille' && botChoice === 'pierre') ||
+            (userChoice === 'ciseaux' && botChoice === 'feuille')
+        ) result = "Tu as gagné ! 🎉";
+        else result = "J'ai gagné ! 🤖";
+        
+        return `Tu as choisi **${userChoice}**, j'ai choisi **${botChoice}**.\n${result}`;
+    }
+
+    async executeLovecalc(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'lovecalc');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'lovecalc');
+        
+        const user1 = interaction.options.getUser('personne1');
+        const user2 = interaction.options.getUser('personne2') || interaction.user;
+        const score = Math.floor(Math.random() * 101);
+        
+        let message = "";
+        if (score >= 90) message = "L'amour fou ! ❤️‍🔥";
+        else if (score >= 70) message = "Il y a de l'étincelle ! ✨";
+        else if (score >= 40) message = "Peut-être dans une autre vie... 😅";
+        else message = "C'est mort. 💀";
+        
+        return `💘 Le pourcentage d'amour entre **${user1.username}** et **${user2.username}** est de **${score}%** !\n${message}`;
+    }
+
+    async executeHug(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'hug');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'hug');
+        
+        const target = interaction.options.getUser('utilisateur');
+        return `🫂 **${interaction.user.username}** fait un gros câlin à **${target.username}** !`;
+    }
+
+    async executeSlap(interaction, warnManager = null) {
+        const pre = await this.checkPrerequisites(interaction, warnManager, 'slap');
+        if (!pre.allowed) return pre.msg;
+        this.setCooldown(interaction.user.id, interaction.guild.id, 'slap');
+        
+        const target = interaction.options.getUser('utilisateur');
+        return `👋 **${interaction.user.username}** a donné une gifle à **${target.username}** ! Ça fait mal !`;
+    }
+
+    /**
+
      * Reload the manager (for hot reload functionality)
      */
     reload() {
