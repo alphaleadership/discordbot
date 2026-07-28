@@ -21,6 +21,7 @@ function login(isAuto = false) {
             document.getElementById('control-panel').style.display = 'block';
             loadBanlist();
             loadServers();
+            connectWebSocket(); // Start listening to WebSocket
         } else {
             localStorage.removeItem('admin_password');
             if (!isAuto) {
@@ -120,8 +121,11 @@ function getMessages() {
                 const messageElement = document.createElement('div');
                 messageElement.classList.add('message');
                 messageElement.innerHTML = `
-                    <p><strong>${message.author}</strong> - <em>${message.timestamp}</em></p>
-                    <p>${message.content}</p>
+                    <div class="message-header">
+                        <span class="message-author">${message.author}</span>
+                        <span class="message-time">${message.timestamp}</span>
+                    </div>
+                    <div class="message-content">${escapeHtml(message.content)}</div>
                 `;
                 container.appendChild(messageElement);
             });
@@ -166,4 +170,91 @@ function exportMembers() {
 function log(message) {
     const logs = document.getElementById('logs');
     logs.textContent += `> ${message}\n`;
+    logs.scrollTop = logs.scrollHeight;
+}
+
+// HTML Escaper for message inputs
+function escapeHtml(text) {
+    if (!text) return '';
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+// WebSocket client connection for real-time GitHub feeds
+function connectWebSocket() {
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${protocol}//${window.location.host}`;
+    const ws = new WebSocket(wsUrl);
+
+    ws.onopen = () => {
+        log('Connexion WebSocket établie avec succès !');
+    };
+
+    ws.onmessage = (event) => {
+        try {
+            const data = JSON.parse(event.data);
+            if (data.type === 'welcome') return;
+            
+            handleGithubEvent(data);
+        } catch (e) {
+            console.error('Error handling WebSocket message', e);
+        }
+    };
+
+    ws.onclose = () => {
+        log('Connexion WebSocket fermée. Tentative de reconconnexion dans 5 secondes...');
+        setTimeout(connectWebSocket, 5000);
+    };
+
+    ws.onerror = (err) => {
+        console.error('WebSocket Error: ', err);
+    };
+}
+
+function handleGithubEvent(event) {
+    const feed = document.getElementById('github-feed');
+    const placeholder = feed.querySelector('.feed-placeholder');
+    if (placeholder) {
+        feed.innerHTML = '';
+    }
+
+    const item = document.createElement('div');
+    item.className = `feed-item ${event.type}`;
+    
+    let titleHtml = '';
+    let metaHtml = '';
+    
+    if (event.type === 'issue') {
+        titleHtml = `<span class="badge success">Issue</span> <a href="${event.url}" target="_blank">#${event.number} ${escapeHtml(event.title)}</a>`;
+        metaHtml = `<span>Dépôt: ${escapeHtml(event.repository)}</span> <span>Par: @${escapeHtml(event.author)}</span> <span>Action: ${escapeHtml(event.action)}</span>`;
+    } else if (event.type === 'pull_request') {
+        titleHtml = `<span class="badge purple">PR</span> <a href="${event.url}" target="_blank">#${event.number} ${escapeHtml(event.title)}</a>`;
+        metaHtml = `<span>Dépôt: ${escapeHtml(event.repository)}</span> <span>Par: @${escapeHtml(event.author)}</span> <span>Action: ${escapeHtml(event.action)}</span>`;
+    } else if (event.type === 'review_comment') {
+        titleHtml = `<span class="badge warning">PR Comment</span> <a href="${event.url}" target="_blank">Commentaire sur la PR #${event.number}</a>`;
+        metaHtml = `<span>Dépôt: ${escapeHtml(event.repository)}</span> <span>Auteur: @${escapeHtml(event.author)}</span>`;
+    } else if (event.type === 'release') {
+        titleHtml = `<span class="badge info">Release</span> <a href="${event.url}" target="_blank">Version ${escapeHtml(event.tag)} : ${escapeHtml(event.name)}</a>`;
+        metaHtml = `<span>Dépôt: ${escapeHtml(event.repository)}</span> <span>Auteur: @${escapeHtml(event.author)}</span>`;
+    } else {
+        // Fallback generic event
+        titleHtml = `<span class="badge info">Event</span> <span>Activité sur ${escapeHtml(event.repository || 'GitHub')}</span>`;
+        metaHtml = `<span>Auteur: @${escapeHtml(event.author || 'system')}</span>`;
+    }
+
+    item.innerHTML = `
+        <div class="feed-title">${titleHtml}</div>
+        <div class="feed-meta">${metaHtml}</div>
+    `;
+
+    feed.insertBefore(item, feed.firstChild);
+
+    // Limit elements to 30 items
+    while (feed.children.length > 30) {
+        feed.removeChild(feed.lastChild);
+    }
 }
