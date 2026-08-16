@@ -42,12 +42,14 @@ class EspionageManagerMock {
         }
     }
 
-    async buildDossierEmbed(member, threatLevel, messageCount, notes) {
+    async buildDossierEmbed(user, member, threatLevel, messageCount, notes) {
         const threatEmoji = this.getThreatEmoji(threatLevel);
         const threatColor = this.getThreatColor(threatLevel);
 
-        const createdDate = `<t:${Math.floor(member.user.createdTimestamp / 1000)}:R>`;
-        const joinedDate = `<t:${Math.floor(member.joinedTimestamp / 1000)}:R>`;
+        const createdDate = `<t:${Math.floor(user.createdTimestamp / 1000)}:R>`;
+        const joinedDate = member?.joinedTimestamp
+            ? `<t:${Math.floor(member.joinedTimestamp / 1000)}:R>`
+            : '⚠️ Non membre du serveur actuellement';
 
         let warnsText = 'Aucun avertissement actif.';
 
@@ -58,24 +60,24 @@ class EspionageManagerMock {
 
         let banStatusText = 'Non présent dans la banlist';
         if (this.banlistManager) {
-            const guildId = member.guild?.id || member.guildId || '1475239703853928523';
-            const banCheck = await this.banlistManager.isBanned(member.id, guildId);
+            const guildId = member?.guild?.id || member?.guildId || '1475239703853928523';
+            const banCheck = await this.banlistManager.isBanned(user.id, guildId);
             if (banCheck.banned) {
                 banStatusText = `🔴 **BANNI**\n**Raison :** ${banCheck.reason}`;
             }
         }
 
-        const rolesList = member.roles?.cache 
+        const rolesList = member?.roles?.cache 
             ? member.roles.cache.filter(r => r.id !== member.guild?.roles?.everyone?.id).map(r => `<@&${r.id}>`).join(', ')
             : 'Aucun rôle';
 
         return new EmbedBuilder()
             .setColor(threatColor)
-            .setTitle(`📂 DOSSIER CLASSÉ : ${member.user.username}`)
-            .setDescription(`Fiche de renseignement confidentielle concernant le citoyen/sujet <@${member.id}>.`)
-            .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
+            .setTitle(`📂 DOSSIER CLASSÉ : ${user.username}`)
+            .setDescription(`Fiche de renseignement confidentielle concernant le citoyen/sujet <@${user.id}>.${!member?.joinedTimestamp ? '\n⚠️ *Cette personne n\'est pas (ou plus) membre du serveur.*' : ''}`)
+            .setThumbnail(user.displayAvatarURL ? user.displayAvatarURL({ dynamic: true }) : null)
             .addFields(
-                { name: '👤 Identité', value: `**Username:** ${member.user.username}\n**ID:** \`${member.id}\``, inline: true },
+                { name: '👤 Identité', value: `**Username:** ${user.username}\n**ID:** \`${user.id}\``, inline: true },
                 { name: '⚠️ Niveau de Menace', value: `${threatEmoji} **${threatLevel.toUpperCase()}**`, inline: true },
                 { name: '📅 Registre Temporel', value: `**Création compte:** ${createdDate}\n**Arrivée serveur:** ${joinedDate}`, inline: false },
                 { name: '📊 Activité', value: `**Messages détectés:** \`${messageCount}\``, inline: true },

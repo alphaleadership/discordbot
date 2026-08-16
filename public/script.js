@@ -21,6 +21,7 @@ function login(isAuto = false) {
             document.getElementById('control-panel').style.display = 'block';
             loadBanlist();
             loadServers();
+            loadEspionageStatus();
             connectWebSocket(); // Start listening to WebSocket
         } else {
             localStorage.removeItem('admin_password');
@@ -257,4 +258,205 @@ function handleGithubEvent(event) {
     while (feed.children.length > 30) {
         feed.removeChild(feed.lastChild);
     }
+}
+
+function loadEspionageStatus() {
+    fetch('/espionage/status')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('espionage-targets').textContent = data.targetCount;
+            document.getElementById('espionage-forum').textContent = data.forumConfigured ? 'Oui' : 'Non';
+            if (data.forumConfigured) {
+                document.getElementById('espionage-forum').style.color = '#34d399'; // green accent
+            } else {
+                document.getElementById('espionage-forum').style.color = '#f87171'; // red danger
+            }
+            loadEspionageTargets();
+        })
+        .catch(err => {
+            console.error('Error loading espionage status:', err);
+            document.getElementById('espionage-targets').textContent = 'Erreur';
+            document.getElementById('espionage-forum').textContent = 'Erreur';
+        });
+}
+
+function loadEspionageTargets() {
+    fetch('/espionage/targets')
+        .then(res => res.json())
+        .then(targets => {
+            const tbody = document.getElementById('espionage-targets-table-body');
+            tbody.innerHTML = '';
+            
+            if (targets.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 8px; color: var(--text-muted);">Aucune cible.</td></tr>';
+                return;
+            }
+
+            // Échelle de tri par niveau de menace
+            const threatScale = {
+                'Critical': 4,
+                'High': 3,
+                'Medium': 2,
+                'Low': 1
+            };
+
+            // Trier : Niveau de menace décroissant, puis par nombre de messages décroissant
+            targets.sort((a, b) => {
+                const aScale = threatScale[a.threatLevel] || 0;
+                const bScale = threatScale[b.threatLevel] || 0;
+                if (bScale !== aScale) {
+                    return bScale - aScale;
+                }
+                return (b.messageCount || 0) - (a.messageCount || 0);
+            });
+
+            targets.forEach(target => {
+                const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid rgba(255,255,255,0.03)';
+                
+                const threatColor = target.threatLevel === 'Critical' ? '#ef4444' : (target.threatLevel === 'High' ? '#f97316' : '#3b82f6');
+                const displayName = target.tag !== 'Inconnu' ? `${target.tag} (${target.id.slice(-6)})` : target.id;
+
+                tr.innerHTML = `
+                    <td onclick="showEspionageTarget('${target.id}')" style="padding: 6px; font-weight: 500; color: var(--accent); cursor: pointer; text-decoration: underline; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 120px;" title="Cliquer pour voir le dossier (ID: ${target.id})">${escapeHtml(displayName)}</td>
+                    <td style="padding: 6px; color: ${threatColor}; font-weight: bold;">${target.threatLevel}</td>
+                    <td style="padding: 6px; text-align: right;">
+                        <button onclick="banEspionageTarget('${target.id}', '${target.tag}')" class="btn-danger" style="padding: 3px 6px; font-size: 0.75rem; border-radius: 4px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">Ban</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(err => {
+            console.error('Error loading espionage targets:', err);
+        });
+}
+
+let activeModalTargetId = null;
+
+function showEspionageTarget(userId) {
+    activeModalTargetId = userId;
+    const content = document.getElementById('espionage-modal-content');
+    content.innerHTML = '<p>Chargement des détails du dossier...</p>';
+    document.getElementById('espionage-modal').style.display = 'flex';
+
+    fetch(`/espionage/target?userId=${userId}`)
+        .then(res => res.json())
+        .then(target => {
+            let notesHtml = '';
+            if (target.notes && target.notes.length > 0) {
+                notesHtml = target.notes.map(n => {
+                    const date = new Date(n.timestamp).toLocaleString('fr-FR');
+                    return `<div style="margin-bottom: 8px; padding: 8px; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="font-size: 0.75rem; color: var(--text-muted); display:flex; justify-content:space-between;">
+                            <span>Par: @${n.author}</span>
+                            <span>${date}</span>
+                        </div>
+                        <div style="margin-top: 4px; color: var(--text-primary); font-size: 0.85rem;">${escapeHtml(n.content)}</div>
+                    </div>`;
+                }).join('');
+            } else {
+                notesHtml = '<p style="color: var(--text-muted); font-style: italic; font-size: 0.85rem;">Aucun rapport d\'agent ou note rédigée.</p>';
+            }
+
+            content.innerHTML = `
+                <div style="margin-bottom: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.9rem;">
+                    <div><strong>Identifiant :</strong> <code style="background:rgba(0,0,0,0.3); padding: 2px 4px; border-radius:4px;">${target.id}</code></div>
+                    <div><strong>Tag Discord :</strong> <span>${escapeHtml(target.tag)}</span></div>
+                    <div><strong>Menace :</strong> <span style="font-weight:bold; color: ${target.threatLevel === 'Critical' ? '#ef4444' : '#3b82f6'}">${target.threatLevel}</span></div>
+                    <div><strong>Messages :</strong> <span>${target.messageCount}</span></div>
+                </div>
+                <div style="margin-top: 15px;">
+                    <h3 style="margin-bottom: 10px; font-size: 0.95rem; color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">🕵️ Notes d'Agents & Rapports</h3>
+                    <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
+                        ${notesHtml}
+                    </div>
+                </div>
+            `;
+        })
+        .catch(err => {
+            content.innerHTML = `<p style="color:#ef4444;">Erreur lors du chargement : ${escapeHtml(err.message)}</p>`;
+        });
+}
+
+function closeEspionageModal() {
+    document.getElementById('espionage-modal').style.display = 'none';
+    activeModalTargetId = null;
+}
+
+function deleteEspionageTarget() {
+    if (!activeModalTargetId) return;
+    if (!confirm("Êtes-vous sûr de vouloir supprimer définitivement ce dossier d'espionnage (thread Discord + base locale) ? Cette action est irréversible.")) {
+        return;
+    }
+
+    log(`Demande de suppression définitive du dossier ${activeModalTargetId}...`);
+    fetch('/espionage/target-delete', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: activeModalTargetId })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            log(`Succès : ${data.message}`);
+            closeEspionageModal();
+            loadEspionageStatus();
+        } else {
+            log(`Échec de la suppression : ${data.message}`);
+            alert(`Erreur : ${data.message}`);
+        }
+    })
+    .catch(err => {
+        log(`Erreur lors de la suppression : ${err.message}`);
+    });
+}
+
+function banEspionageTarget(userId, tag) {
+    const reason = prompt(`Entrez la raison du bannissement pour ${tag || userId} :`);
+    if (reason === null) return; // Annulé
+    if (!reason.trim()) {
+        alert("La raison est obligatoire pour procéder au bannissement.");
+        return;
+    }
+
+    log(`Demande d'ajout de ${tag || userId} à la banlist...`);
+    fetch('/espionage/target-banlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, reason })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            log(`Succès : ${tag || userId} a été banni et son dossier mis à jour.`);
+            loadEspionageStatus();
+        } else {
+            log(`Échec du bannissement : ${data.message}`);
+            alert(`Erreur : ${data.message}`);
+        }
+    })
+    .catch(err => {
+        log(`Erreur de connexion : ${err.message}`);
+    });
+}
+
+function recreateDossiers() {
+    log("Démarrage de la régénération globale des dossiers d'espionnage...");
+    fetch('/espionage/recreate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            log(`Régénération terminée : ${data.count} dossiers d'espionnage ont été recréés avec succès.`);
+            loadEspionageStatus();
+        } else {
+            log(`Échec de la régénération : ${data.message}`);
+        }
+    })
+    .catch(err => {
+        log(`Erreur lors de la requête de régénération : ${err.message}`);
+    });
 }

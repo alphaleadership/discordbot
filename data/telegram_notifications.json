@@ -12,7 +12,7 @@
         "stats": false
       },
       "bridgeEnabled": true,
-      "lastConfigured": "2026-07-19T14:18:13.494Z"
+      "lastConfigured": "2026-08-09T07:27:17.316Z"
     },
     "": {
       "telegramChannelId": "telegram-chat",
@@ -26,7 +26,7 @@
         "stats": false
       },
       "bridgeEnabled": true,
-      "lastConfigured": "2026-07-19T14:18:13.506Z"
+      "lastConfigured": "2026-08-09T07:27:17.327Z"
     },
     "test-guild-2": {
       "telegramChannelId": "telegram-chat-2",
@@ -40,8 +40,8 @@
         "stats": false
       },
       "bridgeEnabled": true,
-      "lastConfigured": "2026-07-19T14:18:13.519Z"
+      "lastConfigured": "2026-08-09T07:27:17.340Z"
     }
   },
-  "lastUpdated": "2026-07-19T14:18:13.519Z"
+  "lastUpdated": "2026-08-09T07:27:17.340Z"
 }

@@ -2,7 +2,7 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:47.101Z",
-    "lastModified": "2026-07-19T14:17:02.479Z"
+    "lastModified": "2026-08-09T07:26:32.228Z"
   },
   "_settings": {
     "supportServerId": "1254376882888114176",
@@ -412,6 +412,36 @@
       "discriminator": "0",
       "initialMessage": null,
       "queuedAt": "2026-07-19T14:17:02.479Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1785269779923-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-07-28T20:16:19.923Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1785270151659-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-07-28T20:22:31.659Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1786260392228-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-08-09T07:26:32.228Z",
       "reason": "support_server_not_found",
       "retryCount": 0,
       "status": "queued"

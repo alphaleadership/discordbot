@@ -43,6 +43,21 @@ export default {
                         .setDescription('Le membre dont le dossier doit être supprimé')
                         .setRequired(true)
                 )
+        )
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('banlist')
+                .setDescription('Ajoute l\'utilisateur concerné par un dossier à la banlist interne')
+                .addUserOption(option =>
+                    option.setName('membre')
+                        .setDescription('Le membre ciblé à ajouter à la banlist')
+                        .setRequired(true)
+                )
+                .addStringOption(option =>
+                    option.setName('raison')
+                        .setDescription('La raison de l\'ajout à la banlist')
+                        .setRequired(true)
+                )
         ),
 
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, economyManager, forumReportManager, autoConfigManager, dmTicketManager, customsManager, espionageManager) {
@@ -115,6 +130,56 @@ export default {
                 console.error('Error clearing member dossier:', error);
                 return interaction.editReply({
                     content: '❌ Une erreur critique est survenue lors de la suppression du dossier.'
+                });
+            }
+        } else if (subcommand === 'banlist') {
+            const targetUser = interaction.options.getUser('membre', true);
+            const reason = interaction.options.getString('raison', true);
+
+            await interaction.deferReply({ ephemeral: true });
+
+            try {
+                if (!banlistManager) {
+                    return interaction.editReply({
+                        content: '❌ Erreur : Le gestionnaire de banlist n\'est pas configuré.'
+                    });
+                }
+
+                // 1. Ajouter l'utilisateur à la banlist interne
+                const result = await banlistManager.addToBanlist(targetUser.id, reason, interaction.user.id);
+                
+                if (result.success) {
+                    // 2. Tenter de récupérer le membre s'il est là
+                    const member = await interaction.guild.members.fetch(targetUser.id).catch(() => null);
+                    const target = member ?? targetUser;
+
+                    // 3. Ajouter une note dans le dossier d'espionnage
+                    await espionageManager.addNote(
+                        target,
+                        `🛑 BANLIST : Ajouté à la banlist interne par <@${interaction.user.id}>.\n**Raison** : ${reason}`,
+                        interaction.user.id
+                    );
+
+                    // 4. Mettre à jour le niveau de menace du dossier si le dossier existe
+                    const guildData = espionageManager.getGuildConfig(interaction.guild.id);
+                    if (guildData.targets[targetUser.id]) {
+                        guildData.targets[targetUser.id].threatLevel = 'Critical';
+                        espionageManager.saveDossiers();
+                        await espionageManager.updateDossier(target);
+                    }
+
+                    return interaction.editReply({
+                        content: `✅ **${targetUser.username}** a été ajouté à la banlist interne. Une note confidentielle de menace a été enregistrée dans son dossier.`
+                    });
+                } else {
+                    return interaction.editReply({
+                        content: `❌ Échec de l'ajout à la banlist : ${result.message}`
+                    });
+                }
+            } catch (error) {
+                console.error('Error adding user to banlist via dossier command:', error);
+                return interaction.editReply({
+                    content: '❌ Une erreur critique est survenue lors de l\'ajout à la banlist.'
                 });
             }
         }

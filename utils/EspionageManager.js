@@ -28,6 +28,18 @@ export class EspionageManager {
         return this.clients && this.clients.length > 0 ? this.clients[0] : null;
     }
 
+    set client(value) {
+        if (value) {
+            if (!this.clients) this.clients = [];
+            const idx = this.clients.indexOf(value);
+            if (idx > -1) {
+                // Mettre au début
+                this.clients.splice(idx, 1);
+            }
+            this.clients.unshift(value);
+        }
+    }
+
     ensureFileExists() {
         try {
             const dir = path.dirname(this.filePath);
@@ -356,15 +368,9 @@ export class EspionageManager {
         const userId = message.author.id;
         const guildData = this.getGuildConfig(guildId);
 
-        // N'enregistrer que pour les dossiers déjà existants ou si on veut suivre tout le monde de façon passive
-        // Dans une micronation, on suit en priorité ceux qui écrivent
+        // N'enregistrer le message que si la cible a déjà un dossier configuré (thread ou suivi actif)
         if (!guildData.targets[userId]) {
-            guildData.targets[userId] = {
-                threadId: null,
-                messageCount: 0,
-                threatLevel: 'Low',
-                notes: []
-            };
+            return;
         }
 
         guildData.targets[userId].messageCount++;

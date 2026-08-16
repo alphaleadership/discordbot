@@ -381,6 +381,7 @@ sharedConfig.backupToGitHub = backupToGitHub;
 
 // Initialiser le gestionnaire d'interactions (will be updated per client)
 let interactionHandler;
+let banlistManager;
 
 const tokens = process.env.DISCORD_TOKEN.split(',');
 const webPassword = process.env.WEB_PASSWORD || 'password';
@@ -710,7 +711,7 @@ for (const token of tokens) {
 
     const reportManager = new ReportManager();
     reportManager.moderationLogger = new ModerationLogger(reportManager);
-    const banlistManager = new BanlistManager();
+    banlistManager = new BanlistManager();
     const blockedWordsManager = new BlockedWordsManager();
     const watchlistManager = new WatchlistManager('data/watchlist.json', reportManager);
     const telegramIntegration = new TelegramIntegration(process.env.TELEGRAM_BOT_TOKEN, client);
@@ -1861,14 +1862,75 @@ app.get('/banlist', (req, res) => {
     });
 });
 
-app.post('/banlist', (req, res) => {
-    fs.writeFile('banlist.txt', req.body.banlist, 'utf8', (err) => {
-        if (err) {
-            res.json({ success: false });
-        } else {
-            res.json({ success: true });
+app.post('/banlist', async (req, res) => {
+    try {
+        if (!req.body.banlist) {
+            return res.json({ success: false, message: 'Banlist data missing' });
         }
-    });
+
+        const inputLines = req.body.banlist.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+        const newIds = new Set();
+        const inputMap = new Map(); // userId -> details mapping if present
+
+        for (const line of inputLines) {
+            // Extraire l'ID (les 17 à 20 chiffres) et garder le reste comme raison
+            const match = line.match(/^(\d{17,20})(.*)$/);
+            if (match) {
+                const id = match[1];
+                const rest = match[2].trim();
+                newIds.add(id);
+                
+                // Formater la raison propre : enlever les tirets ou barres verticales inutiles
+                let reason = rest.replace(/^[\s\-;|#]+/, '').trim();
+                if (!reason) reason = 'Raison non spécifiée (Import Web)';
+                inputMap.set(id, reason);
+            }
+        }
+
+        // Lire le fichier existant
+        let existingLines = [];
+        if (fs.existsSync('banlist.txt')) {
+            const content = fs.readFileSync('banlist.txt', 'utf-8');
+            existingLines = content.split('\n').map(l => l.trim()).filter(Boolean);
+        }
+
+        const finalLines = [];
+        const processedIds = new Set();
+
+        // 1. Conserver et mettre à jour les bans existants
+        for (const line of existingLines) {
+            const match = line.match(/^(\d{17,20})/);
+            if (match) {
+                const id = match[1];
+                processedIds.add(id);
+                // Si l'utilisateur est toujours présent dans la nouvelle liste soumise, on conserve sa ligne existante
+                if (newIds.has(id)) {
+                    finalLines.push(line);
+                }
+                // Si l'utilisateur a été retiré de la liste soumise, il est implicitement débanni
+            } else if (line) {
+                finalLines.push(line);
+            }
+        }
+
+        // 2. Ajouter les nouveaux bans
+        const timestamp = new Date().toISOString();
+        for (const id of newIds) {
+            if (!processedIds.has(id)) {
+                const reason = inputMap.get(id) || 'Raison non spécifiée (Import Web)';
+                const newEntry = `${id} - ${reason} | Ajouté par: WebConsole | Le: ${timestamp}`;
+                finalLines.push(newEntry);
+            }
+        }
+
+        // Écrire le fichier final
+        fs.writeFileSync('banlist.txt', finalLines.join('\n') + (finalLines.length > 0 ? '\n' : ''), 'utf-8');
+
+        res.json({ success: true, count: newIds.size });
+    } catch (err) {
+        console.error('Error updating banlist via POST route:', err);
+        res.json({ success: false, error: err.message });
+    }
 });
 
 app.get('/servers', (req, res) => {
@@ -2037,6 +2099,271 @@ app.get('/messages', async (req, res) => {
     } catch (error) {
         console.error(`Failed to fetch messages from channel ${channel.name} in server ${guild.name}:`, error);
         res.status(500).send('Failed to fetch messages.');
+    }
+});
+
+// Endpoints pour la gestion des dossiers d'espionnage depuis l'interface web
+app.get('/espionage/status', async (req, res) => {
+    try {
+        const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
+        if (!fs.existsSync(jsonPath)) {
+            return res.json({ targetCount: 0, forumConfigured: false });
+        }
+        const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        
+        const guildData = data.guilds?.[ESPIONAGE_GUILD_ID];
+        const targetCount = guildData?.targets ? Object.keys(guildData.targets).length : 0;
+        const forumConfigured = !!guildData?.forumChannelId;
+
+        res.json({
+            targetCount,
+            forumConfigured,
+            forumChannelId: guildData?.forumChannelId || null
+        });
+    } catch (error) {
+        console.error('Error fetching espionage status:', error);
+        res.status(500).json({ error: 'Failed to fetch status' });
+    }
+});
+
+app.get('/espionage/targets', async (req, res) => {
+    try {
+        const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
+        if (!fs.existsSync(jsonPath)) {
+            return res.json([]);
+        }
+        const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        const guildData = data.guilds?.[ESPIONAGE_GUILD_ID];
+
+        if (!guildData || !guildData.targets) {
+            return res.json([]);
+        }
+
+        // Tenter d'obtenir les infos discord à jour pour chaque utilisateur
+        const targetsList = [];
+        for (const [userId, targetInfo] of Object.entries(guildData.targets)) {
+            let userTag = 'Inconnu';
+            // Chercher dans le cache de nos clients discord ou fetch si nécessaire
+            for (const client of clients) {
+                let cachedUser = client.users.cache.get(userId);
+                if (!cachedUser) {
+                    cachedUser = await client.users.fetch(userId).catch(() => null);
+                }
+                if (cachedUser) {
+                    userTag = cachedUser.tag;
+                    break;
+                }
+            }
+
+            targetsList.push({
+                id: userId,
+                tag: userTag,
+                threatLevel: targetInfo.threatLevel || 'Low',
+                messageCount: targetInfo.messageCount || 0,
+                threadId: targetInfo.threadId || null,
+                notesCount: targetInfo.notes ? targetInfo.notes.length : 0
+            });
+        }
+
+        res.json(targetsList);
+    } catch (error) {
+        console.error('Error fetching espionage targets:', error);
+        res.status(500).json({ error: 'Failed to fetch targets' });
+    }
+});
+
+app.post('/espionage/target-banlist', async (req, res) => {
+    try {
+        const { userId, reason } = req.body;
+        if (!userId || !reason) {
+            return res.status(400).json({ success: false, message: 'ID utilisateur ou raison manquante.' });
+        }
+
+        if (!banlistManager) {
+            return res.status(500).json({ success: false, message: 'Gestionnaire de banlist indisponible.' });
+        }
+
+        // 1. Ajouter à la banlist interne
+        const result = await banlistManager.addToBanlist(userId, reason, 'WebDashboard');
+        
+        if (result.success) {
+            // 2. Mettre à jour la base des dossiers d'espionnage si présent
+            let espionageManagerInstance = null;
+            const ESPIONAGE_GUILD_ID = '1475239703853928523';
+            let guild = null;
+
+            for (const client of clients) {
+                guild = client.guilds.cache.get(ESPIONAGE_GUILD_ID) || await client.guilds.fetch(ESPIONAGE_GUILD_ID).catch(() => null);
+                if (guild) {
+                    espionageManagerInstance = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
+                    break;
+                }
+            }
+
+            if (espionageManagerInstance && guild) {
+                // Tenter de fetch l'utilisateur discord complet
+                let userObj = null;
+                for (const client of clients) {
+                    userObj = await client.users.fetch(userId).catch(() => null);
+                    if (userObj) break;
+                }
+
+                if (userObj) {
+                    const memberObj = await guild.members.fetch(userId).catch(() => null);
+                    const target = memberObj ?? userObj;
+
+                    // Ajouter une note sur son dossier
+                    await espionageManagerInstance.addNote(
+                        target,
+                        `🛑 BANLIST : Ajouté à la banlist interne depuis le Dashboard Web.\n**Raison** : ${reason}`,
+                        'WebDashboard'
+                    );
+
+                    // Mettre à jour le threat level
+                    const fileData = espionageManagerInstance.getGuildConfig(ESPIONAGE_GUILD_ID);
+                    if (fileData.targets[userId]) {
+                        fileData.targets[userId].threatLevel = 'Critical';
+                        espionageManagerInstance.saveDossiers();
+                        await espionageManagerInstance.updateDossier(target);
+                    }
+                }
+            }
+
+            res.json({ success: true, message: 'Utilisateur banni avec succès.' });
+        } else {
+            res.json({ success: false, message: result.message });
+        }
+    } catch (error) {
+        console.error('Error adding espionage target to banlist from web:', error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+app.get('/espionage/target', async (req, res) => {
+    try {
+        const { userId } = req.query;
+        if (!userId) {
+            return res.status(400).json({ error: 'User ID is required' });
+        }
+
+        const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
+        if (!fs.existsSync(jsonPath)) {
+            return res.status(404).json({ error: 'Dossier file not found' });
+        }
+
+        const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        const guildData = data.guilds?.[ESPIONAGE_GUILD_ID];
+        const target = guildData?.targets?.[userId];
+
+        if (!target) {
+            return res.status(404).json({ error: 'Target not found in espionage database' });
+        }
+
+        let userTag = 'Inconnu';
+        for (const client of clients) {
+            let cachedUser = client.users.cache.get(userId);
+            if (!cachedUser) {
+                cachedUser = await client.users.fetch(userId).catch(() => null);
+            }
+            if (cachedUser) {
+                userTag = cachedUser.tag;
+                break;
+            }
+        }
+
+        res.json({
+            id: userId,
+            tag: userTag,
+            threatLevel: target.threatLevel || 'Low',
+            messageCount: target.messageCount || 0,
+            threadId: target.threadId || null,
+            notes: target.notes || []
+        });
+    } catch (error) {
+        console.error('Error fetching single target dossier:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+app.delete('/espionage/target-delete', async (req, res) => {
+    try {
+        const { userId } = req.body;
+        if (!userId) {
+            return res.status(400).json({ success: false, message: 'User ID is required' });
+        }
+
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        let espionageManagerInstance = null;
+        let guild = null;
+
+        for (const client of clients) {
+            guild = client.guilds.cache.get(ESPIONAGE_GUILD_ID) || await client.guilds.fetch(ESPIONAGE_GUILD_ID).catch(() => null);
+            if (guild) {
+                espionageManagerInstance = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
+                break;
+            }
+        }
+
+        if (!espionageManagerInstance || !guild) {
+            return res.status(404).json({ success: false, message: 'Espionage service or guild not found' });
+        }
+
+        // Simuler ou fetch l'user à supprimer
+        let userObj = null;
+        for (const client of clients) {
+            userObj = await client.users.fetch(userId).catch(() => null);
+            if (userObj) break;
+        }
+
+        if (!userObj) {
+            userObj = { id: userId, username: `Cible-${userId.slice(-6)}` };
+        }
+
+        const result = await espionageManagerInstance.clearMemberDossier(userObj, guild);
+        if (result.success) {
+            res.json({ success: true, message: `Dossier de ${result.username} supprimé avec succès.` });
+        } else {
+            res.status(500).json({ success: false, message: result.message });
+        }
+    } catch (error) {
+        console.error('Error deleting espionage dossier from web:', error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+app.post('/espionage/recreate', async (req, res) => {
+    try {
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        let guild = null;
+        let espionageManagerInstance = null;
+
+        for (const client of clients) {
+            guild = client.guilds.cache.get(ESPIONAGE_GUILD_ID) || await client.guilds.fetch(ESPIONAGE_GUILD_ID).catch(() => null);
+            if (guild) {
+                // Instancier temporairement un EspionageManager s'il n'est pas accessible globalement
+                espionageManagerInstance = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
+                break;
+            }
+        }
+
+        if (!guild || !espionageManagerInstance) {
+            return res.status(404).json({ success: false, message: 'Serveur d\'espionnage introuvable ou bot non connecté.' });
+        }
+
+        console.log(`[WEB DASHBOARD] Démarrage de la régénération globale des dossiers...`);
+        const result = await espionageManagerInstance.regenerateAllDossiers(guild);
+        
+        if (result.success) {
+            res.json({ success: true, count: result.count });
+        } else {
+            res.status(500).json({ success: false, message: result.message });
+        }
+    } catch (error) {
+        console.error('Error recreating espionage dossiers from web panel:', error);
+        res.status(500).json({ success: false, message: error.message });
     }
 });
 

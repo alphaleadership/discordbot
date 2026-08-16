@@ -1,0 +1,770 @@
+[
+  {
+    "id": "1785484855899_gjphb5rhb",
+    "timestamp": "2026-07-31T08:00:55.899Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 93,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 93,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484866388_nwm70hy70",
+    "timestamp": "2026-07-31T08:01:06.388Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 92,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 92,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484876876_3t61noqtk",
+    "timestamp": "2026-07-31T08:01:16.876Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 91,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 91,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484887365_dtveberwm",
+    "timestamp": "2026-07-31T08:01:27.365Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 90,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 90,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484897854_kjfsuc5as",
+    "timestamp": "2026-07-31T08:01:37.854Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 89,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 89,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484908341_23tg0vbwr",
+    "timestamp": "2026-07-31T08:01:48.341Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 88,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 88,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484918823_i5bal9h9n",
+    "timestamp": "2026-07-31T08:01:58.823Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 87,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 87,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484929309_q3fon4fb8",
+    "timestamp": "2026-07-31T08:02:09.309Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 86,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 86,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484939795_hif05g41e",
+    "timestamp": "2026-07-31T08:02:19.795Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 85,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 85,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484950279_7pkzca42n",
+    "timestamp": "2026-07-31T08:02:30.279Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484960766_wfdvxox3p",
+    "timestamp": "2026-07-31T08:02:40.766Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484971252_15nbuhzwy",
+    "timestamp": "2026-07-31T08:02:51.252Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484981737_n1q3aj8gb",
+    "timestamp": "2026-07-31T08:03:01.737Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785484992222_fg4v2mt20",
+    "timestamp": "2026-07-31T08:03:12.222Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485002709_z2fs6o7e0",
+    "timestamp": "2026-07-31T08:03:22.709Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485013195_r0uc3iw2y",
+    "timestamp": "2026-07-31T08:03:33.195Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485023678_s3c2wadku",
+    "timestamp": "2026-07-31T08:03:43.678Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485034170_kpkaxexvv",
+    "timestamp": "2026-07-31T08:03:54.170Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 84,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 84,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485044661_ofkghg3fl",
+    "timestamp": "2026-07-31T08:04:04.661Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 85,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 85,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485055151_pkzqy7laf",
+    "timestamp": "2026-07-31T08:04:15.151Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 86,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 86,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485065641_9latt3c9m",
+    "timestamp": "2026-07-31T08:04:25.641Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 87,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 87,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485076128_ftmtcmrs3",
+    "timestamp": "2026-07-31T08:04:36.128Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 88,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 88,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485086617_yewvi5zy5",
+    "timestamp": "2026-07-31T08:04:46.617Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 89,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 89,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485097101_6k6irkpci",
+    "timestamp": "2026-07-31T08:04:57.101Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 90,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 90,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485107587_7enm5xznq",
+    "timestamp": "2026-07-31T08:05:07.587Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 91,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 91,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485118073_iqdphhrs0",
+    "timestamp": "2026-07-31T08:05:18.073Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 92,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 92,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485128555_bdl5ok2xx",
+    "timestamp": "2026-07-31T08:05:28.555Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 93,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "ban"
+        ],
+        "missingModeration": [
+          "ban"
+        ],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 93,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785485139042_qs54sr3wo",
+    "timestamp": "2026-07-31T08:05:39.042Z",
+    "component": "command-registration",
+    "error": {
+      "name": "ConnectTimeoutError",
+      "message": "Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)",
+      "stack": "ConnectTimeoutError: Connect Timeout Error (attempted address: discord.com:443, timeout: 10000ms)\n    at onConnectTimeout (node:internal/deps/undici/undici:2754:28)\n    at Immediate._onImmediate (node:internal/deps/undici/undici:2735:11)\n    at process.processImmediate (node:internal/timers:484:21)",
+      "code": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    "context": {
+      "commandCount": 94,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 94,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785517469246_7f53ib1rf",
+    "timestamp": "2026-07-31T17:04:29.246Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 93,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 93,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  }
+]

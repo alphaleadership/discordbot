@@ -54,7 +54,7 @@ async function downloadDirectory(sftp, remotePath, localPath) {
         }
     } catch (err) {
         console.warn(`⚠️ Échec du téléchargement de ${remotePath}:`, err.message);
-        throw err;
+        console.log(`ℹ️ Poursuite de la synchronisation malgré l'échec de téléchargement du dossier.`);
     }
 }
 
@@ -102,15 +102,15 @@ async function main() {
         const remoteUtils = './utils';
         await syncDirectory(sftp, localUtils, remoteUtils);
 
+        // Upload public folder (dashboard web panel files)
+        const localPublic = path.join(__dirname, 'public');
+        const remotePublic = './public';
+        await syncDirectory(sftp, localPublic, remotePublic);
+
         // Upload index.js
         const localIndex = path.join(__dirname, 'index.js');
         const remoteIndex = './index.js';
         await uploadFile(sftp, localIndex, remoteIndex);
-
-        // Upload de banlist.txt
-        const localBanlist = path.join(__dirname, 'banlist.txt');
-        const remoteBanlist = './banlist.txt';
-        await uploadFile(sftp, localBanlist, remoteBanlist);
 
         // Upload de package.json (indispensable pour l'installation des dépendances comme node-cron)
         const localPackage = path.join(__dirname, 'package.json');
@@ -139,6 +139,12 @@ async function main() {
         const remoteEspionage = './espionage_dossiers.json';
         const localEspionage = path.join(__dirname, 'espionage_dossiers.json');
         await downloadFile(sftp, remoteEspionage, localEspionage);
+
+        // 5. DOWNLOAD de la banlist.txt du serveur
+        console.log('\n🔄 Récupération de la banlist du serveur...');
+        const remoteBanlist = './banlist.txt';
+        const localBanlist = path.join(__dirname, 'banlist.txt');
+        await downloadFile(sftp, remoteBanlist, localBanlist);
         
         console.log('\n🎉 Synchronisation globale terminée avec succès !');
     } catch (err) {
