@@ -24979,6 +24979,45 @@
               "timestamp": "2026-10-13T05:47:36.107Z"
             }
           ]
+        },
+        "1256249022344073298": {
+          "threadId": "1565321429275123773",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1793272111510",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-10-29T11:08:31.510Z"
+            }
+          ]
+        },
+        "1535429299073585203": {
+          "threadId": "1565321430638526585",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1793272111736",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-10-29T11:08:31.736Z"
+            }
+          ]
+        },
+        "1526924266858217506": {
+          "threadId": "1565321432932679871",
+          "messageCount": 0,
+          "threatLevel": "Low",
+          "notes": [
+            {
+              "id": "1793272112424",
+              "content": "🔨 BANNI DU SERVEUR : L'utilisateur a été banni.\n**Raison** : Aucune raison fournie (Bannissement Discord)",
+              "author": "system",
+              "timestamp": "2026-10-29T11:08:32.424Z"
+            }
+          ]
         }
       }
     },
@@ -24989,10 +25028,14 @@
     "1254376882888114176": {
       "forumChannelId": null,
       "targets": {}
+    },
+    "844831346727845939": {
+      "forumChannelId": null,
+      "targets": {}
     }
   },
   "metadata": {
     "version": "1.0",
-    "lastModified": "2026-10-29T08:23:01.861Z"
+    "lastModified": "2026-10-29T11:08:33.093Z"
   }
 }

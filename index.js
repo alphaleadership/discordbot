@@ -26,13 +26,10 @@ if (process.env.NO_SUPERVISOR === 'true') {
 
 function runSupervisor() {
     const BOT_SCRIPT = path.join(__dirname, 'bot.js');
+    // Surveillance EXCLUSIVE de bot.js uniquement.
+    // Tous les autres fichiers et répertoires (commands/, utils/, data/, logs/, public/, etc.) sont exclus.
     const WATCH_TARGETS = [
-        BOT_SCRIPT,
-        path.join(__dirname, 'package.json'),
-        path.join(__dirname, '.env'),
-        path.join(__dirname, 'commands'),
-        path.join(__dirname, 'utils'),
-        path.join(__dirname, 'public')
+        BOT_SCRIPT
     ];
 
     let botProcess = null;
@@ -144,27 +141,15 @@ function runSupervisor() {
         }
     }
 
-    function watchFile(filePath) {
-        if (!fs.existsSync(filePath)) return;
-
-        try {
-            fs.watch(filePath, (eventType) => {
-                triggerRestart(path.basename(filePath));
-            });
-        } catch (err) {
-            log(`Attention : impossible de surveiller le fichier ${filePath} (${err.message})`);
-        }
-    }
-
     function watchTarget(target) {
         if (!fs.existsSync(target)) return;
-        const stat = fs.statSync(target);
-        if (stat.isDirectory()) {
-            watchDirectory(target);
-            log(`👁️ Surveillance active sur le dossier : \x1b[34m${path.basename(target)}/\x1b[0m`);
-        } else {
-            watchFile(target);
-            log(`👁️ Surveillance active sur le fichier : \x1b[34m${path.basename(target)}\x1b[0m`);
+        try {
+            fs.watch(target, (eventType) => {
+                triggerRestart(path.basename(target));
+            });
+            log(`👁️ Surveillance active EXCLUSIVEMENT sur : \x1b[32m${path.basename(target)}\x1b[0m (aucun autre fichier n'est surveillé)`);
+        } catch (err) {
+            log(`Attention : impossible de surveiller ${target} (${err.message})`);
         }
     }
 
