@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1785670794665_oc9k6u9hh",
+    "timestamp": "2026-08-02T11:39:54.665Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "1228212393293647942",
+      "tag": "cb_off"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1495568098076655819"
+    },
+    "reason": "Aucune raison spécifiée",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action",
+    "auditTimestamp": "2026-08-02T11:39:54.665Z"
+  }
+]

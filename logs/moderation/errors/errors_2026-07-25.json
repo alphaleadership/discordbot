@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1784972525846_o5qecaojd",
+    "timestamp": "2026-07-25T09:42:05.846Z",
+    "component": "command-execution-warn",
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of null (reading 'id')",
+      "stack": "TypeError: Cannot read properties of null (reading 'id')\n    at Object.execute (file:///home/container/commands/warn.js?t=1784748660075:26:65)\n    at CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:435:27)\n    at Client.<anonymous> (file:///home/container/index.js:831:38)\n    at Client.emit (node:events:519:28)\n    at InteractionCreateAction.handle (/home/container/node_modules/discord.js/src/client/actions/InteractionCreate.js:101:12)\n    at module.exports [as INTERACTION_CREATE] (/home/container/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)\n    at WebSocketManager.handlePacket (/home/container/node_modules/discord.js/src/client/websocket/WebSocketManager.js:352:31)\n    at WebSocketManager.<anonymous> (/home/container/node_modules/discord.js/src/client/websocket/WebSocketManager.js:236:12)\n    at WebSocketManager.emit (/home/container/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:2504:31)\n    at WebSocketShard.<anonymous> (/home/container/node_modules/@discordjs/ws/dist/index.js:1190:51)\n    at WebSocketShard.emit (/home/container/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:2504:31)\n    at WebSocketShard.onMessage (/home/container/node_modules/@discordjs/ws/dist/index.js:1007:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"
+    },
+    "context": {
+      "userId": "1295832086602715251",
+      "userTag": "spaceoff03",
+      "commandName": "warn"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1784973203071_wm41kq4fy",
+    "timestamp": "2026-07-25T09:53:23.071Z",
+    "component": "command-execution-dossier",
+    "error": {
+      "name": "DiscordAPIError[10008]",
+      "message": "Unknown Message",
+      "stack": "DiscordAPIError[10008]: Unknown Message\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async SequentialHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:1163:23)\n    at async SequentialHandler.queueRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:994:14)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async InteractionWebhook.editMessage (/home/container/node_modules/discord.js/src/structures/Webhook.js:351:15)\n    at async ChatInputCommandInteraction.editReply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:247:17)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:435:13)\n    at async Client.<anonymous> (file:///home/container/index.js:831:17)",
+      "code": 10008
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1475239703853928523",
+      "guildName": "Service espionnage Gouvernemental Monteloria",
+      "commandName": "dossier"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1784973228997_u9vi0tdt1",
+    "timestamp": "2026-07-25T09:53:48.997Z",
+    "component": "command-execution-dossier",
+    "error": {
+      "name": "DiscordAPIError[10008]",
+      "message": "Unknown Message",
+      "stack": "DiscordAPIError[10008]: Unknown Message\n    at handleErrors (/home/container/node_modules/@discordjs/rest/dist/index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async SequentialHandler.runRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:1163:23)\n    at async SequentialHandler.queueRequest (/home/container/node_modules/@discordjs/rest/dist/index.js:994:14)\n    at async _REST.request (/home/container/node_modules/@discordjs/rest/dist/index.js:1307:22)\n    at async InteractionWebhook.editMessage (/home/container/node_modules/discord.js/src/structures/Webhook.js:351:15)\n    at async ChatInputCommandInteraction.editReply (/home/container/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:247:17)\n    at async CommandHandler.handleCommand (file:///home/container/utils/CommandHandler.js:435:13)\n    at async Client.<anonymous> (file:///home/container/index.js:831:17)",
+      "code": 10008
+    },
+    "context": {
+      "userId": "840985745182425108",
+      "userTag": "vanguard_arbinger",
+      "guildId": "1475239703853928523",
+      "guildName": "Service espionnage Gouvernemental Monteloria",
+      "commandName": "dossier"
+    },
+    "logType": "error"
+  },
+  {
+    "id": "1785021077189_9q9fi1jwg",
+    "timestamp": "2026-07-25T23:11:17.189Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 93,
+      "validation": {
+        "success": true,
+        "missingCommands": [],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [],
+        "loadedCommands": 93,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  }
+]

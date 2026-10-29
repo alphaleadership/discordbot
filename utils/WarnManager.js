@@ -41,7 +41,7 @@ export class WarnManager {
         }
     }
 
-    addWarn(guildId, userId, reason, moderatorId = 'système') {
+    addWarn(guildId, userId, reason, moderatorId = 'système', fine = 0) {
         if (!this.warnings[guildId]) {
             this.warnings[guildId] = {};
         }
@@ -53,6 +53,7 @@ export class WarnManager {
             id: Date.now().toString(),
             reason,
             moderatorId,
+            fine: typeof fine === 'number' ? fine : (parseInt(fine, 10) || 0),
             date: new Date().toISOString(),
         };
 

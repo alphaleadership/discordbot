@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1785839056303_vafxnb763",
+    "timestamp": "2026-08-04T10:24:16.303Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "1387188314528026714",
+      "tag": "gobousan13"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1468703054244352153"
+    },
+    "reason": "sanctions boycott",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action"
+  },
+  {
+    "id": "1785839111794_uhaiasy8x",
+    "timestamp": "2026-08-04T10:25:11.794Z",
+    "type": "ban",
+    "moderator": {
+      "id": "1295832086602715251",
+      "tag": "spaceoff03"
+    },
+    "target": {
+      "id": "539168852429242397",
+      "tag": "foot_live_show"
+    },
+    "guild": {
+      "id": "1405654925144490115",
+      "name": "3eme republique de Monteloria cursurien"
+    },
+    "channel": {
+      "id": "1468703054244352153"
+    },
+    "reason": "Sanctions boycott",
+    "success": true,
+    "details": {
+      "deleteMessageDays": 0,
+      "dmSent": false,
+      "targetInGuild": false
+    },
+    "logType": "moderation_action"
+  }
+]

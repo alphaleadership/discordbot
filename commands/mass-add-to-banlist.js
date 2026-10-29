@@ -28,6 +28,13 @@ export default {
         const guildId = interaction.options.getString('guildid') || interaction.guildId;
         const reason = interaction.options.getString('raison') || 'Ajout en masse via commande';
         
+        if (banlistManager.isReasonEmptyOrPlaceholder(reason)) {
+            return interaction.editReply({
+                content: '❌ Une raison valide et explicite est requise pour l\'ajout en masse à la banlist.',
+                ephemeral: true
+            });
+        }
+        
         if (!guildId) {
             return interaction.editReply({
                 content: '❌ ID de serveur non spécifié et commande exécutée en dehors d\'un serveur.',

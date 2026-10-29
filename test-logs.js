@@ -57,7 +57,8 @@ async function sendLogsToGitHub(logs) {
             timeZone: 'Europe/Paris',
             request: {
                 headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
+                    'Accept': 'application/vnd.github+json',
+                    'X-GitHub-Api-Version': process.env.GITHUB_API_VERSION || '2026-03-10'
                 }
             }
         });
@@ -86,19 +87,20 @@ async function sendLogsToGitHub(logs) {
         }
         
         // Envoyer ou mettre à jour le fichier
-        const response = await octokit.repos.createOrUpdateFileContents({
+        const payload = {
             owner: process.env.GITHUB_OWNER,
             repo: process.env.GITHUB_REPO,
             path: GITHUB_LOG_FILE,
             message: message,
             content: Buffer.from(content).toString('base64'),
-            sha: sha,
             branch: process.env.GITHUB_BRANCH || 'main',
             committer: {
                 name: 'GitBot Test',
                 email: 'test@example.com'
-            }
-        });
+            },
+            ...(sha ? { sha } : {})
+        };
+        const response = await octokit.repos.createOrUpdateFileContents(payload);
         
         console.log(`✅ Fichier envoyé avec succès sur GitHub!`);
         console.log(`   URL: ${response.data.content.html_url}`);

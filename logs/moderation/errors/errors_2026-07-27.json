@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1785183530757_r1emxr5h4",
+    "timestamp": "2026-07-27T20:18:50.757Z",
+    "component": "command-registration",
+    "error": {
+      "name": "Error",
+      "message": "getaddrinfo EAI_AGAIN discord.com",
+      "stack": "Error: getaddrinfo EAI_AGAIN discord.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)",
+      "code": "EAI_AGAIN"
+    },
+    "context": {
+      "commandCount": 91,
+      "validation": {
+        "success": false,
+        "missingCommands": [
+          "global-watchlist-add"
+        ],
+        "missingModeration": [],
+        "missingWatchlist": [],
+        "missingGlobalWatchlist": [
+          "global-watchlist-add"
+        ],
+        "loadedCommands": 91,
+        "requiredCommands": 14
+      }
+    },
+    "logType": "error"
+  }
+]

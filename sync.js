@@ -32,6 +32,21 @@ async function syncDirectory(sftp, localPath, remotePath) {
         // Upload de tout le dossier local vers le dossier distant
         const result = await sftp.uploadDir(localPath, remotePath);
         console.log(`✅ Synchronisation réussie pour ${path.basename(localPath)} !`);
+
+        // Supprimer les fichiers distants orphelins qui n'existent plus localement
+        try {
+            const remoteList = await sftp.list(remotePath);
+            const localFiles = new Set(fs.readdirSync(localPath));
+            for (const item of remoteList) {
+                if (item.type === '-' && !localFiles.has(item.name)) {
+                    console.log(`🗑️ Suppression du fichier distant obsolète : ${remotePath}/${item.name}`);
+                    await sftp.delete(`${remotePath}/${item.name}`);
+                }
+            }
+        } catch (cleanupErr) {
+            console.warn(`⚠️ Nettoyage des fichiers distants orphelins : ${cleanupErr.message}`);
+        }
+
         return result;
     } catch (err) {
         console.error(`❌ Échec de la synchronisation de ${localPath}:`, err.message);
@@ -54,7 +69,7 @@ async function downloadDirectory(sftp, remotePath, localPath) {
         }
     } catch (err) {
         console.warn(`⚠️ Échec du téléchargement de ${remotePath}:`, err.message);
-        throw err;
+        console.log(`ℹ️ Poursuite de la synchronisation malgré l'échec de téléchargement du dossier.`);
     }
 }
 
@@ -102,15 +117,34 @@ async function main() {
         const remoteUtils = './utils';
         await syncDirectory(sftp, localUtils, remoteUtils);
 
-        // Upload index.js
+        // Upload public folder (dashboard web panel files)
+        const localPublic = path.join(__dirname, 'public');
+        const remotePublic = './public';
+        await syncDirectory(sftp, localPublic, remotePublic);
+
+        // Upload index.js (Superviseur nodemon)
         const localIndex = path.join(__dirname, 'index.js');
         const remoteIndex = './index.js';
         await uploadFile(sftp, localIndex, remoteIndex);
 
-        // Upload de banlist.txt
-        const localBanlist = path.join(__dirname, 'banlist.txt');
-        const remoteBanlist = './banlist.txt';
-        await uploadFile(sftp, localBanlist, remoteBanlist);
+        // Upload bot.js (Fichier principal du bot supervisé par index.js)
+        const localBot = path.join(__dirname, 'bot.js');
+        if (fs.existsSync(localBot)) {
+            const remoteBot = './bot.js';
+            await uploadFile(sftp, localBot, remoteBot);
+        }
+
+        // Upload backup-to-github.js
+        const localBackup = path.join(__dirname, 'backup-to-github.js');
+        if (fs.existsSync(localBackup)) {
+            const remoteBackup = './backup-to-github.js';
+            await uploadFile(sftp, localBackup, remoteBackup);
+        }
+
+        // Upload de package.json (indispensable pour l'installation des dépendances comme node-cron)
+        const localPackage = path.join(__dirname, 'package.json');
+        const remotePackage = './package.json';
+        await uploadFile(sftp, localPackage, remotePackage);
         
         // 2. DOWNLOAD des logs distants vers local
         console.log('\n🔄 Récupération des logs du serveur...');
@@ -134,6 +168,12 @@ async function main() {
         const remoteEspionage = './espionage_dossiers.json';
         const localEspionage = path.join(__dirname, 'espionage_dossiers.json');
         await downloadFile(sftp, remoteEspionage, localEspionage);
+
+        // 5. DOWNLOAD de la banlist.txt du serveur
+        console.log('\n🔄 Récupération de la banlist du serveur...');
+        const remoteBanlist = './banlist.txt';
+        const localBanlist = path.join(__dirname, 'banlist.txt');
+        await downloadFile(sftp, remoteBanlist, localBanlist);
         
         console.log('\n🎉 Synchronisation globale terminée avec succès !');
     } catch (err) {

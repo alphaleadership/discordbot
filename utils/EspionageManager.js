@@ -2,7 +2,7 @@ import { EmbedBuilder, ChannelType, PermissionsBitField } from 'discord.js';
 import fs from 'fs';
 import path from 'path';
 
-const ESPIONAGE_GUILD_ID = '1475239703853928523';
+const ESPIONAGE_GUILD_ID = '1101569746333351986';
 
 /**
  * EspionageManager - Système de Dossiers d'Espionnage pour Micronation
@@ -16,13 +16,28 @@ const ESPIONAGE_GUILD_ID = '1475239703853928523';
 export class EspionageManager {
     constructor(clientOrClients, guildConfig, warnManager = null, banlistManager = null) {
         this.clients = Array.isArray(clientOrClients) ? clientOrClients : [clientOrClients];
-        this.client = this.clients[0]; // pour la compatibilité descendante
         this.guildConfig = guildConfig;
         this.warnManager = warnManager;
         this.banlistManager = banlistManager;
         this.filePath = path.join(process.cwd(), 'espionage_dossiers.json');
         this.dossiersData = this.loadDossiers();
         this.ensureFileExists();
+    }
+
+    get client() {
+        return this.clients && this.clients.length > 0 ? this.clients[0] : null;
+    }
+
+    set client(value) {
+        if (value) {
+            if (!this.clients) this.clients = [];
+            const idx = this.clients.indexOf(value);
+            if (idx > -1) {
+                // Mettre au début
+                this.clients.splice(idx, 1);
+            }
+            this.clients.unshift(value);
+        }
     }
 
     ensureFileExists() {
@@ -87,6 +102,11 @@ export class EspionageManager {
      * Résout la guilde d'espionnage principale (avec repli sur une guilde fournie).
      */
     async getEspionageGuild(fallbackGuild = null) {
+        if (!this.client && this.clients && this.clients.length > 0) {
+            this.client = this.clients[0];
+        }
+        if (!this.client || !this.client.guilds) return fallbackGuild || null;
+
         let guild = this.client.guilds.cache.get(ESPIONAGE_GUILD_ID) || fallbackGuild || null;
         try {
             if (!guild || guild.id !== ESPIONAGE_GUILD_ID) {
@@ -348,15 +368,9 @@ export class EspionageManager {
         const userId = message.author.id;
         const guildData = this.getGuildConfig(guildId);
 
-        // N'enregistrer que pour les dossiers déjà existants ou si on veut suivre tout le monde de façon passive
-        // Dans une micronation, on suit en priorité ceux qui écrivent
+        // N'enregistrer le message que si la cible a déjà un dossier configuré (thread ou suivi actif)
         if (!guildData.targets[userId]) {
-            guildData.targets[userId] = {
-                threadId: null,
-                messageCount: 0,
-                threatLevel: 'Low',
-                notes: []
-            };
+            return;
         }
 
         guildData.targets[userId].messageCount++;

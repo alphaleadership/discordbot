@@ -53,6 +53,13 @@ export default {
         const reason = interaction.options.getString('raison');
         const watchLevel = interaction.options.getString('niveau') || 'alert'; // Default to alert for global
 
+        if (watchlistManager.isReasonEmptyOrPlaceholder(reason)) {
+            return interaction.reply({
+                content: '❌ Une raison valide et explicite est requise pour ajouter un utilisateur à la liste de surveillance globale (les motifs vides ou placeholders comme "Raison non spécifiée" sont interdits).',
+                ephemeral: true
+            });
+        }
+
         // Check if user is a bot admin
         if (adminManager.isAdmin(user.id)) {
             return interaction.reply({
