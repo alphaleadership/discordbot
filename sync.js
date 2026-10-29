@@ -122,10 +122,17 @@ async function main() {
         const remotePublic = './public';
         await syncDirectory(sftp, localPublic, remotePublic);
 
-        // Upload index.js
+        // Upload index.js (Superviseur nodemon)
         const localIndex = path.join(__dirname, 'index.js');
         const remoteIndex = './index.js';
         await uploadFile(sftp, localIndex, remoteIndex);
+
+        // Upload bot.js (Fichier principal du bot supervisé par index.js)
+        const localBot = path.join(__dirname, 'bot.js');
+        if (fs.existsSync(localBot)) {
+            const remoteBot = './bot.js';
+            await uploadFile(sftp, localBot, remoteBot);
+        }
 
         // Upload backup-to-github.js
         const localBackup = path.join(__dirname, 'backup-to-github.js');

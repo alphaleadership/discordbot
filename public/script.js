@@ -198,6 +198,25 @@ function refreshCurrentTab() {
     }
 }
 
+async function restartBot() {
+    if (!confirm('Êtes-vous sûr de vouloir redémarrer le bot Discord ?')) return;
+    try {
+        showToast('Envoi du signal de redémarrage...', 'info');
+        const res = await authFetch('/api/system/restart', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+            showToast('Redémarrage en cours. Reconnexion automatique...', 'success');
+            setTimeout(() => {
+                window.location.reload();
+            }, 3500);
+        } else {
+            showToast('Échec : ' + (data.message || 'Erreur inconnue'), 'error');
+        }
+    } catch (err) {
+        showToast('Erreur lors du redémarrage : ' + err.message, 'error');
+    }
+}
+
 // ==========================================
 // --- 1. DASHBOARD & SYSTEM STATS ---
 // ==========================================

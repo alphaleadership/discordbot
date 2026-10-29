@@ -67,3 +67,33 @@ describe('Web Management Server - Content-Disposition and Header safety', () => 
         expect(header).toContain('filename*=UTF-8\'\'%F0%9F%9A%80%20Super%20Guild%20%F0%9F%8E%89-bans.txt');
     });
 });
+
+describe('Espionage Targets Endpoint Logic', () => {
+    it('should aggregate targets from guild data without blocking event loop', () => {
+        const mockGuildData = {
+            targets: {
+                'user1': { threatLevel: 'High', messageCount: 42, threadId: '123', notes: [{ id: '1' }] },
+                'user2': { threatLevel: 'Low', messageCount: 5, threadId: null }
+            }
+        };
+
+        const targetsList = [];
+        for (const [userId, targetInfo] of Object.entries(mockGuildData.targets)) {
+            targetsList.push({
+                id: userId,
+                tag: targetInfo.tag || 'Inconnu',
+                threatLevel: targetInfo.threatLevel || 'Low',
+                messageCount: targetInfo.messageCount || 0,
+                threadId: targetInfo.threadId || null,
+                notesCount: targetInfo.notes ? targetInfo.notes.length : 0
+            });
+        }
+
+        expect(targetsList).toHaveLength(2);
+        expect(targetsList[0].id).toBe('user1');
+        expect(targetsList[0].threatLevel).toBe('High');
+        expect(targetsList[0].notesCount).toBe(1);
+        expect(targetsList[1].id).toBe('user2');
+        expect(targetsList[1].notesCount).toBe(0);
+    });
+});

@@ -1,10 +1,12 @@
 {
   "name": "gitbot",
-  "version": "1.0.71",
+  "version": "1.0.72",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "bot": "node bot.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:unit": "vitest run test/unit",
