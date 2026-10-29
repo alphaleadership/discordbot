@@ -90,13 +90,12 @@ async function backupFile(filePath, client = octokit) {
         
         // Envoyer ou mettre à jour le fichier
         const repos = client.repos || client.rest?.repos;
-        const response = await repos.createOrUpdateFileContents({
+        const payload = {
             owner: process.env.GITHUB_OWNER,
             repo: process.env.GITHUB_REPO,
             path: filePath,
             message: `[Backup] ${new Date().toISOString()} - ${fileName}`,
             content: Buffer.from(content).toString('base64'),
-            sha: sha,
             branch: process.env.GITHUB_BRANCH || 'main',
             committer: {
                 name: 'GitBot Backup',
@@ -105,8 +104,10 @@ async function backupFile(filePath, client = octokit) {
             author: {
                 name: 'GitBot Backup',
                 email: 'backup@gitbot.com'
-            }
-        });
+            },
+            ...(sha ? { sha } : {})
+        };
+        const response = await repos.createOrUpdateFileContents(payload);
         
         console.log(`✅ ${filePath} sauvegardé avec succès!`);
         console.log(`   URL: ${response.data.content?.html_url || response.data.commit?.html_url || 'OK'}`);

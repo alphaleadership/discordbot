@@ -275,15 +275,17 @@ async function saveFileToGitHub(path, content, message) {
             return true;
         }
 
-        await octokit.repos.createOrUpdateFileContents({
+        const payload = {
             owner: GITHUB_OWNER,
             repo: GITHUB_REPO,
             path: filePath,
             message: message || `Backup: ${filePath}`,
             content: encodeContent(fileContent),
-            sha,
-            branch: GITHUB_BRANCH
-        });
+            branch: GITHUB_BRANCH,
+            ...(sha ? { sha } : {})
+        };
+
+        await octokit.repos.createOrUpdateFileContents(payload);
         
         
         return true;
@@ -1720,13 +1722,12 @@ async function processLogQueue() {
         // console.log('Envoi des mises à jour vers GitHub...'); // Logs de backup désactivés
         
         try {
-            const response = await octokit.repos.createOrUpdateFileContents({
+            const payload = {
                 owner: process.env.GITHUB_OWNER,
                 repo: process.env.GITHUB_REPO,
                 path: 'bot.log',
                 message: `[Bot] Mise à jour des logs - ${new Date().toISOString()}`,
                 content: Buffer.from(newContent).toString('base64'),
-                sha: fileSha,
                 branch: process.env.GITHUB_BRANCH || 'main',
                 committer: {
                     name: 'GitBot',
@@ -1735,8 +1736,10 @@ async function processLogQueue() {
                 author: {
                     name: 'GitBot',
                     email: 'noreply@github.com'
-                }
-            });
+                },
+                ...(fileSha ? { sha: fileSha } : {})
+            };
+            const response = await octokit.repos.createOrUpdateFileContents(payload);
 
             // console.log(`Logs envoyés avec succès vers GitHub. Commit SHA: ${response.data.commit.sha}`); // Logs de backup désactivés
             

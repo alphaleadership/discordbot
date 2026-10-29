@@ -105,10 +105,11 @@ describe('GitHub Backup System with latest API version', () => {
         expect(success).toBe(true);
         expect(mockClient.repos.createOrUpdateFileContents).toHaveBeenCalledWith(
             expect.objectContaining({
-                sha: undefined,
                 branch: 'main'
             })
         );
+        const callArgs = mockClient.repos.createOrUpdateFileContents.mock.calls[0][0];
+        expect(callArgs.sha).toBeUndefined();
     });
 
     it('should handle non-existent local file gracefully', async () => {
