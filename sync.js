@@ -32,6 +32,21 @@ async function syncDirectory(sftp, localPath, remotePath) {
         // Upload de tout le dossier local vers le dossier distant
         const result = await sftp.uploadDir(localPath, remotePath);
         console.log(`✅ Synchronisation réussie pour ${path.basename(localPath)} !`);
+
+        // Supprimer les fichiers distants orphelins qui n'existent plus localement
+        try {
+            const remoteList = await sftp.list(remotePath);
+            const localFiles = new Set(fs.readdirSync(localPath));
+            for (const item of remoteList) {
+                if (item.type === '-' && !localFiles.has(item.name)) {
+                    console.log(`🗑️ Suppression du fichier distant obsolète : ${remotePath}/${item.name}`);
+                    await sftp.delete(`${remotePath}/${item.name}`);
+                }
+            }
+        } catch (cleanupErr) {
+            console.warn(`⚠️ Nettoyage des fichiers distants orphelins : ${cleanupErr.message}`);
+        }
+
         return result;
     } catch (err) {
         console.error(`❌ Échec de la synchronisation de ${localPath}:`, err.message);
@@ -111,6 +126,13 @@ async function main() {
         const localIndex = path.join(__dirname, 'index.js');
         const remoteIndex = './index.js';
         await uploadFile(sftp, localIndex, remoteIndex);
+
+        // Upload backup-to-github.js
+        const localBackup = path.join(__dirname, 'backup-to-github.js');
+        if (fs.existsSync(localBackup)) {
+            const remoteBackup = './backup-to-github.js';
+            await uploadFile(sftp, localBackup, remoteBackup);
+        }
 
         // Upload de package.json (indispensable pour l'installation des dépendances comme node-cron)
         const localPackage = path.join(__dirname, 'package.json');

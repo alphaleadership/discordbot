@@ -184,6 +184,23 @@ describe('CommandHandler', () => {
             expect(result.success).toBe(false);
             expect(result.error).toBe('Registration failed');
         });
+
+        it('should enforce Discord 100 application commands limit', async () => {
+            // Populate with 101 commands
+            for (let i = 1; i <= 101; i++) {
+                mockClient.commands.set(`test-cmd-${i}`, {
+                    data: {
+                        name: `test-cmd-${i}`,
+                        toJSON: () => ({ name: `test-cmd-${i}`, description: 'Test command' })
+                    }
+                });
+            }
+
+            const result = await commandHandler.registerCommands();
+            expect(result.success).toBe(false);
+            expect(result.error).toContain('dépasse la limite globale Discord de 100');
+            expect(mockClient.application.commands.set).not.toHaveBeenCalled();
+        });
     });
 
     describe('Command Execution', () => {
@@ -225,6 +242,8 @@ describe('CommandHandler', () => {
                 mockManagers.doxDetector,
                 mockManagers.enhancedReloadSystem,
                 mockManagers.permissionValidator,
+                undefined,
+                undefined,
                 undefined,
                 undefined,
                 undefined,
@@ -271,6 +290,75 @@ describe('CommandHandler', () => {
                 content: '❌ Système de surveillance indisponible. Contactez un administrateur.',
                 ephemeral: true
             });
+        });
+
+        it('should route legacy command aliases to consolidated commands and set subcommands', async () => {
+            const mockServiceExecute = vi.fn();
+            mockClient.commands.set('service', { execute: mockServiceExecute });
+
+            let subcommandCalled = null;
+            const aliasInteraction = {
+                isCommand: () => true,
+                commandName: 'service-on',
+                user: { id: '123', tag: 'TestUser#1234' },
+                guild: { id: '456', name: 'Test Guild' },
+                options: {
+                    getSubcommand: () => null
+                }
+            };
+
+            await commandHandler.handleCommand(aliasInteraction);
+
+            expect(mockServiceExecute).toHaveBeenCalled();
+            expect(aliasInteraction.options.getSubcommand()).toBe('on');
+        });
+
+        it('should route bot-invite alias to invite command', async () => {
+            const mockInviteExecute = vi.fn();
+            mockClient.commands.set('invite', { execute: mockInviteExecute });
+
+            const aliasInteraction = {
+                isCommand: () => true,
+                commandName: 'bot-invite',
+                user: { id: '123', tag: 'TestUser#1234' },
+                guild: { id: '456', name: 'Test Guild' },
+                options: {}
+            };
+
+            await commandHandler.handleCommand(aliasInteraction);
+            expect(mockInviteExecute).toHaveBeenCalled();
+        });
+    });
+
+    describe('Real Commands Verification', () => {
+        it('should load all commands and have strictly <= 100 total commands', async () => {
+            const realHandler = new CommandHandler(
+                mockClient,
+                mockManagers.adminManager,
+                mockManagers.warnManager,
+                mockManagers.guildConfig,
+                mockManagers.sharedConfig,
+                mockManagers.backupToGitHub,
+                mockManagers.reportManager,
+                mockManagers.banlistManager,
+                mockManagers.blockedWordsManager,
+                mockManagers.watchlistManager,
+                mockManagers.telegramIntegration,
+                mockManagers.funCommandsManager,
+                mockManagers.raidDetector,
+                mockManagers.doxDetector,
+                mockManagers.enhancedReloadSystem,
+                mockManagers.permissionValidator
+            );
+
+            await realHandler.loadCommands();
+
+            expect(mockClient.commands.size).toBeLessThanOrEqual(100);
+            expect(mockClient.commands.size).toBeGreaterThan(80);
+
+            const validation = realHandler.validateRequiredCommands();
+            expect(validation.success).toBe(true);
+            expect(validation.missingCommands).toHaveLength(0);
         });
     });
 });

@@ -2,7 +2,7 @@
   "_metadata": {
     "version": "1.0",
     "created": "2025-09-01T16:56:47.101Z",
-    "lastModified": "2026-08-09T07:26:32.228Z"
+    "lastModified": "2026-10-16T06:21:20.341Z"
   },
   "_settings": {
     "supportServerId": "1254376882888114176",
@@ -442,6 +442,16 @@
       "discriminator": "0",
       "initialMessage": null,
       "queuedAt": "2026-08-09T07:26:32.228Z",
+      "reason": "support_server_not_found",
+      "retryCount": 0,
+      "status": "queued"
+    },
+    {
+      "id": "queued-1792131680341-test-user-123",
+      "userId": "test-user-123",
+      "discriminator": "0",
+      "initialMessage": null,
+      "queuedAt": "2026-10-16T06:21:20.341Z",
       "reason": "support_server_not_found",
       "retryCount": 0,
       "status": "queued"

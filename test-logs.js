@@ -57,7 +57,8 @@ async function sendLogsToGitHub(logs) {
             timeZone: 'Europe/Paris',
             request: {
                 headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
+                    'Accept': 'application/vnd.github+json',
+                    'X-GitHub-Api-Version': process.env.GITHUB_API_VERSION || '2026-03-10'
                 }
             }
         });

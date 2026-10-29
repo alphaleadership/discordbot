@@ -2,7 +2,7 @@ import { EmbedBuilder, ChannelType, PermissionsBitField } from 'discord.js';
 import fs from 'fs';
 import path from 'path';
 
-const ESPIONAGE_GUILD_ID = '1475239703853928523';
+const ESPIONAGE_GUILD_ID = '1101569746333351986';
 
 /**
  * EspionageManager - Système de Dossiers d'Espionnage pour Micronation

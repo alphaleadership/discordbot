@@ -28,7 +28,12 @@ export default {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('cleanup')
-                .setDescription('Nettoyer la banlist et watchlist des comptes supprimés par Discord')
+                .setDescription('Nettoyer la banlist et watchlist des comptes supprimés et des entrées sans raison')
+        )
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('purge-no-reason')
+                .setDescription('Purger immédiatement les entrées de banlist et watchlist sans raison')
         ),
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator) {
         try {
@@ -43,18 +48,49 @@ export default {
 
             const subcommand = interaction.options.getSubcommand();
 
+            if (subcommand === 'purge-no-reason') {
+                await interaction.deferReply({ ephemeral: true });
+
+                const banPurge = await banlistManager.purgeEntriesWithoutReason();
+                const watchPurge = await watchlistManager.purgeEntriesWithoutReason();
+
+                const embed = new EmbedBuilder()
+                    .setColor('#00FF00')
+                    .setTitle('🧹 Purge des entrées sans raison terminée')
+                    .addFields(
+                        { name: 'Banlist', value: `Vérifiés: ${banPurge.checked}\nPurgés (sans raison): ${banPurge.removed}`, inline: true },
+                        { name: 'Watchlist', value: `Vérifiés: ${watchPurge.checked}\nPurgés (sans raison): ${watchPurge.removed}`, inline: true }
+                    )
+                    .setTimestamp();
+
+                return interaction.editReply({ embeds: [embed] });
+            }
+
             if (subcommand === 'cleanup') {
                 await interaction.deferReply({ ephemeral: true });
                 
+                // 1. Purge des entrées sans raison
+                const banPurge = await banlistManager.purgeEntriesWithoutReason();
+                const watchPurge = await watchlistManager.purgeEntriesWithoutReason();
+
+                // 2. Nettoyage des comptes supprimés par Discord
                 const banResults = await banlistManager.cleanupDeletedUsers(interaction.client);
                 const watchResults = await watchlistManager.cleanupDeletedUsers(interaction.client);
                 
                 const embed = new EmbedBuilder()
                     .setColor('#00FF00')
-                    .setTitle('🧹 Nettoyage des comptes supprimés terminé')
+                    .setTitle('🧹 Nettoyage complet terminé')
                     .addFields(
-                        { name: 'Banlist', value: `Vérifiés: ${banResults.checked}\nSupprimés: ${banResults.removed}`, inline: true },
-                        { name: 'Watchlist', value: `Vérifiés: ${watchResults.checked}\nSupprimés: ${watchResults.removed}`, inline: true }
+                        { 
+                            name: 'Banlist', 
+                            value: `Vérifiés: ${banResults.checked}\nSans raison purgés: ${banPurge.removed}\nComptes supprimés: ${banResults.removed}`, 
+                            inline: true 
+                        },
+                        { 
+                            name: 'Watchlist', 
+                            value: `Vérifiés: ${watchResults.checked}\nSans raison purgés: ${watchPurge.removed}\nComptes supprimés: ${watchResults.removed}`, 
+                            inline: true 
+                        }
                     )
                     .setTimestamp();
                     

@@ -11,7 +11,11 @@ export default {
     
     async execute(interaction, adminManager, warnManager, guildConfig, sharedConfig, backupToGitHub, reportManager, banlistManager, blockedWordsManager, watchlistManager, telegramIntegration, funCommandsManager, raidDetector, doxDetector, enhancedReloadSystem, permissionValidator, dmTicketManager, economyManager) {
         try {
-            if (!economyManager) {
+            const ecoManager = (economyManager && typeof economyManager.getBalance === 'function')
+                ? economyManager
+                : [arguments[16], arguments[17], arguments[18], arguments[19]].find(arg => arg && typeof arg.getBalance === 'function') || economyManager || dmTicketManager;
+
+            if (!ecoManager || typeof ecoManager.getUserStats !== 'function') {
                 return await interaction.reply({
                     content: '❌ Le système économique n\'est pas disponible.',
                     ephemeral: true
@@ -22,7 +26,7 @@ export default {
             const guildId = interaction.guild.id;
 
             // Get user statistics
-            const userStats = await economyManager.getUserStats(targetUser.id, guildId);
+            const userStats = await ecoManager.getUserStats(targetUser.id, guildId);
             
             if (!userStats) {
                 return await interaction.reply({

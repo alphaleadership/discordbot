@@ -85,7 +85,8 @@ export class EconomyManager {
                 created: new Date().toISOString(),
                 lastModified: new Date().toISOString()
             },
-            guilds: {}
+            guilds: {},
+            globalBank: {}
         };
     }
 
@@ -155,6 +156,13 @@ export class EconomyManager {
             if (typeof parsed !== 'object' || parsed === null) {
                 throw new Error('Invalid economy data structure');
             }
+
+            if (!parsed.guilds || typeof parsed.guilds !== 'object') {
+                parsed.guilds = {};
+            }
+            if (!parsed.globalBank || typeof parsed.globalBank !== 'object') {
+                parsed.globalBank = {};
+            }
             
             return parsed;
         } catch (error) {
@@ -209,6 +217,7 @@ export class EconomyManager {
         if (!this.economy.guilds[guildId]) {
             this.economy.guilds[guildId] = {
                 totalCurrency: 0,
+                totalTransactions: 0,
                 baseValue: this.defaultConfig.baseValue,
                 currentValue: this.defaultConfig.baseValue,
                 inflationRate: 0.0,
@@ -217,6 +226,42 @@ export class EconomyManager {
                 config: { ...this.defaultConfig }
             };
         }
+    }
+
+    /**
+     * Enregistre une transaction sur le serveur pour le suivi économique
+     * @param {string} guildId - ID du serveur
+     */
+    recordGuildTransaction(guildId) {
+        if (!guildId) return;
+        this.ensureGuildExists(guildId);
+        this.economy.guilds[guildId].totalTransactions = (this.economy.guilds[guildId].totalTransactions || 0) + 1;
+        this.economy.guilds[guildId].lastUpdate = new Date().toISOString();
+    }
+
+    /**
+     * Récupère le nombre total de transactions enregistrées pour un serveur
+     * @param {string} guildId - ID du serveur
+     * @returns {number} Nombre de transactions
+     */
+    getGuildTransactionCount(guildId) {
+        if (!guildId || !this.economy.guilds || !this.economy.guilds[guildId]) {
+            return 0;
+        }
+        const guild = this.economy.guilds[guildId];
+        let count = guild.totalTransactions || 0;
+        
+        // Comptabilise également l'historique utilisateur si disponible
+        if (guild.users) {
+            let userTxs = 0;
+            for (const uid in guild.users) {
+                if (Array.isArray(guild.users[uid]?.transactions)) {
+                    userTxs += guild.users[uid].transactions.length;
+                }
+            }
+            count = Math.max(count, userTxs);
+        }
+        return count;
     }
 
     /**
@@ -281,8 +326,9 @@ export class EconomyManager {
             user.totalEarned += amount;
             user.lastActivity = new Date().toISOString();
             
-            // Update guild total currency
+            // Update guild total currency and transactions
             guild.totalCurrency += amount;
+            guild.totalTransactions = (guild.totalTransactions || 0) + 1;
             guild.lastUpdate = new Date().toISOString();
             
             // Update market value based on new currency circulation
@@ -341,8 +387,9 @@ export class EconomyManager {
             user.totalSpent += amount;
             user.lastActivity = new Date().toISOString();
             
-            // Update guild total currency
+            // Update guild total currency and transactions
             guild.totalCurrency -= amount;
+            guild.totalTransactions = (guild.totalTransactions || 0) + 1;
             guild.lastUpdate = new Date().toISOString();
             
             // Update market value based on new currency circulation
@@ -362,6 +409,881 @@ export class EconomyManager {
             return {
                 success: false,
                 message: 'Failed to remove currency'
+            };
+        }
+    }
+
+    /**
+     * Applique une amende à un utilisateur (ex: avertissement / warn).
+     * Prélève le montant spécifié sur le solde local du serveur.
+     * Si le solde local est insuffisant ou nul, le compte bancaire inter-serveur prend le relais pour payer le reste.
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} guildId - ID du serveur
+     * @param {number} amount - Montant de l'amende
+     * @param {string} reason - Motif de l'amende
+     * @returns {Promise<Object>} Résultat du prélèvement
+     */
+    async applyFine(userId, guildId, amount, reason = 'Amende disciplinaire') {
+        try {
+            this.ensureUserExists(guildId, userId);
+            this.ensureGlobalBankUserExists(userId);
+            
+            const user = this.economy.guilds[guildId].users[userId];
+            const guild = this.economy.guilds[guildId];
+            const bankAccount = this.economy.globalBank[userId];
+
+            const currentBalance = user.balance || 0;
+            const currentBankBalance = bankAccount.balance || 0;
+            const requestedAmount = Math.max(0, parseInt(amount, 10) || 0);
+
+            if (requestedAmount <= 0) {
+                return {
+                    success: true,
+                    deducted: 0,
+                    deductedFromLocal: 0,
+                    deductedFromBank: 0,
+                    requestedAmount: 0,
+                    remainingBalance: currentBalance,
+                    remainingBankBalance: currentBankBalance,
+                    paidByBank: false,
+                    paidFullyByBank: false,
+                    wasPartial: false,
+                    message: 'Aucune amende à prélever'
+                };
+            }
+
+            // 1. Déduction sur le solde local
+            const deductedFromLocal = Math.min(requestedAmount, currentBalance);
+            const remainingFine = requestedAmount - deductedFromLocal;
+
+            // 2. Si solde local insuffisant, déduction sur le compte bancaire inter-serveur
+            const deductedFromBank = remainingFine > 0 ? Math.min(remainingFine, currentBankBalance) : 0;
+            const totalDeducted = deductedFromLocal + deductedFromBank;
+
+            // Mise à jour du portefeuille local
+            if (deductedFromLocal > 0) {
+                user.balance -= deductedFromLocal;
+                user.totalSpent = (user.totalSpent || 0) + deductedFromLocal;
+                user.lastActivity = new Date().toISOString();
+
+                guild.totalCurrency = Math.max(0, (guild.totalCurrency || 0) - deductedFromLocal);
+                guild.totalTransactions = (guild.totalTransactions || 0) + 1;
+                guild.lastUpdate = new Date().toISOString();
+
+                await this.calculateMarketValue(guildId);
+            }
+
+            // Enregistrement de la transaction dans le portefeuille local
+            if (totalDeducted > 0) {
+                if (!user.transactions) {
+                    user.transactions = [];
+                }
+                user.transactions.push({
+                    type: 'fine',
+                    amount: -totalDeducted,
+                    requestedAmount,
+                    deductedFromLocal,
+                    deductedFromBank,
+                    reason,
+                    timestamp: new Date().toISOString(),
+                    balanceAfter: user.balance
+                });
+            }
+
+            // Mise à jour du compte bancaire inter-serveur si sollicité
+            if (deductedFromBank > 0) {
+                bankAccount.balance -= deductedFromBank;
+                bankAccount.totalWithdrawn = (bankAccount.totalWithdrawn || 0) + deductedFromBank;
+                bankAccount.lastWithdraw = new Date().toISOString();
+
+                if (!bankAccount.transactions) {
+                    bankAccount.transactions = [];
+                }
+                bankAccount.transactions.push({
+                    type: 'fine',
+                    subType: 'fine_deduction',
+                    amount: -deductedFromBank,
+                    requestedFine: requestedAmount,
+                    deductedFromLocal,
+                    deductedFromBank,
+                    guildId,
+                    reason,
+                    timestamp: new Date().toISOString(),
+                    balanceAfter: bankAccount.balance
+                });
+            }
+
+            if (totalDeducted > 0) {
+                await this.saveEconomy();
+            }
+
+            const wasPartial = totalDeducted < requestedAmount;
+            let message = '';
+            if (deductedFromBank > 0 && deductedFromLocal > 0) {
+                message = wasPartial
+                    ? `Amende partielle: ${totalDeducted}/${requestedAmount} coins prélevés (${deductedFromLocal} local + ${deductedFromBank} banque inter-serveur, soldes épuisés)`
+                    : `Amende de ${totalDeducted} coins prélevée (${deductedFromLocal} local + ${deductedFromBank} banque inter-serveur)`;
+            } else if (deductedFromBank > 0 && deductedFromLocal === 0) {
+                message = wasPartial
+                    ? `Amende partielle: ${totalDeducted}/${requestedAmount} coins prélevés sur la banque inter-serveur (portefeuille local et banque épuisés)`
+                    : `Amende de ${totalDeducted} coins prélevée sur la banque inter-serveur (portefeuille local vide)`;
+            } else if (wasPartial) {
+                message = `Amende partielle: ${totalDeducted}/${requestedAmount} coins prélevés (soldes épuisés)`;
+            } else {
+                message = `Amende de ${totalDeducted} coins appliquée avec succès`;
+            }
+
+            return {
+                success: true,
+                deducted: totalDeducted,
+                deductedFromLocal,
+                deductedFromBank,
+                requestedAmount,
+                remainingBalance: user.balance,
+                remainingBankBalance: bankAccount.balance,
+                paidByBank: deductedFromBank > 0,
+                paidFullyByBank: deductedFromLocal === 0 && deductedFromBank > 0,
+                wasPartial,
+                message
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur lors de l\'application de l\'amende:', error);
+            return {
+                success: false,
+                deducted: 0,
+                deductedFromLocal: 0,
+                deductedFromBank: 0,
+                remainingBalance: 0,
+                remainingBankBalance: 0,
+                paidByBank: false,
+                paidFullyByBank: false,
+                wasPartial: true,
+                message: error.message || 'Erreur lors du prélèvement de l\'amende'
+            };
+        }
+    }
+
+    /**
+     * Sets a user's balance to an exact amount (Admin)
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @param {number} amount - New balance amount
+     * @param {string} reason - Reason for setting balance
+     * @returns {Promise<Object>} Result
+     */
+    async setBalance(userId, guildId, amount, reason = 'Admin set balance') {
+        try {
+            if (typeof amount !== 'number' || isNaN(amount) || amount < 0) {
+                return {
+                    success: false,
+                    message: 'Le montant doit être un nombre positif ou nul'
+                };
+            }
+
+            this.ensureUserExists(guildId, userId);
+            const user = this.economy.guilds[guildId].users[userId];
+            const oldBalance = user.balance;
+            user.balance = amount;
+            user.lastActivity = new Date().toISOString();
+
+            // Adjust total currency in guild
+            const diff = amount - oldBalance;
+            this.economy.guilds[guildId].totalCurrency += diff;
+            this.economy.guilds[guildId].totalTransactions = (this.economy.guilds[guildId].totalTransactions || 0) + 1;
+            this.economy.guilds[guildId].lastUpdate = new Date().toISOString();
+
+            await this.calculateMarketValue(guildId);
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                oldBalance,
+                newBalance: user.balance,
+                reason,
+                message: `Solde de ${userId} mis à jour : ${oldBalance} -> ${amount}`
+            };
+        } catch (error) {
+            console.error('Error setting balance:', error);
+            return {
+                success: false,
+                message: 'Failed to set balance'
+            };
+        }
+    }
+
+    /**
+     * Resets a user's balance to 0 (Admin)
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @param {string} reason - Reason for reset
+     * @returns {Promise<Object>} Result
+     */
+    async resetBalance(userId, guildId, reason = 'Admin reset balance') {
+        return this.setBalance(userId, guildId, 0, reason);
+    }
+
+    /**
+     * S'assure que la structure de la banque globale existe
+     */
+    ensureGlobalBankExists() {
+        if (!this.economy.globalBank || typeof this.economy.globalBank !== 'object') {
+            this.economy.globalBank = {};
+        }
+    }
+
+    /**
+     * S'assure qu'un compte bancaire inter-serveur existe pour un utilisateur
+     * @param {string} userId - ID de l'utilisateur
+     */
+    ensureGlobalBankUserExists(userId) {
+        this.ensureGlobalBankExists();
+        if (!this.economy.globalBank[userId]) {
+            this.economy.globalBank[userId] = {
+                balance: 0,
+                totalDeposited: 0,
+                totalWithdrawn: 0,
+                lastDeposit: null,
+                lastWithdraw: null,
+                lastInterest: null,
+                createdAt: new Date().toISOString(),
+                transactions: []
+            };
+        }
+    }
+
+    /**
+     * Récupère le solde du compte bancaire inter-serveur d'un utilisateur
+     * @param {string} userId - ID de l'utilisateur
+     * @returns {number} Solde bancaire
+     */
+    getGlobalBankBalance(userId) {
+        this.ensureGlobalBankUserExists(userId);
+        return this.economy.globalBank[userId]?.balance || 0;
+    }
+
+    /**
+     * Calcule le taux d'intérêt journalier dynamique pour un serveur donné,
+     * en fonction de la masse monétaire en circulation et du volume de transactions.
+     * 
+     * Modèle macroéconomique :
+     * - Taux de base : 1.00%
+     * - Modificateur masse monétaire : Récompense la liquidité en circulation (+0.1% à +1.8% selon l'abondance)
+     * - Bonus vélocité transactions : Récompense l'activité économique et le dynamisme du serveur (jusqu'à +2.0%)
+     * - Bornes de sécurité : plancher à 0.50% et plafond à 5.00%
+     * 
+     * @param {string} [guildId=null] - ID du serveur
+     * @returns {Object} Analyse et détail du taux d'intérêt dynamique
+     */
+    calculateDynamicInterestRate(guildId = null) {
+        const baseRate = 0.01; // 1.00% de base
+        const minRate = 0.005; // 0.50% plancher
+        const maxRate = 0.050; // 5.00% plafond
+
+        if (!guildId || !this.economy.guilds || !this.economy.guilds[guildId]) {
+            return {
+                rate: baseRate,
+                ratePercent: 1.0,
+                ratePercentage: '1.00%',
+                baseRate,
+                currencyModifier: 0,
+                transactionBonus: 0,
+                totalCurrency: 0,
+                transactionCount: 0,
+                minRate,
+                maxRate,
+                isDynamic: false
+            };
+        }
+
+        const guild = this.economy.guilds[guildId];
+        const totalCurrency = Math.max(0, guild.totalCurrency || 0);
+        const transactionCount = this.getGuildTransactionCount(guildId);
+
+        // 1. Modificateur basé sur la masse monétaire en circulation
+        let currencyModifier = 0;
+        if (totalCurrency <= 1000) {
+            currencyModifier = -0.002; // -0.20% si l'économie est à sec (< 1000 coins)
+        } else {
+            // Entre 1,000 et 1,000,000+ coins : progression logarithmique
+            const logRatio = Math.log10(totalCurrency / 1000);
+            currencyModifier = Math.min(0.018, Math.max(0, logRatio * 0.006));
+        }
+
+        // 2. Bonus basé sur le nombre de transactions
+        let transactionBonus = 0;
+        if (transactionCount > 0) {
+            // Progression logarithmique selon le volume de transactions enregistrées
+            const logTx = Math.log10(Math.max(1, transactionCount));
+            transactionBonus = Math.min(0.020, logTx * 0.0065);
+        }
+
+        const calculatedRate = baseRate + currencyModifier + transactionBonus;
+        const finalRate = Math.max(minRate, Math.min(maxRate, calculatedRate));
+
+        return {
+            rate: finalRate,
+            ratePercent: parseFloat((finalRate * 100).toFixed(2)),
+            ratePercentage: (finalRate * 100).toFixed(2) + '%',
+            baseRate,
+            currencyModifier,
+            transactionBonus,
+            totalCurrency,
+            transactionCount,
+            minRate,
+            maxRate,
+            isDynamic: true
+        };
+    }
+
+    /**
+     * Récupère les statistiques bancaires et le patrimoine complet d'un utilisateur
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} [guildId=null] - ID du serveur actuel (optionnel)
+     * @returns {Object} Statistiques bancaires
+     */
+    getBankStats(userId, guildId = null) {
+        this.ensureGlobalBankUserExists(userId);
+        if (guildId) {
+            this.ensureUserExists(guildId, userId);
+        }
+
+        const localBalance = guildId ? (this.economy.guilds[guildId]?.users[userId]?.balance || 0) : 0;
+        const bankAccount = this.economy.globalBank[userId];
+        const bankBalance = bankAccount.balance || 0;
+
+        // Calcul des intérêts quotidiens dynamiques
+        const todayDate = new Date().toDateString();
+        const lastInterestDate = bankAccount.lastInterest ? new Date(bankAccount.lastInterest).toDateString() : null;
+        const canClaimInterest = bankBalance > 0 && lastInterestDate !== todayDate;
+        
+        const dynamicRateInfo = this.calculateDynamicInterestRate(guildId);
+        const interestRate = dynamicRateInfo.rate;
+        const potentialInterest = bankBalance > 0 ? Math.max(1, Math.round(bankBalance * interestRate)) : 0;
+
+        // Trouver la dernière transaction d'intérêts aujourd'hui si déjà distribuée automatiquement
+        const todayInterestTx = (bankAccount.transactions || []).slice().reverse().find(
+            tx => tx.type === 'interest' && new Date(tx.timestamp).toDateString() === todayDate
+        );
+        const receivedToday = todayInterestTx?.amount || 0;
+
+        // Calcul du patrimoine total à travers tous les serveurs
+        let totalLocalBalances = 0;
+        if (this.economy.guilds) {
+            for (const gid in this.economy.guilds) {
+                if (this.economy.guilds[gid]?.users?.[userId]) {
+                    totalLocalBalances += (this.economy.guilds[gid].users[userId].balance || 0);
+                }
+            }
+        }
+
+        return {
+            localBalance,
+            bankBalance,
+            netWorth: localBalance + bankBalance,
+            totalNetWorth: totalLocalBalances + bankBalance,
+            totalDeposited: bankAccount.totalDeposited || 0,
+            totalWithdrawn: bankAccount.totalWithdrawn || 0,
+            canClaimInterest,
+            autoInterestEnabled: true,
+            receivedToday,
+            todayInterestRate: todayInterestTx?.ratePercentage || dynamicRateInfo.ratePercentage,
+            interestRate: dynamicRateInfo.rate,
+            interestRatePercent: dynamicRateInfo.ratePercent,
+            interestRatePercentage: dynamicRateInfo.ratePercentage,
+            interestRateInfo: dynamicRateInfo,
+            potentialInterest,
+            lastInterest: bankAccount.lastInterest,
+            lastDeposit: bankAccount.lastDeposit,
+            lastWithdraw: bankAccount.lastWithdraw,
+            createdAt: bankAccount.createdAt
+        };
+    }
+
+    /**
+     * Dépose de l'argent du portefeuille local vers le compte bancaire inter-serveur
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} guildId - ID du serveur
+     * @param {number} amount - Montant à déposer
+     * @param {string} [reason='Dépôt bancaire'] - Motif
+     * @returns {Promise<Object>} Résultat
+     */
+    async depositToBank(userId, guildId, amount, reason = 'Dépôt bancaire') {
+        try {
+            const depositAmount = Math.max(0, parseInt(amount, 10) || 0);
+            if (depositAmount <= 0) {
+                return {
+                    success: false,
+                    message: 'Le montant à déposer doit être supérieur à 0'
+                };
+            }
+
+            this.ensureUserExists(guildId, userId);
+            this.ensureGlobalBankUserExists(userId);
+
+            const user = this.economy.guilds[guildId].users[userId];
+            const bankAccount = this.economy.globalBank[userId];
+
+            if (user.balance < depositAmount) {
+                return {
+                    success: false,
+                    message: `Solde portefeuille insuffisant (${user.balance.toLocaleString()} coins disponibles, ${depositAmount.toLocaleString()} demandés)`
+                };
+            }
+
+            // Débit portefeuille local
+            user.balance -= depositAmount;
+            user.lastActivity = new Date().toISOString();
+
+            const guild = this.economy.guilds[guildId];
+            guild.totalCurrency = Math.max(0, (guild.totalCurrency || 0) - depositAmount);
+            guild.totalTransactions = (guild.totalTransactions || 0) + 1;
+            guild.lastUpdate = new Date().toISOString();
+
+            // Crédit compte bancaire inter-serveur
+            bankAccount.balance += depositAmount;
+            bankAccount.totalDeposited = (bankAccount.totalDeposited || 0) + depositAmount;
+            bankAccount.lastDeposit = new Date().toISOString();
+
+            if (!bankAccount.transactions) bankAccount.transactions = [];
+            bankAccount.transactions.push({
+                type: 'deposit',
+                amount: depositAmount,
+                guildId,
+                reason,
+                timestamp: new Date().toISOString(),
+                balanceAfter: bankAccount.balance
+            });
+
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                deposited: depositAmount,
+                localBalance: user.balance,
+                bankBalance: bankAccount.balance,
+                message: `Dépôt de ${depositAmount.toLocaleString()} coins effectué avec succès !`
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur dépôt banque:', error);
+            return {
+                success: false,
+                message: error.message || 'Échec du dépôt bancaire'
+            };
+        }
+    }
+
+    /**
+     * Retire de l'argent du compte bancaire inter-serveur vers le portefeuille local
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} guildId - ID du serveur
+     * @param {number} amount - Montant à retirer
+     * @param {string} [reason='Retrait bancaire'] - Motif
+     * @returns {Promise<Object>} Résultat
+     */
+    async withdrawFromBank(userId, guildId, amount, reason = 'Retrait bancaire') {
+        try {
+            const withdrawAmount = Math.max(0, parseInt(amount, 10) || 0);
+            if (withdrawAmount <= 0) {
+                return {
+                    success: false,
+                    message: 'Le montant à retirer doit être supérieur à 0'
+                };
+            }
+
+            this.ensureUserExists(guildId, userId);
+            this.ensureGlobalBankUserExists(userId);
+
+            const user = this.economy.guilds[guildId].users[userId];
+            const bankAccount = this.economy.globalBank[userId];
+
+            if (bankAccount.balance < withdrawAmount) {
+                return {
+                    success: false,
+                    message: `Solde bancaire insuffisant (${bankAccount.balance.toLocaleString()} coins en banque, ${withdrawAmount.toLocaleString()} demandés)`
+                };
+            }
+
+            // Débit banque inter-serveur
+            bankAccount.balance -= withdrawAmount;
+            bankAccount.totalWithdrawn = (bankAccount.totalWithdrawn || 0) + withdrawAmount;
+            bankAccount.lastWithdraw = new Date().toISOString();
+
+            // Crédit portefeuille local
+            user.balance += withdrawAmount;
+            user.lastActivity = new Date().toISOString();
+
+            const guild = this.economy.guilds[guildId];
+            guild.totalCurrency = (guild.totalCurrency || 0) + withdrawAmount;
+            guild.totalTransactions = (guild.totalTransactions || 0) + 1;
+            guild.lastUpdate = new Date().toISOString();
+
+            if (!bankAccount.transactions) bankAccount.transactions = [];
+            bankAccount.transactions.push({
+                type: 'withdraw',
+                amount: -withdrawAmount,
+                guildId,
+                reason,
+                timestamp: new Date().toISOString(),
+                balanceAfter: bankAccount.balance
+            });
+
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                withdrawn: withdrawAmount,
+                localBalance: user.balance,
+                bankBalance: bankAccount.balance,
+                message: `Retrait de ${withdrawAmount.toLocaleString()} coins effectué avec succès !`
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur retrait banque:', error);
+            return {
+                success: false,
+                message: error.message || 'Échec du retrait bancaire'
+            };
+        }
+    }
+
+    /**
+     * Effectue un virement de banque à banque inter-serveur entre deux utilisateurs
+     * @param {string} fromUserId - ID de l'expéditeur
+     * @param {string} toUserId - ID du bénéficiaire
+     * @param {number} amount - Montant du virement
+     * @param {string} [reason='Virement bancaire'] - Motif
+     * @returns {Promise<Object>} Résultat
+     */
+    async transferBank(fromUserId, toUserId, amount, reason = 'Virement bancaire') {
+        try {
+            if (fromUserId === toUserId) {
+                return {
+                    success: false,
+                    message: 'Vous ne pouvez pas effectuer un virement à vous-même'
+                };
+            }
+
+            const transferAmount = Math.max(0, parseInt(amount, 10) || 0);
+            if (transferAmount <= 0) {
+                return {
+                    success: false,
+                    message: 'Le montant du virement doit être supérieur à 0'
+                };
+            }
+
+            this.ensureGlobalBankUserExists(fromUserId);
+            this.ensureGlobalBankUserExists(toUserId);
+
+            const senderAccount = this.economy.globalBank[fromUserId];
+            const recipientAccount = this.economy.globalBank[toUserId];
+
+            if (senderAccount.balance < transferAmount) {
+                return {
+                    success: false,
+                    message: `Solde bancaire insuffisant (${senderAccount.balance.toLocaleString()} coins en banque, ${transferAmount.toLocaleString()} demandés)`
+                };
+            }
+
+            // Débit expéditeur
+            senderAccount.balance -= transferAmount;
+            if (!senderAccount.transactions) senderAccount.transactions = [];
+            senderAccount.transactions.push({
+                type: 'wire_transfer_out',
+                amount: -transferAmount,
+                targetUserId: toUserId,
+                reason,
+                timestamp: new Date().toISOString(),
+                balanceAfter: senderAccount.balance
+            });
+
+            // Crédit bénéficiaire
+            recipientAccount.balance += transferAmount;
+            if (!recipientAccount.transactions) recipientAccount.transactions = [];
+            recipientAccount.transactions.push({
+                type: 'wire_transfer_in',
+                amount: transferAmount,
+                fromUserId,
+                reason,
+                timestamp: new Date().toISOString(),
+                balanceAfter: recipientAccount.balance
+            });
+
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                amount: transferAmount,
+                senderBalance: senderAccount.balance,
+                recipientBalance: recipientAccount.balance,
+                message: `Virement inter-serveur de ${transferAmount.toLocaleString()} coins effectué avec succès !`
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur virement banque:', error);
+            return {
+                success: false,
+                message: error.message || 'Échec du virement bancaire'
+            };
+        }
+    }
+
+    /**
+     * Identifie le serveur principal ou le plus actif pour un utilisateur
+     * @param {string} userId - ID de l'utilisateur
+     * @returns {string|null} ID du serveur principal
+     */
+    getPrimaryGuildForUser(userId) {
+        if (!this.economy.guilds) return null;
+        let bestGuildId = null;
+        let maxBalance = -1;
+
+        for (const gid in this.economy.guilds) {
+            const user = this.economy.guilds[gid]?.users?.[userId];
+            if (user) {
+                const bal = user.balance || 0;
+                if (bal > maxBalance) {
+                    maxBalance = bal;
+                    bestGuildId = gid;
+                }
+            }
+        }
+        return bestGuildId;
+    }
+
+    /**
+     * Traite automatiquement les intérêts du jour pour un utilisateur individuel s'ils sont dus
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} [guildId=null] - ID du serveur
+     * @returns {Promise<Object>} Résultat
+     */
+    async autoProcessDailyInterestForUser(userId, guildId = null) {
+        this.ensureGlobalBankUserExists(userId);
+        const bankAccount = this.economy.globalBank[userId];
+        if (!bankAccount || !bankAccount.balance || bankAccount.balance <= 0) {
+            return { credited: false, reason: 'Compte vide' };
+        }
+
+        const todayDate = new Date().toDateString();
+        const lastInterestDate = bankAccount.lastInterest ? new Date(bankAccount.lastInterest).toDateString() : null;
+        if (lastInterestDate === todayDate) {
+            return { credited: false, reason: 'Déjà crédité aujourd\'hui' };
+        }
+
+        const targetGuildId = guildId || this.getPrimaryGuildForUser(userId);
+        const rateInfo = this.calculateDynamicInterestRate(targetGuildId);
+        const interest = Math.max(1, Math.round(bankAccount.balance * rateInfo.rate));
+
+        bankAccount.balance += interest;
+        bankAccount.lastInterest = new Date().toISOString();
+
+        if (!bankAccount.transactions) bankAccount.transactions = [];
+        bankAccount.transactions.push({
+            type: 'interest',
+            auto: true,
+            amount: interest,
+            rate: rateInfo.rate,
+            ratePercentage: rateInfo.ratePercentage,
+            guildId: targetGuildId,
+            timestamp: new Date().toISOString(),
+            balanceAfter: bankAccount.balance
+        });
+
+        await this.saveEconomy();
+
+        return {
+            credited: true,
+            interest,
+            rate: rateInfo.rate,
+            rateInfo,
+            newBankBalance: bankAccount.balance
+        };
+    }
+
+    /**
+     * Traite et verse automatiquement les intérêts quotidiens pour tous les comptes bancaires éligibles
+     * @param {string} [defaultGuildId=null] - ID de serveur par défaut optionnel
+     * @returns {Promise<Object>} Rapport de la distribution automatique
+     */
+    async processAllPendingBankInterests(defaultGuildId = null) {
+        try {
+            this.ensureGlobalBankExists();
+            const todayDate = new Date().toDateString();
+            let totalAccountsProcessed = 0;
+            let totalInterestDistributed = 0;
+            const details = [];
+
+            for (const userId in this.economy.globalBank) {
+                const bankAccount = this.economy.globalBank[userId];
+                if (!bankAccount || !bankAccount.balance || bankAccount.balance <= 0) {
+                    continue;
+                }
+
+                const lastInterestDate = bankAccount.lastInterest ? new Date(bankAccount.lastInterest).toDateString() : null;
+                if (lastInterestDate === todayDate) {
+                    continue;
+                }
+
+                const targetGuildId = defaultGuildId || this.getPrimaryGuildForUser(userId);
+                const rateInfo = this.calculateDynamicInterestRate(targetGuildId);
+
+                const interest = Math.max(1, Math.round(bankAccount.balance * rateInfo.rate));
+                bankAccount.balance += interest;
+                bankAccount.lastInterest = new Date().toISOString();
+
+                if (!bankAccount.transactions) bankAccount.transactions = [];
+                bankAccount.transactions.push({
+                    type: 'interest',
+                    auto: true,
+                    amount: interest,
+                    rate: rateInfo.rate,
+                    ratePercentage: rateInfo.ratePercentage,
+                    guildId: targetGuildId,
+                    timestamp: new Date().toISOString(),
+                    balanceAfter: bankAccount.balance
+                });
+
+                totalAccountsProcessed++;
+                totalInterestDistributed += interest;
+                details.push({
+                    userId,
+                    guildId: targetGuildId,
+                    interest,
+                    newBalance: bankAccount.balance,
+                    rate: rateInfo.ratePercentage
+                });
+            }
+
+            if (totalAccountsProcessed > 0) {
+                await this.saveEconomy();
+                console.log(`[Banque] Distribution automatique des intérêts : +${totalInterestDistributed} coins versés sur ${totalAccountsProcessed} comptes.`);
+            }
+
+            return {
+                success: true,
+                totalAccountsProcessed,
+                totalInterestDistributed,
+                details
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur processAllPendingBankInterests:', error);
+            return {
+                success: false,
+                totalAccountsProcessed: 0,
+                totalInterestDistributed: 0,
+                message: error.message
+            };
+        }
+    }
+
+    /**
+     * Réclame les intérêts quotidiens sur le compte bancaire inter-serveur
+     * La distribution est automatique, cette commande sert de vérification et versement immédiat si besoin
+     * @param {string} userId - ID de l'utilisateur
+     * @param {string} [guildId=null] - ID du serveur pour le calcul dynamique
+     * @returns {Promise<Object>} Résultat
+     */
+    async claimBankInterest(userId, guildId = null) {
+        try {
+            this.ensureGlobalBankUserExists(userId);
+            const bankAccount = this.economy.globalBank[userId];
+
+            if (!bankAccount.balance || bankAccount.balance <= 0) {
+                return {
+                    success: false,
+                    message: 'Votre compte bancaire est vide. Déposez des coins pour générer des intérêts.'
+                };
+            }
+
+            const todayDate = new Date().toDateString();
+            const lastInterestDate = bankAccount.lastInterest ? new Date(bankAccount.lastInterest).toDateString() : null;
+
+            if (lastInterestDate === todayDate) {
+                const todayTx = (bankAccount.transactions || []).slice().reverse().find(tx => tx.type === 'interest' && new Date(tx.timestamp).toDateString() === todayDate);
+                const todayInterest = todayTx?.amount || 0;
+                const todayRate = todayTx?.ratePercentage || '1.00%';
+                return {
+                    success: false,
+                    alreadyCredited: true,
+                    autoCredited: true,
+                    interest: todayInterest,
+                    ratePercentage: todayRate,
+                    newBankBalance: bankAccount.balance,
+                    message: `Vous avez déjà réclamé (ou reçu automatiquement) vos intérêts bancaires aujourd'hui (+${todayInterest.toLocaleString()} coins). Vos prochains intérêts seront versés automatiquement demain !`
+                };
+            }
+
+            const dynamicRateInfo = this.calculateDynamicInterestRate(guildId);
+            const interest = Math.max(1, Math.round(bankAccount.balance * dynamicRateInfo.rate));
+            bankAccount.balance += interest;
+            bankAccount.lastInterest = new Date().toISOString();
+
+            if (!bankAccount.transactions) bankAccount.transactions = [];
+            bankAccount.transactions.push({
+                type: 'interest',
+                auto: true,
+                amount: interest,
+                rate: dynamicRateInfo.rate,
+                ratePercentage: dynamicRateInfo.ratePercentage,
+                guildId,
+                timestamp: new Date().toISOString(),
+                balanceAfter: bankAccount.balance
+            });
+
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                interest,
+                rate: dynamicRateInfo.rate,
+                rateInfo: dynamicRateInfo,
+                newBankBalance: bankAccount.balance,
+                message: `Vous avez reçu +${interest.toLocaleString()} coins d'intérêts bancaires (taux : ${dynamicRateInfo.ratePercentage}) !`
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur intérêts banque:', error);
+            return {
+                success: false,
+                message: error.message || 'Échec de la réclamation des intérêts'
+            };
+        }
+    }
+
+    /**
+     * Définit le solde bancaire inter-serveur d'un utilisateur (Admin)
+     * @param {string} userId - ID de l'utilisateur
+     * @param {number} amount - Nouveau solde
+     * @param {string} [reason='Admin set bank balance'] - Motif
+     * @returns {Promise<Object>} Résultat
+     */
+    async adminSetBankBalance(userId, amount, reason = 'Admin set bank balance') {
+        try {
+            const newBalance = Math.max(0, parseInt(amount, 10) || 0);
+            this.ensureGlobalBankUserExists(userId);
+            const bankAccount = this.economy.globalBank[userId];
+            const oldBalance = bankAccount.balance || 0;
+
+            bankAccount.balance = newBalance;
+
+            if (!bankAccount.transactions) bankAccount.transactions = [];
+            bankAccount.transactions.push({
+                type: 'admin_set',
+                amount: newBalance - oldBalance,
+                reason,
+                timestamp: new Date().toISOString(),
+                balanceAfter: newBalance
+            });
+
+            await this.saveEconomy();
+
+            return {
+                success: true,
+                oldBalance,
+                newBalance,
+                message: `Solde bancaire de ${userId} fixé à ${newBalance.toLocaleString()} coins`
+            };
+        } catch (error) {
+            console.error('[EconomyManager] Erreur admin set bank balance:', error);
+            return {
+                success: false,
+                message: error.message || 'Échec de la mise à jour du solde bancaire'
             };
         }
     }
@@ -412,6 +1334,9 @@ export class EconomyManager {
             toUser.balance += amount;
             toUser.totalEarned += amount;
             toUser.lastActivity = new Date().toISOString();
+            
+            this.economy.guilds[guildId].totalTransactions = (this.economy.guilds[guildId].totalTransactions || 0) + 1;
+            this.economy.guilds[guildId].lastUpdate = new Date().toISOString();
             
             // Save changes
             await this.saveEconomy();
@@ -528,6 +1453,62 @@ export class EconomyManager {
     }
 
     /**
+     * Executes a work activity for a user with cooldown
+     * @param {string} userId - User ID
+     * @param {string} guildId - Guild ID
+     * @param {number} cooldownMinutes - Cooldown in minutes (default 30)
+     * @returns {Promise<Object>} Result with earnings, job and new balance or cooldown remaining
+     */
+    async executeWork(userId, guildId, cooldownMinutes = 30) {
+        try {
+            this.ensureUserExists(guildId, userId);
+            const user = this.economy.guilds[guildId].users[userId];
+            const now = Date.now();
+            const cooldownMs = cooldownMinutes * 60 * 1000;
+
+            if (user.lastWork) {
+                const lastWorkTime = new Date(user.lastWork).getTime();
+                const diff = now - lastWorkTime;
+                if (diff < cooldownMs) {
+                    const remainingMs = cooldownMs - diff;
+                    const remainingMins = Math.ceil(remainingMs / 60000);
+                    return {
+                        success: false,
+                        cooldown: true,
+                        remainingMinutes: remainingMins,
+                        message: `Vous devez vous reposer encore ${remainingMins} minute(s) avant de travailler à nouveau.`
+                    };
+                }
+            }
+
+            const guild = this.economy.guilds[guildId];
+            const marketMultiplier = guild.currentValue || 1.0;
+            const baseSalary = Math.floor(Math.random() * 70) + 50; // 50 - 120
+            const finalSalary = Math.max(10, Math.round(baseSalary * marketMultiplier));
+
+            const result = await this.addCurrency(userId, guildId, finalSalary, 'Salaire de travail');
+            if (result.success) {
+                user.lastWork = new Date().toISOString();
+                await this.saveEconomy();
+                return {
+                    success: true,
+                    amount: finalSalary,
+                    newBalance: user.balance,
+                    currentValue: guild.currentValue
+                };
+            }
+
+            return result;
+        } catch (error) {
+            console.error('Error executing work:', error);
+            return {
+                success: false,
+                message: 'Failed to execute work'
+            };
+        }
+    }
+
+    /**
      * Gets user statistics
      * @param {string} userId - User ID
      * @param {string} guildId - Guild ID
@@ -544,8 +1525,12 @@ export class EconomyManager {
             const user = this.economy.guilds[guildId].users[userId];
             const guild = this.economy.guilds[guildId];
             
+            const bankBalance = this.getGlobalBankBalance(userId);
+            
             return {
                 balance: user.balance,
+                bankBalance,
+                netWorth: user.balance + bankBalance,
                 totalEarned: user.totalEarned,
                 totalSpent: user.totalSpent,
                 lastActivity: user.lastActivity,

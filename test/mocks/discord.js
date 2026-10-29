@@ -814,6 +814,14 @@ class MockSlashCommandBuilder {
     this.dm_permission = null;
   }
 
+  get name() {
+    return this.name_value;
+  }
+
+  get description() {
+    return this.description_value;
+  }
+
   setName(name) {
     this.name_value = name;
     return this;
@@ -854,6 +862,13 @@ class MockSlashCommandBuilder {
 
   addChannelOption(fn) {
     const option = new MockSlashCommandChannelOption();
+    fn(option);
+    this.options_value.push(option);
+    return this;
+  }
+
+  addRoleOption(fn) {
+    const option = new MockSlashCommandRoleOption();
     fn(option);
     this.options_value.push(option);
     return this;
@@ -1075,6 +1090,38 @@ class MockSlashCommandChannelOption {
   }
 }
 
+class MockSlashCommandRoleOption {
+  constructor() {
+    this.name_value = '';
+    this.description_value = '';
+    this.required_value = false;
+  }
+
+  setName(name) {
+    this.name_value = name;
+    return this;
+  }
+
+  setDescription(description) {
+    this.description_value = description;
+    return this;
+  }
+
+  setRequired(required) {
+    this.required_value = required;
+    return this;
+  }
+
+  toJSON() {
+    return {
+      type: 8, // ROLE
+      name: this.name_value,
+      description: this.description_value,
+      required: this.required_value
+    };
+  }
+}
+
 class MockSlashCommandSubcommandOption {
   constructor() {
     this.name_value = '';
@@ -1122,6 +1169,13 @@ class MockSlashCommandSubcommandOption {
 
   addChannelOption(fn) {
     const option = new MockSlashCommandChannelOption();
+    fn(option);
+    this.options_value.push(option);
+    return this;
+  }
+
+  addRoleOption(fn) {
+    const option = new MockSlashCommandRoleOption();
     fn(option);
     this.options_value.push(option);
     return this;
@@ -1325,6 +1379,80 @@ class MockEmbedBuilder {
   }
 }
 
+class MockActionRowBuilder {
+  constructor() {
+    this.components = [];
+  }
+
+  addComponents(...components) {
+    this.components.push(...components.flat());
+    return this;
+  }
+
+  setComponents(...components) {
+    this.components = components.flat();
+    return this;
+  }
+
+  toJSON() {
+    return {
+      type: 1, // ACTION_ROW
+      components: this.components.map(c => typeof c.toJSON === 'function' ? c.toJSON() : c)
+    };
+  }
+}
+
+class MockButtonBuilder {
+  constructor() {
+    this.data = {
+      type: 2 // BUTTON
+    };
+  }
+
+  setCustomId(id) {
+    this.data.custom_id = id;
+    this.data.customId = id;
+    return this;
+  }
+
+  setLabel(label) {
+    this.data.label = label;
+    return this;
+  }
+
+  setStyle(style) {
+    this.data.style = style;
+    return this;
+  }
+
+  setDisabled(disabled = true) {
+    this.data.disabled = disabled;
+    return this;
+  }
+
+  setEmoji(emoji) {
+    this.data.emoji = emoji;
+    return this;
+  }
+
+  setURL(url) {
+    this.data.url = url;
+    return this;
+  }
+
+  toJSON() {
+    return this.data;
+  }
+}
+
+export const ButtonStyle = {
+  Primary: 1,
+  Secondary: 2,
+  Success: 3,
+  Danger: 4,
+  Link: 5
+};
+
 // Export all mocks with both names for compatibility
 export const Client = MockClient;
 export const Guild = MockGuild;
@@ -1342,6 +1470,8 @@ export const SlashCommandBuilder = MockSlashCommandBuilder;
 export const CommandInteraction = MockInteraction;
 export const EmbedBuilder = MockEmbedBuilder;
 export const Invite = MockInvite;
+export const ActionRowBuilder = MockActionRowBuilder;
+export const ButtonBuilder = MockButtonBuilder;
 
 // Also export with Mock prefix for test utilities
 export {
@@ -1354,13 +1484,16 @@ export {
   MockDMChannel,
   MockForumChannel,
   MockThreadChannel,
+  MockThreadChannel as MockThread,
   MockMessage,
   MockCollection,
   MockPermissions,
   MockSlashCommandBuilder,
   MockInteraction,
   MockEmbedBuilder,
-  MockInvite
+  MockInvite,
+  MockActionRowBuilder,
+  MockButtonBuilder
 };
 
 // Export permission flags

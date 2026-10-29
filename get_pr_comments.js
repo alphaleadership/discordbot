@@ -4,7 +4,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN
+  auth: process.env.GITHUB_TOKEN,
+  request: {
+    headers: {
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': process.env.GITHUB_API_VERSION || '2026-03-10'
+    }
+  }
 });
 
 async function run() {

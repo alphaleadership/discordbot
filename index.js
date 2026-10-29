@@ -5,6 +5,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cron from 'node-cron';
 import { WebSocketServer } from 'ws';
+import crypto from 'crypto';
 import MessageLogger from './utils/MessageLogger.js';
 import AdminManager from './utils/AdminManager.js';
 import { InteractionHandler } from './utils/InteractionHandler.js';
@@ -37,6 +38,7 @@ import { EconomyManager } from './utils/EconomyManager.js';
 import { ForumReportManager } from './utils/ForumReportManager.js';
 import AutoConfigManager from './utils/AutoConfigManager.js';
 import { EspionageManager } from './utils/EspionageManager.js';
+import { GiveawayManager } from './utils/GiveawayManager.js';
 
 let dmTicketManager; // Declare dmTicketManager here
 
@@ -419,7 +421,8 @@ function initOctokit() {
             request: {
                 timeout: 10000,
                 headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
+                    'Accept': 'application/vnd.github+json',
+                    'X-GitHub-Api-Version': process.env.GITHUB_API_VERSION || '2026-03-10'
                 }
             }
         });
@@ -722,6 +725,24 @@ for (const token of tokens) {
     const forumReportManager = new ForumReportManager(client, guildConfig, reportManager);
     const autoConfigManager = new AutoConfigManager(client, guildConfig);
     const espionageManager = new EspionageManager(clients, guildConfig, warnManager, banlistManager);
+    const giveawayManager = new GiveawayManager(economyManager);
+    client.giveawayManager = giveawayManager;
+    giveawayManager.start(client);
+    client.economyManager = economyManager;
+    client.reportManager = reportManager;
+    client.banlistManager = banlistManager;
+    client.blockedWordsManager = blockedWordsManager;
+    client.watchlistManager = watchlistManager;
+    client.telegramIntegration = telegramIntegration;
+    client.funCommandsManager = funCommandsManager;
+    client.espionageManager = espionageManager;
+    client.adminManager = adminManager;
+    client.warnManager = warnManager;
+
+    // Distribution automatique des intérêts bancaires en attente au démarrage
+    economyManager.processAllPendingBankInterests().catch(err => {
+        console.error('[Banque] Erreur vérification intérêts au démarrage:', err);
+    });
     
     // Initialize enhanced message logger with report manager
     messageLogger = new MessageLogger(reportManager);
@@ -761,6 +782,16 @@ for (const token of tokens) {
 
     // Enregistrer les commandes
     client.once('ready', async () => {
+        // Purge automatique au démarrage des entrées banlist et watchlist sans raison
+        try {
+            const banPurge = await banlistManager.purgeEntriesWithoutReason();
+            const watchPurge = await watchlistManager.purgeEntriesWithoutReason();
+            if (banPurge.removed > 0 || watchPurge.removed > 0) {
+                console.log(`[Blacklist Purge] Démarrage: ${banPurge.removed} entrée(s) banlist et ${watchPurge.removed} entrée(s) watchlist sans raison purgée(s).`);
+            }
+        } catch (purgeError) {
+            console.error('[Blacklist Purge] Erreur lors de la purge automatique au démarrage:', purgeError);
+        }
        
         await commandHandler.registerCommands();
         console.log(`=== BOT CONNECTÉ EN TANT QUE ${client.user.tag} ===`);
@@ -825,6 +856,9 @@ for (const token of tokens) {
             return;
         } else if (interaction.isButton() && interaction.customId.startsWith('reopen_ticket_')) {
             await dmTicketManager.handleTicketReopen(interaction);
+            return;
+        } else if (interaction.isButton() && interaction.customId.startsWith('giveaway_')) {
+            await giveawayManager.handleButton(interaction);
             return;
         }
         
@@ -1844,15 +1878,91 @@ app.post('/github-webhook', async (req, res) => {
     res.status(200).send('Webhook processed');
 });
 
+// --- Web Management Server: Auth & Sessions ---
+const activeTokens = new Map(); // token -> { createdAt, expiresAt }
+
+function createSessionToken() {
+    const token = crypto.randomBytes(32).toString('hex');
+    activeTokens.set(token, { createdAt: Date.now(), expiresAt: Date.now() + 24 * 60 * 60 * 1000 });
+    return token;
+}
+
+function getPrimaryClient() {
+    return clients[0] || null;
+}
+
+function formatAttachmentHeader(filename, type = 'attachment') {
+    const raw = String(filename || 'export.txt').replace(/[\r\n\0]/g, '');
+    const asciiFallback = raw
+        .replace(/œ/g, 'oe').replace(/Œ/g, 'OE')
+        .replace(/æ/g, 'ae').replace(/Æ/g, 'AE')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^\x20-\x7E]/g, '_')
+        .replace(/["\\;]/g, '_');
+    const encoded = encodeURIComponent(raw);
+    return `${type}; filename="${asciiFallback}"; filename*=UTF-8''${encoded}`;
+}
+
+function requireAuth(req, res, next) {
+    if (process.env.NODE_ENV === 'test') return next();
+
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.startsWith('Bearer ') 
+        ? authHeader.slice(7) 
+        : (req.query?.token || req.headers['x-admin-token'] || req.body?.adminToken || req.query?.password);
+
+    if (token) {
+        const session = activeTokens.get(token);
+        if (session && session.expiresAt > Date.now()) {
+            return next();
+        }
+        if (token === webPassword) {
+            return next();
+        }
+    }
+    return res.status(401).json({ success: false, error: 'Authentification requise.' });
+}
+
 app.post('/login', (req, res) => {
-    if (req.body.password === webPassword) {
-        res.json({ success: true });
+    if (req.body && req.body.password === webPassword) {
+        const token = createSessionToken();
+        const primaryClient = getPrimaryClient();
+        res.json({
+            success: true,
+            token,
+            bot: primaryClient?.user ? {
+                id: primaryClient.user.id,
+                tag: primaryClient.user.tag,
+                avatar: primaryClient.user.displayAvatarURL ? primaryClient.user.displayAvatarURL() : null
+            } : null
+        });
     } else {
-        res.json({ success: false });
+        res.status(401).json({ success: false, message: 'Mot de passe incorrect' });
     }
 });
 
-app.get('/banlist', (req, res) => {
+app.post('/logout', (req, res) => {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.startsWith('Bearer ') ? authHeader.slice(7) : req.body?.token;
+    if (token) activeTokens.delete(token);
+    res.json({ success: true });
+});
+
+app.get('/api/auth/verify', requireAuth, (req, res) => {
+    const primaryClient = getPrimaryClient();
+    res.json({
+        success: true,
+        authenticated: true,
+        bot: primaryClient?.user ? {
+            id: primaryClient.user.id,
+            tag: primaryClient.user.tag,
+            avatar: primaryClient.user.displayAvatarURL ? primaryClient.user.displayAvatarURL() : null
+        } : null
+    });
+});
+
+app.get('/banlist', requireAuth, (req, res) => {
     fs.readFile('banlist.txt', 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Error reading banlist');
@@ -1862,7 +1972,7 @@ app.get('/banlist', (req, res) => {
     });
 });
 
-app.post('/banlist', async (req, res) => {
+app.post('/banlist', requireAuth, async (req, res) => {
     try {
         if (!req.body.banlist) {
             return res.json({ success: false, message: 'Banlist data missing' });
@@ -1933,17 +2043,22 @@ app.post('/banlist', async (req, res) => {
     }
 });
 
-app.get('/servers', (req, res) => {
+app.get('/servers', requireAuth, (req, res) => {
     const allGuilds = [];
     clients.forEach(client => {
         client.guilds.cache.forEach(guild => {
-            allGuilds.push({ id: guild.id, name: guild.name });
+            allGuilds.push({
+                id: guild.id,
+                name: guild.name,
+                memberCount: guild.memberCount || 0,
+                icon: guild.iconURL ? guild.iconURL() : null
+            });
         });
     });
     res.json(allGuilds);
 });
 
-app.post('/massban', async (req, res) => {
+app.post('/massban', requireAuth, async (req, res) => {
     const { serverId } = req.body;
     let guild;
     for (const client of clients) {
@@ -2003,7 +2118,7 @@ app.post('/massban', async (req, res) => {
     });
 });
 
-app.get('/exportbans', async (req, res) => {
+app.get('/exportbans', requireAuth, async (req, res) => {
     const { serverId } = req.query;
     let guild;
     for (const client of clients) {
@@ -2021,7 +2136,8 @@ app.get('/exportbans', async (req, res) => {
     try {
         const bans = await guild.bans.fetch();
         const banIds = bans.map(ban => ban.user.id).join('\n');
-        res.header('Content-Disposition', `attachment; filename=${guild.name}-bans.txt`);
+        const filename = `${guild.name || serverId}-bans.txt`;
+        res.setHeader('Content-Disposition', formatAttachmentHeader(filename));
         res.type('text/plain');
         res.send(banIds);
     } catch (error) {
@@ -2030,7 +2146,7 @@ app.get('/exportbans', async (req, res) => {
     }
 });
 
-app.get('/exportmembers', async (req, res) => {
+app.get('/exportmembers', requireAuth, async (req, res) => {
     const { serverId } = req.query;
     let guild;
     for (const client of clients) {
@@ -2045,7 +2161,8 @@ app.get('/exportmembers', async (req, res) => {
     try {
         await guild.members.fetch();
         const memberIds = guild.members.cache.map(member => member.id).join('\n');
-        res.header('Content-Disposition', `attachment; filename=${guild.name}-members.txt`);
+        const filename = `${guild.name || serverId}-members.txt`;
+        res.setHeader('Content-Disposition', formatAttachmentHeader(filename));
         res.type('text/plain');
         res.send(memberIds);
     } catch (error) {
@@ -2054,7 +2171,7 @@ app.get('/exportmembers', async (req, res) => {
     }
 });
 
-app.get('/channels', (req, res) => {
+app.get('/channels', requireAuth, (req, res) => {
     const { serverId } = req.query;
     let guild;
     for (const client of clients) {
@@ -2071,7 +2188,7 @@ app.get('/channels', (req, res) => {
     res.json(channelList);
 });
 
-app.get('/messages', async (req, res) => {
+app.get('/messages', requireAuth, async (req, res) => {
     const { serverId, channelId } = req.query;
     let guild;
     for (const client of clients) {
@@ -2103,7 +2220,7 @@ app.get('/messages', async (req, res) => {
 });
 
 // Endpoints pour la gestion des dossiers d'espionnage depuis l'interface web
-app.get('/espionage/status', async (req, res) => {
+app.get('/espionage/status', requireAuth, async (req, res) => {
     try {
         const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
         if (!fs.existsSync(jsonPath)) {
@@ -2127,7 +2244,7 @@ app.get('/espionage/status', async (req, res) => {
     }
 });
 
-app.get('/espionage/targets', async (req, res) => {
+app.get('/espionage/targets', requireAuth, async (req, res) => {
     try {
         const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
         if (!fs.existsSync(jsonPath)) {
@@ -2174,7 +2291,7 @@ app.get('/espionage/targets', async (req, res) => {
     }
 });
 
-app.post('/espionage/target-banlist', async (req, res) => {
+app.post('/espionage/target-banlist', requireAuth, async (req, res) => {
     try {
         const { userId, reason } = req.body;
         if (!userId || !reason) {
@@ -2241,7 +2358,7 @@ app.post('/espionage/target-banlist', async (req, res) => {
     }
 });
 
-app.get('/espionage/target', async (req, res) => {
+app.get('/espionage/target', requireAuth, async (req, res) => {
     try {
         const { userId } = req.query;
         if (!userId) {
@@ -2288,7 +2405,7 @@ app.get('/espionage/target', async (req, res) => {
     }
 });
 
-app.delete('/espionage/target-delete', async (req, res) => {
+app.delete('/espionage/target-delete', requireAuth, async (req, res) => {
     try {
         const { userId } = req.body;
         if (!userId) {
@@ -2334,7 +2451,7 @@ app.delete('/espionage/target-delete', async (req, res) => {
     }
 });
 
-app.post('/espionage/recreate', async (req, res) => {
+app.post('/espionage/recreate', requireAuth, async (req, res) => {
     try {
         const ESPIONAGE_GUILD_ID = '1475239703853928523';
         let guild = null;
@@ -2367,6 +2484,435 @@ app.post('/espionage/recreate', async (req, res) => {
     }
 });
 
+
+// ==========================================
+// --- NOUVELLES ROUTES API WEB MANAGEMENT ---
+// ==========================================
+
+// 1. STATISTIQUES GLOBALES DU SYSTÈME & BOT
+app.get('/api/system/stats', requireAuth, async (req, res) => {
+    try {
+        const primaryClient = getPrimaryClient();
+        const mem = process.memoryUsage();
+        const uptimeSeconds = process.uptime();
+        const days = Math.floor(uptimeSeconds / 86400);
+        const hours = Math.floor((uptimeSeconds % 86400) / 3600);
+        const minutes = Math.floor((uptimeSeconds % 3600) / 60);
+        const formattedUptime = `${days}j ${hours}h ${minutes}m`;
+
+        let totalGuilds = 0;
+        let totalMembers = 0;
+        let totalChannels = 0;
+        clients.forEach(c => {
+            if (c.guilds?.cache) {
+                totalGuilds += c.guilds.cache.size;
+                c.guilds.cache.forEach(g => {
+                    totalMembers += g.memberCount || 0;
+                    totalChannels += g.channels?.cache?.size || 0;
+                });
+            }
+        });
+
+        // Banlist count
+        let banlistCount = 0;
+        if (fs.existsSync('banlist.txt')) {
+            const lines = fs.readFileSync('banlist.txt', 'utf8').split('\n').filter(l => l.trim().length > 0);
+            banlistCount = lines.length;
+        }
+
+        // Watchlist count
+        let watchlistCount = 0;
+        const wlManager = primaryClient?.watchlistManager || watchlistManager;
+        if (wlManager && typeof wlManager.getWatchlistCount === 'function') {
+            watchlistCount = wlManager.getWatchlistCount();
+        } else if (wlManager?.watchlistData) {
+            watchlistCount = Object.keys(wlManager.watchlistData).length;
+        }
+
+        // Espionage target count
+        let espionageCount = 0;
+        const jsonPath = path.join(process.cwd(), 'espionage_dossiers.json');
+        if (fs.existsSync(jsonPath)) {
+            try {
+                const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+                const ESPIONAGE_GUILD_ID = '1475239703853928523';
+                espionageCount = Object.keys(data.guilds?.[ESPIONAGE_GUILD_ID]?.targets || {}).length;
+            } catch (_) {}
+        }
+
+        // Economy stats
+        let totalEconomyUsers = 0;
+        let totalCashInCirculation = 0;
+        let totalBankInDeposits = 0;
+        const ecoManager = primaryClient?.economyManager;
+        if (ecoManager && ecoManager.data) {
+            totalEconomyUsers = Object.keys(ecoManager.data.users || {}).length;
+            totalBankInDeposits = Object.values(ecoManager.data.globalBank || {}).reduce((sum, b) => sum + (b.balance || 0), 0);
+            for (const u of Object.values(ecoManager.data.users || {})) {
+                totalCashInCirculation += (u.balance || 0);
+            }
+        }
+
+        const stats = {
+            bot: {
+                tag: primaryClient?.user?.tag || 'GitBot',
+                id: primaryClient?.user?.id || null,
+                avatar: primaryClient?.user?.displayAvatarURL ? primaryClient.user.displayAvatarURL() : null,
+                status: primaryClient?.isReady() ? 'online' : 'offline',
+                ping: primaryClient?.ws?.ping ?? -1,
+                uptime: formattedUptime,
+                uptimeSeconds
+            },
+            system: {
+                nodeVersion: process.version,
+                platform: process.platform,
+                memoryRssMb: Math.round(mem.rss / 1024 / 1024),
+                memoryHeapMb: Math.round(mem.heapUsed / 1024 / 1024),
+                memoryHeapTotalMb: Math.round(mem.heapTotal / 1024 / 1024)
+            },
+            counts: {
+                guilds: totalGuilds,
+                members: totalMembers,
+                channels: totalChannels,
+                commands: primaryClient?.commandHandler?.client?.commands?.size || 0,
+                maxCommands: 100,
+                banlist: banlistCount,
+                watchlist: watchlistCount,
+                espionageTargets: espionageCount,
+                economyUsers: totalEconomyUsers,
+                totalCashInCirculation,
+                totalBankInDeposits
+            },
+            services: {
+                telegram: primaryClient?.telegramIntegration ? (primaryClient.telegramIntegration.getStatus?.()?.connected ?? false) : false,
+                githubBackup: !!octokit
+            }
+        };
+
+        res.json(stats);
+    } catch (err) {
+        console.error('Error fetching system stats:', err);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// 2. BANLIST STRUCTURÉE (API JSON)
+app.get('/api/banlist', requireAuth, (req, res) => {
+    if (!fs.existsSync('banlist.txt')) {
+        return res.json({ count: 0, bans: [] });
+    }
+    const content = fs.readFileSync('banlist.txt', 'utf8');
+    const lines = content.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    const bans = [];
+    for (const line of lines) {
+        const match = line.match(/^(\d{17,20})\s*[-|:]?\s*(.*?)(?:\s*\|\s*Ajouté par:\s*([^|]+))?(?:\s*\|\s*Le:\s*(.+))?$/i);
+        if (match) {
+            bans.push({
+                id: match[1],
+                reason: match[2]?.trim() || 'Raison non spécifiée',
+                addedBy: match[3]?.trim() || 'Inconnu',
+                date: match[4]?.trim() || null,
+                raw: line
+            });
+        } else {
+            const idMatch = line.match(/^(\d{17,20})/);
+            if (idMatch) {
+                bans.push({
+                    id: idMatch[1],
+                    reason: line.substring(idMatch[1].length).replace(/^[\s\-:|]+/, '').trim() || 'Raison non spécifiée',
+                    addedBy: 'Inconnu',
+                    date: null,
+                    raw: line
+                });
+            }
+        }
+    }
+    res.json({ count: bans.length, bans });
+});
+
+app.post('/api/banlist/add', requireAuth, async (req, res) => {
+    try {
+        const { userId, reason } = req.body;
+        if (!userId || !/^\d{17,20}$/.test(userId)) {
+            return res.status(400).json({ success: false, message: 'ID Discord invalide (17 à 20 chiffres requis).' });
+        }
+        const bManager = getPrimaryClient()?.banlistManager || banlistManager;
+        if (bManager) {
+            const result = await bManager.addToBanlist(userId, reason || 'Banni via WebConsole', 'WebConsole');
+            return res.json(result);
+        }
+        res.status(500).json({ success: false, message: 'BanlistManager indisponible.' });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+app.post('/api/banlist/remove', requireAuth, async (req, res) => {
+    try {
+        const { userId } = req.body;
+        if (!userId) return res.status(400).json({ success: false, message: 'ID requis.' });
+        const bManager = getPrimaryClient()?.banlistManager || banlistManager;
+        if (bManager) {
+            const result = await bManager.removeFromBanlist(userId);
+            return res.json(result);
+        }
+        res.status(500).json({ success: false, message: 'BanlistManager indisponible.' });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+app.post('/api/banlist/purge', requireAuth, async (req, res) => {
+    try {
+        const bManager = getPrimaryClient()?.banlistManager || banlistManager;
+        if (bManager) {
+            const result = await bManager.purgeEntriesWithoutReason();
+            return res.json(result);
+        }
+        res.status(500).json({ success: false, message: 'BanlistManager indisponible.' });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+// 3. WATCHLIST (SURVEILLANCE)
+app.get('/api/watchlist', requireAuth, async (req, res) => {
+    try {
+        const wlManager = getPrimaryClient()?.watchlistManager || watchlistManager;
+        if (!wlManager) {
+            return res.status(500).json({ error: 'WatchlistManager non disponible' });
+        }
+        const entries = [];
+        const rawData = wlManager.watchlistData || {};
+        
+        for (const [key, data] of Object.entries(rawData)) {
+            entries.push({
+                key,
+                userId: data.userId || (key.includes('_') ? key.split('_')[1] : key),
+                guildId: data.guildId || (key.startsWith('GLOBAL_') ? 'GLOBAL' : (key.includes('_') ? key.split('_')[0] : 'GLOBAL')),
+                isGlobal: data.isGlobal ?? (key.startsWith('GLOBAL_') || data.guildId === 'GLOBAL'),
+                reason: data.reason || 'Raison non spécifiée',
+                watchLevel: data.watchLevel || 1,
+                userTag: data.userTag || data.username || 'Inconnu',
+                addedAt: data.addedAt || data.timestamp || null,
+                addedBy: data.addedBy || 'Inconnu',
+                notesCount: Array.isArray(data.notes) ? data.notes.length : 0
+            });
+        }
+        res.json(entries);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.post('/api/watchlist/add', requireAuth, async (req, res) => {
+    try {
+        const { userId, reason, watchLevel = 1, isGlobal = true, guildId } = req.body;
+        if (!userId || !reason) {
+            return res.status(400).json({ success: false, message: 'ID et raison obligatoires.' });
+        }
+        const wlManager = getPrimaryClient()?.watchlistManager || watchlistManager;
+        if (!wlManager) return res.status(500).json({ success: false, message: 'WatchlistManager non disponible.' });
+        
+        const targetGuildId = isGlobal ? 'GLOBAL' : (guildId || 'GLOBAL');
+        const result = isGlobal 
+            ? await wlManager.addToGlobalWatchlist(userId, reason, 'WebDashboard', parseInt(watchLevel, 10))
+            : await wlManager.addToWatchlist(userId, targetGuildId, reason, 'WebDashboard', parseInt(watchLevel, 10));
+            
+        res.json(result);
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+app.post('/api/watchlist/remove', requireAuth, async (req, res) => {
+    try {
+        const { userId, guildId, isGlobal = false } = req.body;
+        if (!userId) return res.status(400).json({ success: false, message: 'ID obligatoire.' });
+        const wlManager = getPrimaryClient()?.watchlistManager || watchlistManager;
+        if (!wlManager) return res.status(500).json({ success: false, message: 'WatchlistManager non disponible.' });
+
+        const result = isGlobal || guildId === 'GLOBAL'
+            ? await wlManager.removeFromGlobalWatchlist(userId)
+            : await wlManager.removeFromWatchlist(userId, guildId);
+
+        res.json(result);
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+app.post('/api/watchlist/purge', requireAuth, async (req, res) => {
+    try {
+        const wlManager = getPrimaryClient()?.watchlistManager || watchlistManager;
+        if (!wlManager) return res.status(500).json({ success: false, message: 'WatchlistManager indisponible.' });
+        const result = await wlManager.purgeEntriesWithoutReason();
+        res.json(result);
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+// 4. ÉCONOMIE & BANQUE
+app.get('/api/economy/stats', requireAuth, async (req, res) => {
+    try {
+        const ecoManager = getPrimaryClient()?.economyManager;
+        if (!ecoManager) return res.status(500).json({ error: 'EconomyManager indisponible' });
+        const indicators = ecoManager.getEconomicIndicators ? ecoManager.getEconomicIndicators() : {};
+        const totalWallets = Object.keys(ecoManager.data?.users || {}).length;
+        const totalBanks = Object.keys(ecoManager.data?.globalBank || {}).length;
+        res.json({
+            totalWallets,
+            totalBanks,
+            ...indicators
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.get('/api/economy/user', requireAuth, async (req, res) => {
+    try {
+        const { userId, guildId } = req.query;
+        if (!userId) return res.status(400).json({ error: 'User ID requis' });
+        const ecoManager = getPrimaryClient()?.economyManager;
+        if (!ecoManager) return res.status(500).json({ error: 'EconomyManager indisponible' });
+
+        const targetGuildId = guildId || clients[0]?.guilds?.cache?.first()?.id;
+        const userWallet = targetGuildId ? await ecoManager.getUser(userId, targetGuildId) : null;
+        const bankData = ecoManager.getBankBalance(userId);
+        const netWorth = await ecoManager.getNetWorth(userId, targetGuildId);
+
+        res.json({
+            userId,
+            guildId: targetGuildId,
+            wallet: userWallet ? userWallet.balance : 0,
+            bank: bankData.balance,
+            dailyInterestRatePercent: bankData.dailyInterestRatePercent,
+            netWorth: netWorth.netWorth,
+            allServersCash: netWorth.allServersCash
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.post('/api/economy/adjust', requireAuth, async (req, res) => {
+    try {
+        const { userId, guildId, amount, type = 'add', isPercent = false, reason = 'Ajustement WebDashboard' } = req.body;
+        if (!userId || amount === undefined || amount === null) {
+            return res.status(400).json({ success: false, message: 'Paramètres manquants.' });
+        }
+        const ecoManager = getPrimaryClient()?.economyManager;
+        if (!ecoManager) return res.status(500).json({ success: false, message: 'EconomyManager indisponible' });
+
+        const targetGuildId = guildId || clients[0]?.guilds?.cache?.first()?.id;
+        if (!targetGuildId) return res.status(400).json({ success: false, message: 'ID de serveur introuvable' });
+
+        const currentUser = await ecoManager.getUser(userId, targetGuildId);
+        let delta = 0;
+        if (isPercent) {
+            const pct = Math.min(100, Math.max(0, parseFloat(amount)));
+            delta = Math.floor((currentUser.balance * pct) / 100);
+        } else {
+            delta = parseInt(amount, 10);
+        }
+
+        if (isNaN(delta) || delta <= 0) {
+            return res.status(400).json({ success: false, message: 'Montant invalide.' });
+        }
+
+        let newBalance;
+        if (type === 'add') {
+            newBalance = await ecoManager.addCurrency(userId, targetGuildId, delta, reason);
+        } else {
+            newBalance = await ecoManager.removeCurrency(userId, targetGuildId, delta, reason);
+        }
+
+        res.json({ success: true, newBalance, delta, type });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+// 5. ENVOI DE MESSAGE DANS UN SALON
+app.post('/api/channels/send', requireAuth, async (req, res) => {
+    try {
+        const { serverId, channelId, message } = req.body;
+        if (!serverId || !channelId || !message) {
+            return res.status(400).json({ success: false, message: 'Tous les champs sont requis.' });
+        }
+        let channel = null;
+        for (const client of clients) {
+            const guild = client.guilds.cache.get(serverId);
+            if (guild) {
+                channel = guild.channels.cache.get(channelId);
+                if (channel) break;
+            }
+        }
+        if (!channel || !channel.isTextBased()) {
+            return res.status(404).json({ success: false, message: 'Salon textuel introuvable.' });
+        }
+        const sent = await channel.send(message);
+        res.json({ success: true, messageId: sent.id });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+// 6. DOSSIERS D'ESPIONNAGE : AJOUT DE NOTE
+app.post('/api/espionage/target/add-note', requireAuth, async (req, res) => {
+    try {
+        const { userId, note } = req.body;
+        if (!userId || !note) {
+            return res.status(400).json({ success: false, message: 'ID et note obligatoires.' });
+        }
+        const ESPIONAGE_GUILD_ID = '1475239703853928523';
+        let guild = null;
+        let espionageManagerInstance = null;
+        for (const client of clients) {
+            guild = client.guilds.cache.get(ESPIONAGE_GUILD_ID) || await client.guilds.fetch(ESPIONAGE_GUILD_ID).catch(() => null);
+            if (guild) {
+                espionageManagerInstance = client.espionageManager || new EspionageManager(clients, guildConfig, warnManager, banlistManager);
+                break;
+            }
+        }
+        if (!guild || !espionageManagerInstance) {
+            return res.status(404).json({ success: false, message: 'Serveur d\'espionnage introuvable.' });
+        }
+        let userObj = null;
+        for (const client of clients) {
+            userObj = await client.users.fetch(userId).catch(() => null);
+            if (userObj) break;
+        }
+        const member = userObj ? (await guild.members.fetch(userId).catch(() => null) || userObj) : { id: userId, username: `Cible-${userId.slice(-6)}` };
+        await espionageManagerInstance.addNote(member, note, 'WebDashboard');
+        res.json({ success: true, message: 'Note ajoutée au dossier avec succès.' });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+});
+
+// 7. LOGS DU BOT EN DIRECT
+app.get('/api/logs', requireAuth, async (req, res) => {
+    try {
+        const linesCount = parseInt(req.query.lines || '100', 10);
+        const filter = req.query.filter || 'all';
+        let logLines = [];
+
+        if (fs.existsSync('bot.log')) {
+            const raw = fs.readFileSync('bot.log', 'utf8');
+            logLines = raw.split(/\r?\n/).filter(Boolean);
+            if (filter === 'error') {
+                logLines = logLines.filter(l => l.includes('ERROR') || l.includes('CRITICAL') || l.includes('Error') || l.includes('Échec'));
+            }
+            logLines = logLines.slice(-linesCount);
+        }
+        res.json({ lines: logLines });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 let serverInstance;
 
@@ -2517,5 +3063,21 @@ cron.schedule('* * * * *', async () => {
                 }
             }
         }
+    }
+});
+
+// --- Distribution automatique des intérêts bancaires inter-serveurs ---
+// S'exécute automatiquement toutes les heures pour créditer les intérêts journaliers de chaque épargnant
+cron.schedule('0 * * * *', async () => {
+    try {
+        for (const client of clients) {
+            const ecoManager = client.economyManager;
+            if (ecoManager && typeof ecoManager.processAllPendingBankInterests === 'function') {
+                await ecoManager.processAllPendingBankInterests();
+                break; // Les données bancaires globales sont partagées entre tous les clients
+            }
+        }
+    } catch (err) {
+        console.error('[Banque] Erreur lors de la distribution automatique planifiée des intérêts:', err);
     }
 });
