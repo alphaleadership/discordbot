@@ -24,7 +24,7 @@ export default {
             // Permissions bits
             const adminPerms = '8';
             // Recommandé: ManageRoles, ManageChannels, Kick, Ban, ManageMessages, EmbedLinks, AttachFiles, ReadHistory, ModerateMembers, AddReactions
-            const recommendedPerms = '1099511627775';
++            const recommendedPerms = '1101927672918';
             // Basique: ViewChannel, SendMessages, EmbedLinks, AttachFiles, ReadMessageHistory
             const basicPerms = '274878220288';
 
