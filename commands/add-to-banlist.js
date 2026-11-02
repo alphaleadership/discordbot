@@ -28,6 +28,13 @@ export default {
         const targetUser = interaction.options.getUser('utilisateur');
         const reason = interaction.options.getString('raison');
 
+        if (banlistManager.isReasonEmptyOrPlaceholder(reason)) {
+            return interaction.reply({
+                content: '❌ Une raison explicite et détaillée est requise pour ajouter un utilisateur à la banlist (les placeholders comme "Raison non spécifiée" ou les motifs vides sont interdits).',
+                ephemeral: true
+            });
+        }
+
         if (isBotAdmin) {
             const result = await banlistManager.addToBanlist(
                 targetUser.id,

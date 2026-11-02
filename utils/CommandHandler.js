@@ -34,6 +34,15 @@ export class CommandHandler {
         const __dirname = path.dirname(__filename);
         const commandsPath = path.join(__dirname, '..', 'commands');
         const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+        const diskCommandNames = new Set(commandFiles.map(file => path.basename(file, '.js')));
+
+        // Purge any commands in memory that no longer exist on disk
+        for (const loadedName of this.client.commands.keys()) {
+            if (!diskCommandNames.has(loadedName)) {
+                console.log(`[CommandHandler] Commande obsolète retirée de la mémoire: ${loadedName}`);
+                this.client.commands.delete(loadedName);
+            }
+        }
 
         for (const file of commandFiles) {
             await this.loadCommandFile(commandsPath, file);
@@ -141,6 +150,12 @@ export class CommandHandler {
         const commands = this.client.commands.map(cmd => cmd.data.toJSON());
 
         try {
+            if (commands.length > 100) {
+                const errorMsg = `[CRITICAL] Nombre de commandes (${commands.length}) dépasse la limite globale Discord de 100 !`;
+                console.error(errorMsg);
+                throw new Error(errorMsg);
+            }
+
             console.log(`[INFO] Début de l'actualisation des commandes (/) - ${commands.length} commandes à enregistrer.`);
 
             await this.client.application.commands.set(commands);
@@ -356,7 +371,7 @@ export class CommandHandler {
      * @returns {boolean} True if it's a moderation command
      */
     isModerationCommand(commandName) {
-        const moderationCommands = ['ban', 'kick', 'timeout', 'clear', 'unban', 'warn', 'clearwarns', 'admin'];
+        const moderationCommands = ['ban', 'kick', 'timeout', 'untimeout', 'clear', 'unban', 'warn', 'clearwarns', 'unwarn', 'admin', 'banlist-check', 'banlist-purge', 'eco-admin'];
         return moderationCommands.includes(commandName);
     }
 
@@ -369,7 +384,7 @@ export class CommandHandler {
         const watchlistCommands = [
             'watchlist-add', 'watchlist-remove', 'watchlist-list',
             'watchlist-info', 'watchlist-note', 'watchlist-status',
-            'watchlist-validate',
+            'watchlist-validate', 'watchlist-purge',
             'global-watchlist-add', 'global-watchlist-remove',
             'global-watchlist-list', 'global-watchlist-info'
         ];
@@ -398,7 +413,40 @@ export class CommandHandler {
     async handleCommand(interaction) {
         if (!interaction.isCommand()) return;
 
-        const command = this.client.commands.get(interaction.commandName);
+        const commandAliases = {
+            'bot-invite': { target: 'invite' },
+            'closeticket': { target: 'close-ticket' },
+            'service-on': { target: 'service', subcommand: 'on' },
+            'service-off': { target: 'service', subcommand: 'off' },
+            'service-setup': { target: 'service', subcommand: 'setup' },
+            'service-stats': { target: 'service', subcommand: 'stats' },
+            'get-char-limit': { target: 'char-limit', subcommand: 'get' },
+            'set-char-limit': { target: 'char-limit', subcommand: 'set' },
+            'add-blocked-word': { target: 'blocked-words', subcommand: 'add' },
+            'remove-blocked-word': { target: 'blocked-words', subcommand: 'remove' },
+            'list-blocked-words': { target: 'blocked-words', subcommand: 'list' },
+            'reload-health': { target: 'reload', subcommand: 'health' },
+            'reload-rollback': { target: 'reload', subcommand: 'rollback' },
+            'reload-status': { target: 'reload', subcommand: 'status' },
+            'telegram-config': { target: 'telegram', subcommand: 'config' },
+            'telegram-status': { target: 'telegram', subcommand: 'status' },
+            'telegram-test': { target: 'telegram', subcommand: 'test' },
+            'set-telegram-bridge': { target: 'telegram', subcommand: 'bridge' },
+            'set-telegram-notification-channel': { target: 'telegram', subcommand: 'notify' },
+            'telegram-notify': { target: 'telegram', subcommand: 'notify' }
+        };
+
+        let command = this.client.commands.get(interaction.commandName);
+        let effectiveCommandName = interaction.commandName;
+
+        if (!command && commandAliases[interaction.commandName]) {
+            const alias = commandAliases[interaction.commandName];
+            command = this.client.commands.get(alias.target);
+            effectiveCommandName = alias.target;
+            if (alias.subcommand && interaction.options) {
+                interaction.options.getSubcommand = () => alias.subcommand;
+            }
+        }
 
         if (!command) {
             console.error(`[ERREUR] Aucune commande correspondant à ${interaction.commandName} n'a été trouvée.`);
@@ -419,16 +467,16 @@ export class CommandHandler {
 
         try {
             // Log command execution for moderation and watchlist commands
-            if (this.isModerationCommand(interaction.commandName) || this.isWatchlistCommand(interaction.commandName)) {
-                console.log(`[INFO] Exécution de la commande ${interaction.commandName} par ${interaction.user.tag} (${interaction.user.id}) sur ${interaction.guild?.name || 'DM'}`);
+            if (this.isModerationCommand(effectiveCommandName) || this.isWatchlistCommand(effectiveCommandName)) {
+                console.log(`[INFO] Exécution de la commande ${effectiveCommandName} par ${interaction.user.tag} (${interaction.user.id}) sur ${interaction.guild?.name || 'DM'}`);
             }
 
             // Validate required managers for specific command types
-            if (this.isModerationCommand(interaction.commandName) && !this.permissionValidator) {
+            if (this.isModerationCommand(effectiveCommandName) && !this.permissionValidator) {
                 throw new Error('PermissionValidator requis pour les commandes de modération');
             }
 
-            if (this.isWatchlistCommand(interaction.commandName) && !this.watchlistManager) {
+            if (this.isWatchlistCommand(effectiveCommandName) && !this.watchlistManager) {
                 throw new Error('WatchlistManager requis pour les commandes de surveillance');
             }
 

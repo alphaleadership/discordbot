@@ -1,13 +1,13 @@
 {
-  "guild6_user6": {
+  "guild_user6": {
     "userId": "user6",
     "username": "Unknown",
     "discriminator": "0",
-    "reason": "reason6",
+    "reason": "test",
     "addedBy": "mod",
-    "addedAt": "2026-07-19T14:14:21.376Z",
+    "addedAt": "2026-08-09T07:25:18.487Z",
     "lastSeen": null,
-    "guildId": "guild6",
+    "guildId": "guild",
     "watchLevel": "observe",
     "notes": [],
     "incidents": [],
@@ -15,7 +15,7 @@
   },
   "_metadata": {
     "version": "2.0",
-    "created": "2026-07-19T14:14:21.376Z",
-    "lastModified": "2026-07-19T14:14:21.376Z"
+    "created": "2026-08-09T07:25:18.487Z",
+    "lastModified": "2026-08-09T07:25:18.487Z"
   }
 }

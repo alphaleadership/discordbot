@@ -563,23 +563,38 @@ export class EnhancedReloadSystem extends EventEmitter {
         try {
             const commandsPath = path.resolve('commands');
             const filePath = path.join(commandsPath, filename);
-            
+
+            // Prune any commands from memory whose file no longer exists on disk
+            if (fs.existsSync(commandsPath) && this.commandHandler?.client?.commands) {
+                const diskFiles = new Set(fs.readdirSync(commandsPath).filter(f => f.endsWith('.js')).map(f => path.basename(f, '.js')));
+                for (const loadedName of this.commandHandler.client.commands.keys()) {
+                    if (!diskFiles.has(loadedName)) {
+                        console.log(`[EnhancedReloadSystem] Removing obsolete command from memory: ${loadedName}`);
+                        this.commandHandler.client.commands.delete(loadedName);
+                    }
+                }
+            }
+
             if (!fs.existsSync(filePath)) {
                 console.log(`[EnhancedReloadSystem] Command file not found: ${filePath}`);
+                if (this.commandHandler?.client?.commands?.has(commandName)) {
+                    this.commandHandler.client.commands.delete(commandName);
+                    await this.commandHandler.registerCommands();
+                }
                 return;
             }
-            
+
             // Remove old command
             if (this.commandHandler.client.commands.has(commandName)) {
                 this.commandHandler.client.commands.delete(commandName);
             }
-            
+
             // Load new command
             await this.commandHandler.loadCommandFile(commandsPath, filename);
-            
+
             // Update Discord commands
             await this.commandHandler.registerCommands();
-            
+
             console.log(`[EnhancedReloadSystem] Successfully reloaded command: ${commandName}`);
         } catch (error) {
             console.error(`[EnhancedReloadSystem] Failed to reload command ${commandName}:`, error);

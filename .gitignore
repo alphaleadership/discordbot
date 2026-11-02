@@ -11,3 +11,4 @@ node_modules
 .npm/
 messages/
 sync.js
+db_gateway.php

@@ -13,6 +13,41 @@ export class BanlistManager {
     }
 
     /**
+     * Vérifie si une raison est vide ou équivalente à un placeholder générique
+     * @param {string} reason - Raison à vérifier
+     * @returns {boolean} True si vide ou placeholder
+     */
+    isReasonEmptyOrPlaceholder(reason) {
+        if (!reason || typeof reason !== 'string') return true;
+        const trimmed = reason.trim().toLowerCase();
+        if (trimmed.length === 0) return true;
+        
+        const placeholders = [
+            'raison non spécifiée',
+            'raison non specifiee',
+            'aucune raison',
+            'aucune raison spécifiée',
+            'aucune raison specifiee',
+            'aucun',
+            'aucune',
+            'none',
+            'no reason',
+            'n/a',
+            'na',
+            'null',
+            'undefined',
+            'non spécifiée',
+            'non specifiee',
+            'non spécifié',
+            'non specifie',
+            'sans raison',
+            'pas de raison'
+        ];
+        
+        return placeholders.includes(trimmed);
+    }
+
+    /**
      * Loads whitelist from file
      */
     loadWhitelist() {
@@ -140,6 +175,13 @@ export class BanlistManager {
      */
     async addPendingRequest(requestData) {
         try {
+            if (!requestData || this.isReasonEmptyOrPlaceholder(requestData.reason)) {
+                return {
+                    success: false,
+                    error: 'Une raison explicite et non vide est obligatoire pour soumettre une demande.'
+                };
+            }
+
             const requestId = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
             const request = {
                 id: requestId,
@@ -322,6 +364,60 @@ export class BanlistManager {
     }
 
     /**
+     * Purge toutes les entrées de la banlist qui n'ont pas de raison valide ou ont un placeholder
+     * @returns {Promise<{checked: number, removed: number, purgedUsers: Array<{userId: string, line: string, reason: string}>}>}
+     */
+    async purgeEntriesWithoutReason() {
+        console.log('Démarrage de la purge des entrées sans raison de la banlist...');
+        const results = { checked: 0, removed: 0, purgedUsers: [] };
+        
+        try {
+            if (!fs.existsSync('banlist.txt')) {
+                return results;
+            }
+            
+            const fileContent = fs.readFileSync('banlist.txt', 'utf-8');
+            const lines = fileContent.split('\n').filter(line => line.trim() !== '');
+            const validLines = [];
+            
+            for (const line of lines) {
+                results.checked++;
+                const idMatch = line.match(/^(\d+)/);
+                const userId = idMatch ? idMatch[1] : 'Inconnu';
+                
+                let reason = '';
+                const separatorIndex = line.indexOf(' - ');
+                if (separatorIndex !== -1) {
+                    const afterDash = line.slice(separatorIndex + 3);
+                    const metaIndex = afterDash.search(/\s*\|\s*(?:Ajouté par:|$)/i);
+                    reason = (metaIndex !== -1 ? afterDash.slice(0, metaIndex) : afterDash).trim();
+                }
+                
+                if (!idMatch || this.isReasonEmptyOrPlaceholder(reason)) {
+                    results.removed++;
+                    results.purgedUsers.push({
+                        userId,
+                        line,
+                        reason: reason || 'Aucune raison spécifiée'
+                    });
+                } else {
+                    validLines.push(line);
+                }
+            }
+            
+            if (results.removed > 0) {
+                fs.writeFileSync('banlist.txt', validLines.join('\n') + (validLines.length > 0 ? '\n' : ''), 'utf-8');
+                console.log(`[BanlistManager] Purge terminée : ${results.removed} entrée(s) sans raison retirée(s).`);
+            }
+            
+            return results;
+        } catch (error) {
+            console.error('Erreur lors de la purge des entrées sans raison de la banlist:', error);
+            return { ...results, error: error.message };
+        }
+    }
+
+    /**
      * Ajoute un utilisateur à la liste de bannissement
      * @param {string} userId - L'ID de l'utilisateur à bannir
      * @param {string} reason - La raison du bannissement
@@ -330,6 +426,20 @@ export class BanlistManager {
      */
     async addToBanlist(userId, reason, authorId) {
         try {
+            if (!userId) {
+                return {
+                    success: false,
+                    message: 'ID utilisateur manquant.'
+                };
+            }
+
+            if (this.isReasonEmptyOrPlaceholder(reason)) {
+                return {
+                    success: false,
+                    message: 'Une raison explicite et non vide est requise pour ajouter un utilisateur à la banlist.'
+                };
+            }
+
             if (!fs.existsSync('banlist.txt')) {
                 fs.writeFileSync('banlist.txt', '', 'utf-8');
             }
@@ -346,7 +456,7 @@ export class BanlistManager {
             }
             
             const timestamp = new Date().toISOString();
-            const newEntry = `${userId} - ${reason} | Ajouté par: ${authorId} | Le: ${timestamp}\n`;
+            const newEntry = `${userId} - ${reason.trim()} | Ajouté par: ${authorId} | Le: ${timestamp}\n`;
             
             fs.appendFileSync('banlist.txt', newEntry, 'utf-8');
             
@@ -372,6 +482,15 @@ export class BanlistManager {
      */
     async addManyToBanlist(userIds, reason, authorId) {
         try {
+            if (this.isReasonEmptyOrPlaceholder(reason)) {
+                return {
+                    success: false,
+                    message: "Une raison explicite et non vide est requise pour l'importation en masse.",
+                    added: 0,
+                    errors: userIds.length
+                };
+            }
+
             let addedCount = 0;
             let errorCount = 0;
             
@@ -424,7 +543,13 @@ export class BanlistManager {
             if (banEntry) {
                 // Extraire la raison du bannissement (tout ce qui suit ' - ' et précède ' | ')
                 const reasonMatch = banEntry.match(/ - (.*?)( \| Ajouté par:|$)/);
-                const reason = reasonMatch ? reasonMatch[1] : 'Raison non spécifiée';
+                const reason = reasonMatch ? reasonMatch[1].trim() : '';
+                
+                // Si la raison est vide ou placeholder, l'entrée est considérée invalide
+                if (this.isReasonEmptyOrPlaceholder(reason)) {
+                    return { banned: false, reason: '' };
+                }
+
                 return { banned: true, reason };
             }
             

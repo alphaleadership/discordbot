@@ -152,16 +152,16 @@
     "guildId": "guild456",
     "commands": {
       "joke": {
-        "count": 624,
-        "lastUsed": "2026-07-19T14:17:53.671Z"
+        "count": 728,
+        "lastUsed": "2026-10-16T06:21:22.080Z"
       }
     },
-    "totalUsage": 624,
+    "totalUsage": 728,
     "scores": {
       "trivia": {
-        "totalPoints": 600,
-        "gamesPlayed": 72,
-        "correctAnswers": 48
+        "totalPoints": 700,
+        "gamesPlayed": 84,
+        "correctAnswers": 56
       }
     }
   },
@@ -172,9 +172,9 @@
     "totalUsage": 0,
     "scores": {
       "trivia": {
-        "totalPoints": 2400,
-        "gamesPlayed": 24,
-        "correctAnswers": 24
+        "totalPoints": 2800,
+        "gamesPlayed": 28,
+        "correctAnswers": 28
       }
     }
   },
@@ -185,9 +185,9 @@
     "totalUsage": 0,
     "scores": {
       "trivia": {
-        "totalPoints": 1200,
-        "gamesPlayed": 24,
-        "correctAnswers": 24
+        "totalPoints": 1400,
+        "gamesPlayed": 28,
+        "correctAnswers": 28
       }
     }
   },
@@ -198,9 +198,9 @@
     "totalUsage": 0,
     "scores": {
       "trivia": {
-        "totalPoints": 1800,
-        "gamesPlayed": 24,
-        "correctAnswers": 24
+        "totalPoints": 2100,
+        "gamesPlayed": 28,
+        "correctAnswers": 28
       }
     }
   }

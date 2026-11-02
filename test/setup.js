@@ -70,30 +70,45 @@ vi.mock('node-telegram-bot-api', () => ({
 }));
 
 // Mock @octokit/rest for GitHub integration
-vi.mock('@octokit/rest', () => ({
-  Octokit: vi.fn().mockImplementation(() => ({
-    rest: {
-      repos: {
-        createOrUpdateFileContents: vi.fn().mockResolvedValue({
-          data: { commit: { sha: 'mock_sha' } }
-        }),
-        getContent: vi.fn().mockResolvedValue({
-          data: { content: Buffer.from('mock content').toString('base64') }
-        })
-      },
-      git: {
-        getRef: vi.fn().mockResolvedValue({
-          data: { object: { sha: 'mock_ref_sha' } }
-        })
+vi.mock('@octokit/rest', () => {
+  const reposMock = {
+    createOrUpdateFileContents: vi.fn().mockResolvedValue({
+      data: {
+        commit: { sha: 'mock_sha', html_url: 'https://github.com/mock/repo/commit/mock_sha' },
+        content: { html_url: 'https://github.com/mock/repo/blob/main/test.json' }
       }
-    }
-  }))
-}));
+    }),
+    getContent: vi.fn().mockResolvedValue({
+      data: { content: Buffer.from('mock content').toString('base64'), sha: 'mock_sha' }
+    })
+  };
+  const gitMock = {
+    getRef: vi.fn().mockResolvedValue({
+      data: { object: { sha: 'mock_ref_sha' } }
+    })
+  };
+
+  return {
+    Octokit: vi.fn().mockImplementation((config) => ({
+      config,
+      repos: reposMock,
+      git: gitMock,
+      rest: {
+        repos: reposMock,
+        git: gitMock
+      }
+    }))
+  };
+});
 
 // Mock dotenv
-vi.mock('dotenv', () => ({
-  config: vi.fn()
-}));
+vi.mock('dotenv', () => {
+  const config = vi.fn();
+  return {
+    config,
+    default: { config }
+  };
+});
 
 // Mock express for web server tests
 vi.mock('express', () => ({

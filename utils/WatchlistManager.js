@@ -465,6 +465,41 @@ export class WatchlistManager {
     }
 
     /**
+     * Checks if a reason is empty or matches common placeholder texts
+     * @param {string} reason - Reason to check
+     * @returns {boolean} True if empty or placeholder
+     */
+    isReasonEmptyOrPlaceholder(reason) {
+        if (!reason || typeof reason !== 'string') return true;
+        const trimmed = reason.trim().toLowerCase();
+        if (trimmed.length === 0) return true;
+        
+        const placeholders = [
+            'raison non spécifiée',
+            'raison non specifiee',
+            'aucune raison',
+            'aucune raison spécifiée',
+            'aucune raison specifiee',
+            'aucun',
+            'aucune',
+            'none',
+            'no reason',
+            'n/a',
+            'na',
+            'null',
+            'undefined',
+            'non spécifiée',
+            'non specifiee',
+            'non spécifié',
+            'non specifie',
+            'sans raison',
+            'pas de raison'
+        ];
+        
+        return placeholders.includes(trimmed);
+    }
+
+    /**
      * Checks if a watchlist entry is valid
      * @param {Object} entry - Entry to validate
      * @returns {boolean} True if valid
@@ -475,6 +510,8 @@ export class WatchlistManager {
                typeof entry.userId === 'string' &&
                typeof entry.guildId === 'string' &&
                typeof entry.reason === 'string' &&
+               entry.reason.trim().length > 0 &&
+               !this.isReasonEmptyOrPlaceholder(entry.reason) &&
                typeof entry.addedBy === 'string';
     }
 
@@ -811,6 +848,13 @@ export class WatchlistManager {
             for (const [key, entry] of Object.entries(fixed)) {
                 if (key.startsWith('_')) continue;
                 
+                // If entry has no valid reason or uses a generic placeholder, purge it
+                if (!entry || typeof entry !== 'object' || !entry.reason || this.isReasonEmptyOrPlaceholder(entry.reason)) {
+                    console.log(`[WatchlistManager] Purge de l'entrée watchlist ${key} sans raison valide`);
+                    delete fixed[key];
+                    continue;
+                }
+                
                 if (entry && typeof entry === 'object') {
                     // Ensure required arrays exist
                     if (!Array.isArray(entry.notes)) entry.notes = [];
@@ -867,6 +911,8 @@ export class WatchlistManager {
                 const trimmedReason = entryData.reason.trim();
                 if (trimmedReason.length === 0) {
                     errors.push('reason cannot be empty');
+                } else if (this.isReasonEmptyOrPlaceholder(trimmedReason)) {
+                    errors.push('reason cannot be a placeholder');
                 } else if (trimmedReason.length < 3) {
                     warnings.push('reason is very short (less than 3 characters)');
                 } else if (trimmedReason.length > 500) {
@@ -1874,6 +1920,43 @@ export class WatchlistManager {
             console.error('Error during watchlist cleanup:', error);
             return { ...results, error: error.message };
         }
+    }
+
+    /**
+     * Purges all watchlist entries that do not have a valid reason or have placeholder reasons
+     * @returns {Promise<{checked: number, removed: number, purgedKeys: string[]}>}
+     */
+    async purgeEntriesWithoutReason() {
+        console.log('Starting purge of watchlist entries without reasons...');
+        const results = { checked: 0, removed: 0, purgedKeys: [] };
+
+        try {
+            await this.waitForFileLock();
+
+            for (const [key, entry] of Object.entries(this.watchlist)) {
+                if (key.startsWith('_')) continue;
+
+                results.checked++;
+                const reason = entry && typeof entry.reason === 'string' ? entry.reason : '';
+
+                if (!reason || this.isReasonEmptyOrPlaceholder(reason)) {
+                    console.log(`Purging watchlist entry ${key} without reason (reason: "${reason}")`);
+                    delete this.watchlist[key];
+                    results.removed++;
+                    results.purgedKeys.push(key);
+                }
+            }
+
+            if (results.removed > 0) {
+                await this.saveWatchlistWithRetry();
+                console.log(`Watchlist purge finished: ${results.removed} entries removed.`);
+            }
+
+            return results;
+        } catch (error) {
+            console.error('Error during watchlist purge without reason:', error);
+            return { ...results, error: error.message };
+        }
     }   
     getWatchlistKey(userId, guildId) {
         const directKey = `${guildId}_${userId}`;
@@ -1904,13 +1987,17 @@ export class WatchlistManager {
             
             for (const key in this.watchlist) {
                 const entry = this.watchlist[key];
-                if (entry.userId === userId) {
+                if (entry && entry.userId === userId) {
                     if (userInfo.username && entry.username !== userInfo.username) {
                         entry.username = userInfo.username;
                         updated = true;
                     }
                     if (userInfo.discriminator && entry.discriminator !== userInfo.discriminator) {
                         entry.discriminator = userInfo.discriminator;
+                        updated = true;
+                    }
+                    if (userInfo.lastSeen && entry.lastSeen !== userInfo.lastSeen) {
+                        entry.lastSeen = userInfo.lastSeen;
                         updated = true;
                     }
                 }
@@ -1921,8 +2008,10 @@ export class WatchlistManager {
                 console.log(`Informations utilisateur mises à jour pour ${userId}`);
             }
             
+            return { success: true, updated };
         } catch (error) {
             console.error('Erreur lors de la mise à jour des informations utilisateur:', error);
+            return { success: false, error: error.message };
         }
     }
 
@@ -2049,13 +2138,13 @@ export class WatchlistManager {
 
             // Update user info in watchlist with error handling
             try {
-                const updateResult =await this.updateUserInfo(userId, {
+                const updateResult = this.updateUserInfo(userId, {
                     username: member.user.username,
                     discriminator: member.user.discriminator,
                     lastSeen: new Date().toISOString()
                 });
                 
-                if (!updateResult.success) {
+                if (updateResult && !updateResult.success) {
                     console.warn(`[${operationId}] Failed to update user info:`, updateResult.error);
                 }
             } catch (error) {
@@ -2264,7 +2353,7 @@ export class WatchlistManager {
                     lastSeen: new Date().toISOString()
                 });
                 
-                if (!updateResult.success) {
+                if (updateResult && !updateResult.success) {
                     console.warn(`[${operationId}] Failed to update user info:`, updateResult.error);
                 }
             } catch (error) {

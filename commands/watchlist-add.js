@@ -65,6 +65,14 @@ export default {
                 });
             }
 
+            // Validate reason
+            if (watchlistManager.isReasonEmptyOrPlaceholder(reason)) {
+                return interaction.reply({
+                    content: '❌ Une raison valide et explicite est requise pour ajouter un utilisateur à la surveillance (les motifs vides ou placeholders comme "Raison non spécifiée" sont interdits).',
+                    ephemeral: true
+                });
+            }
+
             // Validate reason length
             if (reason.trim().length < 3) {
                 return interaction.reply({

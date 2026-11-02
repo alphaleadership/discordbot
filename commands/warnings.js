@@ -10,11 +10,12 @@ export default {
                 .setDescription('L\'utilisateur dont voir les avertissements (par défaut: vous-même)')
                 .setRequired(false)
         ),
-    async execute(interaction) {
+    async execute(interaction, adminManager, warnManagerParam) {
         const targetUser = interaction.options.getUser('utilisateur') || interaction.user;
+        const localMgr = warnManagerParam || localWarnManager;
         
-        const localGuildId = interaction.guild.id;
-        const localWarns = localWarnManager.getWarns(localGuildId, targetUser.id).map(w => ({ ...w, scope: `Serveur: ${interaction.guild.name}` }));
+        const localGuildId = interaction.guild ? interaction.guild.id : 'guild';
+        const localWarns = localMgr.getWarns(localGuildId, targetUser.id).map(w => ({ ...w, scope: `Serveur: ${interaction.guild?.name || 'Local'}` }));
         const globalWarns = globalWarnManager.getWarns('global', targetUser.id).map(w => ({ ...w, scope: 'Global' }));
 
         const allWarns = [...localWarns, ...globalWarns];
@@ -34,10 +35,12 @@ export default {
 
         allWarns.slice(0, 25).forEach((warn, index) => {
             const moderator = interaction.guild.members.cache.get(warn.moderatorId)?.user.tag || `ID: ${warn.moderatorId}`;
+            const fineStr = warn.fine ? `\n**Amende:** \`-${warn.fine.toLocaleString()} coins\`` : '';
             embed.addFields({
                 name: `Avertissement #${index + 1} (ID: ${warn.id})`,
                 value: `**Portée:** ${warn.scope}\n` +
-                       `**Raison:** ${warn.reason}\n` +
+                       `**Raison:** ${warn.reason}` +
+                       fineStr + '\n' +
                        `**Modérateur:** ${moderator}\n` +
                        `**Date:** ${new Date(warn.date).toLocaleString('fr-FR')}`,
                 inline: false
